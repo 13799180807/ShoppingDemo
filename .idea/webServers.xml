@@ -5,6 +5,9 @@
       <webServer id="874bd6a5-7466-4e17-851b-1a9341a54148" name="xmapp" url="http://localhost:801/IGG/ShoppingDemo">
         <fileTransfer accessType="LOCAL" port="0" />
       </webServer>
+      <webServer id="5d222d73-7200-471c-b657-8580e2d41942" name="IGGxmapp" url="http://localhost:801/ShoppingDemo">
+        <fileTransfer accessType="LOCAL" port="0" />
+      </webServer>
     </option>
   </component>
 </project>
