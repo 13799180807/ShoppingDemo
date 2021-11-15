@@ -1,0 +1,9 @@
+1.用户表(shop_user)
+2.商品表(shop_wares)
+3.分类表(shop_sort)
+4.状态表(shop_static)
+5.个人资料表(shop_userdate)
+6.冲值记录表(shop_recharge)
+7.消费记录表(shop_consume)
+8.购物车表（shopcart）
+9.
