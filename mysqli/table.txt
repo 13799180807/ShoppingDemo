@@ -5,5 +5,13 @@
 5.个人资料表(shop_userdate)
 6.冲值记录表(shop_recharge)
 7.消费记录表(shop_consume)
-8.购物车表（shopcart）
-9.
+8.购物车表（shop_shopcart）
+9.商品补货表(shop_record)
+10.订单状态表(shop_orderstatic)
+11.订单表（shop_order）
+12.结单表(shop_receiving)
+13.商品图片表(shop_waresimg)
+14.操作日志表(shop_log)  未建
+
+
+

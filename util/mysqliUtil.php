@@ -1,37 +1,6 @@
 <?php
 require_once 'mysqli_connection.php';
-/**
- * 分页查询多语句查询
- * sql写入
- */
-getPageNum("demo","3");
 
-function getPageNum($tableName,$num){
-    /**
-     * 获取到我们要查询的表名进行计算
-     */
-    $conn=getConn();
- //   $sql="SELECT COUNT(*) FROM {$tableName}";
- //   $result=$conn->query($sql);
-
-
-//    $rows=$result->fetch_all();
-//    var_dump($rows);
-//    mysqli_free_result($result);
-//    mysqli_close($conn);
-    $sql="SELECT COUNT(*) FROM {$tableName}";
-    $result=$conn->query($sql);
-    $row=mysqli_num_rows($result);
-     var_dump($row);
-
-}
-function getPaging($page,$num){
-/**
- * 传入需要显示的页面，跟数量
- *
- */
-
-}
 function text(){
     /**
      * 更新测试
