@@ -3,8 +3,6 @@ require_once '../util/mysqliUtil.php';
 require_once '../model/Wares.php';
 include "../config/json.php";
 
-
-
 function conf(){
     /**
      * 配置查询文件
@@ -35,29 +33,6 @@ function homepageWares($typea,$num){
   //  echo $json;
     return $json;
 }
-function waresAll(){
-    /**
-     *图片 名字 价格 uid
-     */
-    $sql='sp_uid,sp_name,sp_imgpath,sp_price';
-    $rows=getAllList("shop_wares",$sql);
-    $i=0;
-    foreach ($rows as $row){
-
-        $c=new Wares();
-        $c->sp_uid=$row[0];
-        $c->sp_name=$row[1];
-        $c->sp_imgpath=$row[2];
-        $c->sp_price=$row[3];
-      //  $c->sp_varieties[4];
-
-        $userList[$i]=$c;
-        $i++;
-    }
-     //json格式返回
-     $a=successJson("请求成功",array("wareslist"=>$userList));
-     return $a;
-}
 function textdemo(){
     //homepageWares("sp_hot",1);  //热度排序
 //homepageWares("create_time",5);//最新上架
@@ -81,6 +56,7 @@ function textdemo(){
 //
 //}
 }
+
 
 
 

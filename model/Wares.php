@@ -1,9 +1,5 @@
 <?php
-//$a= new Wares("1","2","3","","5","6","7","8","9","10","11","12","13");
-//var_dump($a);
-//$resr=new Wares();
-//$resr->add();
-//Wares::add();
+
 function WaresindexlistJson($rows){
     /**
      * 显示出来
@@ -21,9 +17,36 @@ function WaresindexlistJson($rows){
         $userList[$i]=$c;
         $i++;
     }
-    $a=successJson("请求成功",array("wareslist"=>$userList));
+    //$a=successJson("请求成功",array("wareslist"=>$userList));
+    $a=array("wareslist"=>$userList);
     return $a;
 }
+
+/**
+ * @param $rows
+ * @return array[]
+ * 商品详情页用的主要部分显示
+ */
+function WaresdetailList($rows){
+    $i=0;
+    foreach ($rows as $row){
+        $c=new Wares();
+        $c->sp_uid=$row[0];  //商品UID
+        $c->sp_varieties=$row[1]; //商品分类
+        $c->sp_name=$row[2]; //商品名字
+        $c->sp_price=$row[3]; //商品价格
+        $c->sp_num=$row[4];       //剩余库存
+        $c->sp_imgpath=$row[5]; //商品主图
+        $c->sp_hot=$row[6];       //访问量/热门程度
+        $c->sp_sold=$row[7]; //已售出 用来畅销产品给星级
+        $c->sp_text=$row[8];      //商品描述
+        $userList[$i]=$c;
+        $i++;
+    }
+    $a=array("wareslist"=>$userList);
+    return $a;
+}
+
 function WareslistJson($rows){
     /**
      * 显示出来

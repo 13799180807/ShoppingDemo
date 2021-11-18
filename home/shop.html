@@ -1,64 +1,49 @@
-<?php
-
-$homeConfig=array();
-$homeConfig["imgPath"]="../IMG/";
-
-//$salesGoods=homepageWares("sp_sold","5");//销量最高  火爆产品
-$url="http://localhost:801/ShoppingDemo/controller/waresAllService.php?fltyqu=sp_sold&num=6";
-$salesGoods=curl_get($url);
-$salesGoods=JsonList($salesGoods);
-
-//$hotGoods=homepageWares("sp_hot",6);  //热度排序  推荐
-$url1="http://localhost:801/ShoppingDemo/controller/waresAllService.php?fltyqu=sp_hot&num=6";
-$hotGoods=curl_get($url1);
-$hotGoods=JsonList($hotGoods);
-
-//$newestGoods=homepageWares("create_time",6);//最新上架
-$url2="http://localhost:801/ShoppingDemo/controller/waresAllService.php?fltyqu=create_time&num=6";
-$newestGoods=curl_get($url2);
-$newestGoods=JsonList($newestGoods);
-
-
-function JsonList($json){
-    $json=json_decode($json,true);
-    $json=$json["data"];
-    $list=$json["wareslist"];
-    return $list;
-}
-function curl_get($url)
-{
-    $header = array(
-        'Accept: application/json',
-    );
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_HEADER, 0);
-    curl_setopt($curl, CURLOPT_TIMEOUT, 1);
-    curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-    $data = curl_exec($curl);
-
-    if (curl_error($curl)) {
-        print "Error: " . curl_error($curl);
-    } else {
-        curl_close($curl);
-        return $data;
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>周边商城</title>
+    <title>Toyqo - Kids Store Bootstrap 5 Template</title>
+
+    <!-- Favicons -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Vendor CSS (Icon Font) -->
+
+    <!-- 
+<link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css" />
+<link rel="stylesheet" href="assets/css/vendor/pe-icon-7-stroke.min.css" /> 
+-->
+
+
+    <!-- Plugins CSS (All Plugins Files) -->
+
+
+    <!-- 
+<link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
+<link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
+<link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
+<link rel="stylesheet" href="assets/css/plugins/aos.min.css" />
+<link rel="stylesheet" href="assets/css/plugins/nice-select.min.css" />
+-->
+
+
+    <!-- Main Style CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
+
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+
+
     <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
     <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
+
+
+
+
+
 </head>
 
 <body>
@@ -71,16 +56,35 @@ function curl_get($url)
                 <div class="row align-items-center">
 
                     <!-- Header Top Message Start -->
-                    <div class="col-12">
-                        <div class="header-top-msg-wrapper text-center">
-                            <p class="header-top-message text-center">
-                                产品上新啦 <strong>快去选购</strong><a href="shop.html" class="btn btn-hover-dark btn-secondary">去购物吧</a></p>
-                            <div class="header-top-close-btn">
-                                <button class="top-close-btn"><i class="pe-7s-close"></i></button>
-                            </div>
+                    <div class="col-md-12 col-lg-6 text-lg-start text-center">
+                        <div class="header-top-msg-wrapper">
+                            <p class="header-top-message">Welcome to Toyqo baby toys online store</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 text-end d-none d-lg-block">
+                        <div class="header-top-settings">
+                            <ul class="nav align-items-center justify-content-end">
+                                <li class="curreny-wrap">
+                                    $ Currency
+                                    <i class="fa fa-angle-down"></i>
+                                    <ul class="dropdown-list curreny-list">
+                                        <li><a href="#">$ USD</a></li>
+                                        <li><a href="#">€ EURO</a></li>
+                                    </ul>
+                                </li>
+                                <li class="language"> English<i class="fa fa-angle-down"></i>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#">english</a>
+                                        </li>
+                                        <li><a href="#">french</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <!-- Header Top Message End -->
+
                 </div>
             </div>
         </div>
@@ -102,20 +106,18 @@ function curl_get($url)
 
                         <!-- Header Menu Start -->
                         <div class="col-lg-6 d-none d-lg-block">
-
                             <div class="main-menu">
                                 <ul>
-                                    <li><a href="index.html">首页</a></li>
-                                    <!-- <li class="has-children">
-                                        <a href="#">主页<i class="fa fa-angle-down"></i></a>
+                                    <li class="has-children">
+                                        <a href="#">Home <i class="fa fa-angle-down"></i></a>
                                         <ul class="sub-menu">
                                             <li><a href="index.html">Home 1</a></li>
                                             <li><a href="index-2.html">Home 2</a></li>
                                             <li><a href="index-3.html">Home 3</a></li>
                                         </ul>
-                                    </li> -->
+                                    </li>
                                     <li class="has-children position-static">
-                                        <a href="#">产品<i class="fa fa-angle-down"></i></a>
+                                        <a href="#">Shop <i class="fa fa-angle-down"></i></a>
                                         <ul class="mega-menu row">
                                             <li class="col-3">
                                                 <h4 class="mega-menu-title">Shop Layout</h4>
@@ -164,7 +166,7 @@ function curl_get($url)
                                         </ul>
                                     </li>
                                     <li class="has-children">
-                                        <a href="#">页面 <i class="fa fa-angle-down"></i></a>
+                                        <a href="#">Pages <i class="fa fa-angle-down"></i></a>
                                         <ul class="sub-menu">
                                             <li><a href="about.html">About Us</a></li>
                                             <li><a href="contact.html">Contact Us</a></li>
@@ -175,7 +177,7 @@ function curl_get($url)
                                         </ul>
                                     </li>
                                     <li class="has-children">
-                                        <a href="#">博客<i class="fa fa-angle-down"></i></a>
+                                        <a href="#">Blog <i class="fa fa-angle-down"></i></a>
                                         <ul class="sub-menu">
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
@@ -184,11 +186,10 @@ function curl_get($url)
                                             <li><a href="blog-details-sidebar.html">Blog Details Sidebar</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="about.html">关于</a></li>
-                                    <li><a href="contact.html">联系</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
-
                         </div>
                         <!-- Header Menu End -->
 
@@ -216,6 +217,7 @@ function curl_get($url)
                                     <i class="fa fa-bars"></i>
                                 </a>
                                 <!-- Mobile Menu Hambarger Action Button End -->
+
                             </div>
                         </div>
                         <!-- Header Action End -->
@@ -275,7 +277,7 @@ function curl_get($url)
                                 <div class="product-quty-price">
                                     <span class="cart-quantity">3 <strong> × </strong></span>
                                     <span class="price">
-											<span class="new">$70.00</span>
+									<span class="new">$70.00</span>
                                     </span>
                                 </div>
                             </div>
@@ -304,7 +306,7 @@ function curl_get($url)
                                 <div class="product-quty-price">
                                     <span class="cart-quantity">4 <strong> × </strong></span>
                                     <span class="price">
-											<span class="new">$80.00</span>
+									<span class="new">$80.00</span>
                                     </span>
                                 </div>
                             </div>
@@ -333,7 +335,7 @@ function curl_get($url)
                                 <div class="product-quty-price">
                                     <span class="cart-quantity">2 <strong> × </strong></span>
                                     <span class="price">
-											<span class="new">$50.00</span>
+									<span class="new">$50.00</span>
                                     </span>
                                 </div>
                             </div>
@@ -374,628 +376,491 @@ function curl_get($url)
     </div>
     <!-- Header Section End -->
 
-    <!-- Hero/Intro Slider Start -->
+
+    <!-- Breadcrumb Section Start -->
     <div class="section">
-        <div class="hero-slider swiper-container">
-            <div class="swiper-wrapper">
 
-                <div class="hero-slide-item swiper-slide">
-                    <div class="hero-slide-bg">
-                        <img src="assets/images/slider/slider1-1.png" alt="Slider Image" />
-                    </div>
-                    <div class="container">
-                        <div class="hero-slide-content">
-                            <h2 class="title m-0">Get -30% off</h2>
-                            <p>Latest baby product & toy collections.</p>
-                            <a href="shop.html" class="btn btn-primary btn-hover-light">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero-slide-item swiper-slide">
-                    <div class="hero-slide-bg">
-                        <img src="assets/images/slider/slider1-2.png" alt="Slider Image" />
-                    </div>
-                    <div class="container">
-                        <div class="hero-slide-content">
-                            <h2 class="title m-0"> New Arrivals <br />Get flat 50% off </h2>
-                            <a href="shop.html" class="btn btn-primary btn-hover-light">Shop Now</a>
-                        </div>
-                    </div>
+        <!-- Breadcrumb Area Start -->
+        <div class="breadcrumb-area bg-primary">
+            <div class="container">
+                <div class="breadcrumb-content">
+                    <ul>
+                        <li>
+                            <a href="index.html"><i class="fa fa-home"></i> </a>
+                        </li>
+                        <li class="active"> Shop</li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Swiper Pagination Start -->
-            <div class="swiper-pagination d-lg-none"></div>
-            <!-- Swiper Pagination End -->
-
-            <!-- Swiper Navigation Start -->
-            <div class="home-slider-prev swiper-button-prev main-slider-nav d-lg-flex d-none"><i class="pe-7s-angle-left"></i></div>
-            <div class="home-slider-next swiper-button-next main-slider-nav d-lg-flex d-none"><i class="pe-7s-angle-right"></i></div>
-            <!-- Swiper Navigation End -->
         </div>
-    </div>
-    <!-- Hero/Intro Slider End -->
+        <!-- Breadcrumb Area End -->
 
-    <!-- Banner Section Start -->
+    </div>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Shop Section Start -->
     <div class="section section-margin">
-        <div class="container">
-            <!-- Banners Start -->
-            <div class="row mb-n6">
-
-                <!-- Banner Start -->
-                <div class="col-md-6 col-12 mb-6 pe-lg-2 pe-md-3">
-                    <a href="shop.html" class="banner" data-aos="fade-up" data-aos-delay="200">
-                        <img src="assets/images/banner/1.png" alt="Banner Image" />
-                    </a>
-                </div>
-                <!-- Banner End -->
-
-                <!-- Banner Start -->
-                <div class="col-md-6 col-12 mb-6 ps-lg-2 ps-md-3">
-                    <a href="shop.html" class="banner" data-aos="fade-up" data-aos-delay="400">
-                        <img src="assets/images/banner/2.png" alt="Banner Image" />
-                    </a>
-                </div>
-                <!-- Banner End -->
-
-            </div>
-            <!-- Banners End -->
-        </div>
-    </div>
-    <!-- Banner Section End -->
-
-    <!-- Product Section Start -->
-    <div class="section section-margin mt-0 position-relative">
-        <div class="container">
-            <!-- Section Title & Tab Start -->
-            <div class="row mb-lg-8 mb-6">
-                <!-- Section Title Start -->
-                <div class="col-lg col-12">
-                    <div class="section-title mb-0 text-center" data-aos="fade-up" data-aos-delay="200">
-                        <h2 class="title mb-2">最新系列</h2>
-                        <p>将特色产品添加到每周阵容</p>
-                    </div>
-                </div>
-                <!-- Section Title End -->
-            </div>
-            <!-- Section Title & Tab End -->
-            <!-- Products Tab Start -->
-            <div class="row">
-                <div class="col" data-aos="fade-up" data-aos-delay="600">
-                    <div class="product-carousel arrow-outside-container">
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <!--开始 -->
-                                <?php
-                                foreach ( $newestGoods as $row){
-                                      if ($row["sp_uid"] ==""){
-                                          $row["sp_name"]="虚拟物品";
-                                          $row["sp_price"]="？？？";
-                                          $img=$row["sp_imgpath"]="#";
-                                      }else{
-                                          $img=$homeConfig["imgPath"].$row["sp_imgpath"];
-                                      }
-                                      ?>
-                                <div class="swiper-slide">
-                                    <div class="product-wrapper">
-                                        <div class="product mb-6">
-                                            <div class="thumb">
-                                                <!--照片-->
-                                                <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
-                                                  <img class="fit-image" src="<?php echo $img; ?>" alt="Product" />
-                                                </a>
-                                                <!--照片结束-->
-                                                <div class="actions">
-                                                    <a  class="action wishlist"><i class="pe-7s-like"></i></a>
-                                                    <a  class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                                    <a  class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                                </div>
-                                                <!--添加到购物车-->
-                                                <div class="add-cart-btn">
-                                                    <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">添加到购物车</button>
-                                                </div>
-                                                <!--添加到购物车结束-->
-                                            </div>
-                                            <div class="content">
-                                                <h5 class="title">
-                                                    <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>">
-                                                        <?php echo $row["sp_name"] ?>
-                                                    </a>
-                                                </h5>
-                                                <span class="price">
-                                                    <span class="new">
-                                                        ￥<?php echo $row["sp_price"] ?>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--结束 -->
-                                <?php } ?>
-                            </div>
-                            <div class="swiper-pagination d-block d-md-none"></div>
-                            <div class="swiper-button-prev swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-left"></i></div>
-                            <div class="swiper-button-next swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-right"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Products Tab End -->
-        </div>
-
-        <div class="add-cart-btn" style="margin-left: 45%">
-            <a href="#"> <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">查看更多分类</button></a>
-        </div>
-    </div>
-    <!-- Product Section End -->
-
-    <!-- Testimonial Section Start -->
-    <div class="section testimonial-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title text-center" data-aos="fade-up" data-aos-delay="200">
-                        <h2 class="title text-white">Testimonials</h2>
-                        <p class="sub-title text-white">What they say</p>
-                    </div>
-                    <!-- Section Title End -->
-
-                    <!-- Testimonial Carousel Start -->
-                    <div class="testimonial-carousel" data-aos="fade-up" data-aos-delay="400">
-                        <div class="swiper-container testimonial-gallery-thumbs">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="assets/images/testimonial/thumb-1.png" alt="Product Image">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="assets/images/testimonial/thumb-2.png" alt="Product Image">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="assets/images/testimonial/thumb-3.png" alt="Product Image">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="assets/images/testimonial/thumb-4.png" alt="Product Image">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-container testimonial-gallery-top">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Content Start -->
-                                    <div class="testimonial-content text-center">
-                                        <p>Vivamus a lobortis ipsum, vel condimentum magna. Etiam id turpis tortor. Nunc scelerisque, nisi a blandit varius, nunc purus venenatis ligula, sed venenatis orci augue nec sapien. Cum sociis natoque</p>
-                                        <span class="ratings justify-content-center mb-3">
-												<span class="rating-wrap text-white">
-													<span class="star text-warning" style="width: 80%"></span>
-                                        </span>
-                                        <span class="rating-num text-light">(3)</span>
-                                        </span>
-                                        <h4 class="testimonial-author mb-0">Anamika lusy</h4>
-                                    </div>
-                                    <!-- Testimonial Content End -->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Content Start -->
-                                    <div class="testimonial-content text-center">
-                                        <p>Vivamus a lobortis ipsum, vel condimentum magna. Etiam id turpis tortor. Nunc scelerisque, nisi a blandit varius, nunc purus venenatis ligula, sed venenatis orci augue nec sapien. Cum sociis natoque</p>
-                                        <span class="ratings justify-content-center mb-3">
-												<span class="rating-wrap text-white">
-													<span class="star text-warning" style="width: 80%"></span>
-                                        </span>
-                                        <span class="rating-num text-light">(3)</span>
-                                        </span>
-                                        <h4 class="testimonial-author mb-0">Tinsy Nilom</h4>
-                                    </div>
-                                    <!-- Testimonial Content End -->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Content Start -->
-                                    <div class="testimonial-content text-center">
-                                        <p>Vivamus a lobortis ipsum, vel condimentum magna. Etiam id turpis tortor. Nunc scelerisque, nisi a blandit varius, nunc purus venenatis ligula, sed venenatis orci augue nec sapien. Cum sociis natoque</p>
-                                        <span class="ratings justify-content-center mb-3">
-												<span class="rating-wrap text-white">
-													<span class="star text-warning" style="width: 80%"></span>
-                                        </span>
-                                        <span class="rating-num text-light">(3)</span>
-                                        </span>
-                                        <h4 class="testimonial-author mb-0">Cristal Aryan</h4>
-                                    </div>
-                                    <!-- Testimonial Content End -->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Content Start -->
-                                    <div class="testimonial-content text-center">
-                                        <p>Vivamus a lobortis ipsum, vel condimentum magna. Etiam id turpis tortor. Nunc scelerisque, nisi a blandit varius, nunc purus venenatis ligula, sed venenatis orci augue nec sapien. Cum sociis natoque</p>
-                                        <span class="ratings justify-content-center mb-3">
-												<span class="rating-wrap text-white">
-													<span class="star text-warning" style="width: 80%"></span>
-                                        </span>
-                                        <span class="rating-num text-light">(3)</span>
-                                        </span>
-                                        <h4 class="testimonial-author mb-0">Jems Jhon</h4>
-                                    </div>
-                                    <!-- Testimonial Content End -->
-                                </div>
-                            </div>
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next swiper-button-white d-none"></div>
-                            <div class="swiper-button-prev swiper-button-white d-none"></div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Carousel End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial Section End -->
-
-    <!-- Product List Banner Section Start -->
-    <div class="section section-padding">
-        <div class="container">
-            <div class="row mb-n6">
-                <!-- Banner Start -->
-                <div class="col-lg-4 col-md-12 col-12 mb-6">
-                    <div class="banner" data-aos="fade-up" data-aos-delay="200">
-                        <a href="shop.html"><img src="assets/images/banner/3.png" alt="Banner Image" /></a>
-                    </div>
-                </div>
-                <!-- Banner End -->
-                <!-- Product List End -->
-                <!---左边的了--->
-                <!-- Product List Start -->
-                <div class="col-lg-4 col-md-6 col-12 mb-6">
-
-                    <!-- Product List Wrapper Start -->
-                    <div class="product-list-wrapper" data-aos="fade-up" data-aos-delay="600">
-
-                        <!-- Product List Title Start -->
-                        <div class="product-list-title mb-5">
-                            <h4 class="title">推荐产品</h4>
-                        </div>
-                        <!-- Product List Title End -->
-                        <!-- Product List Carousel Start -->
-                        <div class="product-list-carousel-2">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <?php
-                                        foreach ( $hotGoods as $row){
-                                            $img=$homeConfig["imgPath"].$row["sp_imgpath"];
-                                            if ($row["sp_uid"] ==""){
-                                                $row["sp_name"]="虚拟物品,等待添加";
-                                                $row["sp_price"]="？？？";
-                                                $img=$row["sp_imgpath"]="#";
-                                                $xingxing="0%";
-                                            }else{
-                                                $img=$homeConfig["imgPath"].$row["sp_imgpath"];
-                                                $star5=$row["sp_hot"];
-                                                if ($star5>=9){
-                                                    $xingxing="100%";
-                                                }elseif ($star5>=6){
-                                                    $xingxing="80%";
-                                                }elseif ($star5>=3){
-                                                    $xingxing="60%";
-                                                }else{
-                                                    $xingxing="40%";
-                                                }
-                                            }
-
-                                            ?>
-                                            <div class="single-product-list mb-4">
-                                                <div class="product">
-                                                    <div class="thumb">
-                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
-                                                            <img class="fit-image first-image" src="<?php echo $img; ?>" alt="Product Image">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-list-content">
-                                                    <h6 class="product-name">
-                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>"><?php echo $row["sp_name"] ?></a>
-                                                    </h6>
-                                                    <span class="ratings justify-content-start mb-3">
-														<span class="rating-wrap">
-															<span class="star" style="width: <?php echo $xingxing; ?>"></span>
-                                                </span>
-                                                <span class="rating-num"> </span>
-                                                </span>
-                                                    <span class="price">
-														<span class="new">$<?php echo $row["sp_price"] ?></span>
-                                                </span>
-                                                </div>
-                                            </div>
-                                            <?php
-                                        }
-                                        ?>
-                                    </div>
-                                </div>
-                                <!-- Swiper Pagination Start -->
-                                <div class="swiper-pagination d-none"></div>
-                                <!-- Swiper Pagination End -->
-                                <!-- Next Previous Button Start -->
-                                <div class="swiper-product-list-next swiper-button-next"><i class="pe-7s-angle-right"></i></div>
-                                <div class="swiper-product-list-prev swiper-button-prev"><i class="pe-7s-angle-left"></i></div>
-                                <!-- Next Previous Button End -->
-                            </div>
-                        </div>
-                        <!-- Product List Carousel End -->
-
-                    </div>
-                    <!-- Product List Wrapper End -->
-                </div>
-                <!-- Product List End -->
-
-                <!-- Product List End -->
-                <!---右边的了--->
-                <!-- Product List Start -->
-                <div class="col-lg-4 col-md-6 col-12 mb-6">
-
-                    <!-- Product List Wrapper Start -->
-                    <div class="product-list-wrapper" data-aos="fade-up" data-aos-delay="600">
-
-                        <!-- Product List Title Start -->
-                        <div class="product-list-title mb-5">
-                            <h4 class="title">精选产品</h4>
-                        </div>
-                        <!-- Product List Title End -->
-                        <!-- Product List Carousel Start -->
-                        <div class="product-list-carousel-2">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <?php
-                                        foreach ( $salesGoods as $row){
-                                        $img=$homeConfig["imgPath"].$row["sp_imgpath"];
-                                            if ($row["sp_uid"] ==""){
-                                                $row["sp_name"]="虚拟物品,等待添加";
-                                                $row["sp_price"]="？？？";
-                                                $img=$row["sp_imgpath"]="#";
-                                                $xingxing="0%";
-                                            }else{
-                                                $img=$homeConfig["imgPath"].$row["sp_imgpath"];
-                                                $star5=$row["sp_hot"];
-                                                if ($star5>=9){
-                                                    $xingxing="100%";
-                                                }elseif ($star5>=6){
-                                                    $xingxing="80%";
-                                                }elseif ($star5>=3){
-                                                    $xingxing="60%";
-                                                }else{
-                                                    $xingxing="40%";
-                                                }
-                                            }
-
-
-                                        ?>
-<!--                                         Single Product List Start-->
-                                        <div class="single-product-list mb-4">
-                                            <div class="product">
-                                                <div class="thumb">
-                                                    <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
-                                                        <img class="fit-image first-image" src="<?php echo $img; ?>" alt="Product Image">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product-list-content">
-                                                <h6 class="product-name">
-                                                    <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>"><?php echo $row["sp_name"] ?></a>
-                                                </h6>
-                                                <span class="ratings justify-content-start mb-3">
-														<span class="rating-wrap">
-															<span class="star" style="width: <?php echo $xingxing; ?>"></span>
-                                                </span>
-                                                <span class="rating-num"></span>
-                                                </span>
-                                                <span class="price">
-														<span class="new">$<?php echo $row["sp_price"] ?></span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                            <?php
-                                        }
-                                        ?>
-                                    </div>
-                                </div>
-                                <!-- Swiper Pagination Start -->
-                                <div class="swiper-pagination d-none"></div>
-                                <!-- Swiper Pagination End -->
-                                <!-- Next Previous Button Start -->
-                                <div class="swiper-product-list-next swiper-button-next"><i class="pe-7s-angle-right"></i></div>
-                                <div class="swiper-product-list-prev swiper-button-prev"><i class="pe-7s-angle-left"></i></div>
-                                <!-- Next Previous Button End -->
-                            </div>
-                        </div>
-                        <!-- Product List Carousel End -->
-
-                    </div>
-                    <!-- Product List Wrapper End -->
-                </div>
-                <!-- Product List End -->
-
-            </div>
-        </div>
-    </div>
-    <!-- Product List Banner Section End -->
-
-    <!-- Latest Blog Section Start -->
-    <div class="section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
 
-                    <!-- Section Title Start -->
-                    <div class="section-title text-center" data-aos="fade-up" data-aos-delay="300">
-                        <h2 class="title">Testimonials</h2>
-                        <p class="sub-title">What they say</p>
-                    </div>
-                    <!-- Section Title End -->
+                    <!--shop toolbar start-->
+                    <div class="shop_toolbar_wrapper flex-column flex-md-row pb-10 mb-n4">
 
-                    <!-- Latest Blog Carousel Start -->
-                    <div class="latest-blog-carousel arrow-outside-container" data-aos="fade-up" data-aos-delay="600">
-                        <div class="swiper-container">
+                        <!-- Shop Top Bar Left start -->
+                        <div class="shop-top-bar-left mb-4">
 
-                            <div class="swiper-wrapper">
-
-                                <div class="swiper-slide">
-                                    <!-- Single Blog Start -->
-                                    <div class="single-blog">
-                                        <!-- Blog Thumb Start -->
-                                        <div class="blog-thumb">
-                                            <a href="blog-details.html">
-                                                <img class="fit-image" src="assets/images/blog/blog-medium/1.jpg" alt="Blog Image">
-                                            </a>
-                                        </div>
-                                        <!-- Blog Thumb End -->
-                                        <!-- Blog Content Start -->
-                                        <div class="blog-content">
-                                            <div class="blog-meta">
-                                                <p>03/11/2021 | <span>Admin</span></p>
-                                            </div>
-                                            <h5 class="blog-title">
-                                                <a href="blog-details.html">It is a long established fact that a reader will be distracted</a>
-                                            </h5>
-                                        </div>
-                                        <!-- Blog Content End -->
-                                    </div>
-                                    <!-- Single Blog End -->
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <!-- Single Blog Start -->
-                                    <div class="single-blog">
-                                        <!-- Blog Thumb Start -->
-                                        <div class="blog-thumb">
-                                            <a href="blog-details.html">
-                                                <img class="fit-image" src="assets/images/blog/blog-medium/2.jpg" alt="Blog Image">
-                                            </a>
-                                        </div>
-                                        <!-- Blog Thumb End -->
-                                        <!-- Blog Content Start -->
-                                        <div class="blog-content">
-                                            <div class="blog-meta">
-                                                <p>03/11/2021 | <span>Admin</span></p>
-                                            </div>
-                                            <h5 class="blog-title">
-                                                <a href="blog-details.html">There are many variations of passages of lorem ipsum</a>
-                                            </h5>
-                                        </div>
-                                        <!-- Blog Content End -->
-                                    </div>
-                                    <!-- Single Blog End -->
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <!-- Single Blog Start -->
-                                    <div class="single-blog">
-                                        <!-- Blog Thumb Start -->
-                                        <div class="blog-thumb">
-                                            <a href="blog-details.html">
-                                                <img class="fit-image" src="assets/images/blog/blog-medium/3.jpg" alt="Blog Image">
-                                            </a>
-                                        </div>
-                                        <!-- Blog Thumb End -->
-                                        <!-- Blog Content Start -->
-                                        <div class="blog-content">
-                                            <div class="blog-meta">
-                                                <p>03/11/2021 | <span>Admin</span></p>
-                                            </div>
-                                            <h5 class="blog-title">
-                                                <a href="blog-details.html">The standard chunk of lorem ipsum used since</a>
-                                            </h5>
-                                        </div>
-                                        <!-- Blog Content End -->
-                                    </div>
-                                    <!-- Single Blog End -->
-                                </div>
-
+                            <div class="shop_toolbar_btn">
+                                <button data-role="grid_4" type="button" class="active btn-grid-4" title="Grid"><i class="fa fa-th"></i></button>
+                                <button data-role="grid_list" type="button" class="btn-list" title="List"><i class="fa fa-list"></i></button>
+                            </div>
+                            <div class="shop-top-show">
+                                <span>Showing 1–12 of 39 results</span>
                             </div>
 
-                            <!-- Swiper Pagination Start -->
-                            <div class="swiper-pagination d-block d-md-none"></div>
-                            <!-- Swiper Pagination End -->
-
-                            <!-- Next Previous Button Start -->
-                            <div class="swiper-blog-button-next swiper-button-next swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-right"></i></div>
-                            <div class="swiper-blog-button-prev swiper-button-prev swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-left"></i></div>
-                            <!-- Next Previous Button End -->
                         </div>
+                        <!-- Shop Top Bar Left end -->
+
+                        <!-- Shopt Top Bar Right Start -->
+                        <div class="shop-top-bar-right mb-4">
+
+                            <h4 class="title me-2">Short By: </h4>
+
+                            <div class="shop-short-by">
+                                <select class="nice-select" aria-label=".form-select-sm example">
+                                    <option selected>Short by Default</option>
+                                    <option value="1">Short by Popularity</option>
+                                    <option value="2">Short by Rated</option>
+                                    <option value="3">Short by Latest</option>
+                                    <option value="3">Short by Price</option>
+                                    <option value="3">Short by Price</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Shopt Top Bar Right End -->
+
                     </div>
-                    <!-- Latest Blog Carousel End -->
+                    <!--shop toolbar end-->
+
+                    <!-- Shop Wrapper Start -->
+                    <div class="row shop_wrapper grid_4">
+
+                        <!-- Single Product Start -->
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
+                            <div class="product-inner">
+                                <div class="thumb">
+                                    <a href="single-product.html" class="image">
+                                        <img class="first-image" src="assets/images/products/medium-product/2.jpg" alt="Product" />
+                                        <img class="second-image fit-image" src="assets/images/products/medium-product/3.jpg" alt="Product" />
+                                    </a>
+                                    <span class="badges">
+                                            <span class="sale">-18%</span>
+                                    </span>
+                                    <div class="actions">
+                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
+                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="single-product.html">Unique content product</a></h5>
+                                    <span class="price">
+                                            <span class="new">$12.50</span>
+                                    <span class="old">$14.50</span>
+                                    </span>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
+
+                        <!-- Single Product Start -->
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
+                            <div class="product-inner">
+                                <div class="thumb">
+                                    <a href="single-product.html" class="image">
+                                        <img class="first-image" src="assets/images/products/medium-product/1.jpg" alt="Product" />
+                                        <img class="second-image fit-image" src="assets/images/products/medium-product/2.jpg" alt="Product" />
+                                    </a>
+                                    <span class="badges">
+                                            <span class="sale">-18%</span>
+                                    </span>
+                                    <div class="actions">
+                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
+                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="single-product.html">New badge product</a></h5>
+                                    <span class="price">
+                                            <span class="new">$17.50</span>
+                                    </span>
+                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
+
+                        <!-- Single Product Start -->
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
+                            <div class="product-inner">
+                                <div class="thumb">
+                                    <a href="single-product.html" class="image">
+                                        <img class="first-image" src="assets/images/products/medium-product/3.jpg" alt="Product" />
+                                        <img class="second-image fit-image" src="assets/images/products/medium-product/4.jpg" alt="Product" />
+                                    </a>
+                                    <span class="badges"><span class="sale">-18%</span></span>
+                                    <div class="actions">
+                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
+                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="single-product.html">Soldout new product</a></h5>
+                                    <span class="price">
+                                            <span class="new">$19.50</span>
+                                    <span class="old">$21.50</span>
+                                    </span>
+                                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
+
+                        <!-- Single Product Start -->
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
+                            <div class="product-inner">
+                                <div class="thumb">
+                                    <a href="single-product.html" class="image">
+                                        <img class="first-image" src="assets/images/products/medium-product/5.jpg" alt="Product" />
+                                        <img class="second-image fit-image" src="assets/images/products/medium-product/6.jpg" alt="Product" />
+                                    </a>
+                                    <div class="actions">
+                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
+                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <div class="countdown-area">
+                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="single-product.html">Simple toy product</a></h5>
+                                    <span class="price">
+                                            <span class="new">$16.50</span>
+                                    </span>
+                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
+
+                        <!-- Single Product Start -->
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
+                            <div class="product-inner">
+                                <div class="thumb">
+                                    <a href="single-product.html" class="image">
+                                        <img class="first-image" src="assets/images/products/medium-product/7.jpg" alt="Product" />
+                                        <img class="second-image fit-image" src="assets/images/products/medium-product/8.jpg" alt="Product" />
+                                    </a>
+                                    <div class="actions">
+                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
+                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="single-product.html">Baby Cat Doll</a></h5>
+                                    <span class="price">
+                                            <span class="new">$11.00</span>
+                                    <span class="old">$13.00</span>
+                                    </span>
+                                    <p>A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
+
+                        <!-- Single Product Start -->
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
+                            <div class="product-inner">
+                                <div class="thumb">
+                                    <a href="single-product.html" class="image">
+                                        <img class="first-image" src="assets/images/products/medium-product/9.jpg" alt="Product" />
+                                        <img class="second-image fit-image" src="assets/images/products/medium-product/10.jpg" alt="Product" />
+                                    </a>
+                                    <span class="badges">
+                                            <span class="sale">-18%</span>
+                                    </span>
+                                    <div class="actions">
+                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
+                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="single-product.html">Demo product title</a></h5>
+                                    <span class="price">
+                                            <span class="new">$17.80</span>
+                                    <span class="old">$19.10</span>
+                                    </span>
+                                    <p>As opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
+
+                        <!-- Single Product Start -->
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
+                            <div class="product-inner">
+                                <div class="thumb">
+                                    <a href="single-product.html" class="image">
+                                        <img class="first-image" src="assets/images/products/medium-product/11.jpg" alt="Product" />
+                                        <img class="second-image fit-image" src="assets/images/products/medium-product/12.jpg" alt="Product" />
+                                    </a>
+                                    <div class="actions">
+                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
+                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="single-product.html">Dummy text for title</a></h5>
+                                    <span class="price">
+                                            <span class="new">$13.30</span>
+                                    <span class="old">$14.40</span>
+                                    </span>
+                                    <p>There are many variations of passages of lorem ipsum, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
+
+                        <!-- Single Product Start -->
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
+                            <div class="product-inner">
+                                <div class="thumb">
+                                    <a href="single-product.html" class="image">
+                                        <img class="first-image" src="assets/images/products/medium-product/3.jpg" alt="Product" />
+                                        <img class="second-image fit-image" src="assets/images/products/medium-product/4.jpg" alt="Product" />
+                                    </a>
+                                    <div class="actions">
+                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
+                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="single-product.html">Demo product title</a></h5>
+                                    <span class="price">
+                                            <span class="new">$11.90</span>
+                                    </span>
+                                    <p>There are many variations of passages of lorem ipsum, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
+
+                        <!-- Single Product Start -->
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
+                            <div class="product-inner">
+                                <div class="thumb">
+                                    <a href="single-product.html" class="image">
+                                        <img class="first-image" src="assets/images/products/medium-product/5.jpg" alt="Product" />
+                                        <img class="second-image fit-image" src="assets/images/products/medium-product/6.jpg" alt="Product" />
+                                    </a>
+                                    <div class="actions">
+                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
+                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="single-product.html">Product title here</a></h5>
+                                    <span class="price">
+                                            <span class="new">$18.70</span>
+                                    </span>
+                                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
+
+                        <!-- Single Product Start -->
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
+                            <div class="product-inner">
+                                <div class="thumb">
+                                    <a href="single-product.html" class="image">
+                                        <img class="first-image" src="assets/images/products/medium-product/7.jpg" alt="Product" />
+                                        <img class="second-image fit-image" src="assets/images/products/medium-product/8.jpg" alt="Product" />
+                                    </a>
+                                    <span class="badges">
+                                            <span class="sale">New</span>
+                                    </span>
+                                    <div class="actions">
+                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
+                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="single-product.html">Dummy text for title</a></h5>
+                                    <span class="price">
+                                            <span class="new">
+                                                $19.40
+                                            </span>
+                                    </span>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
+
+                        <!-- Single Product Start -->
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
+                            <div class="product-inner">
+                                <div class="thumb">
+                                    <a href="single-product.html" class="image">
+                                        <img class="first-image" src="assets/images/products/medium-product/9.jpg" alt="Product" />
+                                        <img class="second-image fit-image" src="assets/images/products/medium-product/10.jpg" alt="Product" />
+                                    </a>
+                                    <div class="actions">
+                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
+                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="single-product.html">Unique content product</a></h5>
+                                    <span class="price">
+                                            <span class="new">$20.20</span>
+                                    </span>
+                                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
+
+                        <!-- Single Product Start -->
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
+                            <div class="product-inner">
+                                <div class="thumb">
+                                    <a href="single-product.html" class="image">
+                                        <img class="first-image" src="assets/images/products/medium-product/11.jpg" alt="Product" />
+                                        <img class="second-image fit-image" src="assets/images/products/medium-product/12.jpg" alt="Product" />
+                                    </a>
+                                    <span class="badges">
+                                            <span class="sale">-18%</span>
+                                    </span>
+                                    <div class="actions">
+                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
+                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <div class="countdown-area">
+                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="single-product.html">Dummy text for title</a></h5>
+                                    <span class="price">
+                                            <span class="new">$15.60</span>
+                                    <span class="old">$18.60</span>
+                                    </span>
+                                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
+
+                    </div>
+                    <!-- Shop Wrapper End -->
+
+                    <!--shop toolbar start-->
+                    <div class="shop_toolbar_wrapper mt-10 mb-n4">
+
+                        <!-- Shop Top Bar Left start -->
+                        <div class="shop-bottom-bar-left mb-4">
+                            <div class="shop-short-by">
+                                <select class="nice-select rounded-0" aria-label=".form-select-sm example">
+                                    <option selected>Show 12 Per Page</option>
+                                    <option value="1">Show 12 Per Page</option>
+                                    <option value="2">Show 24 Per Page</option>
+                                    <option value="3">Show 15 Per Page</option>
+                                    <option value="3">Show 30 Per Page</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Shop Top Bar Left end -->
+
+                        <!-- Shopt Top Bar Right Start -->
+                        <div class="shop-top-bar-right mb-4">
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link rounded-0" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link rounded-0" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Shopt Top Bar Right End -->
+
+                    </div>
+                    <!--shop toolbar end-->
+
                 </div>
             </div>
         </div>
     </div>
-    <!-- Latest Blog Section End -->
-
-    <!-- Brand Logo Section Start -->
-    <div class="section section-margin">
-        <div class="container">
-            <div class="border-top border-bottom">
-                <div class="row">
-                    <div class="col-12" data-aos="fade-up" data-aos-delay="200">
-                        <!-- Brand Logo Wrapper Start -->
-                        <div class="brand-logo-carousel arrow-outside-container">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo">
-                                        <a href="#"><img src="assets/images/brand-logo/1.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo">
-                                        <a href="#"><img src="assets/images/brand-logo/2.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo">
-                                        <a href=""><img src="assets/images/brand-logo/3.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo">
-                                        <a href="#"><img src="assets/images/brand-logo/4.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo">
-                                        <a href="#"><img src="assets/images/brand-logo/5.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo">
-                                        <a href="#"><img src="assets/images/brand-logo/6.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                </div>
-
-                                <!-- Swiper Pagination Start -->
-                                <div class="swiper-pagination d-none"></div>
-                                <!-- Swiper Pagination End -->
-
-                                <!-- Next Previous Button Start -->
-                                <div class="swiper-logo-button-next swiper-button-next swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-right"></i></div>
-                                <div class="swiper-logo-button-prev swiper-button-prev swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-left"></i></div>
-                                <!-- Next Previous Button End -->
-                            </div>
-                        </div>
-                        <!-- Brand Logo Wrapper End -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Brand Logo Section End -->
+    <!-- Shop Section End -->
 
     <!-- Footer Section Start -->
     <footer class="section footer-section">
@@ -1052,12 +917,9 @@ function curl_get($url)
                                     </form>
                                     <!-- mailchimp-alerts Start -->
                                     <div class="mailchimp-alerts text-centre">
-                                        <div class="mailchimp-submitting"></div>
-                                        <!-- mailchimp-submitting end -->
-                                        <div class="mailchimp-success text-success"></div>
-                                        <!-- mailchimp-success end -->
-                                        <div class="mailchimp-error text-danger"></div>
-                                        <!-- mailchimp-error end -->
+                                        <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                        <div class="mailchimp-success text-success"></div><!-- mailchimp-success end -->
+                                        <div class="mailchimp-error text-danger"></div><!-- mailchimp-error end -->
                                     </div>
                                     <!-- mailchimp-alerts end -->
                                 </div>
@@ -1162,8 +1024,7 @@ function curl_get($url)
                             <!-- Price Box End -->
 
                             <!-- Description Start -->
-                            <p class="desc-content mb-5">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the
-                                master-builder of human happiness.</p>
+                            <p class="desc-content mb-5">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
                             <!-- Description End -->
 
                             <!-- Quantity Start -->
@@ -1383,11 +1244,36 @@ function curl_get($url)
         <!-- Mobile Menu Inner End -->
     </div>
     <!-- Mobile Menu End -->
+
     <!-- Scripts -->
     <!-- Global Vendor, plugins JS -->
+
     <!-- Vendor JS -->
+
+    <!-- 
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/vendor/jquery-migrate-3.3.0.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script> 
+    -->
+
+
     <!-- Plugins JS -->
+
+    <!-- 
+    <script src="assets/js/plugins/aos.min.js"></script>
+    <script src="assets/js/plugins/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/plugins/jquery-ui.min.js"></script>
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugins/countdown.min.js"></script>
+    <script src="assets/js/plugins/lightgallery-all.min.js"></script> 
+    -->
+
+
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+
 
     <script src="assets/js/vendor.min.js"></script>
     <script src="assets/js/plugins.min.js"></script>

@@ -13,6 +13,7 @@
 13.商品图片表(shop_waresimg)
 14.操作日志表(shop_log)  未建
 15.热度表() 未建表
+16.商品详情表(shop_waresimg)
 
 
 
