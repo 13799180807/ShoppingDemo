@@ -1,40 +1,57 @@
 <?php
 $homeConfig=array();
 $homeConfig["imgPath"]="../IMG/";
-
     if(isset($_GET['commodity'])){
-        //判断登入了没先不写
+         //判断登入了没先不写
          //商品图片信息
-         //商品具体说明
-          $url="http://localhost:801/ShoppingDemo/controller/detailsService.php";
-          $postdata=array();
-          $postdata['commodity']=$_GET['commodity'];
-          $postdata['tabletype']="shop_wares";
-          $detailsmian=curl_post($url,$postdata);
-          $detailsmian=JsonList($detailsmian);
-          foreach ($detailsmian as $row){
-              $spId=$row["sp_uid"];  //id
-              $spVarieties=$row["sp_varieties"]; //分类
-              $spName=$row["sp_name"];     //名字
-              $spPrice=$row["sp_price"];     //价格
-              $spNum=$row["sp_num"];     //库存
-              $spImgpath=$row["sp_imgpath"];     //主图
-              $spHot=$row["sp_hot"];     //访问量  星级
-              $spSold=$row["sp_sold"];     //已卖出
-              $spText=$row["sp_text"];     //描述
-              $xingxing="0%";
-              $img=$homeConfig["imgPath"].$row["sp_imgpath"];
-              $star5=$row["sp_hot"];
-              if ($star5>=9){
-                  $xingxing="100%";
-              }elseif ($star5>=6){
-                  $xingxing="80%";
-              }elseif ($star5>=3){
-                  $xingxing="60%";
-              }else{
-                  $xingxing="40%";
-              }
-          }
+         $imgrows=imgcurl();
+         //商品详细说明
+         $textrow=textcurl();
+
+         //商品主要信息
+         $detailmaintext=detailcurl();
+
+         if ($detailmaintext =="-1"){
+             //初始化数据
+             $spId="null";
+             $spVarieties="null";
+             $spName="null";
+             $spPrice="null";
+             $spNum="null";
+             $spImgpath="#";
+             $spHot="null";
+             $spSold="null";
+             $spText="null";
+             $xingxing="0%";
+             $img=$homeConfig["imgPath"]."#";
+             $star5="0";
+         }else{
+             //数据赋值
+             foreach ($detailmaintext as $row){
+                 $spId=$row["sp_uid"];  //id
+                 $spVarieties=$row["sp_varieties"]; //分类
+                 $spName=$row["sp_name"];     //名字
+                 $spPrice=$row["sp_price"];     //价格
+                 $spNum=$row["sp_num"];     //库存
+                 $spImgpath=$row["sp_imgpath"];     //主图
+                 $spHot=$row["sp_hot"];     //访问量  星级
+                 $spSold=$row["sp_sold"];     //已卖出
+                 $spText=$row["sp_text"];     //描述
+                 $xingxing="0%";
+                 $img=$homeConfig["imgPath"].$row["sp_imgpath"];
+                 $star5=$row["sp_hot"];
+                 if ($star5>=9){
+                     $xingxing="100%";
+                 }elseif ($star5>=6){
+                     $xingxing="80%";
+                 }elseif ($star5>=3){
+                     $xingxing="60%";
+                 }else{
+                     $xingxing="40%";
+                 }
+             }
+         }
+
     }else{
         echo "<script>alert('非法操作！');
            location.href='index.php';</script>";
@@ -44,11 +61,55 @@ $homeConfig["imgPath"]="../IMG/";
 ?>
 <?php
 
-function JsonList($json){
+function detailcurl(){
+    $url="http://localhost:801/ShoppingDemo/controller/detailsService.php";
+    $postdata=array();
+    $postdata['commodity']=$_GET['commodity'];
+    $postdata['tabletype']="shop_wares";
+    $detailsmian=curl_post($url,$postdata);
+    $detailsmian=JsonListisset($detailsmian);
+
+    if ($detailsmian=="-1"){
+        return -1;
+    }else{
+       return $detailsmian;
+    }
+}
+function textcurl(){
+    $url="http://localhost:801/ShoppingDemo/controller/waresTextService.php";
+    $postdata=array();
+    $postdata['commodity']=$_GET['commodity'];
+    $textlist=curl_post($url,$postdata);
+    $textlist=JsonListisset($textlist);
+    if ($textlist=="-1"){
+        return -1;
+    }else{
+        return $textlist;
+    }
+}
+function imgcurl(){
+    $url="http://localhost:801/ShoppingDemo/controller/waresImgService.php";
+    $postdata=array();
+    $postdata['commodity']=$_GET['commodity'];
+    $postdata['tabletype']="shop_waresimg";
+    $imglist=curl_post($url,$postdata);
+    $imglist=JsonListisset($imglist);
+    if ($imglist=="-1"){
+        return -1;
+    }else{
+        return $imglist;
+    }
+}
+function JsonListisset($json){
     $json=json_decode($json,true);
-    $json=$json["data"];
-    $json=$json["wareslist"];
-    return $json;
+    $dataisset=$json["datanum"];
+    if($dataisset=="1"){
+        $json=$json["data"];
+        $json=$json["wareslist"];
+        return $json;
+    }else{
+        return -1;
+    }
 }
 function curl_post( $url, $postdata ) {
     $header = array(
@@ -134,6 +195,7 @@ function curl_post( $url, $postdata ) {
                         <div class="main-menu">
                             <ul>
                                 <li><a href="index.php">主页</a></li>
+                                <li><a href="shop.php">更多商品</a></li>
                                 <li class="has-children position-static">
                                     <a href="#">Shop <i class="fa fa-angle-down"></i></a>
                                     <ul class="mega-menu row">
@@ -430,7 +492,7 @@ function curl_post( $url, $postdata ) {
                     <div class="single-product-img swiper-container product-gallery-top">
                         <div class="swiper-wrapper popup-gallery">
                             <a class="swiper-slide w-100" href="<?php echo $img; ?>">
-                                <img class="w-100" src="<?php echo $img; ?>" alt="Product">
+                                <img class="w-100" src="<?php echo $img; ?>" >
                             </a>
                         </div>
                     </div>
@@ -438,28 +500,29 @@ function curl_post( $url, $postdata ) {
 
                     <!-- Single Product Thumb Start  辅助图片 -->
                     <div class="single-product-thumb swiper-container product-gallery-thumbs">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="assets/images/products/small-product/10.jpg" alt="Product">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/products/small-product/2.jpg" alt="Product">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/products/small-product/3.jpg" alt="Product">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/products/small-product/15.jpg" alt="Product">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/products/small-product/8.jpg" alt="Product">
-                            </div>
-                        </div>
 
-                        <!-- Next Previous Button Start -->
-                        <div class="swiper-button-next swiper-button-white"><i class="pe-7s-angle-right"></i></div>
-                        <div class="swiper-button-prev swiper-button-white"><i class="pe-7s-angle-left"></i></div>
-                        <!-- Next Previous Button End -->
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="<?php echo $img; ?>" alt="Product">
+                            </div>
+
+
+                            <?php
+                            if ($imgrows=="-1"){
+                                $img1=$row["sp_imgpath"]="#";
+                            }else{
+                                foreach ($imgrows as $row){
+                                    $img1=$homeConfig["imgPath"].$row["sp_Path"];
+                                    ?>
+                            <div class="swiper-slide">
+                                <img src="<?php echo $img1; ?>" alt="Product">
+                            </div>
+                            <?php
+                              }
+                            }
+                            ?>
+                        </div>
 
                     </div>
                     <!-- Single Product Thumb End -->
@@ -600,7 +663,7 @@ function curl_post( $url, $postdata ) {
                         <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#connect-1" role="tab" aria-selected="true">商品详细描述</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#connect-2" role="tab" aria-selected="false">Reviews</a>
+                        <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#connect-2" role="tab" aria-selected="false">售后服务</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#connect-3" role="tab" aria-selected="false">运输政策</a>
@@ -612,8 +675,20 @@ function curl_post( $url, $postdata ) {
                 <div class="tab-content mb-text" id="myTabContent">
                     <div class="tab-pane fade show active" id="connect-1" role="tabpanel" aria-labelledby="home-tab">
                         <div class="desc-content p-3">
-                            <p class="mb-3">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
-                            <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                            <p class="mb-3">
+                               <?php
+                                   if ($textrow=="-1"){
+                                       $text00="该商品没有具体描述......";
+                                   }else{
+                                       foreach ($textrow as $row) {
+                                           $text00 =$row["spuidtext"];
+                                       }
+                                   }
+                                   ?>
+                                <?php   echo $text00; ?>
+
+                            </p>
+
                         </div>
                     </div>
                     <div class="tab-pane fade" id="connect-2" role="tabpanel" aria-labelledby="profile-tab">
@@ -622,32 +697,10 @@ function curl_post( $url, $postdata ) {
                             <!-- Start Single Review -->
                             <div class="single-review d-flex mb-4">
 
-                                <!-- Review Thumb Start -->
-                                <div class="review_thumb">
-                                    <img alt="review images" src="assets/images/review/1.jpg">
-                                </div>
-                                <!-- Review Thumb End -->
 
                                 <!-- Review Details Start -->
                                 <div class="review_details">
-                                    <div class="review_info mb-2">
 
-                                        <!-- Rating Start -->
-                                        <span class="ratings justify-content-start mb-3">
-                                                    <span class="rating-wrap">
-                                                        <span class="star" style="width: 100%"></span>
-                                            </span>
-                                            <span class="rating-num">(1)</span>
-                                            </span>
-                                        <!-- Rating End -->
-
-                                        <!-- Review Title & Date Start -->
-                                        <div class="review-title-date d-flex">
-                                            <h5 class="title">Admin - </h5><span> January 19, 2021</span>
-                                        </div>
-                                        <!-- Review Title & Date End -->
-
-                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in viverra ex, vitae vestibulum arcu. Duis sollicitudin metus sed lorem commodo, eu dapibus libero interdum. Morbi convallis viverra erat, et aliquet orci congue vel. Integer in odio enim. Pellentesque in dignissim leo. Vivamus varius ex sit amet quam tincidunt iaculis.</p>
                                 </div>
                                 <!-- Review Details End -->
@@ -657,66 +710,23 @@ function curl_post( $url, $postdata ) {
 
                             <!-- Rating Wrap Start -->
                             <div class="rating_wrap">
-                                <h5 class="rating-title mb-2">Add a review </h5>
-                                <p class="mb-2">Your email address will not be published. Required fields are marked *</p>
-                                <h6 class="rating-sub-title mb-2">Your Rating</h6>
+                                <h5 class="rating-title mb-2">7*24 在线服务 </h5>
+                                <p class="mb-2">您好，遇到问题可以随时找我们，我们真诚的为您服务，祝您购物愉快。</p>
+                                <h6 class="rating-sub-title mb-2">店铺总体星级</h6>
 
                                 <!-- Rating Start -->
                                 <span class="ratings justify-content-start mb-3">
                                             <span class="rating-wrap">
                                                 <span class="star" style="width: 100%"></span>
                                     </span>
-                                    <span class="rating-num">(2)</span>
+                                    <span class="rating-num">(5)</span>
                                     </span>
                                 <!-- Rating End -->
 
                             </div>
                             <!-- Rating Wrap End -->
 
-                            <!-- Comments ans Replay Start -->
-                            <div class="comments-area comments-reply-area">
-                                <div class="row">
-                                    <div class="col-lg-12 col-custom">
 
-                                        <!-- Comment form Start -->
-                                        <form action="#" class="comment-form-area">
-                                            <div class="row comment-input">
-
-                                                <!-- Input Name Start -->
-                                                <div class="col-md-6 col-custom comment-form-author mb-3">
-                                                    <label>Name <span class="required">*</span></label>
-                                                    <input type="text" required="required" name="Name">
-                                                </div>
-                                                <!-- Input Name End -->
-
-                                                <!-- Input Email Start -->
-                                                <div class="col-md-6 col-custom comment-form-emai mb-3">
-                                                    <label>Email <span class="required">*</span></label>
-                                                    <input type="text" required="required" name="email">
-                                                </div>
-                                                <!-- Input Email End -->
-
-                                            </div>
-                                            <!-- Comment Texarea Start -->
-                                            <div class="comment-form-comment mb-3">
-                                                <label>Comment</label>
-                                                <textarea class="comment-notes" required="required"></textarea>
-                                            </div>
-                                            <!-- Comment Texarea End -->
-
-                                            <!-- Comment Submit Button Start -->
-                                            <div class="comment-form-submit">
-                                                <button class="btn btn-dark btn-hover-primary">Submit</button>
-                                            </div>
-                                            <!-- Comment Submit Button End -->
-
-                                        </form>
-                                        <!-- Comment form End -->
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Comments ans Replay End -->
 
                         </div>
                         <!-- End Single Content -->
@@ -798,173 +808,6 @@ function curl_post( $url, $postdata ) {
 </div>
 <!-- Single Product Section End -->
 
-<!-- Product Section Start -->
-<div class="section section-margin mt-0 position-relative">
-    <div class="container">
-        <!-- Section Title & Tab Start -->
-        <div class="row mb-lg-8 mb-md-6 mb-4">
-
-            <!-- Section Title Start -->
-            <div class="col-lg col-12">
-                <div class="section-title mb-0 text-center">
-                    <h2 class="title mb-2">Featured Collection</h2>
-                    <p>Add featured products to weekly lineup</p>
-                </div>
-            </div>
-            <!-- Section Title End -->
-
-        </div>
-        <!-- Section Title & Tab End -->
-
-        <!-- Products Start -->
-        <div class="row">
-            <div class="col">
-                <div class="product-carousel arrow-outside-container">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-
-                            <!-- Product Start -->
-                            <div class="swiper-slide">
-                                <div class="product-wrapper">
-                                    <div class="product">
-                                        <div class="thumb">
-                                            <a href="single-product.html" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/1.jpg" alt="Product" />
-                                                <img class="second-image fit-image" src="assets/images/products/medium-product/3.jpg" alt="Product" />
-                                            </a>
-                                            <span class="badges">
-														<span class="sale">-18%</span>
-                                                </span>
-                                            <div class="actions">
-                                                <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                            </div>
-                                            <div class="add-cart-btn">
-                                                <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="title"><a href="single-product.html">Dinosaur Toys for Baby</a></h5>
-                                            <span class="price">
-														<span class="new">
-															$12.50
-														</span>
-                                                </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Product End -->
-
-                            <!-- Product Start -->
-                            <div class="swiper-slide">
-                                <div class="product-wrapper">
-                                    <div class="product">
-                                        <div class="thumb">
-                                            <a href="single-product.html" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/2.jpg" alt="Product" />
-                                            </a>
-                                            <span class="badges">
-														<span class="sale">-20%</span>
-                                                </span>
-                                            <div class="actions">
-                                                <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                            </div>
-                                            <div class="add-cart-btn">
-                                                <button class="btn btn-sm btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="title"><a href="single-product.html">Mini Car Toy for Kids</a></h5>
-                                            <span class="price">
-														<span class="new">$38.50</span>
-                                                <span class="old">$42.85</span>
-                                                </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Product End -->
-
-                            <!-- Product Start -->
-                            <div class="swiper-slide">
-                                <div class="product-wrapper">
-                                    <div class="product">
-                                        <div class="thumb">
-                                            <a href="single-product.html" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/3.jpg" alt="Product" />
-                                            </a>
-                                            <span class="badges">
-														<span class="new">New</span>
-                                                </span>
-                                            <div class="actions">
-                                                <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                            </div>
-                                            <div class="add-cart-btn">
-                                                <button class="btn btn-sm btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="title"><a href="single-product.html">Robotics for Kids</a></h5>
-                                            <span class="price">
-														<span class="new">
-															$28.50
-														</span>
-                                                </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Product End -->
-
-                            <!-- Product Start -->
-                            <div class="swiper-slide">
-                                <div class="product-wrapper">
-                                    <div class="product">
-                                        <div class="thumb">
-                                            <a href="single-product.html" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/4.jpg" alt="Product" />
-                                            </a>
-                                            <div class="actions">
-                                                <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                            </div>
-                                            <div class="add-cart-btn">
-                                                <button class="btn btn-sm btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="title"><a href="single-product.html">Baby Cat Doll</a></h5>
-                                            <span class="price">
-														<span class="new">
-															$25.50
-														</span>
-                                                </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Product End -->
-
-                        </div>
-
-                        <div class="swiper-pagination d-block d-md-none"></div>
-                        <div class="swiper-button-prev swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-left"></i></div>
-                        <div class="swiper-button-next swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-right"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Products End -->
-    </div>
-</div>
-<!-- Product Section End -->
 
 <!-- Footer Section Start -->
 <footer class="section footer-section">
@@ -1043,7 +886,7 @@ function curl_post( $url, $postdata ) {
             <div class="row align-items-center">
                 <div class="col-12 text-center">
                     <div class="copyright-content">
-                        <p class="mb-0">Copyright &copy; 2021.Company name All rights reserved.<a target="_blank" href="https://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+                        <p class="mb-0">Copyright &copy; 2021.Company name All rights reserved.<a target="_blank" >XXX版权所有</a></p>
                     </div>
                 </div>
             </div>

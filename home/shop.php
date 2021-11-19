@@ -1,232 +1,99 @@
+<?php
+
+$sorttype=sortcurl();
+
+
+?>
+<?php
+
+function sortcurl(){
+    $url="http://localhost:801/ShoppingDemo/controller/waresSortlistService.php";
+    $postdata=array();
+    $postdata['Sortlist']="*";
+    $sorttype=curl_post($url,$postdata);
+    $sorttype=JsonListisset($sorttype);
+    if ($sorttype=="-1"){
+        return -1;
+    }else{
+        return $sorttype;
+    }
+}
+function JsonListisset($json){
+    $json=json_decode($json,true);
+    $dataisset=$json["datanum"];
+    if($dataisset=="1"){
+        $json=$json["data"];
+        $json=$json["wareslist"];
+        return $json;
+    }else{
+        return -1;
+    }
+}
+function curl_get($url)
+{
+    $header = array(
+        'Accept: application/json',
+    );
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_HEADER, 0);
+    curl_setopt($curl, CURLOPT_TIMEOUT, 1);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+    $data = curl_exec($curl);
+
+    if (curl_error($curl)) {
+        print "Error: " . curl_error($curl);
+    } else {
+        curl_close($curl);
+        return $data;
+    }
+}
+function curl_post($url,$postdata ) {
+    $header = array(
+        'Accept: application/json',
+    );
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_HEADER, 0);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl, CURLOPT_TIMEOUT, 10);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE );
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE );
+    curl_setopt($curl, CURLOPT_POST, 1);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
+    $data = curl_exec($curl);
+    if (curl_error($curl)) {
+        print "Error: " . curl_error($curl);
+    } else {
+        curl_close($curl);
+        return $data;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toyqo - Kids Store Bootstrap 5 Template</title>
-
-    <!-- Favicons -->
+    <title>商品分类查看</title>
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-    <!-- Vendor CSS (Icon Font) -->
-
-    <!-- 
-<link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css" />
-<link rel="stylesheet" href="assets/css/vendor/pe-icon-7-stroke.min.css" /> 
--->
-
-
-    <!-- Plugins CSS (All Plugins Files) -->
-
-
-    <!-- 
-<link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
-<link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
-<link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
-<link rel="stylesheet" href="assets/css/plugins/aos.min.css" />
-<link rel="stylesheet" href="assets/css/plugins/nice-select.min.css" />
--->
-
-
-    <!-- Main Style CSS -->
-    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
-
-
-    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-
-
     <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
     <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-
-
-
-
-
 </head>
 
 <body>
+
+
     <!-- Header Section Start -->
     <div class="header section">
 
-        <!-- Header Top Start -->
-        <div class="header-top bg-primary">
-            <div class="container">
-                <div class="row align-items-center">
 
-                    <!-- Header Top Message Start -->
-                    <div class="col-md-12 col-lg-6 text-lg-start text-center">
-                        <div class="header-top-msg-wrapper">
-                            <p class="header-top-message">Welcome to Toyqo baby toys online store</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 text-end d-none d-lg-block">
-                        <div class="header-top-settings">
-                            <ul class="nav align-items-center justify-content-end">
-                                <li class="curreny-wrap">
-                                    $ Currency
-                                    <i class="fa fa-angle-down"></i>
-                                    <ul class="dropdown-list curreny-list">
-                                        <li><a href="#">$ USD</a></li>
-                                        <li><a href="#">€ EURO</a></li>
-                                    </ul>
-                                </li>
-                                <li class="language"> English<i class="fa fa-angle-down"></i>
-                                    <ul class="dropdown-list">
-                                        <li><a href="#">english</a>
-                                        </li>
-                                        <li><a href="#">french</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Header Top Message End -->
-
-                </div>
-            </div>
-        </div>
-        <!-- Header Top End -->
-
-        <!-- Header Bottom Start -->
-        <div class="header-bottom">
-            <div class="header-sticky">
-                <div class="container">
-                    <div class="row align-items-center position-relative">
-
-                        <!-- Header Logo Start -->
-                        <div class="col-md-6 col-lg-3 col-xl-2 col-6">
-                            <div class="header-logo">
-                                <a href="index.html"><img src="assets/images/logo/logo.png" alt="Site Logo" /></a>
-                            </div>
-                        </div>
-                        <!-- Header Logo End -->
-
-                        <!-- Header Menu Start -->
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="main-menu">
-                                <ul>
-                                    <li class="has-children">
-                                        <a href="#">Home <i class="fa fa-angle-down"></i></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="index.html">Home 1</a></li>
-                                            <li><a href="index-2.html">Home 2</a></li>
-                                            <li><a href="index-3.html">Home 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-children position-static">
-                                        <a href="#">Shop <i class="fa fa-angle-down"></i></a>
-                                        <ul class="mega-menu row">
-                                            <li class="col-3">
-                                                <h4 class="mega-menu-title">Shop Layout</h4>
-                                                <ul class="mb-n2">
-                                                    <li><a href="shop.html">Shop Grid</a></li>
-                                                    <li><a href="shop-left-sidebar.html">Left Sidebar</a></li>
-                                                    <li><a href="shop-right-sidebar.html">Right Sidebar</a></li>
-                                                    <li><a href="shop-list-fullwidth.html">List Fullwidth</a></li>
-                                                    <li><a href="shop-list-left-sidebar.html">List Left Sidebar</a></li>
-                                                    <li><a href="shop-list-right-sidebar.html">List Right Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="col-3">
-                                                <h4 class="mega-menu-title">Product Layout</h4>
-                                                <ul class="mb-n2">
-                                                    <li><a href="single-product.html">Single Product</a></li>
-                                                    <li><a href="single-product-sale.html">Single Product Sale</a></li>
-                                                    <li><a href="single-product-group.html">Single Product Group</a></li>
-                                                    <li><a href="single-product-normal.html">Single Product Normal</a></li>
-                                                    <li><a href="single-product-affiliate.html">Single Product Affiliate</a></li>
-                                                    <li><a href="single-product-slider.html">Single Product Slider</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="col-3">
-                                                <h4 class="mega-menu-title">Product Layout</h4>
-                                                <ul class="mb-n2">
-                                                    <li><a href="single-product-gallery-left.html">Gallery Left</a></li>
-                                                    <li><a href="single-product-gallery-right.html">Gallery Right</a></li>
-                                                    <li><a href="single-product-tab-style-left.html">Tab Style Left</a></li>
-                                                    <li><a href="single-product-tab-style-right.html">Tab Style Right</a></li>
-                                                    <li><a href="single-product-sticky-left.html">Sticky Left</a></li>
-                                                    <li><a href="single-product-sticky-right.html">Sticky Right</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="col-3">
-                                                <h4 class="mega-menu-title">Other Pages</h4>
-                                                <ul class="mb-n2">
-                                                    <li><a href="my-account.html">My Account</a></li>
-                                                    <li><a href="login.html">Loging | Register</a></li>
-                                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                                    <li><a href="cart.html">Cart</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                    <li><a href="compare.html">Compare</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-children">
-                                        <a href="#">Pages <i class="fa fa-angle-down"></i></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="contact.html">Contact Us</a></li>
-                                            <li><a href="error-404.html">Error 404</a></li>
-                                            <li><a href="faq.html">FAQ</a></li>
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="register.html">Register</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-children">
-                                        <a href="#">Blog <i class="fa fa-angle-down"></i></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                            <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                            <li><a href="blog-details-sidebar.html">Blog Details Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Header Menu End -->
-
-                        <!-- Header Action Start -->
-                        <div class="col-md-6 col-lg-3 col-xl-4 col-6 justify-content-end">
-                            <div class="header-actions">
-                                <a href="javascript:void(0)" class="header-action-btn header-action-btn-search d-none d-lg-block"><i class="pe-7s-search"></i></a>
-                                <div class="dropdown-user d-none d-lg-block">
-                                    <a href="javascript:void(0)" class="header-action-btn"><i class="pe-7s-user"></i></a>
-                                    <ul class="dropdown-menu-user">
-                                        <li><a class="dropdown-item" href="#">Usd</a></li>
-                                        <li><a class="dropdown-item" href="#">Pound</a></li>
-                                        <li><a class="dropdown-item" href="#">Taka</a></li>
-                                    </ul>
-                                </div>
-                                <a href="wishlist.html" class="header-action-btn header-action-btn-wishlist">
-                                    <i class="pe-7s-like"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="header-action-btn header-action-btn-cart">
-                                    <i class="pe-7s-cart"></i>
-                                    <span class="header-action-num">3</span>
-                                </a>
-                                <!-- Mobile Menu Hambarger Action Button Start -->
-                                <a href="javascript:void(0)" class="header-action-btn header-action-btn-menu d-lg-none d-md-block">
-                                    <i class="fa fa-bars"></i>
-                                </a>
-                                <!-- Mobile Menu Hambarger Action Button End -->
-
-                            </div>
-                        </div>
-                        <!-- Header Action End -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Header Bottom End -->
 
         <!-- Offcanvas Search Start -->
         <div class="offcanvas-search">
@@ -239,7 +106,7 @@
                 <!-- Button Close End -->
 
                 <!-- Offcanvas Search Form Start -->
-                <form class="offcanvas-search-form" action="#">
+                <form class="offcanvas-search-form" action="#" >
                     <input type="text" placeholder="Search Product..." class="offcanvas-search-input">
                 </form>
                 <!-- Offcanvas Search Form End -->
@@ -386,9 +253,11 @@
                 <div class="breadcrumb-content">
                     <ul>
                         <li>
-                            <a href="index.html"><i class="fa fa-home"></i> </a>
+                            <a href="index.php"><i class="fa fa-home"></i> </a>
                         </li>
-                        <li class="active"> Shop</li>
+                        <li class="active">
+                            <a href="index.php">返回主界面</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -415,7 +284,7 @@
                                 <button data-role="grid_list" type="button" class="btn-list" title="List"><i class="fa fa-list"></i></button>
                             </div>
                             <div class="shop-top-show">
-                                <span>Showing 1–12 of 39 results</span>
+                                <span>当前一共数据有：xx</span>
                             </div>
 
                         </div>
@@ -423,19 +292,29 @@
 
                         <!-- Shopt Top Bar Right Start -->
                         <div class="shop-top-bar-right mb-4">
+                            <!--表单请求-->
+                            <form action="shop.php" method="post" >
+                                <div class="shop-short-by">
+                                    <select   name="type11" class="nice-select" aria-label=".form-select-sm example">
+                                        <option value="*">查询全部</option>
 
-                            <h4 class="title me-2">Short By: </h4>
-
-                            <div class="shop-short-by">
-                                <select class="nice-select" aria-label=".form-select-sm example">
-                                    <option selected>Short by Default</option>
-                                    <option value="1">Short by Popularity</option>
-                                    <option value="2">Short by Rated</option>
-                                    <option value="3">Short by Latest</option>
-                                    <option value="3">Short by Price</option>
-                                    <option value="3">Short by Price</option>
-                                </select>
-                            </div>
+                                        <?php
+                                        if ($sorttype=="-1"){
+                                            $ty="数据异常";
+                                        }else{
+                                            foreach ($sorttype as $row){
+                                                $ty=$row['sort_name'];
+                                        ?>
+                                        <option value="<?php  echo $ty; ?>"><?php  echo $ty; ?></option>
+                                        <?php
+                                            }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                                <input class="btn btn-whited btn-hover-primary text-capitalize add-to-cart" type="submit" value="点击查询">
+                            </form>
+                            <!--表单请求结束-->
                         </div>
                         <!-- Shopt Top Bar Right End -->
 
@@ -939,7 +818,7 @@
                 <div class="row align-items-center">
                     <div class="col-12 text-center">
                         <div class="copyright-content">
-                            <p class="mb-0">Copyright &copy; 2021.Company name All rights reserved.<a target="_blank" href="https://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+                            <p class="mb-0">Copyright &copy; 2021.Company name All rights reserved.</p>
                         </div>
                     </div>
                 </div>

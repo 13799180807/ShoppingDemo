@@ -19,6 +19,20 @@ $newestGoods=curl_get($url2);
 $newestGoods=JsonList($newestGoods);
 
 
+
+
+
+function JsonListisset($json){
+    $json=json_decode($json,true);
+    $dataisset=$json["datanum"];
+    if($dataisset=="1"){
+        $json=$json["data"];
+        $json=$json["wareslist"];
+        return $json;
+    }else{
+        return -1;
+    }
+}
 function JsonList($json){
     $json=json_decode($json,true);
     $json=$json["data"];
@@ -40,6 +54,28 @@ function curl_get($url)
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
     $data = curl_exec($curl);
 
+    if (curl_error($curl)) {
+        print "Error: " . curl_error($curl);
+    } else {
+        curl_close($curl);
+        return $data;
+    }
+}
+function curl_post( $url, $postdata ) {
+    $header = array(
+        'Accept: application/json',
+    );
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_HEADER, 0);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl, CURLOPT_TIMEOUT, 10);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE );
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE );
+    curl_setopt($curl, CURLOPT_POST, 1);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
+    $data = curl_exec($curl);
     if (curl_error($curl)) {
         print "Error: " . curl_error($curl);
     } else {
@@ -105,15 +141,8 @@ function curl_get($url)
 
                             <div class="main-menu">
                                 <ul>
-                                    <li><a href="index.html">首页</a></li>
-                                    <!-- <li class="has-children">
-                                        <a href="#">主页<i class="fa fa-angle-down"></i></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="index.html">Home 1</a></li>
-                                            <li><a href="index-2.html">Home 2</a></li>
-                                            <li><a href="index-3.html">Home 3</a></li>
-                                        </ul>
-                                    </li> -->
+                                    <li><a href="index.php">首页</a></li>
+                                    <li><a href="shop.php">更多商品</a></li>
                                     <li class="has-children position-static">
                                         <a href="#">产品<i class="fa fa-angle-down"></i></a>
                                         <ul class="mega-menu row">
@@ -738,7 +767,7 @@ function curl_get($url)
 
                         <!-- Product List Title Start -->
                         <div class="product-list-title mb-5">
-                            <h4 class="title">精选产品</h4>
+                            <h4 class="title">销量最高</h4>
                         </div>
                         <!-- Product List Title End -->
                         <!-- Product List Carousel Start -->
@@ -1077,7 +1106,7 @@ function curl_get($url)
                 <div class="row align-items-center">
                     <div class="col-12 text-center">
                         <div class="copyright-content">
-                            <p class="mb-0">Copyright &copy; 2021.Company name All rights reserved.<a target="_blank" href="https://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+                            <p class="mb-0">Copyright &copy; 2021.Company name All rights reserved</p>
                         </div>
                     </div>
                 </div>
