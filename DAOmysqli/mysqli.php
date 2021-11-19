@@ -3,6 +3,42 @@ require_once './../util/mysqli_connection.php';
 require_once './../config/log.php';
 
 
+
+
+
+
+/**
+ * @param $tableName
+ * @param $fileds
+ * @return int|mixed
+ * 根据表名查询全部信息
+ */
+function getAllList($tableName,$fileds){
+    /**
+     * 查询全部数据
+     * 表名，查询的字段名
+     */
+    $sql="SELECT {$fileds} FROM {$tableName}";
+    $conn=getConn();
+    $result=$conn->query($sql);
+    $row=mysqli_num_rows($result);  //受影响行数
+    $log="执行了：  {$sql};  受影响行数为：{$row} ";
+    conlog::AddLog($log,"ConLog");
+    if($row>0){
+        $rows=$result->fetch_all();
+        mysqli_free_result($result);
+        mysqli_close($conn);
+        return $rows;
+
+    }else{
+        mysqli_free_result($result);
+        mysqli_close($conn);
+        return -1;
+    }
+}
+
+
+
 /**
  * @param $tableName
  * @param $fileds

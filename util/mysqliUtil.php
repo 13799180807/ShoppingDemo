@@ -1,6 +1,11 @@
 <?php
 require_once 'mysqli_connection.php';
 
+
+
+
+
+
 function text(){
     /**
      * 更新测试
@@ -42,6 +47,22 @@ function text(){
         echo "没有结果";
     }
 
+}
+function getAllList($tableName,$fileds){
+    /**
+     * 查询全部数据
+     * 表名，查询的字段名
+     */
+    $sql="SELECT {$fileds} FROM {$tableName}";
+    $conn=getConn();
+    $result=$conn->query($sql);
+    $row=mysqli_num_rows($result);  //受影响行数
+    echo $row;
+
+    $rows=$result->fetch_all();
+    mysqli_free_result($result);
+    mysqli_close($conn);
+    return $rows;
 }
 function getquerysql($sql){
     /**
@@ -111,19 +132,6 @@ function getAllOne($tableName,$fileds,$condition){
      * 返回结果集
      */
     $sql="SELECT {$fileds} FROM {$tableName} WHERE {$condition}";
-    $conn=getConn();
-    $result=$conn->query($sql);
-    $rows=$result->fetch_all();
-    mysqli_free_result($result);
-    mysqli_close($conn);
-    return $rows;
-}
-function getAllList($tableName,$fileds){
-    /**
-     * 查询全部数据
-     * 表名，查询的字段名
-     */
-    $sql="SELECT {$fileds} FROM {$tableName}";
     $conn=getConn();
     $result=$conn->query($sql);
     $rows=$result->fetch_all();

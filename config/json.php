@@ -29,13 +29,15 @@ require_once 'config.php';
 //    //$a=failJson("网络异常","");
 //    //echo $a;
 //}
-function successJson($msg,$dataList){
+function successJson($msg,$dataList,$statusdata="1"){
     /**
      * 成功json返回值
+     * $statusdata="1" 默认是有数据，否则就是没数据
      */
     $status=success;
     $json = array(
         'status' => $status,
+        'datanum'=>$statusdata,
         'msg' => $msg,
         'data' =>$dataList
     );

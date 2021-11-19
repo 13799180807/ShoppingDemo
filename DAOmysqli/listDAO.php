@@ -1,6 +1,9 @@
 <?php
 require_once 'mysqli.php';
 require_once '../model/Wares.php';
+require_once '../model/imgWares.php';
+require_once '../model/textWares.php';
+require_once '../model/sortWares.php';
 require_once '../config/json.php';
 
 function conf(){
@@ -14,7 +17,81 @@ function conf(){
     $queryCoodtion['create_time']="create_time";//根据最新查询（创建时间）
     $queryCoodtion['sp_sold']="sp_sold";//根据销量查询显示
     $queryCoodtion['shop_wares']="shop_wares";//商品表   --对应数据库表明
+    $queryCoodtion['shop_waresimg']="shop_waresimg";//商品图片表   --对应数据库表明
+    $queryCoodtion['shop_warestest']="shop_warestext";//商品详细信息表   --对应数据库表明
+    $queryCoodtion['shop_sort']="shop_sort";//商品分类表   --对应数据库表明
     return $queryCoodtion;
+}
+
+
+/**
+ * @param $spuid
+ * @return false|string
+ * 查询商品详细信息就是文本说明用的
+ */
+function textWaresimpl($spuid){
+    $sqlconfig=conf();
+    $tablename=$sqlconfig["shop_warestest"]; //表名
+    $condition="sp_uid='{$spuid}'";
+    if (getIssetOne($tablename,$condition)){
+        $fileds='sp_uid,spuidtext'; //查询字段
+        $condtion="sp_uid='{$spuid}'";  //条件
+        $rows=getAllOne($tablename,$fileds,$condtion);
+        $arr=textWareslist($rows);
+        $json=successJson("请求成功",$arr);
+        return $json;
+    }else{
+        $arr=array(
+            0=>array('',''),
+        );
+        $arr=imgWareslist($arr);
+        $json=successJson("请求成功,数据不存在",$arr,"0");
+        return $json;
+    }
+}
+function sortWaresimpl(){
+    $sqlconfig=conf();
+    $tablename=$sqlconfig["shop_sort"]; //表名
+    $rows=getAllList($tablename,"*");
+    if($rows =="-1"){
+        $arr=array(
+            0=>array(''),
+        );
+        $arr=sortWareslist($arr);
+        $json=successJson("请求成功,数据不存在",$arr,"0");
+        return $json;
+    }else{
+        $arr=sortWareslist($rows);
+        $json=successJson("请求成功",$arr);
+        return $json;
+    }
+}
+
+
+/**
+ * @param $spuid
+ * @return false|string
+ * 显示图片用的
+ */
+function imgWarespagelist($spuid){
+    $sqlconfig=conf();
+    $tablename=$sqlconfig["shop_waresimg"]; //表名
+    $condition="sp_uid='{$spuid}'";
+    if (getIssetOne($tablename,$condition)){
+        $fileds='sp_uid,img_path'; //查询字段
+        $condtion="sp_uid='{$spuid}'";  //条件
+        $rows=getAllOne($tablename,$fileds,$condtion);
+        $arr=imgWareslist($rows);
+        $json=successJson("请求成功",$arr);
+        return $json;
+    }else{
+        $arr=array(
+            0=>array('',''),
+        );
+        $arr=imgWareslist($arr);
+        $json=successJson("请求成功,数据不存在",$arr,"0");
+        return $json;
+    }
 }
 
 /**
