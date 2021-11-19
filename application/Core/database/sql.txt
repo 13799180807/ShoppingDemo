@@ -1,0 +1,107 @@
+function alld(){
+    $sql="select * from demo where id>=2 ";
+    $conn=mysqlConnect();
+    $stmt = $conn->stmt_init();
+    $stmt->prepare($sql);
+    $stmt->execute();
+    $result=$stmt->get_result();
+    $rows=$result->fetch_all(2);
+    var_dump($rows);
+//    foreach($rows as $v){
+//      //  print_r($v).'<br>';
+//         var_dump($v);
+//    }
+    $stmt->free_result();
+    $stmt->close();
+    $conn->close();
+}
+function quert(){
+
+    $a=1;
+    $sql="select * from demo where  id=?";
+    $conn=mysqlConnect();
+    $stmt = $conn->stmt_init();  //构建空白的语句对象
+    $stmt->prepare($sql);
+    $stmt->bind_param("s",$a);
+    $result = $stmt->execute();
+   // $row = $result->fetch_assoc();
+   // $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
+  //  var_dump($row);
+ //   echo $row;
+
+    $stmt->bind_result($id,$user,$pwd,$test);
+    $stmt->fetch();
+    echo $id,$user,$pwd , $test;
+    $stmt->free_result();
+
+
+    if ($result){
+        echo '成功';
+    }else{
+        echo '失败';
+    }
+    var_dump($result);
+    $stmt->close();
+    $conn->close();
+}
+function del(){
+    $a=40;
+    $sql="DELETE FROM demo WHERE id = ?";
+    $conn=mysqlConnect();
+    $stmt = $conn->stmt_init();  //构建空白的语句对象
+    $stmt->prepare($sql);
+    $stmt->bind_param("s",$a);
+    $result = $stmt->execute();
+    if ($result){
+        echo '成功';
+    }else{
+        echo '失败';
+    }
+    var_dump($result);
+    $stmt->close();
+    $conn->close();
+}
+
+function upade(){
+    $a=12;
+    $b=2;
+    $c=3;
+    $d=1;
+    $conn=mysqlConnect();
+    $sql = "update demo set user=?,pwd=?,test=? where id=?";
+    $stmt = $conn->stmt_init();  //构建空白的语句对象
+    $stmt->prepare($sql);
+    $stmt->bind_param("ssss",$a,$b,$c,$d);
+    $result = $stmt->execute();
+    if ($result){
+        echo '成功';
+    }else{
+        echo '失败';
+    }
+    var_dump($result);
+    $stmt->close();
+    $conn->close();
+}
+
+function insert(){
+    $a=11;
+    $b=2;
+    $c=3;
+    $conn=mysqlConnect();
+    $sql="insert into demo(user,pwd,test) value (?,?,?)";
+    $stmt=$conn->stmt_init();
+    $stmt->prepare($sql);
+    $stmt->bind_param("sss",$a,$b,$c);
+    $result=$stmt->execute();
+    if ($result){
+        echo '成功';
+    }else{
+        echo '失败';
+    }
+
+  //  $rows  = $result->fetch_all();
+  //  var_dump($rows);
+    var_dump($result);
+    $stmt->close();
+    $conn->close();
+}

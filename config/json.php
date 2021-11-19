@@ -54,5 +54,4 @@ function failJson($msg,$dataList){
         'data' =>$dataList
     );
     return json_encode($json);
-
 }

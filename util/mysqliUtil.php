@@ -2,10 +2,6 @@
 require_once 'mysqli_connection.php';
 
 
-
-
-
-
 function text(){
     /**
      * 更新测试

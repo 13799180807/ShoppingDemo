@@ -29,11 +29,3 @@ function getConn(){
     }
 
 }
-function  releaseRes(){
-    /**
-     * 释放资源
-     */
-
-
-
-}
