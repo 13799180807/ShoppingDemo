@@ -1,0 +1,254 @@
+2021-11-22 10:48:46
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 10:48:46
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 10:48:46
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 10:49:47
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 10:49:47
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 10:49:47
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 10:50:05
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 10:50:05
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 10:50:05
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 10:58:00
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 10:58:00
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 10:58:00
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 10:58:34
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 10:58:34
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 10:58:34
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 10:59:09
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 10:59:09
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 10:59:09
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 10:59:47
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 10:59:47
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 10:59:47
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:00:20
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:00:20
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:00:20
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:01:02
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:01:02
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:01:02
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:01:35
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:01:35
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:01:35
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:02:19
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:02:19
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:02:19
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:02:20
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:02:20
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:02:20
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:03:00
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:03:00
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:03:00
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:04:08
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:04:08
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:04:08
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:04:39
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:04:39
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:04:39
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:04:43
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:04:43
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:04:43
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:10
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:10
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:10
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:12
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:12
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:12
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:13
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:13
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:13
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:13
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:13
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:13
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:14
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:14
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:14
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:14
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:14
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:05:14
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:50
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:50
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:50
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:57
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:57
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:57
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:57
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:57
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:57
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:57
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:57
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:57
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:58
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:58
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:07:58
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:29:41
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:29:41
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:29:41
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:29:53
+执行了：  SELECT * FROM shop_waresimg WHERE sp_uid='8';  受影响行数为：1 作用：判断数据库存在不存在该数据（大于0存在）
+2021-11-22 11:29:53
+执行了：  SELECT sp_uid,img_path FROM shop_waresimg WHERE sp_uid='8';  受影响行数为：1 
+2021-11-22 11:29:53
+执行了：  SELECT * FROM shop_warestext WHERE sp_uid='8';  受影响行数为：0 作用：判断数据库存在不存在该数据（大于0存在）
+2021-11-22 11:29:53
+执行了：  SELECT * FROM shop_wares WHERE sp_uid='8';  受影响行数为：1 作用：判断数据库存在不存在该数据（大于0存在）
+2021-11-22 11:29:53
+执行了：  SELECT sp_uid,sp_varieties,sp_name,sp_price,sp_num,sp_imgpath,sp_hot,sp_sold,sp_text FROM shop_wares WHERE sp_uid='8';  受影响行数为：1 
+2021-11-22 11:30:10
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:30:10
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:30:10
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:30:30
+执行了：  SELECT * FROM shop_sort;  受影响行数为：3 
+2021-11-22 11:31:08
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:31:08
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:31:08
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:31:41
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:31:41
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:31:41
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:32:08
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:32:08
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:32:08
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:33:09
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:33:09
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:33:09
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:44:03
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 11:44:03
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 11:44:03
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 11:44:05
+执行了：  SELECT * FROM shop_waresimg WHERE sp_uid='5';  受影响行数为：0 作用：判断数据库存在不存在该数据（大于0存在）
+2021-11-22 11:44:05
+执行了：  SELECT * FROM shop_warestext WHERE sp_uid='5';  受影响行数为：1 作用：判断数据库存在不存在该数据（大于0存在）
+2021-11-22 11:44:05
+执行了：  SELECT sp_uid,spuidtext FROM shop_warestext WHERE sp_uid='5';  受影响行数为：1 
+2021-11-22 11:44:05
+执行了：  SELECT * FROM shop_wares WHERE sp_uid='5';  受影响行数为：1 作用：判断数据库存在不存在该数据（大于0存在）
+2021-11-22 11:44:05
+执行了：  SELECT sp_uid,sp_varieties,sp_name,sp_price,sp_num,sp_imgpath,sp_hot,sp_sold,sp_text FROM shop_wares WHERE sp_uid='5';  受影响行数为：1 
+2021-11-22 11:44:14
+执行了：  SELECT * FROM shop_waresimg WHERE sp_uid='3';  受影响行数为：4 作用：判断数据库存在不存在该数据（大于0存在）
+2021-11-22 11:44:14
+执行了：  SELECT sp_uid,img_path FROM shop_waresimg WHERE sp_uid='3';  受影响行数为：4 
+2021-11-22 11:44:14
+执行了：  SELECT * FROM shop_warestext WHERE sp_uid='3';  受影响行数为：1 作用：判断数据库存在不存在该数据（大于0存在）
+2021-11-22 11:44:14
+执行了：  SELECT sp_uid,spuidtext FROM shop_warestext WHERE sp_uid='3';  受影响行数为：1 
+2021-11-22 11:44:14
+执行了：  SELECT * FROM shop_wares WHERE sp_uid='3';  受影响行数为：1 作用：判断数据库存在不存在该数据（大于0存在）
+2021-11-22 11:44:14
+执行了：  SELECT sp_uid,sp_varieties,sp_name,sp_price,sp_num,sp_imgpath,sp_hot,sp_sold,sp_text FROM shop_wares WHERE sp_uid='3';  受影响行数为：1 
+2021-11-22 14:15:17
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_sold  desc limit 6;  受影响行数为：5 
+2021-11-22 14:15:17
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by sp_hot  desc limit 6;  受影响行数为：5 
+2021-11-22 14:15:17
+执行了：  SELECT sp_uid,sp_name,sp_price,sp_imgpath,sp_hot,sp_sold FROM shop_wares WHERE  sp_state='上架'   order by create_time  desc limit 6;  受影响行数为：5 
+2021-11-22 14:15:34
+执行了：  SELECT * FROM shop_waresimg WHERE sp_uid='8';  受影响行数为：1 作用：判断数据库存在不存在该数据（大于0存在）
+2021-11-22 14:15:34
+执行了：  SELECT sp_uid,img_path FROM shop_waresimg WHERE sp_uid='8';  受影响行数为：1 
+2021-11-22 14:15:34
+执行了：  SELECT * FROM shop_warestext WHERE sp_uid='8';  受影响行数为：0 作用：判断数据库存在不存在该数据（大于0存在）
+2021-11-22 14:15:34
+执行了：  SELECT * FROM shop_wares WHERE sp_uid='8';  受影响行数为：1 作用：判断数据库存在不存在该数据（大于0存在）
+2021-11-22 14:15:34
+执行了：  SELECT sp_uid,sp_varieties,sp_name,sp_price,sp_num,sp_imgpath,sp_hot,sp_sold,sp_text FROM shop_wares WHERE sp_uid='8';  受影响行数为：1 
