@@ -10,7 +10,7 @@ class waresDaolmpl implements waresDao{
      * @param $num
      * @param $state
      * @return false|mixed|string
-     * 主页分类拆查询结果返回例如最新最热推荐
+     * 主页分类查询结果返回例如最新最热推荐
      */
     public function waresShowindex($typea, $num, $state)
     {

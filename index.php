@@ -1,4 +1,11 @@
 <?php
+/**
+ * 收集错误
+ */
+error_reporting(-1);
+ini_set('display_errors',0);
+ini_set('log_errors',1);
+ini_set('error_log','logs/sys_log');
 require 'application/Core/database/Connection.php';
 require 'application/Config/config.php';
 require 'application/Config/json.php';
