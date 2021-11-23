@@ -1,29 +1,18 @@
 <?php
-require_once './../DAOmysqli/listDAO.php';
 header("Content-type:application/json;charset=utf-8");
 
+//商品主页分类显示查询
+/**
+ * 分类查询显示
+ */
+//$dao = new waresDaolmpl();
+//$json=$dao->waresShowindex("sp_hot","5","上架");
+//echo $json;
 
 
 
 
-
-if(isset($_POST['Sort'])){
-    $typeSort=$_POST['Sort'];  //分类类型查看
-
-
-
-
-
-    //分页查询用的
-    //当个是哪个页面
-    //页面显示几条数据
-
-    //首先先执行一此要查询的分页数据看数据是否存在
-
-
-
-
-
+//if(isset($_GET['fltyqu'])){
 //    $query=$_GET["fltyqu"];
 //    $querynum=$_GET["num"];
 //    if($query=="sp_hot"){
@@ -41,29 +30,10 @@ if(isset($_POST['Sort'])){
 //        $json=failJson("请求失败",$errlist);
 //        echo $json;
 //    }
-
-}else{
-    $errlist=array(
-        "wareslist"=>array(
-            'err'=>"请输入正确值",
-            'tips'=>"请不要进行违法操作",),
-    );
-    $json=failJson("请求失败",$errlist);
-    echo $json;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
+//}else{
+//    $errlist=array();
+//    $errlist['err']="请输入正确值";
+//    $json=failJson("请求失败",$errlist);
+//    echo $json;
+//}

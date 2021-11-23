@@ -7,6 +7,17 @@ class WaresText
     public $spuidtext;
 
     /**
+     * WaresText constructor.
+     * @param $sp_uid
+     * @param $spuidtext
+     */
+    public function __construct($sp_uid="", $spuidtext="")
+    {
+        $this->sp_uid = $sp_uid;
+        $this->spuidtext = $spuidtext;
+    }
+
+    /**
      * @return mixed
      */
     public function getSpUid()

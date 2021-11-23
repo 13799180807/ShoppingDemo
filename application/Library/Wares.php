@@ -15,7 +15,7 @@ class Wares
     var $sp_collection; //商品收藏数
     var $sp_sold;     //已售出
     var $sp_admin;    //操作者
-    var $create_time;
+    var $create_time; //创建时间
 
     /**
      * @return mixed
@@ -223,7 +223,7 @@ class Wares
     public function setCreateTime($create_time): void
     {
         $this->create_time = $create_time;
-    }  //创建时间
+    }
 
 
 

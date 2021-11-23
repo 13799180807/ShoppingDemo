@@ -4,7 +4,14 @@
 class WaresImg
 {
     public $sp_uid;  //商品UID
-    public $sp_Path;
+    public $sp_Path; //图片路径
+
+    public function __construct($sp_uid="", $sp_Path="")
+    {
+        $this->sp_uid = $sp_uid;
+        $this->sp_Path = $sp_Path;
+    }
+
 
     /**
      * @return mixed
@@ -36,7 +43,6 @@ class WaresImg
     public function setSpPath($sp_Path): void
     {
         $this->sp_Path = $sp_Path;
-    } //商品图片地址
-
+    }
 
 }
