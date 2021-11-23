@@ -19,7 +19,7 @@ require 'application/Model/WaresModelAll.php';
 /**
  * 分类查询显示
  */
-$dao = new waresDaolmpl();
+//$dao = new waresDaolmpl();
 //$json=$dao->waresShowindex("sp_hot","5","上架");
 
 //$json=$dao->waresShowImg("3");
@@ -28,8 +28,8 @@ $dao = new waresDaolmpl();
 //$json=$dao->waresShowText("50");
 //echo $json;
 
-$json=$dao->waresShowDetails(3);
-echo $json;
+//$json=$dao->waresShowDetails(3);
+//echo $json;
 
 
 

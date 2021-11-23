@@ -5,9 +5,9 @@ header("Content-type:application/json;charset=utf-8");
 /**
  * 分类查询显示
  */
-//$dao = new waresDaolmpl();
-//$json=$dao->waresShowindex("sp_hot","5","上架");
-//echo $json;
+$dao = new waresDaolmpl();
+$json=$dao->waresShowindex("sp_hot","5","上架");
+echo $json;
 
 
 
