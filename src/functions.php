@@ -56,7 +56,7 @@ function failJson($msg,$dataList){
     /**
      * 失败返回值
      */
-    $status=fail;
+    $status=FAIL;
     $json = array(
         'status' => $status,
         'msg' => $msg,

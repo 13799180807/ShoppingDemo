@@ -1,19 +1,29 @@
 <?php
-function routes(){
-    $routes=array();
-    $routes['he']="1";
-    $routes['ha']="2";
-    $routes['3q']="3";
-    $routes['4s']="是不是标签";
-    $routes['5r']="中标";
-    return $routes;
-}
+
+    Route::any(function (){
+
+
+        $parame=parameterList($_REQUEST);
+        if(uri($_SERVER["REQUEST_URI"])=="/index"){
+            $json=WaresController::waresSortAll($parame);
+            echo $json;
+        }elseif(uri($_SERVER["REQUEST_URI"])=="/index/details"){
+            $json=WaresController::waresDetailsAll($parame);
+            echo $json;
+        }elseif(uri($_SERVER["REQUEST_URI"])=="/index/details/img"){
+            $json=WaresController::waresImgAll($parame);
+            echo $json;
+        }elseif(uri($_SERVER["REQUEST_URI"])=="/index/details/text"){
+            $json=WaresController::waresTextAll($parame);
+            echo $json;
+        }
+        else{
+
+            echo "<h2>404</h2>我进来了但是迷路了......";
+        }
 
 
 
-
-
-
-
+    });
 
 

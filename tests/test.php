@@ -3,8 +3,10 @@ require '../src/settings.php';
 
 
 //主页用的
-//$c=WaresController::waresSortAll();
-//var_dump($c);
+//$arr=array();
+//$arr["method"]="hot";
+//$c=WaresController::waresSortAll($arr);
+//echo $c;
 
 
 //某个商品的图片
@@ -17,8 +19,8 @@ require '../src/settings.php';
 
 
 //商品详情页面显示
-$c=WaresController::waresDetailsAll();
-echo $c;
+//$c=WaresController::waresDetailsAll();
+//echo $c;
 
 
 
