@@ -1,6 +1,8 @@
 <?php
-$homeConfig=array();
-$homeConfig["imgPath"]="../../../public/images/";
+require 'config.php';
+require 'curl.php';
+
+
     if(isset($_GET['commodity'])){
          //判断登入了没先不写
          //商品图片信息
@@ -54,7 +56,7 @@ $homeConfig["imgPath"]="../../../public/images/";
 
     }else{
         echo "<script>alert('非法操作！');
-           location.href='1.php';</script>";
+           location.href='index.php';</script>";
         exit;
     }
 
@@ -62,6 +64,7 @@ $homeConfig["imgPath"]="../../../public/images/";
 <?php
 
 function detailcurl(){
+
     $url="http://localhost:801/ShoppingDemo/controller/detailsService.php";
     $postdata=array();
     $postdata['commodity']=$_GET['commodity'];
@@ -76,11 +79,12 @@ function detailcurl(){
     }
 }
 function textcurl(){
-    $url="http://localhost:801/ShoppingDemo/controller/waresTextService.php";
+  //  http://localhost:8080/index/details/text/?uid=3
+    $url="http://localhost:8080/index/details/text/";
     $postdata=array();
-    $postdata['commodity']=$_GET['commodity'];
+    $postdata['uid']=$_GET['commodity'];
     $textlist=curl_post($url,$postdata);
-    $textlist=JsonListisset($textlist);
+    $textlist=JsonList($textlist);
     if ($textlist=="-1"){
         return -1;
     }else{
@@ -88,49 +92,15 @@ function textcurl(){
     }
 }
 function imgcurl(){
-    $url="http://localhost:801/ShoppingDemo/controller/waresImgService.php";
+    $url="http://localhost:8080/index/details/img/ ";
     $postdata=array();
-    $postdata['commodity']=$_GET['commodity'];
-    $postdata['tabletype']="shop_waresimg";
+    $postdata['uid']=$_GET['commodity'];
     $imglist=curl_post($url,$postdata);
-    $imglist=JsonListisset($imglist);
+    $imglist=JsonList($imglist);
     if ($imglist=="-1"){
         return -1;
     }else{
         return $imglist;
-    }
-}
-function JsonListisset($json){
-    $json=json_decode($json,true);
-    $dataisset=$json["datanum"];
-    if($dataisset=="1"){
-        $json=$json["data"];
-        $json=$json["wareslist"];
-        return $json;
-    }else{
-        return -1;
-    }
-}
-function curl_post( $url, $postdata ) {
-    $header = array(
-       'Accept: Application/json',
-    );
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_HEADER, 0);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($curl, CURLOPT_TIMEOUT, 10);
-    curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE );
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE );
-    curl_setopt($curl, CURLOPT_POST, 1);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
-    $data = curl_exec($curl);
-    if (curl_error($curl)) {
-        print "Error: " . curl_error($curl);
-    } else {
-        curl_close($curl);
-        return $data;
     }
 }
 ?>

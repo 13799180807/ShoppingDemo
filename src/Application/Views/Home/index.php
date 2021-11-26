@@ -1,88 +1,19 @@
 <?php
+require 'curl.php';
+require 'config.php';
 
-$homeConfig=array();
-$homeConfig["imgPath"]="../../../public/images/";
-
-//$salesGoods=homepageWares("sp_sold","5");//销量最高  火爆产品
-$url="http://localhost:801/ShoppingDemo/controller/waresAllService.php?fltyqu=sp_sold&num=6";
-$salesGoods=curl_get($url);
+$urlsold="http://localhost:8080/index/?method=sold";
+$salesGoods=curl_get($urlsold);
 $salesGoods=JsonList($salesGoods);
 
-//$hotGoods=homepageWares("sp_hot",6);  //热度排序  推荐
-$url1="http://localhost:801/ShoppingDemo/controller/waresAllService.php?fltyqu=sp_hot&num=6";
-$hotGoods=curl_get($url1);
+$urlhot="http://localhost:8080/index/?method=sold";
+$hotGoods=curl_get($urlhot);
 $hotGoods=JsonList($hotGoods);
 
-//$newestGoods=homepageWares("create_time",6);//最新上架
-$url2="http://localhost:801/ShoppingDemo/controller/waresAllService.php?fltyqu=create_time&num=6";
-$newestGoods=curl_get($url2);
+$urlnewest="http://localhost:8080/index/?method=time";
+$newestGoods=curl_get($urlnewest);
 $newestGoods=JsonList($newestGoods);
 
-
-
-
-
-function JsonListisset($json){
-    $json=json_decode($json,true);
-    $dataisset=$json["datanum"];
-    if($dataisset=="1"){
-        $json=$json["data"];
-        $json=$json["wareslist"];
-        return $json;
-    }else{
-        return -1;
-    }
-}
-function JsonList($json){
-    $json=json_decode($json,true);
-    $json=$json["data"];
-    $list=$json["wareslist"];
-    return $list;
-}
-function curl_get($url)
-{
-    $header = array(
-        'Accept: Application/json',
-    );
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_HEADER, 0);
-    curl_setopt($curl, CURLOPT_TIMEOUT, 1);
-    curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-    $data = curl_exec($curl);
-
-    if (curl_error($curl)) {
-        print "Error: " . curl_error($curl);
-    } else {
-        curl_close($curl);
-        return $data;
-    }
-}
-function curl_post( $url, $postdata ) {
-    $header = array(
-        'Accept: Application/json',
-    );
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_HEADER, 0);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($curl, CURLOPT_TIMEOUT, 10);
-    curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE );
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE );
-    curl_setopt($curl, CURLOPT_POST, 1);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
-    $data = curl_exec($curl);
-    if (curl_error($curl)) {
-        print "Error: " . curl_error($curl);
-    } else {
-        curl_close($curl);
-        return $data;
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -497,52 +428,50 @@ function curl_post( $url, $postdata ) {
                             <div class="swiper-wrapper">
                                 <!--开始 -->
                                 <?php
-                                foreach ( $newestGoods as $row){
-                                      if ($row["sp_uid"] ==""){
-                                          $row["sp_name"]="虚拟物品";
-                                          $row["sp_price"]="？？？";
-                                          $img=$row["sp_imgpath"]="#";
-                                      }else{
-                                          $img=$homeConfig["imgPath"].$row["sp_imgpath"];
-                                      }
-                                      ?>
-                                <div class="swiper-slide">
-                                    <div class="product-wrapper">
-                                        <div class="product mb-6">
-                                            <div class="thumb">
-                                                <!--照片-->
-                                                <a href="single-product.php?commodity=<?php echo $row[" class="image">
-                                                  <img class="fit-image" src="<?php echo $img; ?>" alt="Product" />
-                                                </a>
-                                                <!--照片结束-->
-                                                <div class="actions">
-                                                    <a  class="action wishlist"><i class="pe-7s-like"></i></a>
-                                                    <a  class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                                    <a  class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                                </div>
-                                                <!--添加到购物车-->
-                                                <div class="add-cart-btn">
-                                                    <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">添加到购物车</button>
-                                                </div>
-                                                <!--添加到购物车结束-->
-                                            </div>
-                                            <div class="content">
-                                                <h5 class="title">
-                                                    <a href="single-product.php?commodity=<?php echo $row[">
-                                                        <?php echo $row["sp_name"] ?>
+
+                                if ($newestGoods=="-1"){
+
+                                }else{
+                                    foreach ( $newestGoods as $row){
+                                        $img=IMG_PATH.$row["sp_imgpath"];
+                                    ?>
+                                    <div class="swiper-slide">
+                                        <div class="product-wrapper">
+                                            <div class="product mb-6">
+                                                <div class="thumb">
+                                                    <!--照片-->
+                                                    <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
+                                                        <img class="fit-image" src="<?php echo $img; ?>" alt="Product" />
                                                     </a>
-                                                </h5>
-                                                <span class="price">
+                                                    <!--照片结束-->
+                                                    <div class="actions">
+                                                        <a  class="action wishlist"><i class="pe-7s-like"></i></a>
+                                                        <a  class="action compare"><i class="pe-7s-refresh-2"></i></a>
+                                                        <a  class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
+                                                    </div>
+                                                    <!--添加到购物车-->
+                                                    <div class="add-cart-btn">
+                                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">添加到购物车</button>
+                                                    </div>
+                                                    <!--添加到购物车结束-->
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="title">
+                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>">
+                                                            <?php echo $row["sp_name"] ?>
+                                                        </a>
+                                                    </h5>
+                                                    <span class="price">
                                                     <span class="new">
                                                         ￥<?php echo $row["sp_price"] ?>
                                                     </span>
                                                 </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!--结束 -->
-                                <?php } ?>
+                                    <!--结束 -->
+                                <?php }} ?>
                             </div>
                             <div class="swiper-pagination d-block d-md-none"></div>
                             <div class="swiper-button-prev swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-left"></i></div>
@@ -691,15 +620,12 @@ function curl_post( $url, $postdata ) {
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <?php
-                                        foreach ( $hotGoods as $row){
-                                            $img=$homeConfig["imgPath"].$row["sp_imgpath"];
-                                            if ($row["sp_uid"] ==""){
-                                                $row["sp_name"]="虚拟物品,等待添加";
-                                                $row["sp_price"]="？？？";
-                                                $img=$row["sp_imgpath"]="#";
-                                                $xingxing="0%";
-                                            }else{
-                                                $img=$homeConfig["imgPath"].$row["sp_imgpath"];
+                                        if ($hotGoods=="-1"){
+
+                                        }else{
+                                            foreach ( $hotGoods as $row){
+
+                                                $img=IMG_PATH.$row["sp_imgpath"];
                                                 $star5=$row["sp_hot"];
                                                 if ($star5>=9){
                                                     $xingxing="100%";
@@ -710,20 +636,19 @@ function curl_post( $url, $postdata ) {
                                                 }else{
                                                     $xingxing="40%";
                                                 }
-                                            }
 
                                             ?>
                                             <div class="single-product-list mb-4">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.php?commodity=<?php echo $row[" class="image">
+                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
                                                             <img class="fit-image first-image" src="<?php echo $img; ?>" alt="Product Image">
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="product-list-content">
                                                     <h6 class="product-name">
-                                                        <a href="single-product.php?commodity=<?php echo $row["><?php echo $row["sp_name"] ?></a>
+                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>"><?php echo $row["sp_name"] ?></a>
                                                     </h6>
                                                     <span class="ratings justify-content-start mb-3">
 														<span class="rating-wrap">
@@ -737,6 +662,7 @@ function curl_post( $url, $postdata ) {
                                                 </div>
                                             </div>
                                             <?php
+                                            }
                                         }
                                         ?>
                                     </div>
@@ -776,15 +702,11 @@ function curl_post( $url, $postdata ) {
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <?php
-                                        foreach ( $salesGoods as $row){
-                                        $img=$homeConfig["imgPath"].$row["sp_imgpath"];
-                                            if ($row["sp_uid"] ==""){
-                                                $row["sp_name"]="虚拟物品,等待添加";
-                                                $row["sp_price"]="？？？";
-                                                $img=$row["sp_imgpath"]="#";
-                                                $xingxing="0%";
-                                            }else{
-                                                $img=$homeConfig["imgPath"].$row["sp_imgpath"];
+                                        if ($salesGoods=="-1"){
+
+                                        }else{
+                                            foreach ( $salesGoods as $row){
+                                                $img=IMG_PATH.$row["sp_imgpath"];
                                                 $star5=$row["sp_hot"];
                                                 if ($star5>=9){
                                                     $xingxing="100%";
@@ -795,35 +717,33 @@ function curl_post( $url, $postdata ) {
                                                 }else{
                                                     $xingxing="40%";
                                                 }
-                                            }
-
-
-                                        ?>
-<!--                                         Single Product List Start-->
-                                        <div class="single-product-list mb-4">
-                                            <div class="product">
-                                                <div class="thumb">
-                                                    <a href="single-product.php?commodity=<?php echo $row[" class="image">
-                                                        <img class="fit-image first-image" src="<?php echo $img; ?>" alt="Product Image">
-                                                    </a>
+                                            ?>
+                                            <!--Single Product List Start-->
+                                            <div class="single-product-list mb-4">
+                                                <div class="product">
+                                                    <div class="thumb">
+                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
+                                                            <img class="fit-image first-image" src="<?php echo $img; ?>" alt="Product Image">
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="product-list-content">
-                                                <h6 class="product-name">
-                                                    <a href="single-product.php?commodity=<?php echo $row["><?php echo $row["sp_name"] ?></a>
-                                                </h6>
-                                                <span class="ratings justify-content-start mb-3">
+                                                <div class="product-list-content">
+                                                    <h6 class="product-name">
+                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>"><?php echo $row["sp_name"] ?></a>
+                                                    </h6>
+                                                    <span class="ratings justify-content-start mb-3">
 														<span class="rating-wrap">
 															<span class="star" style="width: <?php echo $xingxing; ?>"></span>
                                                 </span>
                                                 <span class="rating-num"></span>
                                                 </span>
-                                                <span class="price">
+                                                    <span class="price">
 														<span class="new">$<?php echo $row["sp_price"] ?></span>
                                                 </span>
+                                                </div>
                                             </div>
-                                        </div>
                                             <?php
+                                            }
                                         }
                                         ?>
                                     </div>
