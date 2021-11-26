@@ -6,7 +6,7 @@ $urlsold="http://localhost:8080/index/?method=sold";
 $salesGoods=curl_get($urlsold);
 $salesGoods=JsonList($salesGoods);
 
-$urlhot="http://localhost:8080/index/?method=sold";
+$urlhot="http://localhost:8080/index/?method=hot";
 $hotGoods=curl_get($urlhot);
 $hotGoods=JsonList($hotGoods);
 
@@ -22,10 +22,10 @@ $newestGoods=JsonList($newestGoods);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>周边商城</title>
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="shortcut icon" href="<?php echo ASSETS; ?>images/favicon.ico">
+    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/style.min.css">
 </head>
 
 <body>
@@ -41,7 +41,7 @@ $newestGoods=JsonList($newestGoods);
                     <div class="col-12">
                         <div class="header-top-msg-wrapper text-center">
                             <p class="header-top-message text-center">
-                                产品上新啦 <strong>快去选购</strong><a href="shop.html" class="btn btn-hover-dark btn-secondary">去购物吧</a></p>
+                                产品上新啦 <strong>快去选购</strong><a href="shop.php" class="btn btn-hover-dark btn-secondary">去购物吧</a></p>
                             <div class="header-top-close-btn">
                                 <button class="top-close-btn"><i class="pe-7s-close"></i></button>
                             </div>
@@ -62,7 +62,7 @@ $newestGoods=JsonList($newestGoods);
                         <!-- Header Logo Start -->
                         <div class="col-md-6 col-lg-3 col-xl-2 col-6">
                             <div class="header-logo">
-                                <a href="index.html"><img src="assets/images/logo/logo.png" alt="Site Logo" /></a>
+                                <a href="index.php"><img src="<?php echo ASSETS; ?>images/logo/logo.png" alt="Site Logo" /></a>
                             </div>
                         </div>
                         <!-- Header Logo End -->
@@ -489,106 +489,7 @@ $newestGoods=JsonList($newestGoods);
     </div>
     <!-- Product Section End -->
 
-    <!-- Testimonial Section Start -->
-    <div class="section testimonial-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title text-center" data-aos="fade-up" data-aos-delay="200">
-                        <h2 class="title text-white">Testimonials</h2>
-                        <p class="sub-title text-white">What they say</p>
-                    </div>
-                    <!-- Section Title End -->
 
-                    <!-- Testimonial Carousel Start -->
-                    <div class="testimonial-carousel" data-aos="fade-up" data-aos-delay="400">
-                        <div class="swiper-container testimonial-gallery-thumbs">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="assets/images/testimonial/thumb-1.png" alt="Product Image">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="assets/images/testimonial/thumb-2.png" alt="Product Image">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="assets/images/testimonial/thumb-3.png" alt="Product Image">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="assets/images/testimonial/thumb-4.png" alt="Product Image">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-container testimonial-gallery-top">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Content Start -->
-                                    <div class="testimonial-content text-center">
-                                        <p>Vivamus a lobortis ipsum, vel condimentum magna. Etiam id turpis tortor. Nunc scelerisque, nisi a blandit varius, nunc purus venenatis ligula, sed venenatis orci augue nec sapien. Cum sociis natoque</p>
-                                        <span class="ratings justify-content-center mb-3">
-												<span class="rating-wrap text-white">
-													<span class="star text-warning" style="width: 80%"></span>
-                                        </span>
-                                        <span class="rating-num text-light">(3)</span>
-                                        </span>
-                                        <h4 class="testimonial-author mb-0">Anamika lusy</h4>
-                                    </div>
-                                    <!-- Testimonial Content End -->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Content Start -->
-                                    <div class="testimonial-content text-center">
-                                        <p>Vivamus a lobortis ipsum, vel condimentum magna. Etiam id turpis tortor. Nunc scelerisque, nisi a blandit varius, nunc purus venenatis ligula, sed venenatis orci augue nec sapien. Cum sociis natoque</p>
-                                        <span class="ratings justify-content-center mb-3">
-												<span class="rating-wrap text-white">
-													<span class="star text-warning" style="width: 80%"></span>
-                                        </span>
-                                        <span class="rating-num text-light">(3)</span>
-                                        </span>
-                                        <h4 class="testimonial-author mb-0">Tinsy Nilom</h4>
-                                    </div>
-                                    <!-- Testimonial Content End -->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Content Start -->
-                                    <div class="testimonial-content text-center">
-                                        <p>Vivamus a lobortis ipsum, vel condimentum magna. Etiam id turpis tortor. Nunc scelerisque, nisi a blandit varius, nunc purus venenatis ligula, sed venenatis orci augue nec sapien. Cum sociis natoque</p>
-                                        <span class="ratings justify-content-center mb-3">
-												<span class="rating-wrap text-white">
-													<span class="star text-warning" style="width: 80%"></span>
-                                        </span>
-                                        <span class="rating-num text-light">(3)</span>
-                                        </span>
-                                        <h4 class="testimonial-author mb-0">Cristal Aryan</h4>
-                                    </div>
-                                    <!-- Testimonial Content End -->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- Testimonial Content Start -->
-                                    <div class="testimonial-content text-center">
-                                        <p>Vivamus a lobortis ipsum, vel condimentum magna. Etiam id turpis tortor. Nunc scelerisque, nisi a blandit varius, nunc purus venenatis ligula, sed venenatis orci augue nec sapien. Cum sociis natoque</p>
-                                        <span class="ratings justify-content-center mb-3">
-												<span class="rating-wrap text-white">
-													<span class="star text-warning" style="width: 80%"></span>
-                                        </span>
-                                        <span class="rating-num text-light">(3)</span>
-                                        </span>
-                                        <h4 class="testimonial-author mb-0">Jems Jhon</h4>
-                                    </div>
-                                    <!-- Testimonial Content End -->
-                                </div>
-                            </div>
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next swiper-button-white d-none"></div>
-                            <div class="swiper-button-prev swiper-button-white d-none"></div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Carousel End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial Section End -->
 
     <!-- Product List Banner Section Start -->
     <div class="section section-padding">
@@ -769,182 +670,6 @@ $newestGoods=JsonList($newestGoods);
     </div>
     <!-- Product List Banner Section End -->
 
-    <!-- Latest Blog Section Start -->
-    <div class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-
-                    <!-- Section Title Start -->
-                    <div class="section-title text-center" data-aos="fade-up" data-aos-delay="300">
-                        <h2 class="title">Testimonials</h2>
-                        <p class="sub-title">What they say</p>
-                    </div>
-                    <!-- Section Title End -->
-
-                    <!-- Latest Blog Carousel Start -->
-                    <div class="latest-blog-carousel arrow-outside-container" data-aos="fade-up" data-aos-delay="600">
-                        <div class="swiper-container">
-
-                            <div class="swiper-wrapper">
-
-                                <div class="swiper-slide">
-                                    <!-- Single Blog Start -->
-                                    <div class="single-blog">
-                                        <!-- Blog Thumb Start -->
-                                        <div class="blog-thumb">
-                                            <a href="blog-details.html">
-                                                <img class="fit-image" src="assets/images/blog/blog-medium/1.jpg" alt="Blog Image">
-                                            </a>
-                                        </div>
-                                        <!-- Blog Thumb End -->
-                                        <!-- Blog Content Start -->
-                                        <div class="blog-content">
-                                            <div class="blog-meta">
-                                                <p>03/11/2021 | <span>Admin</span></p>
-                                            </div>
-                                            <h5 class="blog-title">
-                                                <a href="blog-details.html">It is a long established fact that a reader will be distracted</a>
-                                            </h5>
-                                        </div>
-                                        <!-- Blog Content End -->
-                                    </div>
-                                    <!-- Single Blog End -->
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <!-- Single Blog Start -->
-                                    <div class="single-blog">
-                                        <!-- Blog Thumb Start -->
-                                        <div class="blog-thumb">
-                                            <a href="blog-details.html">
-                                                <img class="fit-image" src="assets/images/blog/blog-medium/2.jpg" alt="Blog Image">
-                                            </a>
-                                        </div>
-                                        <!-- Blog Thumb End -->
-                                        <!-- Blog Content Start -->
-                                        <div class="blog-content">
-                                            <div class="blog-meta">
-                                                <p>03/11/2021 | <span>Admin</span></p>
-                                            </div>
-                                            <h5 class="blog-title">
-                                                <a href="blog-details.html">There are many variations of passages of lorem ipsum</a>
-                                            </h5>
-                                        </div>
-                                        <!-- Blog Content End -->
-                                    </div>
-                                    <!-- Single Blog End -->
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <!-- Single Blog Start -->
-                                    <div class="single-blog">
-                                        <!-- Blog Thumb Start -->
-                                        <div class="blog-thumb">
-                                            <a href="blog-details.html">
-                                                <img class="fit-image" src="assets/images/blog/blog-medium/3.jpg" alt="Blog Image">
-                                            </a>
-                                        </div>
-                                        <!-- Blog Thumb End -->
-                                        <!-- Blog Content Start -->
-                                        <div class="blog-content">
-                                            <div class="blog-meta">
-                                                <p>03/11/2021 | <span>Admin</span></p>
-                                            </div>
-                                            <h5 class="blog-title">
-                                                <a href="blog-details.html">The standard chunk of lorem ipsum used since</a>
-                                            </h5>
-                                        </div>
-                                        <!-- Blog Content End -->
-                                    </div>
-                                    <!-- Single Blog End -->
-                                </div>
-
-                            </div>
-
-                            <!-- Swiper Pagination Start -->
-                            <div class="swiper-pagination d-block d-md-none"></div>
-                            <!-- Swiper Pagination End -->
-
-                            <!-- Next Previous Button Start -->
-                            <div class="swiper-blog-button-next swiper-button-next swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-right"></i></div>
-                            <div class="swiper-blog-button-prev swiper-button-prev swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-left"></i></div>
-                            <!-- Next Previous Button End -->
-                        </div>
-                    </div>
-                    <!-- Latest Blog Carousel End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Latest Blog Section End -->
-
-    <!-- Brand Logo Section Start -->
-    <div class="section section-margin">
-        <div class="container">
-            <div class="border-top border-bottom">
-                <div class="row">
-                    <div class="col-12" data-aos="fade-up" data-aos-delay="200">
-                        <!-- Brand Logo Wrapper Start -->
-                        <div class="brand-logo-carousel arrow-outside-container">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo">
-                                        <a href="#"><img src="assets/images/brand-logo/1.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo">
-                                        <a href="#"><img src="assets/images/brand-logo/2.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo">
-                                        <a href=""><img src="assets/images/brand-logo/3.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo">
-                                        <a href="#"><img src="assets/images/brand-logo/4.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo">
-                                        <a href="#"><img src="assets/images/brand-logo/5.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo">
-                                        <a href="#"><img src="assets/images/brand-logo/6.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                </div>
-
-                                <!-- Swiper Pagination Start -->
-                                <div class="swiper-pagination d-none"></div>
-                                <!-- Swiper Pagination End -->
-
-                                <!-- Next Previous Button Start -->
-                                <div class="swiper-logo-button-next swiper-button-next swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-right"></i></div>
-                                <div class="swiper-logo-button-prev swiper-button-prev swiper-nav-button d-none d-md-flex"><i class="pe-7s-angle-left"></i></div>
-                                <!-- Next Previous Button End -->
-                            </div>
-                        </div>
-                        <!-- Brand Logo Wrapper End -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Brand Logo Section End -->
 
     <!-- Footer Section Start -->
     <footer class="section footer-section">

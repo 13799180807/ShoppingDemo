@@ -2,7 +2,7 @@
 
 
 
-class waresDaolmpl implements waresDao{
+class WaresDaoImpl implements waresDao{
 
     /**
      * @param $conn

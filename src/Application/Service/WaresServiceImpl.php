@@ -12,7 +12,7 @@ class WaresServiceImpl implements WaresService{
     {
         // TODO: Implement waresShowAll() method.
         $conn=Connection::conn();
-        $dao=new WaresDaolmpl();
+        $dao=new WaresDaoImpl();
         $rows=$dao->waresNewsQuery($conn,$typea,$num,$state);
         $conn->close();
         if (count($rows)>0){
@@ -30,7 +30,7 @@ class WaresServiceImpl implements WaresService{
     {
         // TODO: Implement waresImgAll() method.
         $conn=Connection::conn();
-        $dao=new WaresDaolmpl();
+        $dao=new WaresDaoImpl();
         $rows=$dao->waresImgQuery($conn,$sp_uid);
         $conn->close();
         if (count($rows)>0){
@@ -48,7 +48,7 @@ class WaresServiceImpl implements WaresService{
     {
         // TODO: Implement waresTextAll() method.
         $conn=Connection::conn();
-        $dao=new WaresDaolmpl();
+        $dao=new WaresDaoImpl();
         $rows=$dao->waresTextQuery($conn,$sp_uid);
         $conn->close();
         if (count($rows)>0){
@@ -66,7 +66,7 @@ class WaresServiceImpl implements WaresService{
     {
         // TODO: Implement waresOneAll() method.
         $conn=Connection::conn();
-        $dao=new WaresDaolmpl();
+        $dao=new WaresDaoImpl();
         $rows=$dao->waresOneQuery($conn,$sp_uid);
         $conn->close();
         if (count($rows)>0){

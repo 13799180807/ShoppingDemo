@@ -1,108 +1,45 @@
 <?php
-require 'config.php';
 require 'curl.php';
-
+require 'config.php';
 
     if(isset($_GET['commodity'])){
-         //判断登入了没先不写
-         //商品图片信息
-         $imgrows=imgcurl();
-         //商品详细说明
-         $textrow=textcurl();
-
-         //商品主要信息
-         $detailmaintext=detailcurl();
-
-         if ($detailmaintext =="-1"){
-             //初始化数据
-             $spId="null";
-             $spVarieties="null";
-             $spName="null";
-             $spPrice="null";
-             $spNum="null";
-             $spImgpath="#";
-             $spHot="null";
-             $spSold="null";
-             $spText="null";
-             $xingxing="0%";
-             $img=$homeConfig["imgPath"]."#";
-             $star5="0";
-         }else{
-             //数据赋值
-             foreach ($detailmaintext as $row){
-                 $spId=$row["sp_uid"];  //id
-                 $spVarieties=$row["sp_varieties"]; //分类
-                 $spName=$row["sp_name"];     //名字
-                 $spPrice=$row["sp_price"];     //价格
-                 $spNum=$row["sp_num"];     //库存
-                 $spImgpath=$row["sp_imgpath"];     //主图
-                 $spHot=$row["sp_hot"];     //访问量  星级
-                 $spSold=$row["sp_sold"];     //已卖出
-                 $spText=$row["sp_text"];     //描述
-                 $xingxing="0%";
-                 $img=$homeConfig["imgPath"].$row["sp_imgpath"];
-                 $star5=$row["sp_hot"];
-                 if ($star5>=9){
-                     $xingxing="100%";
-                 }elseif ($star5>=6){
-                     $xingxing="80%";
-                 }elseif ($star5>=3){
-                     $xingxing="60%";
-                 }else{
-                     $xingxing="40%";
-                 }
-             }
-         }
-
+        $singleall=uriSingle();
+        if($singleall=="-1"){
+            echo "<script>alert('非法操作,请通过正确途径进入！');
+            location.href='index.php';</script>";
+            exit;
+        }else{
+            $imgrows=uriSingleImg();
+            $textrow=testUri();
+            foreach ($singleall as $value){
+                $spId=$value["sp_uid"];  //id
+                $spVarieties=$value["sp_varieties"]; //分类
+                $spName=$value["sp_name"];     //名字
+                $spPrice=$value["sp_price"];     //价格
+                $spNum=$value["sp_num"];     //库存
+                $spImgpath=$value["sp_imgpath"];     //主图
+                $spHot=$value["sp_hot"];     //访问量  星级
+                $spSold=$value["sp_sold"];     //已卖出
+                $spText=$value["sp_text"];     //描述
+                $xingxing="0%";
+                $img=IMG_PATH.$value["sp_imgpath"];
+                $star5=$value["sp_hot"];
+                if ($star5>=9){
+                    $xingxing="100%";
+                }elseif ($star5>=6){
+                    $xingxing="80%";
+                }elseif ($star5>=3){
+                    $xingxing="60%";
+                }else{
+                    $xingxing="40%";
+                }
+            }
+        }
     }else{
         echo "<script>alert('非法操作！');
            location.href='index.php';</script>";
         exit;
     }
-
-?>
-<?php
-
-function detailcurl(){
-
-    $url="http://localhost:801/ShoppingDemo/controller/detailsService.php";
-    $postdata=array();
-    $postdata['commodity']=$_GET['commodity'];
-    $postdata['tabletype']="shop_wares";
-    $detailsmian=curl_post($url,$postdata);
-    $detailsmian=JsonListisset($detailsmian);
-
-    if ($detailsmian=="-1"){
-        return -1;
-    }else{
-       return $detailsmian;
-    }
-}
-function textcurl(){
-  //  http://localhost:8080/index/details/text/?uid=3
-    $url="http://localhost:8080/index/details/text/";
-    $postdata=array();
-    $postdata['uid']=$_GET['commodity'];
-    $textlist=curl_post($url,$postdata);
-    $textlist=JsonList($textlist);
-    if ($textlist=="-1"){
-        return -1;
-    }else{
-        return $textlist;
-    }
-}
-function imgcurl(){
-    $url="http://localhost:8080/index/details/img/ ";
-    $postdata=array();
-    $postdata['uid']=$_GET['commodity'];
-    $imglist=curl_post($url,$postdata);
-    $imglist=JsonList($imglist);
-    if ($imglist=="-1"){
-        return -1;
-    }else{
-        return $imglist;
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -112,10 +49,10 @@ function imgcurl(){
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php echo$spName ;?>商品详情页面</title>
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="shortcut icon" href="<?php echo ASSETS; ?>images/favicon.ico">
+    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/style.min.css">
 </head>
 
 <body>
@@ -123,160 +60,6 @@ function imgcurl(){
 <!-- Header Section Start -->
 <div class="header section">
 
-    <!-- Header Top Start -->
-    <div class="header-top bg-primary">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Header Top Message Start -->
-                <div class="col-md-12 col-lg-6 text-lg-start text-center">
-                    <div class="header-top-msg-wrapper">
-                        <p class="header-top-message">欢迎来到网上玩具商城</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 text-end d-none d-lg-block">
-                    <div class="header-top-settings">
-                        <ul class="nav align-items-center justify-content-end">
-
-                        </ul>
-                    </div>
-                </div>
-                <!-- Header Top Message End -->
-            </div>
-        </div>
-    </div>
-    <!-- Header Top End -->
-
-    <!-- Header Bottom Start -->
-    <div class="header-bottom">
-        <div class="header-sticky">
-            <div class="container">
-                <div class="row align-items-center position-relative">
-
-                    <!-- Header Logo Start -->
-                    <div class="col-md-6 col-lg-3 col-xl-2 col-6">
-                        <div class="header-logo">
-                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Site Logo" /></a>
-                        </div>
-                    </div>
-                    <!-- Header Logo End -->
-
-                    <!-- Header Menu Start -->
-                    <div class="col-lg-6 d-none d-lg-block">
-                        <div class="main-menu">
-                            <ul>
-                                <li><a href="index.php">主页</a></li>
-                                <li><a href="shop.php">更多商品</a></li>
-                                <li class="has-children position-static">
-                                    <a href="#">Shop <i class="fa fa-angle-down"></i></a>
-                                    <ul class="mega-menu row">
-                                        <li class="col-3">
-                                            <h4 class="mega-menu-title">Shop Layout</h4>
-                                            <ul class="mb-n2">
-                                                <li><a href="shop.html">Shop Grid</a></li>
-                                                <li><a href="shop-left-sidebar.html">Left Sidebar</a></li>
-                                                <li><a href="shop-right-sidebar.html">Right Sidebar</a></li>
-                                                <li><a href="shop-list-fullwidth.html">List Fullwidth</a></li>
-                                                <li><a href="shop-list-left-sidebar.html">List Left Sidebar</a></li>
-                                                <li><a href="shop-list-right-sidebar.html">List Right Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="col-3">
-                                            <h4 class="mega-menu-title">Product Layout</h4>
-                                            <ul class="mb-n2">
-                                                <li><a href="single-product.html">Single Product</a></li>
-                                                <li><a href="single-product-sale.html">Single Product Sale</a></li>
-                                                <li><a href="single-product-group.html">Single Product Group</a></li>
-                                                <li><a href="single-product-normal.html">Single Product Normal</a></li>
-                                                <li><a href="single-product-affiliate.html">Single Product Affiliate</a></li>
-                                                <li><a href="single-product-slider.html">Single Product Slider</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="col-3">
-                                            <h4 class="mega-menu-title">Product Layout</h4>
-                                            <ul class="mb-n2">
-                                                <li><a href="single-product-gallery-left.html">Gallery Left</a></li>
-                                                <li><a href="single-product-gallery-right.html">Gallery Right</a></li>
-                                                <li><a href="single-product-tab-style-left.html">Tab Style Left</a></li>
-                                                <li><a href="single-product-tab-style-right.html">Tab Style Right</a></li>
-                                                <li><a href="single-product-sticky-left.html">Sticky Left</a></li>
-                                                <li><a href="single-product-sticky-right.html">Sticky Right</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="col-3">
-                                            <h4 class="mega-menu-title">Other Pages</h4>
-                                            <ul class="mb-n2">
-                                                <li><a href="my-account.html">My Account</a></li>
-                                                <li><a href="login.html">Loging | Register</a></li>
-                                                <li><a href="wishlist.html">Wishlist</a></li>
-                                                <li><a href="cart.html">Cart</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="compare.html">Compare</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="has-children">
-                                    <a href="#">Pages <i class="fa fa-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                        <li><a href="error-404.html">Error 404</a></li>
-                                        <li><a href="faq.html">FAQ</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="register.html">Register</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-children">
-                                    <a href="#">Blog <i class="fa fa-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                        <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                        <li><a href="blog-details-sidebar.html">Blog Details Sidebar</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Header Menu End -->
-
-                    <!-- Header Action Start -->
-                    <div class="col-md-6 col-lg-3 col-xl-4 col-6 justify-content-end">
-                        <div class="header-actions">
-                            <a href="javascript:void(0)" class="header-action-btn header-action-btn-search d-none d-lg-block"><i class="pe-7s-search"></i></a>
-                            <div class="dropdown-user d-none d-lg-block">
-                                <a href="javascript:void(0)" class="header-action-btn"><i class="pe-7s-user"></i></a>
-                                <ul class="dropdown-menu-user">
-                                    <li><a class="dropdown-item" href="#">Usd</a></li>
-                                    <li><a class="dropdown-item" href="#">Pound</a></li>
-                                    <li><a class="dropdown-item" href="#">Taka</a></li>
-                                </ul>
-                            </div>
-                            <a href="wishlist.html" class="header-action-btn header-action-btn-wishlist">
-                                <i class="pe-7s-like"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="header-action-btn header-action-btn-cart">
-                                <i class="pe-7s-cart"></i>
-                                <span class="header-action-num">3</span>
-                            </a>
-                            <!-- Mobile Menu Hambarger Action Button Start -->
-                            <a href="javascript:void(0)" class="header-action-btn header-action-btn-menu d-lg-none d-md-block">
-                                <i class="fa fa-bars"></i>
-                            </a>
-                            <!-- Mobile Menu Hambarger Action Button End -->
-
-                        </div>
-                    </div>
-                    <!-- Header Action End -->
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header Bottom End -->
 
     <!-- Offcanvas Search Start -->
     <div class="offcanvas-search">
@@ -476,14 +259,12 @@ function imgcurl(){
                             <div class="swiper-slide">
                                 <img src="<?php echo $img; ?>" alt="Product">
                             </div>
-
-
                             <?php
                             if ($imgrows=="-1"){
                                 $img1=$row["sp_imgpath"]="#";
                             }else{
                                 foreach ($imgrows as $row){
-                                    $img1=$homeConfig["imgPath"].$row["sp_Path"];
+                                    $img1=IMG_PATH.$row["sp_Path"];
                                     ?>
                             <div class="swiper-slide">
                                 <img src="<?php echo $img1; ?>" alt="Product">
@@ -638,9 +419,6 @@ function imgcurl(){
                     <li class="nav-item">
                         <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#connect-3" role="tab" aria-selected="false">运输政策</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="review-tab" data-bs-toggle="tab" href="#connect-4" role="tab" aria-selected="false">Size Chart</a>
-                    </li>
                 </ul>
                 <div class="tab-content mb-text" id="myTabContent">
                     <div class="tab-pane fade show active" id="connect-1" role="tabpanel" aria-labelledby="home-tab">
@@ -720,55 +498,6 @@ function imgcurl(){
                         </div>
                         <!-- Shipping Policy End -->
                     </div>
-                    <div class="tab-pane fade" id="connect-4" role="tabpanel" aria-labelledby="review-tab">
-                        <div class="size-tab table-responsive-lg p-3">
-                            <h4 class="title-3 mb-4">Size Chart</h4>
-                            <table class="table border mb-0">
-                                <tbody>
-                                <tr>
-                                    <td class="cun-name"><span>UK</span></td>
-                                    <td>18</td>
-                                    <td>20</td>
-                                    <td>22</td>
-                                    <td>24</td>
-                                    <td>26</td>
-                                </tr>
-                                <tr>
-                                    <td class="cun-name"><span>European</span></td>
-                                    <td>46</td>
-                                    <td>48</td>
-                                    <td>50</td>
-                                    <td>52</td>
-                                    <td>54</td>
-                                </tr>
-                                <tr>
-                                    <td class="cun-name"><span>usa</span></td>
-                                    <td>14</td>
-                                    <td>16</td>
-                                    <td>18</td>
-                                    <td>20</td>
-                                    <td>22</td>
-                                </tr>
-                                <tr>
-                                    <td class="cun-name"><span>Australia</span></td>
-                                    <td>28</td>
-                                    <td>10</td>
-                                    <td>12</td>
-                                    <td>14</td>
-                                    <td>16</td>
-                                </tr>
-                                <tr>
-                                    <td class="cun-name"><span>Canada</span></td>
-                                    <td>24</td>
-                                    <td>18</td>
-                                    <td>14</td>
-                                    <td>42</td>
-                                    <td>36</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- Single Product Tab End -->
@@ -805,8 +534,8 @@ function imgcurl(){
                         <h2 class="widget-title">Contact Us</h2>
                         <ul class="contact-links">
                             <li><i class="pe-7s-home"></i> <span>Your address goes here</span> </li>
-                            <li><i class="pe-7s-mail"></i><a href="mailto:info@example.com"> info@example.com</a></li>
-                            <li><i class="pe-7s-call"></i><a href="tel:+012-3456-789"> +012 3456 789</a></li>
+                            <li><i class="pe-7s-mail"></i><a > info@example.com</a></li>
+                            <li><i class="pe-7s-call"></i><a > +012 3456 789</a></li>
                         </ul>
                     </div>
                 </div>
@@ -814,11 +543,11 @@ function imgcurl(){
                     <div class="single-footer-widget aos-init aos-animate">
                         <h2 class="widget-title">Information</h2>
                         <ul class="widget-list">
-                            <li><a href="contact.html">Terms & Conditions</a></li>
-                            <li><a href="contact.html">Payment Methode</a></li>
-                            <li><a href="contact.html">Product Warranty</a></li>
-                            <li><a href="contact.html">Return Process</a></li>
-                            <li><a href="contact.html">Payment Security</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Payment Methode</a></li>
+                            <li><a href="#">Product Warranty</a></li>
+                            <li><a href="#">Return Process</a></li>
+                            <li><a href="#">Payment Security</a></li>
                         </ul>
                     </div>
                 </div>
@@ -882,19 +611,19 @@ function imgcurl(){
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <a class="swiper-slide" href="#">
-                                    <img class="w-100" src="assets/images/products/large-product/1.jpg" alt="Product">
+                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/1.jpg" alt="Product">
                                 </a>
                                 <a class="swiper-slide" href="#">
-                                    <img class="w-100" src="assets/images/products/large-product/2.jpg" alt="Product">
+                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/2.jpg" alt="Product">
                                 </a>
                                 <a class="swiper-slide" href="#">
-                                    <img class="w-100" src="assets/images/products/large-product/3.jpg" alt="Product">
+                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/3.jpg" alt="Product">
                                 </a>
                                 <a class="swiper-slide" href="#">
-                                    <img class="w-100" src="assets/images/products/large-product/4.jpg" alt="Product">
+                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/4.jpg" alt="Product">
                                 </a>
                                 <a class="swiper-slide" href="#">
-                                    <img class="w-100" src="assets/images/products/large-product/5.jpg" alt="Product">
+                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/5.jpg" alt="Product">
                                 </a>
                             </div>
 
@@ -965,8 +694,8 @@ function imgcurl(){
 
                         <!-- Action Button Start -->
                         <div class="actions border-bottom mb-4 pb-4">
-                            <a href="compare.html" title="Compare" class="action compare"><i class="pe-7s-refresh-2"></i> Compare</a>
-                            <a href="wishlist.html" title="Wishlist" class="action wishlist"><i class="pe-7s-like"></i> Wishlist</a>
+                            <a href="#" title="Compare" class="action compare"><i class="pe-7s-refresh-2"></i> Compare</a>
+                            <a href="#" title="Wishlist" class="action wishlist"><i class="pe-7s-like"></i> Wishlist</a>
                         </div>
                         <!-- Action Button End -->
 
@@ -1164,39 +893,16 @@ function imgcurl(){
 
 <!-- Scripts -->
 <!-- Global Vendor, plugins JS -->
-
 <!-- Vendor JS -->
-
-<!--
-<script src="assets/js/vendor/popper.min.js"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>
-<script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
-<script src="assets/js/vendor/jquery-migrate-3.3.0.min.js"></script>
-<script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
--->
-
-
 <!-- Plugins JS -->
-
-<!--
-<script src="assets/js/plugins/aos.min.js"></script>
-<script src="assets/js/plugins/jquery.ajaxchimp.min.js"></script>
-<script src="assets/js/plugins/jquery-ui.min.js"></script>
-<script src="assets/js/plugins/nice-select.min.js"></script>
-<script src="assets/js/plugins/swiper-bundle.min.js"></script>
-<script src="assets/js/plugins/countdown.min.js"></script>
-<script src="assets/js/plugins/lightgallery-all.min.js"></script>
--->
-
-
 <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 
 
-<script src="assets/js/vendor.min.js"></script>
-<script src="assets/js/plugins.min.js"></script>
+<script src="<?php echo ASSETS; ?>js/vendor.min.js"></script>
+<script src="<?php echo ASSETS; ?>js/plugins.min.js"></script>
 
 <!--Main JS-->
-<script src="assets/js/main.js"></script>
+<script src="<?php echo ASSETS; ?>js/main.js"></script>
 </body>
 
 </html>

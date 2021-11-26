@@ -90,7 +90,7 @@ class WaresController
         if (isset($parameter["uid"])) {
             $sp_uid = $parameter["uid"];
             $dao= new WaresServiceImpl();
-            $arr=$dao-waresImgAll($sp_uid);
+            $arr=$dao->waresImgAll($sp_uid);
             if ($arr=="-1"){
                 $arr=array(
                     0=>array('','',''),
@@ -122,7 +122,7 @@ class WaresController
         if (isset($parameter["uid"])) {
             $sp_uid = $parameter["uid"];
             $dao= new WaresServiceImpl();
-            $arr=$dao-waresTextAll($sp_uid);
+            $arr=$dao->waresTextAll($sp_uid);
             if($arr=="-1"){
                 $arr=array(
                     0=>array('','',''),

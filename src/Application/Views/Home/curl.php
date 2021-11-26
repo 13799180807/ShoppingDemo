@@ -1,25 +1,42 @@
 <?php
 
 
-//$url="http://localhost:8080/index/?method=hot";
-//$salesGoods=curl_get($url);
-//$salesGoods=JsonList($salesGoods);
-//
-//
-//
-//
-//var_dump($salesGoods);
 
-
-
+function testUri(){
+    $url="http://localhost:8080/index/details/text/sin/";
+    $datalist=array();
+    $datalist["uid"]=$_GET['commodity'];
+    $json=curl_post($url,$datalist);
+    $tesrlist=JsonList($json);
+    return $tesrlist;
+}
+function uriSingleImg(){
+    $url="http://localhost:8080/index/details/img/sin/";
+    $datalist=array();
+    $datalist["uid"]=$_GET['commodity'];
+    $json=curl_post($url,$datalist);
+    $imgall=JsonList($json);
+    return $imgall;
+}
+function uriSingle(){
+    $url="http://localhost:8080/index/details/sin/";
+    $datalist=array();
+    $datalist["uid"]=$_GET['commodity'];
+    $json=curl_post($url,$datalist);
+    $singleall=JsonList($json);
+    return $singleall;
+}
 function JsonList($json){
     $json=json_decode($json,true);
-    if($json["code"]=="1"){
-        $list=$json["data"];
-        return $list;
-    }else{
-        return -1;
+    if ($json["status"]=="200"){
+        if($json["code"]=="1"){
+            $list=$json["data"];
+            return $list;
+        }else{
+            return -1;
+        }
     }
+     return -1;
 }
 function curl_get($url)
 {

@@ -40,9 +40,5 @@ interface  waresDao{
     public function waresOneQuery($conn,$sp_uid);
 
 
-
-
-
-
 }
 

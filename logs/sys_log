@@ -1,27 +1,85 @@
 [26-Nov-2021 02:44:35 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
 [26-Nov-2021 02:44:54 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
 [26-Nov-2021 02:46:54 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
-[26-Nov-2021 02:47:31 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
-[26-Nov-2021 03:11:30 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
-[26-Nov-2021 03:11:30 Europe/Berlin] PHP Notice:  Undefined variable: b in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 7
-[26-Nov-2021 03:11:30 Europe/Berlin] PHP Notice:  Undefined variable: c in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 7
-[26-Nov-2021 03:13:17 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
-[26-Nov-2021 03:13:17 Europe/Berlin] PHP Notice:  Undefined variable: b in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 7
-[26-Nov-2021 03:13:17 Europe/Berlin] PHP Notice:  Undefined variable: c in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 7
-[26-Nov-2021 03:13:23 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
-[26-Nov-2021 03:13:23 Europe/Berlin] PHP Notice:  Undefined variable: b in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 7
-[26-Nov-2021 03:13:23 Europe/Berlin] PHP Notice:  Undefined variable: c in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 7
-[26-Nov-2021 03:16:08 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:21:59 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:22:00 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:22:00 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:22:00 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:22:00 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:22:55 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:36:34 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:36:35 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:37:04 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:37:58 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:37:58 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:37:58 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
-[26-Nov-2021 03:39:37 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresControlle.rphp on line 37
+[26-Nov-2021 06:30:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function waresImgAll() in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php:93
+Stack trace:
+#0 E:\xampp\htdocs\ShoppingDemo\src\routes.php(14): WaresController::waresImgAll(Array)
+#1 E:\xampp\htdocs\ShoppingDemo\src\Application\Model\Route.php(21): {closure}()
+#2 E:\xampp\htdocs\ShoppingDemo\src\routes.php(23): Route::any(Object(Closure))
+#3 E:\xampp\htdocs\ShoppingDemo\public\index.php(8): include('E:\\xampp\\htdocs...')
+#4 {main}
+  thrown in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 93
+[26-Nov-2021 06:31:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function waresImgAll() in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php:93
+Stack trace:
+#0 E:\xampp\htdocs\ShoppingDemo\src\routes.php(14): WaresController::waresImgAll(Array)
+#1 E:\xampp\htdocs\ShoppingDemo\src\Application\Model\Route.php(21): {closure}()
+#2 E:\xampp\htdocs\ShoppingDemo\src\routes.php(23): Route::any(Object(Closure))
+#3 E:\xampp\htdocs\ShoppingDemo\public\index.php(8): include('E:\\xampp\\htdocs...')
+#4 {main}
+  thrown in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 93
+[26-Nov-2021 08:46:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'WaresDaolmpl' not found in E:\xampp\htdocs\ShoppingDemo\src\Application\Service\WaresServiceImpl.php:15
+Stack trace:
+#0 E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php(37): WaresServiceImpl->waresShowAll('sp_sold', '5', '\xE4\xB8\x8A\xE6\x9E\xB6')
+#1 E:\xampp\htdocs\ShoppingDemo\src\routes.php(8): WaresController::waresSortAll(Array)
+#2 E:\xampp\htdocs\ShoppingDemo\src\Application\Model\Route.php(21): {closure}()
+#3 E:\xampp\htdocs\ShoppingDemo\src\routes.php(23): Route::any(Object(Closure))
+#4 E:\xampp\htdocs\ShoppingDemo\public\index.php(8): include('E:\\xampp\\htdocs...')
+#5 {main}
+  thrown in E:\xampp\htdocs\ShoppingDemo\src\Application\Service\WaresServiceImpl.php on line 15
+[26-Nov-2021 08:46:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'WaresDaolmpl' not found in E:\xampp\htdocs\ShoppingDemo\src\Application\Service\WaresServiceImpl.php:15
+Stack trace:
+#0 E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php(37): WaresServiceImpl->waresShowAll('sp_hot', '5', '\xE4\xB8\x8A\xE6\x9E\xB6')
+#1 E:\xampp\htdocs\ShoppingDemo\src\routes.php(8): WaresController::waresSortAll(Array)
+#2 E:\xampp\htdocs\ShoppingDemo\src\Application\Model\Route.php(21): {closure}()
+#3 E:\xampp\htdocs\ShoppingDemo\src\routes.php(23): Route::any(Object(Closure))
+#4 E:\xampp\htdocs\ShoppingDemo\public\index.php(8): include('E:\\xampp\\htdocs...')
+#5 {main}
+  thrown in E:\xampp\htdocs\ShoppingDemo\src\Application\Service\WaresServiceImpl.php on line 15
+[26-Nov-2021 08:46:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'WaresDaolmpl' not found in E:\xampp\htdocs\ShoppingDemo\src\Application\Service\WaresServiceImpl.php:15
+Stack trace:
+#0 E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php(37): WaresServiceImpl->waresShowAll('create_time', '5', '\xE4\xB8\x8A\xE6\x9E\xB6')
+#1 E:\xampp\htdocs\ShoppingDemo\src\routes.php(8): WaresController::waresSortAll(Array)
+#2 E:\xampp\htdocs\ShoppingDemo\src\Application\Model\Route.php(21): {closure}()
+#3 E:\xampp\htdocs\ShoppingDemo\src\routes.php(23): Route::any(Object(Closure))
+#4 E:\xampp\htdocs\ShoppingDemo\public\index.php(8): include('E:\\xampp\\htdocs...')
+#5 {main}
+  thrown in E:\xampp\htdocs\ShoppingDemo\src\Application\Service\WaresServiceImpl.php on line 15
+[26-Nov-2021 08:48:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'WaresDaolmpl' not found in E:\xampp\htdocs\ShoppingDemo\src\Application\Service\WaresServiceImpl.php:69
+Stack trace:
+#0 E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php(62): WaresServiceImpl->waresOneAll('8')
+#1 E:\xampp\htdocs\ShoppingDemo\src\routes.php(11): WaresController::waresDetailsAll(Array)
+#2 E:\xampp\htdocs\ShoppingDemo\src\Application\Model\Route.php(21): {closure}()
+#3 E:\xampp\htdocs\ShoppingDemo\src\routes.php(23): Route::any(Object(Closure))
+#4 E:\xampp\htdocs\ShoppingDemo\public\index.php(8): include('E:\\xampp\\htdocs...')
+#5 {main}
+  thrown in E:\xampp\htdocs\ShoppingDemo\src\Application\Service\WaresServiceImpl.php on line 69
+[26-Nov-2021 08:48:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'WaresDaolmpl' not found in E:\xampp\htdocs\ShoppingDemo\src\Application\Service\WaresServiceImpl.php:69
+Stack trace:
+#0 E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php(62): WaresServiceImpl->waresOneAll('8')
+#1 E:\xampp\htdocs\ShoppingDemo\src\routes.php(11): WaresController::waresDetailsAll(Array)
+#2 E:\xampp\htdocs\ShoppingDemo\src\Application\Model\Route.php(21): {closure}()
+#3 E:\xampp\htdocs\ShoppingDemo\src\routes.php(23): Route::any(Object(Closure))
+#4 E:\xampp\htdocs\ShoppingDemo\public\index.php(8): include('E:\\xampp\\htdocs...')
+#5 {main}
+  thrown in E:\xampp\htdocs\ShoppingDemo\src\Application\Service\WaresServiceImpl.php on line 69
+[26-Nov-2021 08:49:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'WaresDaolmpl' not found in E:\xampp\htdocs\ShoppingDemo\src\Application\Service\WaresServiceImpl.php:33
+Stack trace:
+#0 E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php(93): WaresServiceImpl->waresImgAll('8')
+#1 E:\xampp\htdocs\ShoppingDemo\src\routes.php(14): WaresController::waresImgAll(Array)
+#2 E:\xampp\htdocs\ShoppingDemo\src\Application\Model\Route.php(21): {closure}()
+#3 E:\xampp\htdocs\ShoppingDemo\src\routes.php(23): Route::any(Object(Closure))
+#4 E:\xampp\htdocs\ShoppingDemo\public\index.php(8): include('E:\\xampp\\htdocs...')
+#5 {main}
+  thrown in E:\xampp\htdocs\ShoppingDemo\src\Application\Service\WaresServiceImpl.php on line 33
+[26-Nov-2021 10:01:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'SortServiceImpl' not found in E:\xampp\htdocs\ShoppingDemo\tests\test.php:7
+Stack trace:
+#0 {main}
+  thrown in E:\xampp\htdocs\ShoppingDemo\tests\test.php on line 7
+[26-Nov-2021 10:01:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'SortServiceImpl' not found in E:\xampp\htdocs\ShoppingDemo\tests\test.php:7
+Stack trace:
+#0 {main}
+  thrown in E:\xampp\htdocs\ShoppingDemo\tests\test.php on line 7
+[26-Nov-2021 10:01:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'SortServiceImpl' not found in E:\xampp\htdocs\ShoppingDemo\tests\test.php:7
+Stack trace:
+#0 {main}
+  thrown in E:\xampp\htdocs\ShoppingDemo\tests\test.php on line 7
