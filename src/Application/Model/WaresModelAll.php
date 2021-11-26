@@ -24,7 +24,8 @@ class WaresModelAll
             $dataList[$i]=$c;
             $i++;
         }
-        return array("waresArr"=>$dataList);
+     //   return array("waresArr"=>$dataList);
+        return $dataList;
     }
 
     /**
@@ -39,7 +40,8 @@ class WaresModelAll
             $dataList[$i]=$c;
             $i++;
         }
-        return array("wareslist"=>$dataList);
+     //   return array("wareslist"=>$dataList);
+        return $dataList;
     }
 
     /**
@@ -54,7 +56,8 @@ class WaresModelAll
             $dataList[$i]=$c;
             $i++;
         }
-        return array("wareslist"=>$dataList);
+     //   return array("wareslist"=>$dataList);
+        return $dataList;
     }
 
     /**
@@ -78,7 +81,8 @@ class WaresModelAll
             $dataList[$i]=$c;
             $i++;
         }
-        return array("wareslist"=>$dataList);
+       // return array("wareslist"=>$dataList);
+        return $dataList;
     }
 
 

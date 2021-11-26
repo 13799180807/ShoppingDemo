@@ -8,7 +8,7 @@ class WaresServiceImpl implements WaresService{
      * @param $state
      * @return int|mixed
      */
-    public function waresShowAll($typea, $num, $state)
+    public  function waresShowAll($typea, $num, $state)
     {
         // TODO: Implement waresShowAll() method.
         $conn=Connection::conn();

@@ -1,7 +1,7 @@
 <?php
 
     Route::any(function (){
-
+        header("Content-type:Application/json;charset=utf-8");
 
         $parame=parameterList($_REQUEST);
         if(uri($_SERVER["REQUEST_URI"])=="/index"){
@@ -18,12 +18,8 @@
             echo $json;
         }
         else{
-
-            echo "<h2>404</h2>我进来了但是迷路了......";
+            echo "<h2>404</h2>";
         }
-
-
-
     });
 
 

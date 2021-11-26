@@ -1,0 +1,27 @@
+[26-Nov-2021 02:44:35 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
+[26-Nov-2021 02:44:54 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
+[26-Nov-2021 02:46:54 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
+[26-Nov-2021 02:47:31 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
+[26-Nov-2021 03:11:30 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
+[26-Nov-2021 03:11:30 Europe/Berlin] PHP Notice:  Undefined variable: b in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 7
+[26-Nov-2021 03:11:30 Europe/Berlin] PHP Notice:  Undefined variable: c in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 7
+[26-Nov-2021 03:13:17 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
+[26-Nov-2021 03:13:17 Europe/Berlin] PHP Notice:  Undefined variable: b in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 7
+[26-Nov-2021 03:13:17 Europe/Berlin] PHP Notice:  Undefined variable: c in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 7
+[26-Nov-2021 03:13:23 Europe/Berlin] PHP Notice:  Undefined variable: a in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 6
+[26-Nov-2021 03:13:23 Europe/Berlin] PHP Notice:  Undefined variable: b in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 7
+[26-Nov-2021 03:13:23 Europe/Berlin] PHP Notice:  Undefined variable: c in E:\xampp\htdocs\ShoppingDemo\public\index.php on line 7
+[26-Nov-2021 03:16:08 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:21:59 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:22:00 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:22:00 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:22:00 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:22:00 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:22:55 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:36:34 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:36:35 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:37:04 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:37:58 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:37:58 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:37:58 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresController.php on line 37
+[26-Nov-2021 03:39:37 Europe/Berlin] PHP Deprecated:  Non-static method WaresServiceImpl::waresShowAll() should not be called statically in E:\xampp\htdocs\ShoppingDemo\src\Application\Controller\Home\WaresControlle.rphp on line 37

@@ -11,7 +11,7 @@ class WaresController
      * 商品分类信息显示
      */
     public static function waresSortAll($parameter){
-        header("Content-type:Application/json;charset=utf-8");
+
         if (isset($parameter["method"])){
 
         }else{
@@ -33,8 +33,8 @@ class WaresController
             $json=failJson("请求失败，参数不正确", $errlist);
             return $json;
         }
-        //前端数据还没处理
-        $arr=WaresServiceImpl::waresShowAll($typea,"5","上架");
+        $dao= new WaresServiceImpl();
+        $arr=$dao->waresShowAll($typea,"5","上架");
         if($arr=="-1"){
             $arr=array(
                 0=>array('','','','','','','','','','','','',''),
@@ -55,10 +55,11 @@ class WaresController
      * 单个商品详情页面
      */
     public static function waresDetailsAll($parameter){
-        header("Content-type:Application/json;charset=utf-8");
+
         if (isset($parameter["uid"])){
             $sp_uid=$parameter["uid"];
-            $arr=WaresServiceImpl::waresOneAll($sp_uid);
+            $dao= new WaresServiceImpl();
+            $arr=$dao->waresOneAll($sp_uid);
             if($arr=="-1"){
                 $arr=array(
                     0=>array('','','','','','','','','','','','',''),
@@ -85,10 +86,11 @@ class WaresController
      * 单个商品图片信息显示
      */
     public static function waresImgAll($parameter){
-        header("Content-type:Application/json;charset=utf-8");
+
         if (isset($parameter["uid"])) {
             $sp_uid = $parameter["uid"];
-            $arr=WaresServiceImpl::waresImgAll($sp_uid);
+            $dao= new WaresServiceImpl();
+            $arr=$dao-waresImgAll($sp_uid);
             if ($arr=="-1"){
                 $arr=array(
                     0=>array('','',''),
@@ -116,10 +118,11 @@ class WaresController
      * 单个商品详细信息介绍
      */
     public static function waresTextAll($parameter){
-        header("Content-type:Application/json;charset=utf-8");
+
         if (isset($parameter["uid"])) {
             $sp_uid = $parameter["uid"];
-            $arr=WaresServiceImpl::waresTextAll($sp_uid);
+            $dao= new WaresServiceImpl();
+            $arr=$dao-waresTextAll($sp_uid);
             if($arr=="-1"){
                 $arr=array(
                     0=>array('','',''),
@@ -139,8 +142,5 @@ class WaresController
             return $json;
         }
     }
-
-
-
 
 }
