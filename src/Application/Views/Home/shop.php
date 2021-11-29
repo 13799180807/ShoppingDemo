@@ -2,16 +2,104 @@
 require 'curl.php';
 require 'config.php';
 
-$sortListAll=sortListUri();
-if(isset($_POST['sort_Name'])){
-    $sortname=$_POST['sort_Name'];
-}else{
-    $sortname = "查询全部";   //查询类型
-}
+    $sortListAll=sortListUri();  //分类显示
+
+    $PageNumber=pagingUri(8,"查询全部");
+    $totalPage=$PageNumber['page'];    //总页面
+
+    $result=waresSortQuery("查询全部",1,8);
+    $waresSortData=$result['wares'];
+    $callBackData=$result['callBack'];
+    $sortname=$callBackData['name'];  //名字
+    $currentPage=$callBackData['page'];  //当前页面
+    $perPage=$callBackData['num'];  //一个页面显示几个
+
+    if (isset($_POST['sort_Name'])){
+        $sortname=$_POST['sort_Name'];
+        $perPage=$_POST['select_num'];
+        $currentPage=$_POST['page_num'];
+
+        $PageNumber=pagingUri($perPage,$sortname);
+        $totalPage=$PageNumber['page'];    //总页面
+
+        $result=waresSortQuery($sortname,$currentPage,$perPage);
+        $waresSortData=$result['wares'];
+        $callBackData=$result['callBack'];
+        $sortname=$callBackData['name'];  //名字
+        $currentPage=$callBackData['page'];  //当前页面
+        $perPage=$callBackData['num'];  //一个页面显示几个
+        if ($currentPage==0){
+            $currentPage=1;
+            $perPage=8;
+            $sortname=$sortname;
+        }
+
+    }
 
 
 
-$pageNum=8;
+//
+//
+//    if(isset($_POST['sort_Name'])){
+//        $sortname=$_POST['sort_Name'];
+//        $pageNum=$_POST['select_num'];
+//        $page=$_POST['page_num'];
+//
+//        $result=waresSortQuery($sortname,$page,$pageNum);
+//        $waresSortData=$result['wares'];
+//        $callBackData=$result['callBack'];
+//
+//    }
+
+
+
+//var_dump($sortname);
+//var_dump($page);
+//var_dump($pageNum);
+
+
+
+
+//$result=waresSortQuery($sortname,1,$pageNum);
+//$waresSortData=$result['wares'];
+//$callBackData=$result['callBack'];
+
+
+//var_dump($page);
+//var_dump($PageNumber); //页码
+//var_dump($sortname);  //查询名称
+//var_dump($pageNum);   //当前页面显示数量
+
+
+
+
+
+//
+//$sortname = "查询全部";   //查询类型
+//$pageNum=8;
+//$page=1;
+
+
+
+//
+//if(isset($_POST['sort_Name'])){
+//    $sortname=$_POST['sort_Name'];
+//    $pageNum=$_POST['select_num'];
+//    $PageNumber=pagingUri($pageNum,$sortname);
+//    $page=$PageNumber['page'];
+//    $result=waresSortQuery($sortname,1,$pageNum);
+//    $waresSortData=$result['wares'];
+//    $callBackData=$result['callBack'];
+//}
+//
+//if (isset($_GET['method']) && is_numeric($_GET['page'])){
+//    $result=waresSortQuery($sortname,$_GET['page'],$pageNum);
+//    $waresSortData=$result['wares'];
+//    $callBackData=$result['callBack'];
+//}
+
+
+
 
 
 //初始化的时候
@@ -28,19 +116,10 @@ $pageNum=8;
 //
 //
 //$pageNum=$pagedata['num'];  //几个
-//$number=$pagedata['page']; //几页
-//$sortname=$pagedata['sortName']; //名字
 //
-//$result=waresSortQuery($sortname,$pageNum,$number);
-//$waresSortData=$result['wares'];
-//$callBackData=$result['callBack'];
+
 //var_dump($callBackData);
 //var_dump($waresSortData);
-
-
-
-
-
 
 
 
@@ -258,7 +337,7 @@ $pageNum=8;
                             </div>
                             <div class="shop-top-show">
                                 <span><?php
-                                    echo "当前查询结果为：类别： {$sortname} ，当前为第：{$number} 页，当页显示：{$pageNum} 个"
+                                    echo "当前查询到类别： {$sortname} ，当前为第：{$currentPage} 页，显示：{$perPage} 条数据"
                                     ?></span>
                             </div>
                         </div>
@@ -337,9 +416,10 @@ $pageNum=8;
                         <!-- Shop Top Bar Left start -->
                         <div class="shop-bottom-bar-left mb-4">
                             <div class="shop-short-by">
-                                <select class="nice-select rounded-0" aria-label=".form-select-sm example">
-                                    <option value="<?php echo $pageNum; ?>" selected> 每页显示<?php echo $pageNum; ?>条</option>
+                                <select  name="select_num"   class="nice-select rounded-0" aria-label=".form-select-sm example">
+                                    <option value="<?php echo $perPage; ?>" selected> 每页显示<?php echo $perPage; ?>条</option>
                                     <option value="4">每页显示4条</option>
+                                    <option value="8">每页显示8条</option>
                                     <option value="12">每页显示12条</option>
                                 </select>
                             </div>
@@ -348,28 +428,18 @@ $pageNum=8;
 
                         <!-- Shopt Top Bar Right Start -->
                         <div class="shop-top-bar-right mb-4">
-                            <nav>
-                                <ul class="pagination">
-                                    <li class="page-item disabled">
-                                        <a class="page-link rounded-0" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                    </li>
-                                    <?php
-                                    for ($ye=1;$ye<=$number;$ye++){
 
+                                <select  name="page_num"   class="nice-select rounded-0" aria-label=".form-select-sm example">
+                                    <option value="<?php echo $currentPage; ?>" selected>当前为第 <?php echo $currentPage; ?> 页</option>
+                                    <?php
+                                    for ($ye=1;$ye<=$totalPage;$ye++){
                                     ?>
-                                    <li   class="page-item"><a class="page-link active" href="#"><?php echo $ye; ?></a></li>
+                                        <option value="<?php echo $ye; ?>"><?php echo $ye; ?>页</option>
                                     <?php
                                     }
                                     ?>
-                                    <li class="page-item">
-                                        <a class="page-link rounded-0" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
+                                </select>
+
                         </div>
                         <!-- Shopt Top Bar Right End -->
                     </div>
