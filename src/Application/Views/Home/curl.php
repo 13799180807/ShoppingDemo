@@ -2,6 +2,34 @@
 
 
 
+
+function waresSortQuery($sortName,$page,$num){
+    $url="http://localhost:8080/index/sort/waresall/all/";
+    $datalist=array();
+    $datalist["sortName"]=$sortName;
+    $datalist["page"]=$page;
+    $datalist["num"]=$num;
+    $json=curl_post($url,$datalist);
+    $list=JsonList($json);
+    return $list;
+}
+function pagingUri($num,$sortName){
+    $url="http://localhost:8080/index/sort/page/num/";
+    $datalist=array();
+    $datalist["num"]=$num;
+    $datalist["sortName"]=$sortName;
+    $json=curl_post($url,$datalist);
+    $list=JsonList($json);
+    return $list;
+}
+function sortListUri(){
+    $url="http://localhost:8080/index/waressort/sort/";
+    $datalist=array();
+    $datalist["method"]="all";
+    $json=curl_post($url,$datalist);
+    $list=JsonList($json);
+    return $list;
+}
 function testUri(){
     $url="http://localhost:8080/index/details/text/sin/";
     $datalist=array();

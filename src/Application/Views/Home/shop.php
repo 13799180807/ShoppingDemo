@@ -1,79 +1,52 @@
 <?php
+require 'curl.php';
+require 'config.php';
 
-$sorttype=sortcurl();
+$sortListAll=sortListUri();
+if(isset($_POST['sort_Name'])){
+    $sortname=$_POST['sort_Name'];
+}else{
+    $sortname = "查询全部";   //查询类型
+}
+
+
+
+$pageNum=8;
+
+
+//初始化的时候
+
+//$pageNum="0";           //每页显示
+//
+//
+//var_dump($sortListAll);
+//
+//
+//
+////显示页码
+//$pagedata=pagingUri($pageNum,$sortname);
+//
+//
+//$pageNum=$pagedata['num'];  //几个
+//$number=$pagedata['page']; //几页
+//$sortname=$pagedata['sortName']; //名字
+//
+//$result=waresSortQuery($sortname,$pageNum,$number);
+//$waresSortData=$result['wares'];
+//$callBackData=$result['callBack'];
+//var_dump($callBackData);
+//var_dump($waresSortData);
+
+
+
+
+
+
+
 
 
 ?>
-<?php
 
-function sortcurl(){
-    $url="http://localhost:801/ShoppingDemo/controller/waresSortlistService.php";
-    $postdata=array();
-    $postdata['Sortlist']="*";
-    $sorttype=curl_post($url,$postdata);
-    $sorttype=JsonListisset($sorttype);
-    if ($sorttype=="-1"){
-        return -1;
-    }else{
-        return $sorttype;
-    }
-}
-function JsonListisset($json){
-    $json=json_decode($json,true);
-    $dataisset=$json["datanum"];
-    if($dataisset=="1"){
-        $json=$json["data"];
-        $json=$json["wareslist"];
-        return $json;
-    }else{
-        return -1;
-    }
-}
-function curl_get($url)
-{
-    $header = array(
-        'Accept: Application/json',
-    );
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_HEADER, 0);
-    curl_setopt($curl, CURLOPT_TIMEOUT, 1);
-    curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-    $data = curl_exec($curl);
-
-    if (curl_error($curl)) {
-        print "Error: " . curl_error($curl);
-    } else {
-        curl_close($curl);
-        return $data;
-    }
-}
-function curl_post($url,$postdata ) {
-    $header = array(
-        'Accept: Application/json',
-    );
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_HEADER, 0);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($curl, CURLOPT_TIMEOUT, 10);
-    curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE );
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE );
-    curl_setopt($curl, CURLOPT_POST, 1);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
-    $data = curl_exec($curl);
-    if (curl_error($curl)) {
-        print "Error: " . curl_error($curl);
-    } else {
-        curl_close($curl);
-        return $data;
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,10 +54,10 @@ function curl_post($url,$postdata ) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>商品分类查看</title>
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="shortcut icon" href="<?php echo ASSETS; ?>images/favicon.ico">
+    <link rel="stylesheet"    href="<?php echo ASSETS; ?>css/vendor/vendor.min.css">
+    <link rel="stylesheet"    href="<?php echo ASSETS; ?>css/plugins/plugins.min.css">
+    <link rel="stylesheet"    href="<?php echo ASSETS; ?>css/style.min.css">
 </head>
 
 <body>
@@ -272,7 +245,7 @@ function curl_post($url,$postdata ) {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-
+                    <form action="shop.php" method="post" >
                     <!--shop toolbar start-->
                     <div class="shop_toolbar_wrapper flex-column flex-md-row pb-10 mb-n4">
 
@@ -284,28 +257,28 @@ function curl_post($url,$postdata ) {
                                 <button data-role="grid_list" type="button" class="btn-list" title="List"><i class="fa fa-list"></i></button>
                             </div>
                             <div class="shop-top-show">
-                                <span>当前一共数据有：xx</span>
+                                <span><?php
+                                    echo "当前查询结果为：类别： {$sortname} ，当前为第：{$number} 页，当页显示：{$pageNum} 个"
+                                    ?></span>
                             </div>
-
                         </div>
                         <!-- Shop Top Bar Left end -->
 
                         <!-- Shopt Top Bar Right Start -->
                         <div class="shop-top-bar-right mb-4">
                             <!--表单请求-->
-                            <form action="shop.php" method="post" >
-                                <div class="shop-short-by">
-                                    <select   name="type11" class="nice-select" aria-label=".form-select-sm example">
-                                        <option value="*">查询全部</option>
 
+                                <div class="shop-short-by">
+                                    <select   name="sort_Name" class="nice-select"   >
+                                        <option value="<?php  echo $sortname; ?>"><?php  echo $sortname; ?></option>
+                                        <option value="查询全部">查询全部</option>
                                         <?php
-                                        if ($sorttype=="-1"){
-                                            $ty="数据异常";
+                                        if ($sortListAll=="-1" || $sortListAll==""){
                                         }else{
-                                            foreach ($sorttype as $row){
-                                                $ty=$row['sort_name'];
+                                            foreach ($sortListAll as $row){
+                                                $sortname=$row['sort_name'];
                                         ?>
-                                        <option value="<?php  echo $ty; ?>"><?php  echo $ty; ?></option>
+                                        <option value="<?php  echo $sortname; ?>"><?php  echo $sortname; ?></option>
                                         <?php
                                             }
                                         }
@@ -313,7 +286,7 @@ function curl_post($url,$postdata ) {
                                     </select>
                                 </div>
                                 <input class="btn btn-whited btn-hover-primary text-capitalize add-to-cart" type="submit" value="点击查询">
-                            </form>
+
                             <!--表单请求结束-->
                         </div>
                         <!-- Shopt Top Bar Right End -->
@@ -324,387 +297,50 @@ function curl_post($url,$postdata ) {
                     <!-- Shop Wrapper Start -->
                     <div class="row shop_wrapper grid_4">
 
+<!--开始-->
+                        <?php
+                        $waresSortData;
+                        if($waresSortData==""){
+                            echo "<span style='margin-left: 45%;font-size: 23px'>空空如也......</span>";
+                        }{
+                            foreach ($waresSortData as $row){
+
+                        ?>
                         <!-- Single Product Start -->
                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="single-product.html" class="image">
-                                        <img class="first-image" src="assets/images/products/medium-product/2.jpg" alt="Product" />
-                                        <img class="second-image fit-image" src="assets/images/products/medium-product/3.jpg" alt="Product" />
+                                    <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
+                                        <img class="first-image" src="<?php echo IMG_PATH.$row['sp_imgpath'] ; ?>" alt="Product" />
                                     </a>
-                                    <span class="badges">
-                                            <span class="sale">-18%</span>
-                                    </span>
-                                    <div class="actions">
-                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <div class="add-cart-btn">
-                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                    </div>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="single-product.html">Unique content product</a></h5>
+                                    <h5 class="title"><a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>"><?php echo $row['sp_name'] ;?></a></h5>
                                     <span class="price">
-                                            <span class="new">$12.50</span>
-                                    <span class="old">$14.50</span>
+                                            <span class="new">￥<?php echo $row['sp_price'] ;?></span>
+                                    <span class="old">  </span>
                                     </span>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
                                 </div>
                             </div>
                         </div>
                         <!-- Single Product End -->
-
-                        <!-- Single Product Start -->
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
-                            <div class="product-inner">
-                                <div class="thumb">
-                                    <a href="single-product.html" class="image">
-                                        <img class="first-image" src="assets/images/products/medium-product/1.jpg" alt="Product" />
-                                        <img class="second-image fit-image" src="assets/images/products/medium-product/2.jpg" alt="Product" />
-                                    </a>
-                                    <span class="badges">
-                                            <span class="sale">-18%</span>
-                                    </span>
-                                    <div class="actions">
-                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <div class="add-cart-btn">
-                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="single-product.html">New badge product</a></h5>
-                                    <span class="price">
-                                            <span class="new">$17.50</span>
-                                    </span>
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Product End -->
-
-                        <!-- Single Product Start -->
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
-                            <div class="product-inner">
-                                <div class="thumb">
-                                    <a href="single-product.html" class="image">
-                                        <img class="first-image" src="assets/images/products/medium-product/3.jpg" alt="Product" />
-                                        <img class="second-image fit-image" src="assets/images/products/medium-product/4.jpg" alt="Product" />
-                                    </a>
-                                    <span class="badges"><span class="sale">-18%</span></span>
-                                    <div class="actions">
-                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <div class="add-cart-btn">
-                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="single-product.html">Soldout new product</a></h5>
-                                    <span class="price">
-                                            <span class="new">$19.50</span>
-                                    <span class="old">$21.50</span>
-                                    </span>
-                                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Product End -->
-
-                        <!-- Single Product Start -->
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
-                            <div class="product-inner">
-                                <div class="thumb">
-                                    <a href="single-product.html" class="image">
-                                        <img class="first-image" src="assets/images/products/medium-product/5.jpg" alt="Product" />
-                                        <img class="second-image fit-image" src="assets/images/products/medium-product/6.jpg" alt="Product" />
-                                    </a>
-                                    <div class="actions">
-                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <div class="countdown-area">
-                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
-                                    </div>
-                                    <div class="add-cart-btn">
-                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="single-product.html">Simple toy product</a></h5>
-                                    <span class="price">
-                                            <span class="new">$16.50</span>
-                                    </span>
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Product End -->
-
-                        <!-- Single Product Start -->
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
-                            <div class="product-inner">
-                                <div class="thumb">
-                                    <a href="single-product.html" class="image">
-                                        <img class="first-image" src="assets/images/products/medium-product/7.jpg" alt="Product" />
-                                        <img class="second-image fit-image" src="assets/images/products/medium-product/8.jpg" alt="Product" />
-                                    </a>
-                                    <div class="actions">
-                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <div class="add-cart-btn">
-                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="single-product.html">Baby Cat Doll</a></h5>
-                                    <span class="price">
-                                            <span class="new">$11.00</span>
-                                    <span class="old">$13.00</span>
-                                    </span>
-                                    <p>A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal...</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Product End -->
-
-                        <!-- Single Product Start -->
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
-                            <div class="product-inner">
-                                <div class="thumb">
-                                    <a href="single-product.html" class="image">
-                                        <img class="first-image" src="assets/images/products/medium-product/9.jpg" alt="Product" />
-                                        <img class="second-image fit-image" src="assets/images/products/medium-product/10.jpg" alt="Product" />
-                                    </a>
-                                    <span class="badges">
-                                            <span class="sale">-18%</span>
-                                    </span>
-                                    <div class="actions">
-                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <div class="add-cart-btn">
-                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="single-product.html">Demo product title</a></h5>
-                                    <span class="price">
-                                            <span class="new">$17.80</span>
-                                    <span class="old">$19.10</span>
-                                    </span>
-                                    <p>As opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for...</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Product End -->
-
-                        <!-- Single Product Start -->
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
-                            <div class="product-inner">
-                                <div class="thumb">
-                                    <a href="single-product.html" class="image">
-                                        <img class="first-image" src="assets/images/products/medium-product/11.jpg" alt="Product" />
-                                        <img class="second-image fit-image" src="assets/images/products/medium-product/12.jpg" alt="Product" />
-                                    </a>
-                                    <div class="actions">
-                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <div class="add-cart-btn">
-                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="single-product.html">Dummy text for title</a></h5>
-                                    <span class="price">
-                                            <span class="new">$13.30</span>
-                                    <span class="old">$14.40</span>
-                                    </span>
-                                    <p>There are many variations of passages of lorem ipsum, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Product End -->
-
-                        <!-- Single Product Start -->
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
-                            <div class="product-inner">
-                                <div class="thumb">
-                                    <a href="single-product.html" class="image">
-                                        <img class="first-image" src="assets/images/products/medium-product/3.jpg" alt="Product" />
-                                        <img class="second-image fit-image" src="assets/images/products/medium-product/4.jpg" alt="Product" />
-                                    </a>
-                                    <div class="actions">
-                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <div class="add-cart-btn">
-                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="single-product.html">Demo product title</a></h5>
-                                    <span class="price">
-                                            <span class="new">$11.90</span>
-                                    </span>
-                                    <p>There are many variations of passages of lorem ipsum, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Product End -->
-
-                        <!-- Single Product Start -->
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
-                            <div class="product-inner">
-                                <div class="thumb">
-                                    <a href="single-product.html" class="image">
-                                        <img class="first-image" src="assets/images/products/medium-product/5.jpg" alt="Product" />
-                                        <img class="second-image fit-image" src="assets/images/products/medium-product/6.jpg" alt="Product" />
-                                    </a>
-                                    <div class="actions">
-                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <div class="add-cart-btn">
-                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="single-product.html">Product title here</a></h5>
-                                    <span class="price">
-                                            <span class="new">$18.70</span>
-                                    </span>
-                                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Product End -->
-
-                        <!-- Single Product Start -->
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
-                            <div class="product-inner">
-                                <div class="thumb">
-                                    <a href="single-product.html" class="image">
-                                        <img class="first-image" src="assets/images/products/medium-product/7.jpg" alt="Product" />
-                                        <img class="second-image fit-image" src="assets/images/products/medium-product/8.jpg" alt="Product" />
-                                    </a>
-                                    <span class="badges">
-                                            <span class="sale">New</span>
-                                    </span>
-                                    <div class="actions">
-                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <div class="add-cart-btn">
-                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="single-product.html">Dummy text for title</a></h5>
-                                    <span class="price">
-                                            <span class="new">
-                                                $19.40
-                                            </span>
-                                    </span>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Product End -->
-
-                        <!-- Single Product Start -->
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
-                            <div class="product-inner">
-                                <div class="thumb">
-                                    <a href="single-product.html" class="image">
-                                        <img class="first-image" src="assets/images/products/medium-product/9.jpg" alt="Product" />
-                                        <img class="second-image fit-image" src="assets/images/products/medium-product/10.jpg" alt="Product" />
-                                    </a>
-                                    <div class="actions">
-                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <div class="add-cart-btn">
-                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="single-product.html">Unique content product</a></h5>
-                                    <span class="price">
-                                            <span class="new">$20.20</span>
-                                    </span>
-                                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Product End -->
-
-                        <!-- Single Product Start -->
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
-                            <div class="product-inner">
-                                <div class="thumb">
-                                    <a href="single-product.html" class="image">
-                                        <img class="first-image" src="assets/images/products/medium-product/11.jpg" alt="Product" />
-                                        <img class="second-image fit-image" src="assets/images/products/medium-product/12.jpg" alt="Product" />
-                                    </a>
-                                    <span class="badges">
-                                            <span class="sale">-18%</span>
-                                    </span>
-                                    <div class="actions">
-                                        <a href="wishlist.html" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                        <a href="compare.html" class="action compare"><i class="pe-7s-refresh-2"></i></a>
-                                        <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <div class="countdown-area">
-                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
-                                    </div>
-                                    <div class="add-cart-btn">
-                                        <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">Add To Cart</button>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="single-product.html">Dummy text for title</a></h5>
-                                    <span class="price">
-                                            <span class="new">$15.60</span>
-                                    <span class="old">$18.60</span>
-                                    </span>
-                                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Product End -->
-
+                        <?php
+                            }
+                        }
+                        ?>
+<!--结束-->
                     </div>
                     <!-- Shop Wrapper End -->
 
                     <!--shop toolbar start-->
                     <div class="shop_toolbar_wrapper mt-10 mb-n4">
-
                         <!-- Shop Top Bar Left start -->
                         <div class="shop-bottom-bar-left mb-4">
                             <div class="shop-short-by">
                                 <select class="nice-select rounded-0" aria-label=".form-select-sm example">
-                                    <option selected>Show 12 Per Page</option>
-                                    <option value="1">Show 12 Per Page</option>
-                                    <option value="2">Show 24 Per Page</option>
-                                    <option value="3">Show 15 Per Page</option>
-                                    <option value="3">Show 30 Per Page</option>
+                                    <option value="<?php echo $pageNum; ?>" selected> 每页显示<?php echo $pageNum; ?>条</option>
+                                    <option value="4">每页显示4条</option>
+                                    <option value="12">每页显示12条</option>
                                 </select>
                             </div>
                         </div>
@@ -719,9 +355,14 @@ function curl_post($url,$postdata ) {
                                             <span aria-hidden="true">&laquo;</span>
                                         </a>
                                     </li>
-                                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <?php
+                                    for ($ye=1;$ye<=$number;$ye++){
+
+                                    ?>
+                                    <li   class="page-item"><a class="page-link active" href="#"><?php echo $ye; ?></a></li>
+                                    <?php
+                                    }
+                                    ?>
                                     <li class="page-item">
                                         <a class="page-link rounded-0" href="#" aria-label="Next">
                                             <span aria-hidden="true">&raquo;</span>
@@ -731,10 +372,9 @@ function curl_post($url,$postdata ) {
                             </nav>
                         </div>
                         <!-- Shopt Top Bar Right End -->
-
                     </div>
                     <!--shop toolbar end-->
-
+                    </form>
                 </div>
             </div>
         </div>

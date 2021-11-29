@@ -9,7 +9,10 @@ class Route
             "/index",
             "/index/details",
             "/index/details/img",
-            "/index/details/text"
+            "/index/details/text",
+            "/index/waressort",
+            "/index/sort/page",
+            "/index/sort/waresall",
         );
         return $routeList;
     }

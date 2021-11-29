@@ -29,6 +29,22 @@ interface SortService{
      */
     public function sortUpate($id,$name);
 
+    /**
+     * @param $sortName
+     * @param $pages
+     * @param $num
+     * @return mixed
+     * 分页显示
+     */
+    public function sortWaresPages($sortName,$pages,$num);
+
+    /**
+     * @param $sortName
+     * @param $num
+     * @return mixed
+     * 给前端显示有多少页面
+     */
+    public function waresPagesNum($sortName,$num);
 
 
 }

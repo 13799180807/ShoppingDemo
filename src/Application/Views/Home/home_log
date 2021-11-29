@@ -1,0 +1,501 @@
+[29-Nov-2021 02:02:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 31
+[29-Nov-2021 02:02:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 31
+
+[29-Nov-2021 06:59:44 Europe/Berlin] PHP Notice:  Undefined index: sort_Name in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 5
+[29-Nov-2021 07:02:09 Europe/Berlin] PHP Notice:  Undefined index: sort_Name in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 5
+[29-Nov-2021 07:02:24 Europe/Berlin] PHP Notice:  Undefined index: sort_Name in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 5
+[29-Nov-2021 07:07:01 Europe/Berlin] PHP Notice:  Undefined index: sort_Name in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 5
+[29-Nov-2021 07:18:55 Europe/Berlin] PHP Notice:  Undefined index: sort_Name in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 5
+[29-Nov-2021 07:20:13 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 665
+[29-Nov-2021 07:20:41 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 663
+[29-Nov-2021 07:22:47 Europe/Berlin] PHP Notice:  Undefined index: sort_Name in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 5
+[29-Nov-2021 07:31:49 Europe/Berlin] PHP Notice:  Undefined index: sort_Name in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 5
+[29-Nov-2021 07:38:52 Europe/Berlin] PHP Notice:  Undefined index: sort_Name in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 5
+[29-Nov-2021 08:45:51 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 08:45:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 08:49:50 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 08:49:50 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 22
+[29-Nov-2021 08:49:50 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 23
+[29-Nov-2021 09:01:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:01:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 22
+[29-Nov-2021 09:01:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 23
+[29-Nov-2021 09:01:38 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 291
+[29-Nov-2021 09:02:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:02:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 22
+[29-Nov-2021 09:02:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 23
+[29-Nov-2021 09:02:11 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 291
+[29-Nov-2021 09:02:20 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:02:20 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 22
+[29-Nov-2021 09:02:20 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 23
+[29-Nov-2021 09:02:20 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 291
+[29-Nov-2021 09:02:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:02:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 22
+[29-Nov-2021 09:02:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 23
+[29-Nov-2021 09:02:37 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 291
+[29-Nov-2021 09:02:58 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:02:58 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 22
+[29-Nov-2021 09:02:58 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 23
+[29-Nov-2021 09:02:58 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 291
+[29-Nov-2021 09:03:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:03:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 22
+[29-Nov-2021 09:03:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 23
+[29-Nov-2021 09:03:37 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 291
+[29-Nov-2021 09:04:03 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:04:03 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 22
+[29-Nov-2021 09:04:03 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 23
+[29-Nov-2021 09:04:03 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 291
+[29-Nov-2021 09:04:19 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:04:19 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 22
+[29-Nov-2021 09:04:19 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 23
+[29-Nov-2021 09:04:19 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 291
+[29-Nov-2021 09:08:27 Europe/Berlin] PHP Notice:  Undefined index: sort_Name in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 5
+[29-Nov-2021 09:09:31 Europe/Berlin] PHP Notice:  Undefined index: sort_Name in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 5
+[29-Nov-2021 09:14:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:14:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 31
+[29-Nov-2021 09:14:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:14:24 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:14:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:14:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 31
+[29-Nov-2021 09:14:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:14:30 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:14:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:14:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 31
+[29-Nov-2021 09:14:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:14:32 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:14:34 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:14:34 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 31
+[29-Nov-2021 09:14:34 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:14:34 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:15:09 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:15:09 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 31
+[29-Nov-2021 09:15:09 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:15:09 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:15:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:15:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 31
+[29-Nov-2021 09:15:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:15:10 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:15:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:15:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 31
+[29-Nov-2021 09:15:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:15:12 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:15:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:15:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 31
+[29-Nov-2021 09:15:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:15:15 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:15:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:15:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 31
+[29-Nov-2021 09:15:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:15:16 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:15:25 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:15:25 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:15:25 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:15:25 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:15:25 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 31
+[29-Nov-2021 09:15:25 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:15:25 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:15:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:15:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:15:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:15:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:15:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 31
+[29-Nov-2021 09:15:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:15:27 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:15:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:15:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:15:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:15:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:15:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 31
+[29-Nov-2021 09:15:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:15:29 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:16:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:16:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 22
+[29-Nov-2021 09:16:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 23
+[29-Nov-2021 09:16:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:16:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:16:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:16:26 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:17:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:17:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:17:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:17:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:17:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:17:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 33
+[29-Nov-2021 09:17:01 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 304
+[29-Nov-2021 09:17:46 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:17:46 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:17:46 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:17:46 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:17:46 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:17:46 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 33
+[29-Nov-2021 09:17:46 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:17:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:17:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:17:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:17:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:17:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:17:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 33
+[29-Nov-2021 09:17:48 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:18:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:18:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:18:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:18:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:18:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:18:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 33
+[29-Nov-2021 09:18:12 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:18:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:18:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:18:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:18:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:18:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:18:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 33
+[29-Nov-2021 09:18:16 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:18:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:18:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:18:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:18:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:18:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:18:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 33
+[29-Nov-2021 09:18:18 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:19:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:19:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:19:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:19:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:19:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:19:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 33
+[29-Nov-2021 09:19:18 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:19:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:19:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:19:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:19:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:19:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:19:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 33
+[29-Nov-2021 09:19:23 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:19:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:19:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:19:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:19:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:19:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:19:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 33
+[29-Nov-2021 09:19:24 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:19:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:19:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:19:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:19:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:19:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:19:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 33
+[29-Nov-2021 09:19:27 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:21:04 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:21:04 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:21:04 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:21:04 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:21:04 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:21:04 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 33
+[29-Nov-2021 09:21:04 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:21:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:21:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 27
+[29-Nov-2021 09:21:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 28
+[29-Nov-2021 09:21:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:21:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 32
+[29-Nov-2021 09:21:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 33
+[29-Nov-2021 09:21:11 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:23:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:23:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:23:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[29-Nov-2021 09:23:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:23:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:23:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 30
+[29-Nov-2021 09:23:27 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:23:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:23:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:23:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[29-Nov-2021 09:23:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:23:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:23:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 30
+[29-Nov-2021 09:23:30 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:23:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:23:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:23:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[29-Nov-2021 09:23:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:23:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:23:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 30
+[29-Nov-2021 09:23:32 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:23:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:23:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:23:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[29-Nov-2021 09:23:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:23:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:23:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 30
+[29-Nov-2021 09:23:33 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:23:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:23:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:23:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[29-Nov-2021 09:23:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:23:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:23:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 30
+[29-Nov-2021 09:23:38 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:25:08 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:25:08 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:25:08 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[29-Nov-2021 09:25:08 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:25:08 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:25:08 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 30
+[29-Nov-2021 09:25:08 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:25:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:25:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:25:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[29-Nov-2021 09:25:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:25:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:25:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 30
+[29-Nov-2021 09:25:13 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:25:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:25:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:25:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[29-Nov-2021 09:25:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:25:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:25:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 30
+[29-Nov-2021 09:25:15 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:25:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:25:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:25:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[29-Nov-2021 09:25:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:25:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:25:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 30
+[29-Nov-2021 09:25:17 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:25:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:25:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:25:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[29-Nov-2021 09:25:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:25:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:25:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 30
+[29-Nov-2021 09:25:52 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:25:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:25:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:25:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[29-Nov-2021 09:25:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:25:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:25:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 30
+[29-Nov-2021 09:25:57 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 59
+[29-Nov-2021 09:26:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 24
+[29-Nov-2021 09:26:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[29-Nov-2021 09:26:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[29-Nov-2021 09:26:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 29
+[29-Nov-2021 09:26:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 30
+[29-Nov-2021 09:26:01 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:28 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:28 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:28 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:28 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:28 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:28 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:28 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:28 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:36 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:26:38 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:38 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:38 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:38 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:38 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:38 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:38 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:38 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:26:40 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:40 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:40 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:40 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:40 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:40 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:40 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:40 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:26:43 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:43 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:43 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:43 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:43 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:43 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:43 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:43 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:26:44 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:44 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:44 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:44 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:44 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:44 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:44 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:44 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:26:46 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:46 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:46 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:46 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:46 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:46 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:46 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:46 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:26:47 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:47 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:47 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:47 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:47 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:47 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:47 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:47 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:26:51 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:51 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:51 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:51 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:51 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:51 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:51 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:51 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:26:53 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:53 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:53 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:53 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:53 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:53 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:53 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:53 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:26:56 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:56 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:56 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:56 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:56 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:56 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:56 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:56 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:26:59 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:59 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:26:59 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:26:59 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:59 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:26:59 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:59 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:26:59 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:27:01 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:27:01 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:27:01 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 296
+[29-Nov-2021 09:27:01 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:27:01 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 299
+[29-Nov-2021 09:27:01 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:27:01 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 334
+[29-Nov-2021 09:27:01 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 352
+[29-Nov-2021 09:28:28 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:28:28 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:28:28 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 297
+[29-Nov-2021 09:28:28 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:28:28 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:28:28 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 335
+[29-Nov-2021 09:28:28 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 335
+[29-Nov-2021 09:28:28 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 353
+[29-Nov-2021 09:28:30 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:28:30 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:28:30 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 297
+[29-Nov-2021 09:28:30 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:28:30 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:28:30 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 335
+[29-Nov-2021 09:28:30 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 335
+[29-Nov-2021 09:28:30 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 353
+[29-Nov-2021 09:28:33 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:28:33 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:28:33 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 297
+[29-Nov-2021 09:28:33 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:28:33 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:28:33 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 335
+[29-Nov-2021 09:28:33 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 335
+[29-Nov-2021 09:28:33 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 353
+[29-Nov-2021 09:28:35 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:28:35 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:28:35 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 297
+[29-Nov-2021 09:28:35 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:28:35 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:28:35 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 335
+[29-Nov-2021 09:28:35 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 335
+[29-Nov-2021 09:28:35 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 353
+[29-Nov-2021 09:29:54 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:29:54 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 255
+[29-Nov-2021 09:29:54 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 297
+[29-Nov-2021 09:29:54 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:29:54 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 300
+[29-Nov-2021 09:29:54 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 335
+[29-Nov-2021 09:29:54 Europe/Berlin] PHP Notice:  Undefined variable: pageNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 335
+[29-Nov-2021 09:29:54 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 353
+[29-Nov-2021 09:41:26 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:41:26 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:41:26 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:41:26 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:41:26 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359
+[29-Nov-2021 09:41:29 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:41:29 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:41:29 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:41:29 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:41:29 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359
+[29-Nov-2021 09:41:34 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:41:34 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:41:34 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:41:34 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:41:34 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359
+[29-Nov-2021 09:42:03 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:42:03 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:42:03 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:42:03 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:42:03 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359
+[29-Nov-2021 09:42:06 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:42:06 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:42:06 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:42:06 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:42:06 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359
+[29-Nov-2021 09:42:21 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:42:21 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:42:21 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:42:21 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:42:21 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359
+[29-Nov-2021 09:42:52 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:42:52 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:42:52 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:42:52 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:42:52 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359
+[29-Nov-2021 09:42:54 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:42:54 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:42:54 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:42:54 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:42:54 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359
+[29-Nov-2021 09:42:59 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:42:59 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:42:59 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:42:59 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:42:59 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359
+[29-Nov-2021 09:43:00 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:43:00 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:43:00 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:43:00 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:43:00 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359
+[29-Nov-2021 09:43:01 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:43:01 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:43:01 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:43:01 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:43:01 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359
+[29-Nov-2021 09:43:04 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:43:04 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:43:04 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:43:04 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:43:04 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359
+[29-Nov-2021 09:43:08 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 261
+[29-Nov-2021 09:43:08 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 303
+[29-Nov-2021 09:43:08 Europe/Berlin] PHP Notice:  Undefined variable: waresSortData in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:43:08 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 306
+[29-Nov-2021 09:43:08 Europe/Berlin] PHP Notice:  Undefined variable: number in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 359

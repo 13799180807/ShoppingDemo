@@ -484,7 +484,7 @@ $newestGoods=JsonList($newestGoods);
         </div>
 
         <div class="add-cart-btn" style="margin-left: 45%">
-            <a href="#"> <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">查看更多分类</button></a>
+            <a href="shop.php"> <button class="btn btn-whited btn-hover-primary text-capitalize add-to-cart">查看更多分类</button></a>
         </div>
     </div>
     <!-- Product Section End -->

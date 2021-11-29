@@ -6,6 +6,28 @@ require '../src/Application/Domain/Wares.php';
 
 class WaresModelAll
 {
+
+
+
+    public static function sortWaresModelAll($rows,$backAll){
+        $i=0;
+        foreach ($rows as $row){
+            $c=new Wares();
+            $c->sp_uid=$row[0];  //商品UID
+            $c->sp_name=$row[2]; //商品名字
+            $c->sp_price=$row[3]; //商品价格
+            $c->sp_imgpath=$row[7]; //商品主图
+            $dataList[$i]=$c;
+            $i++;
+        }
+        $arr=array(
+            "wares"=>$dataList,
+            "callBack"=>$backAll
+        );
+        return $arr;
+    }
+
+
     /**
      * @param $rows
      * @return array[]

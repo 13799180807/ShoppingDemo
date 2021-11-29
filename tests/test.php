@@ -10,6 +10,21 @@ require '../src/settings.php';
 
 
 
+
+
+
+//$s=SortController::waresSortPageList();
+//echo $s;
+
+//$dao=new SortDaoImpl();
+//$conn=Connection::conn();
+////$a=$dao->waresSortQuery($conn,"查询全部",1,5);
+//$a=$dao->waresPage($conn,"查询全部",3);
+//var_dump($a);
+//
+//$conn->close();
+
+
 //$json=testUri();
 //var_dump($json);
 //

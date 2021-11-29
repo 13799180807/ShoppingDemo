@@ -16,6 +16,15 @@
         }elseif(uri($_SERVER["REQUEST_URI"])=="/index/details/text"){
             $json=WaresController::waresTextAll($parame);
             echo $json;
+        }elseif (uri($_SERVER["REQUEST_URI"])=="/index/waressort"){
+             $json=SortController::waresSortList($parame);
+             echo $json;
+        }elseif (uri($_SERVER["REQUEST_URI"])=="/index/sort/page"){
+            $json=SortController::waresSortPageList($parame);
+            echo $json;
+        }elseif (uri($_SERVER["REQUEST_URI"])=="/index/sort/waresall"){
+            $json=SortController::sortPageWaresAll($parame);
+            echo $json;
         }
         else{
             echo "<h2>404</h2>";

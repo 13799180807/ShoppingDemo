@@ -22,6 +22,8 @@ require '../src/Application/Dao/SortDao.php';
 require '../src/Application/Service/WaresService.php';
 require '../src/Application/Service/SortService.php';
 
+require '../src/Application/Domain/Sort.php';
+
 require '../src/Application/Controller/Home/WaresController.php';
 require '../src/Application/Controller/Home/SortController.php';
 

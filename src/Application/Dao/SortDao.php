@@ -35,4 +35,23 @@ interface SortDao{
      */
     public function sortUpdate($conn,$id,$name);
 
+
+    /**
+     * @param $conn
+     * @param $sortName
+     * @param $num
+     * @return mixed
+     * 查看一共有多少页面
+     */
+    public function waresPage($conn,$sortName,$num);
+
+    /**
+     * @param $conn
+     * @param $sortName
+     * @return mixed
+     * 商品分类查询显示
+     * 分页用的
+     */
+    public function waresSortQuery($conn,$sortName,$pages,$num);
+
 }

@@ -83,5 +83,42 @@ class SortServiceImpl implements SortService
         $conn->close();
         return -1;
     }
+
+    /**
+     * @param $sortName
+     * @param $pages
+     * @param $num
+     * @return mixed|void
+     * 分页查询显示
+     */
+    public function sortWaresPages($sortName, $pages, $num)
+    {
+        // TODO: Implement sortWaresPages() method.
+        $conn=Connection::conn();
+        $dao=new SortDaoImpl();
+        $rows=$dao->waresSortQuery($conn,$sortName,$pages,$num);
+        $conn->close();
+        if (count($rows)==0){
+            return -1;
+        }else{
+            return $rows;
+        }
+    }
+
+    /**
+     * @param $sortName
+     * @param $num
+     * @return false|float|mixed
+     * 给出分页数码
+     */
+    public function waresPagesNum($sortName,$num)
+    {
+        // TODO: Implement waresPagesNum() method.
+        $conn=Connection::conn();
+        $dao=new SortDaoImpl();
+        $pages=$dao->waresPage($conn,$sortName,$num);
+        $conn->close();
+        return $pages;
+    }
 }
 
