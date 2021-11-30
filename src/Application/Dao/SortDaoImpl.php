@@ -8,7 +8,7 @@ class SortDaoImpl implements SortDao
      * @return mixed
      * 查询
      */
-    public function sortListQuery($conn)
+    public static function sortListQuery($conn)
     {
         // TODO: Implement sortListQuery() method.
         $rows=QueryBuilder::queryAll($conn,"shop_sort");
@@ -21,7 +21,7 @@ class SortDaoImpl implements SortDao
      * @return mixed|void
      * 根据分类进行查询
      */
-    public function waresSortQuery($conn,$sortName,$pages,$num)
+    public static function waresSortQuery($conn,$sortName,$pages,$num)
     {
 
         $pages=($pages-1)*$num;
@@ -52,7 +52,7 @@ class SortDaoImpl implements SortDao
      * @return false|float|mixed
      * 查询个数
      */
-    public function waresPage($conn, $sortName, $num)
+    public static function waresPage($conn, $sortName, $num)
     {
         if ($sortName=="查询全部"){
             $sql="SELECT * FROM shop_wares  ";
@@ -79,7 +79,7 @@ class SortDaoImpl implements SortDao
      * @return bool|mixed
      * 删除一个分类
      */
-    public function sortOneDelect($conn, $id)
+    public static function sortOneDelect($conn, $id)
     {
         // TODO: Implement sortOneDel() method.
         $rows=DelectBuilder::delectAll($conn,"shop_sort","id=?","i",$id);
@@ -92,7 +92,7 @@ class SortDaoImpl implements SortDao
      * @return mixed
      * 添加一个分类
      */
-    public function sortInsert($conn, $name)
+    public static function sortInsert($conn, $name)
     {
         // TODO: Implement sortInsert() method.
         $sql="INSERT INTO shop_sort(sort_name) VALUE (?)";
@@ -111,7 +111,7 @@ class SortDaoImpl implements SortDao
      * @return mixed
      * 更新分类
      */
-    public function sortUpdate($conn, $id, $name)
+    public static function sortUpdate($conn, $id, $name)
     {
         // TODO: Implement sortUpdate() method.
         $sql=" UPDATE shop_sort SET sort_name=? WHERE id=?";

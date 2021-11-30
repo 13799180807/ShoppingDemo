@@ -8,7 +8,7 @@ class SortServiceImpl implements SortService
      * @return int|mixed
      * 查询显示的结果
      */
-    public function sortAll()
+    public static function sortAll()
     {
         // TODO: Implement sortAll() method.
         $conn=Connection::conn();
@@ -27,7 +27,7 @@ class SortServiceImpl implements SortService
      * @return bool|mixed
      * 删除一个分类
      */
-    public function sortDel($id)
+    public static function sortDel($id)
     {
         $conn=Connection::conn();
         $dao=new SortDaoImpl();
@@ -43,7 +43,7 @@ class SortServiceImpl implements SortService
      * 添加一个分类
      * 存在不添加，不存在就添加
      */
-    public function sortAdd($name)
+    public static function sortAdd($name)
     {
         // TODO: Implement sortAdd() method.
         $conn=Connection::conn();
@@ -67,7 +67,7 @@ class SortServiceImpl implements SortService
      * @return int
      * 更新一个分类，判断分类是否存在，不存在执行，存在不执行
      */
-    public function sortUpate($id, $name)
+    public static function sortUpate($id, $name)
     {
         // TODO: Implement sortUpate() method.
         $conn=Connection::conn();
@@ -91,7 +91,7 @@ class SortServiceImpl implements SortService
      * @return mixed|void
      * 分页查询显示
      */
-    public function sortWaresPages($sortName, $pages, $num)
+    public static function sortWaresPages($sortName, $pages, $num)
     {
         // TODO: Implement sortWaresPages() method.
         $conn=Connection::conn();
@@ -111,7 +111,7 @@ class SortServiceImpl implements SortService
      * @return false|float|mixed
      * 给出分页数码
      */
-    public function waresPagesNum($sortName,$num)
+    public static function waresPagesNum($sortName,$num)
     {
         // TODO: Implement waresPagesNum() method.
         $conn=Connection::conn();

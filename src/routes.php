@@ -5,8 +5,8 @@
 
         $parame=parameterList($_REQUEST);
         if(uri($_SERVER["REQUEST_URI"])=="/index"){
-            $json=WaresController::waresSortAll($parame);
-            echo $json;
+              $json=GoodsController::homePageInformation($parame);
+              echo $json;
         }elseif(uri($_SERVER["REQUEST_URI"])=="/index/details"){
             $json=WaresController::waresDetailsAll($parame);
             echo $json;
@@ -28,6 +28,16 @@
         }elseif (uri($_SERVER["REQUEST_URI"])=="/index/search"){
             $json=WaresController::waresFuzzySearchDisplay($parame);
             echo $json;
+        }elseif (uri($_SERVER["REQUEST_URI"])=="/index/register"){
+                $json=UserController::userRegister($parame);
+                echo $json;
+        }elseif (uri($_SERVER["REQUEST_URI"])=="/index/verificationCode"){
+            header("Content-Type:image/jpeg");
+        //    $clientIP=$_SERVER['REMOTE_ADDR'];
+          //  session_start();
+            $str=ChaerCode::randomCode();
+          //  $_SESSION[$clientIP]=$str;
+            ChaerCode::verificationCode($str);
         }
         else{
             echo "<h2>404</h2>";

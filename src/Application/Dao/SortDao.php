@@ -9,7 +9,7 @@ interface SortDao
      * @return mixed
      * 查询
      */
-    public function sortListQuery($conn);
+    public static function sortListQuery($conn);
 
     /**
      * @param $conn
@@ -17,7 +17,7 @@ interface SortDao
      * @return mixed
      * 删除
      */
-    public function sortOneDelect($conn,$id);
+    public static function sortOneDelect($conn,$id);
 
     /**
      * @param $conn
@@ -25,7 +25,7 @@ interface SortDao
      * @return mixed
      * 插入操作
      */
-    public function sortInsert($conn,$name);
+    public static function sortInsert($conn,$name);
 
     /**
      * @param $conn
@@ -34,7 +34,7 @@ interface SortDao
      * @return mixed
      * 修改分类名称
      */
-    public function sortUpdate($conn,$id,$name);
+    public static function sortUpdate($conn,$id,$name);
 
 
     /**
@@ -44,7 +44,7 @@ interface SortDao
      * @return mixed
      * 查看一共有多少页面
      */
-    public function waresPage($conn,$sortName,$num);
+    public static function waresPage($conn,$sortName,$num);
 
     /**
      * @param $conn
@@ -53,6 +53,6 @@ interface SortDao
      * 商品分类查询显示
      * 分页用的
      */
-    public function waresSortQuery($conn,$sortName,$pages,$num);
+    public static function waresSortQuery($conn,$sortName,$pages,$num);
 
 }

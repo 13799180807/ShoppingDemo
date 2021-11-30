@@ -1,2 +1,230 @@
 [30-Nov-2021 06:04:24 Europe/Berlin] PHP Notice:  Undefined variable: sortname in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\lookup.php on line 253
 
+[01-Dec-2021 14:00:34 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 67
+[01-Dec-2021 15:15:21 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 236
+[01-Dec-2021 15:15:21 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 15:15:24 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 236
+[01-Dec-2021 15:15:24 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 15:16:28 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:28 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:29 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:29 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:29 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:29 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:29 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:29 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:30 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:30 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:30 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:30 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:30 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:30 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:30 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:30 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:31 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:31 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:31 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:31 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:31 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:31 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:31 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:31 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:31 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:31 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 237
+[01-Dec-2021 15:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 15:32:42 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 240
+[01-Dec-2021 15:32:42 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 246
+[01-Dec-2021 16:51:10 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 236
+[01-Dec-2021 16:51:10 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 16:51:54 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 236
+[01-Dec-2021 16:51:54 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 16:52:58 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 236
+[01-Dec-2021 16:52:58 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 16:53:06 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 236
+[01-Dec-2021 16:53:06 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 16:53:08 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 236
+[01-Dec-2021 16:53:08 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 16:53:08 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 236
+[01-Dec-2021 16:53:08 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 16:53:10 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 236
+[01-Dec-2021 16:53:10 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 16:53:16 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 236
+[01-Dec-2021 16:53:16 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 17:37:25 Asia/Shanghai] PHP Notice:  Undefined index: captcha in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 8
+[01-Dec-2021 17:37:25 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 17:37:25 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 248
+[01-Dec-2021 17:37:41 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:37:53 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:39:29 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:39:48 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:44:14 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 17:44:14 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 248
+[01-Dec-2021 17:47:02 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 17:47:02 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 248
+[01-Dec-2021 17:47:03 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 17:47:03 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 248
+[01-Dec-2021 17:47:05 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 17:47:05 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 248
+[01-Dec-2021 17:47:12 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:48:08 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 17:48:08 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 248
+[01-Dec-2021 17:48:12 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 242
+[01-Dec-2021 17:48:12 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 248
+[01-Dec-2021 17:48:17 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:50:21 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 17:50:21 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 249
+[01-Dec-2021 17:50:23 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 17:50:23 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 249
+[01-Dec-2021 17:50:25 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 17:50:25 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 249
+[01-Dec-2021 17:50:47 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:51:45 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:51:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:51:54 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:54:26 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:54:29 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:54:34 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:54:44 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[01-Dec-2021 17:54:48 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 243
+[01-Dec-2021 17:54:48 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 249
+[01-Dec-2021 17:54:53 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 17
+[02-Dec-2021 17:05:17 Asia/Shanghai] PHP Notice:  Undefined variable: newestGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 435
+[02-Dec-2021 17:05:17 Asia/Shanghai] PHP Notice:  Undefined variable: newestGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 438
+[02-Dec-2021 17:05:17 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 438
+[02-Dec-2021 17:05:17 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 527
+[02-Dec-2021 17:05:17 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 530
+[02-Dec-2021 17:05:17 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 530
+[02-Dec-2021 17:05:17 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 609
+[02-Dec-2021 17:05:17 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 612
+[02-Dec-2021 17:05:17 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 612
+[02-Dec-2021 17:15:58 Asia/Shanghai] PHP Notice:  Undefined index: goodsId in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 436
+[02-Dec-2021 17:15:58 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 528
+[02-Dec-2021 17:15:58 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 531
+[02-Dec-2021 17:15:58 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 531
+[02-Dec-2021 17:15:58 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 610
+[02-Dec-2021 17:15:58 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 613
+[02-Dec-2021 17:15:58 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 613
+[02-Dec-2021 17:16:05 Asia/Shanghai] PHP Notice:  Undefined index: goodsId in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 436
+[02-Dec-2021 17:16:05 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 528
+[02-Dec-2021 17:16:05 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 531
+[02-Dec-2021 17:16:05 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 531
+[02-Dec-2021 17:16:05 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 610
+[02-Dec-2021 17:16:05 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 613
+[02-Dec-2021 17:16:05 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 613
+[02-Dec-2021 17:16:29 Asia/Shanghai] PHP Notice:  Undefined index: goodsId in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 436
+[02-Dec-2021 17:16:29 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 529
+[02-Dec-2021 17:16:29 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 532
+[02-Dec-2021 17:16:29 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 532
+[02-Dec-2021 17:16:29 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 611
+[02-Dec-2021 17:16:29 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 614
+[02-Dec-2021 17:16:29 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 614
+[02-Dec-2021 17:16:32 Asia/Shanghai] PHP Notice:  Undefined index: goodsId in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 436
+[02-Dec-2021 17:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 529
+[02-Dec-2021 17:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 532
+[02-Dec-2021 17:16:32 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 532
+[02-Dec-2021 17:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 611
+[02-Dec-2021 17:16:32 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 614
+[02-Dec-2021 17:16:32 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 614
+[02-Dec-2021 17:16:55 Asia/Shanghai] PHP Notice:  Undefined index: goodsId in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 436
+[02-Dec-2021 17:16:55 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 529
+[02-Dec-2021 17:16:55 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 532
+[02-Dec-2021 17:16:55 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 532
+[02-Dec-2021 17:16:55 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 611
+[02-Dec-2021 17:16:55 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 614
+[02-Dec-2021 17:16:55 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 614
+[02-Dec-2021 17:17:27 Asia/Shanghai] PHP Notice:  Undefined index: goodsId in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 437
+[02-Dec-2021 17:17:27 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 530
+[02-Dec-2021 17:17:27 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 533
+[02-Dec-2021 17:17:27 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 533
+[02-Dec-2021 17:17:27 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 612
+[02-Dec-2021 17:17:27 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 615
+[02-Dec-2021 17:17:27 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 615
+[02-Dec-2021 17:18:21 Asia/Shanghai] PHP Notice:  Undefined index: goodsId in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 437
+[02-Dec-2021 17:18:21 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 530
+[02-Dec-2021 17:18:21 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 533
+[02-Dec-2021 17:18:21 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 533
+[02-Dec-2021 17:18:21 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 612
+[02-Dec-2021 17:18:21 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 615
+[02-Dec-2021 17:18:21 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 615
+[02-Dec-2021 17:18:22 Asia/Shanghai] PHP Notice:  Undefined index: goodsId in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 437
+[02-Dec-2021 17:18:22 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 530
+[02-Dec-2021 17:18:22 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 533
+[02-Dec-2021 17:18:22 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 533
+[02-Dec-2021 17:18:22 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 612
+[02-Dec-2021 17:18:22 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 615
+[02-Dec-2021 17:18:22 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 615
+[02-Dec-2021 17:19:18 Asia/Shanghai] PHP Notice:  Undefined index: goodsId in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 437
+[02-Dec-2021 17:19:18 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 530
+[02-Dec-2021 17:19:18 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 533
+[02-Dec-2021 17:19:18 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 533
+[02-Dec-2021 17:19:18 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 612
+[02-Dec-2021 17:19:18 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 615
+[02-Dec-2021 17:19:18 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 615
+[02-Dec-2021 17:19:57 Asia/Shanghai] PHP Notice:  Undefined index: goodsId in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 437
+[02-Dec-2021 17:19:57 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 530
+[02-Dec-2021 17:19:57 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 533
+[02-Dec-2021 17:19:57 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 533
+[02-Dec-2021 17:19:57 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 612
+[02-Dec-2021 17:19:57 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 615
+[02-Dec-2021 17:19:57 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 615
+[02-Dec-2021 17:19:58 Asia/Shanghai] PHP Notice:  Undefined index: goodsId in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 437
+[02-Dec-2021 17:19:58 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 530
+[02-Dec-2021 17:19:58 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 533
+[02-Dec-2021 17:19:58 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 533
+[02-Dec-2021 17:19:58 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 612
+[02-Dec-2021 17:19:58 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 615
+[02-Dec-2021 17:19:58 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 615
+[02-Dec-2021 17:21:34 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 529
+[02-Dec-2021 17:21:34 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 532
+[02-Dec-2021 17:21:34 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 532
+[02-Dec-2021 17:21:34 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 611
+[02-Dec-2021 17:21:34 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 614
+[02-Dec-2021 17:21:34 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 614
+[02-Dec-2021 17:21:54 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 529
+[02-Dec-2021 17:21:54 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 532
+[02-Dec-2021 17:21:54 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 532
+[02-Dec-2021 17:21:54 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 611
+[02-Dec-2021 17:21:54 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 614
+[02-Dec-2021 17:21:54 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 614
+[02-Dec-2021 17:22:14 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 529
+[02-Dec-2021 17:22:14 Asia/Shanghai] PHP Notice:  Undefined variable: hotGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 532
+[02-Dec-2021 17:22:14 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 532
+[02-Dec-2021 17:22:14 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 611
+[02-Dec-2021 17:22:14 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 614
+[02-Dec-2021 17:22:14 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 614
+[02-Dec-2021 17:28:51 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 602
+[02-Dec-2021 17:28:51 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 605
+[02-Dec-2021 17:28:51 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 605
+[02-Dec-2021 17:29:11 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 602
+[02-Dec-2021 17:29:11 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 605
+[02-Dec-2021 17:29:11 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 605
+[02-Dec-2021 17:29:25 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 602
+[02-Dec-2021 17:29:25 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 605
+[02-Dec-2021 17:29:25 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 605
+[02-Dec-2021 17:29:42 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 602
+[02-Dec-2021 17:29:42 Asia/Shanghai] PHP Notice:  Undefined variable: salesGoods in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 605
+[02-Dec-2021 17:29:42 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 605
+[02-Dec-2021 17:34:10 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:34:10 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:34:10 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:34:10 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:34:10 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:34:58 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:34:58 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:34:58 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:34:58 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:34:58 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:35:24 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:35:24 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:35:24 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:35:24 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:35:24 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620

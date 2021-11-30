@@ -1,75 +1,55 @@
+<?php
+require 'curl.php';
+require 'config.php';
+$captcha="";
+$msg="";  //提示用的
+if(isset($_POST["btn"])){
+
+    if ($_POST['captcha']!=""){
+        if ($_POST['account']!="" && $_POST['password']!="" && $_POST['password1']!=""){
+            $account=$_POST['account'];
+            $password=$_POST['password'];
+            $password1=$_POST['password1'];
+            $captcha=$_POST['captcha'];
+            if ($password==$_POST['password1']){
+                $res=registerUri($account,$password);
+                $res=json_decode($res,true);
+                $msg=$res["msg"].'<a href="login.html" style="color: #0D6EFD">前往登入</a>';
+            }else{
+                $msg="两次密码输入不一致";
+            }
+
+        }else{
+            $msg="账号或者密码为空";
+        }
+    }else{
+        $msg="验证码不能为空";
+    }
+}else{
+    $msg=" ";
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toyqo - Kids Store Bootstrap 5 Template</title>
-
+    <title>账号注册</title>
     <!-- Favicons -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
-
+    <link rel="shortcut icon" href="<?php echo ASSETS; ?>images/favicon.ico">
     <!-- Vendor CSS (Icon Font) -->
-
-
-    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
-
-
-
-
-
+    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/style.min.css">
 </head>
 
 <body>
-<iframe name="formsubmit" style="display:none;">
 
-</iframe>
     <!-- Header Section Start -->
     <div class="header section">
-
-
-
-        <!-- Header Bottom Start -->
-        <div class="header-bottom">
-            <div class="header-sticky">
-                <div class="container">
-                    <div class="row align-items-center position-relative">
-
-                        <!-- Header Logo Start -->
-                        <div class="col-md-6 col-lg-3 col-xl-2 col-6">
-                            <div class="header-logo">
-                                <a href="index.html"><img src="assets/images/logo/logo.png" alt="Site Logo" /></a>
-                            </div>
-                        </div>
-                        <!-- Header Logo End -->
-
-                        <!-- Header Menu Start -->
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="main-menu">
-                                <ul>
-                                    <li><a href="index.php">主页</a></li>
-                                    <li><a href="lookup.php">搜索</a></li>
-                                    <li><a href="shop.php">更多商品</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Header Menu End -->
-
-                        <!-- Header Action Start -->
-                        <div class="col-md-6 col-lg-3 col-xl-4 col-6 justify-content-end">
-                            <div class="header-actions">
-                                <a href="javascript:void(0)" class="header-action-btn header-action-btn-search d-none d-lg-block"><i class="pe-7s-search"></i></a>
-                            </div>
-                        </div>
-                        <!-- Header Action End -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Header Bottom End -->
 
         <!-- Offcanvas Search Start -->
         <div class="offcanvas-search">
@@ -82,8 +62,8 @@
                 <!-- Button Close End -->
 
                 <!-- Offcanvas Search Form Start -->
-                <form class="offcanvas-search-form" action="lookup.php" method="post">
-                    <input type="text" name="lookupName" placeholder="Search Product..." class="offcanvas-search-input">
+                <form class="offcanvas-search-form" action="#">
+                    <input type="text" placeholder="Search Product..." class="offcanvas-search-input">
                 </form>
                 <!-- Offcanvas Search Form End -->
 
@@ -231,7 +211,7 @@
                         <li>
                             <a href="index.php"><i class="fa fa-home"></i> </a>
                         </li>
-                        <li class="active"> Login Page</li>
+                        <a href="login.php"><li class="active">前往登入</li></a>
                     </ul>
                 </div>
             </div>
@@ -240,77 +220,67 @@
 
     </div>
     <!-- Breadcrumb Section End -->
-    <!-- Login Section Start -->
+
+    <!-- Register Section Start -->
     <div class="section section-margin">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-8 m-auto">
-                    <div class="login-wrapper">
-
+                    <!-- Register Wrapper Start -->
+                    <div class="register-wrapper">
                         <!-- Login Title & Content Start -->
                         <div class="section-content text-center mb-5">
-                            <h2 class="title mb-2">登入</h2>
-                            <p class="desc-content">请使用账号进行登入获取更多操作</p>
+                            <h2 class="title mb-2">创建账号</h2>
+                            <p class="desc-content">请使用下面的帐户详细信息注册。</p>
                         </div>
                         <!-- Login Title & Content End -->
+
                         <!-- Form Action Start -->
-                        <form action="#" method="post">
+                        <form action="register.php" name="reg" method="post">
 
-                            <!-- Input Email Start -->
+                            <!-- Input First Name Start -->
                             <div class="single-input-item mb-3">
-                                <input type="email" placeholder="请输入你的账号">
+                                <input name="account" type="text" value="<?php echo $account; ?>" placeholder="请输入你的账号">
                             </div>
-                            <!-- Input Email End -->
+                            <!-- Input First Name End -->
+
+                            <!-- Input Last Name Start -->
+                            <div class="single-input-item mb-3">
+                                <input  name="password"  value="<?php echo $password; ?>"  type="password" placeholder="请输入你的密码">
+                            </div>
+                            <!-- Input Last Name End -->
 
                             <!-- Input Password Start -->
                             <div class="single-input-item mb-3">
-                                <input type="password" placeholder="请输入你的密码">
+                                <input  name="password1" type="password" placeholder="再次输入你的密码">
                             </div>
-                            <!-- Input Password End -->
+                            <div class="single-input-item mb-3">
+                                <input type="text" name="captcha" value="<?php echo $captcha;?>" placeholder="请输入验证码" style="width: 200px" >
+                                <img src="http://localhost:8080/index/verificationCode/res"   onClick="this.src='http://localhost:8080/index/verificationCode/res?nocache='+Math.random()"    style="margin-left: 10px; height: 40px; width: 150px;padding: 1px;" >
+
+                            </div>
                             <!-- Input Password Start -->
                             <div class="single-input-item mb-3">
-                                <input type="text" placeholder="请输入验证码" style="width: 200px" >
-                                <img src="http://localhost:801/1/5.php"    onClick="this.src='http://localhost:801/1/5.php?nocache='+Math.random()"    style="margin-left: 10px; height: 40px; width: 150px;padding: 1px;" >
-                                <a href="login.html?id=1">
-                                    <span style="margin-left: 3px;font-size: 15px;font-family: 楷体 ">点击刷新</span>
-                                </a>
+                               <span><?php  echo $msg;  ?><span>
                             </div>
                             <!-- Input Password End -->
-                            <!-- Checkbox/Forget Password Start -->
+
+                            <!-- Input Password End -->
+                            <!-- Register Button Start -->
                             <div class="single-input-item mb-3">
-                                <div class="login-reg-form-meta d-flex align-items-center justify-content-between">
-                                    <div class="remember-meta mb-3">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="rememberMe">
-                                            <label class="custom-control-label" for="rememberMe">记住账号</label>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="forget-pwd mb-3">忘记密码?</a>
-                                </div>
+                                <button name="btn" class="btn btn btn-dark btn-hover-primary rounded-0">注册</button>
                             </div>
-                            <!-- Checkbox/Forget Password End -->
-
-                            <!-- Login Button Start -->
-                            <div class="single-input-item mb-3">
-                                <button class="btn btn btn-dark btn-hover-primary rounded-0">登入</button>
-                            </div>
-                            <!-- Login Button End -->
-
-                            <!-- Lost Password & Creat New Account Start -->
-                            <div class="lost-password">
-                                <a href="register.php">创建账号</a>
-                            </div>
-                            <!-- Lost Password & Creat New Account End -->
-
+                            <!-- Register Button End -->
                         </form>
                         <!-- Form Action End -->
 
                     </div>
+                    <!-- Register Wrapper End -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- Login Section End -->
+    <!-- Register Section End -->
 
     <!-- Footer Section Start -->
     <footer class="section footer-section">
@@ -398,8 +368,6 @@
         <!-- Footer Bottom End -->
     </footer>
     <!-- Footer Section End -->
-
-
     <!-- Mobile Menu Start -->
     <div class="mobile-menu-wrapper">
         <div class="offcanvas-overlay"></div>
@@ -424,7 +392,77 @@
                 </div>
                 <!-- Mobile Menu Search Box End -->
 
-
+                <!-- Mobile Menu Start -->
+                <div class="mobile-navigation">
+                    <nav>
+                        <ul class="mobile-menu">
+                            <li class="has-children">
+                                <a href="#">Home <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="index.html">Home One</a></li>
+                                    <li><a href="index-2.html">Home Two</a></li>
+                                    <li><a href="index-3.html">Home Three</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">Shop <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="shop.html">Shop Grid</a></li>
+                                    <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
+                                    <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
+                                    <li><a href="shop-list-fullwidth.html">Shop List Fullwidth</a></li>
+                                    <li><a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a></li>
+                                    <li><a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                    <li><a href="cart.html">Shopping Cart</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="compare.html">Compare</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">Product <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="single-product.html">Single Product</a></li>
+                                    <li><a href="single-product-sale.html">Single Product Sale</a></li>
+                                    <li><a href="single-product-group.html">Single Product Group</a></li>
+                                    <li><a href="single-product-normal.html">Single Product Normal</a></li>
+                                    <li><a href="single-product-affiliate.html">Single Product Affiliate</a></li>
+                                    <li><a href="single-product-slider.html">Single Product Slider</a></li>
+                                    <li><a href="single-product-gallery-left.html">Gallery Left</a></li>
+                                    <li><a href="single-product-gallery-right.html">Gallery Right</a></li>
+                                    <li><a href="single-product-tab-style-left.html">Tab Style Left</a></li>
+                                    <li><a href="single-product-tab-style-right.html">Tab Style Right</a></li>
+                                    <li><a href="single-product-sticky-left.html">Sticky Left</a></li>
+                                    <li><a href="single-product-sticky-right.html">Sticky Right</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">Pages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="faq.html">Faq</a></li>
+                                    <li><a href="error-404.html">Error 404</a></li>
+                                    <li><a href="my-account.html">My Account</a></li>
+                                    <li><a href="login.html">Loging | Register</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">Blog <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                    <li><a href="blog-details-sidebar.html">Blog Details Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Mobile Menu End -->
 
                 <!-- Language, Currency & Link Start -->
                 <div class="offcanvas-lag-curr mb-6">

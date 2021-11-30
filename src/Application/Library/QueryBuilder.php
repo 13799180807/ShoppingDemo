@@ -28,6 +28,7 @@ class QueryBuilder{
      * @param $stmtinit
      * @return int
      * 判断数据存在不存在在表格里面
+     * 不存在1，存在-1
      */
     public static function innserQuery($conn,$table,$condtion,$types,$stmtinit){
 

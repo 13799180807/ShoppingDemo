@@ -9,7 +9,7 @@ class WaresServiceImpl implements WaresService
      * @param $state
      * @return int|mixed
      */
-    public  function waresShowAll($typea, $num, $state)
+    public static function waresShowAll($typea, $num, $state)
     {
         // TODO: Implement waresShowAll() method.
         $conn=Connection::conn();
@@ -27,7 +27,7 @@ class WaresServiceImpl implements WaresService
      * @param $sp_uid
      * @return int|mixed
      */
-    public function waresImgAll($sp_uid)
+    public static function waresImgAll($sp_uid)
     {
         // TODO: Implement waresImgAll() method.
         $conn=Connection::conn();
@@ -45,7 +45,7 @@ class WaresServiceImpl implements WaresService
      * @param $sp_uid
      * @return int|mixed
      */
-    public function waresTextAll($sp_uid)
+    public static function waresTextAll($sp_uid)
     {
         // TODO: Implement waresTextAll() method.
         $conn=Connection::conn();
@@ -63,7 +63,7 @@ class WaresServiceImpl implements WaresService
      * @param $sp_uid
      * @return int|mixed
      */
-    public function waresOneAll($sp_uid)
+    public static function waresOneAll($sp_uid)
     {
         // TODO: Implement waresOneAll() method.
         $conn=Connection::conn();
@@ -82,7 +82,7 @@ class WaresServiceImpl implements WaresService
      * @return int|mixed
      * 模糊查找
      */
-    public function waresFuzzySearch($name)
+    public static function waresFuzzySearch($name)
     {
         // TODO: Implement waresFuzzySearch() method.
         $conn=Connection::conn();

@@ -2,17 +2,7 @@
 require 'curl.php';
 require 'config.php';
 
-$urlsold="http://localhost:8080/index/?method=sold";
-$salesGoods=curl_get($urlsold);
-$salesGoods=JsonList($salesGoods);
-
-$urlhot="http://localhost:8080/index/?method=hot";
-$hotGoods=curl_get($urlhot);
-$hotGoods=JsonList($hotGoods);
-
-$urlnewest="http://localhost:8080/index/?method=time";
-$newestGoods=curl_get($urlnewest);
-$newestGoods=JsonList($newestGoods);
+$dataArray=indexCurlPost();
 
 ?>
 
@@ -131,7 +121,7 @@ $newestGoods=JsonList($newestGoods);
                                             <li><a href="error-404.html">Error 404</a></li>
                                             <li><a href="faq.html">FAQ</a></li>
                                             <li><a href="login.html">Login</a></li>
-                                            <li><a href="register.html">Register</a></li>
+                                            <li><a href="register.php">Register</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
@@ -428,19 +418,20 @@ $newestGoods=JsonList($newestGoods);
                             <div class="swiper-wrapper">
                                 <!--开始 -->
                                 <?php
+                                $newest=$dataArray["newest"];
 
-                                if ($newestGoods=="-1"){
+                                if (count($newest)=="1"){
 
                                 }else{
-                                    foreach ( $newestGoods as $row){
-                                        $img=IMG_PATH.$row["sp_imgpath"];
+                                    foreach ( $newest as $row){
+                                        $img=IMG_PATH.$row["goodsImg"];
                                     ?>
                                     <div class="swiper-slide">
                                         <div class="product-wrapper">
                                             <div class="product mb-6">
                                                 <div class="thumb">
                                                     <!--照片-->
-                                                    <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
+                                                    <a href="single-product.php?commodity=<?php echo $row["goodsId"]; ?>" class="image">
                                                         <img class="fit-image" src="<?php echo $img; ?>" alt="Product" />
                                                     </a>
                                                     <!--照片结束-->
@@ -457,13 +448,14 @@ $newestGoods=JsonList($newestGoods);
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="title">
-                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>">
-                                                            <?php echo $row["sp_name"] ?>
+                                                        <a href="single-product.php?commodity=<?php echo $row["goodsId"]; ?>">
+                                                        <a href="single-product.php?commodity=<?php echo $row["goodsId"]; ?>">
+                                                            <?php echo $row["goodsName"] ?>
                                                         </a>
                                                     </h5>
                                                     <span class="price">
                                                     <span class="new">
-                                                        ￥<?php echo $row["sp_price"] ?>
+                                                        ￥<?php echo $row["goodsPrice"] ?>
                                                     </span>
                                                 </span>
                                                 </div>
@@ -521,44 +513,35 @@ $newestGoods=JsonList($newestGoods);
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <?php
-                                        if ($hotGoods=="-1"){
+                                        $xing=110;
+                                        $recommend=$dataArray["recommend"];
+                                        if (count($recommend)=="1"){
 
                                         }else{
-                                            foreach ( $hotGoods as $row){
-
-                                                $img=IMG_PATH.$row["sp_imgpath"];
-                                                $star5=$row["sp_hot"];
-                                                if ($star5>=9){
-                                                    $xingxing="100%";
-                                                }elseif ($star5>=6){
-                                                    $xingxing="80%";
-                                                }elseif ($star5>=3){
-                                                    $xingxing="60%";
-                                                }else{
-                                                    $xingxing="40%";
-                                                }
-
+                                            foreach ( $recommend as $row){
+                                                $img=IMG_PATH.$row["goodsImg"];
+                                                $xing=$xing-10;
                                             ?>
                                             <div class="single-product-list mb-4">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
+                                                        <a href="single-product.php?commodity=<?php echo $row["goodsId"]; ?>" class="image">
                                                             <img class="fit-image first-image" src="<?php echo $img; ?>" alt="Product Image">
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="product-list-content">
                                                     <h6 class="product-name">
-                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>"><?php echo $row["sp_name"] ?></a>
+                                                        <a href="single-product.php?commodity=<?php echo $row["goodsId"]; ?>"><?php echo $row["goodsName"] ?></a>
                                                     </h6>
                                                     <span class="ratings justify-content-start mb-3">
 														<span class="rating-wrap">
-															<span class="star" style="width: <?php echo $xingxing; ?>"></span>
+															<span class="star" style="width: <?php echo $xing; ?>%"></span>
                                                 </span>
                                                 <span class="rating-num"> </span>
                                                 </span>
                                                     <span class="price">
-														<span class="new">$<?php echo $row["sp_price"] ?></span>
+														<span class="new">$<?php echo $row["goodsPrice"] ?></span>
                                                 </span>
                                                 </div>
                                             </div>
@@ -594,7 +577,7 @@ $newestGoods=JsonList($newestGoods);
 
                         <!-- Product List Title Start -->
                         <div class="product-list-title mb-5">
-                            <h4 class="title">销量最高</h4>
+                            <h4 class="title">热门产品</h4>
                         </div>
                         <!-- Product List Title End -->
                         <!-- Product List Carousel Start -->
@@ -603,43 +586,36 @@ $newestGoods=JsonList($newestGoods);
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <?php
-                                        if ($salesGoods=="-1"){
+                                        $xing=110;
+                                        $hot=$dataArray["hot"];
+                                        if (count($hot)=="-1"){
 
                                         }else{
-                                            foreach ( $salesGoods as $row){
-                                                $img=IMG_PATH.$row["sp_imgpath"];
-                                                $star5=$row["sp_hot"];
-                                                if ($star5>=9){
-                                                    $xingxing="100%";
-                                                }elseif ($star5>=6){
-                                                    $xingxing="80%";
-                                                }elseif ($star5>=3){
-                                                    $xingxing="60%";
-                                                }else{
-                                                    $xingxing="40%";
-                                                }
+                                            foreach ( $hot as $row){
+                                                $img=IMG_PATH.$row["goodsImg"];
+                                                $xing=$xing-10;
                                             ?>
                                             <!--Single Product List Start-->
                                             <div class="single-product-list mb-4">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
+                                                        <a href="single-product.php?commodity=<?php echo $row["goodsId"]; ?>" class="image">
                                                             <img class="fit-image first-image" src="<?php echo $img; ?>" alt="Product Image">
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="product-list-content">
                                                     <h6 class="product-name">
-                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>"><?php echo $row["sp_name"] ?></a>
+                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>"><?php echo $row["goodsName"] ?></a>
                                                     </h6>
                                                     <span class="ratings justify-content-start mb-3">
 														<span class="rating-wrap">
-															<span class="star" style="width: <?php echo $xingxing; ?>"></span>
+															<span class="star" style="width: <?php echo $xing; ?>%"></span>
                                                 </span>
                                                 <span class="rating-num"></span>
                                                 </span>
                                                     <span class="price">
-														<span class="new">$<?php echo $row["sp_price"] ?></span>
+														<span class="new">$<?php echo $row["goodsPrice"] ?></span>
                                                 </span>
                                                 </div>
                                             </div>

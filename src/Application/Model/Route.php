@@ -14,6 +14,9 @@ class Route
             "/index/sort/page",
             "/index/sort/waresall",
             "/index/search",
+            "/index/register",
+            "/index/verificationCode",
+
         );
         return $routeList;
     }

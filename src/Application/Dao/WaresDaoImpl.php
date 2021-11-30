@@ -13,7 +13,7 @@ class WaresDaoImpl implements waresDao
      * @return mixed
      * 查询商品表中的信息根据类型，数量，状态查询
      */
-    public function waresNewsQuery($conn, $typea, $num, $state)
+    public static function waresNewsQuery($conn, $typea, $num, $state)
     {
 
         $sql="SELECT * FROM shop_wares WHERE sp_state='{$state}' ORDER BY {$typea} DESC limit {$num}";
@@ -33,7 +33,7 @@ class WaresDaoImpl implements waresDao
      * @return mixed
      * 查询某个商品信息表中的图片
      */
-    public function waresImgQuery($conn, $sp_uid)
+    public static function waresImgQuery($conn, $sp_uid)
     {
         // TODO: Implement waresImgQuery() method.
         $sql="SELECT * FROM shop_waresimg WHERE sp_uid=? ";
@@ -54,7 +54,7 @@ class WaresDaoImpl implements waresDao
      * @return mixed
      * 查询某个商品的详细介绍详细信息
      */
-    public function waresTextQuery($conn, $sp_uid)
+    public static function waresTextQuery($conn, $sp_uid)
     {
         // TODO: Implement waresTextQuery() method.
         $sql="SELECT * FROM shop_warestext WHERE sp_uid=? ";
@@ -74,7 +74,7 @@ class WaresDaoImpl implements waresDao
      * @param $sp_uid
      * 查询一条消息用的
      */
-    public function waresOneQuery($conn, $sp_uid)
+    public static function waresOneQuery($conn, $sp_uid)
     {
         // TODO: Implement waresOneQuery() method.
         $sql="SELECT * FROM shop_wares WHERE sp_uid=? ";
@@ -95,7 +95,7 @@ class WaresDaoImpl implements waresDao
      * @return mixed
      * 模糊查找
      */
-    public function waresVagueQuery($conn, $name)
+    public static function waresVagueQuery($conn, $name)
     {
         $sql="SELECT *FROM shop_wares WHERE sp_name LIKE ?";
         $stmt=$conn->stmt_init();//构建空白的语句对象
@@ -115,7 +115,7 @@ class WaresDaoImpl implements waresDao
      * @return bool|mixed
      * 管理员删除商品sql语句
      */
-    public function deleteById($conn, $id)
+    public static function deleteById($conn, $id)
     {
         $row=DelectBuilder::delectAll($conn,"shop_wares","id=?","i",$id);
         return $row;
@@ -127,7 +127,7 @@ class WaresDaoImpl implements waresDao
      * @return mixed|void
      * 添加
      */
-    public function insert($conn, $list)
+    public static function insert($conn, $list)
     {
         // TODO: Implement insert() method.
     }
@@ -137,7 +137,7 @@ class WaresDaoImpl implements waresDao
      * @param $list
      * 修改
      */
-    public function updateById($conn, $list)
+    public static function updateById($conn, $list)
     {
         // TODO: Implement updateById() method.
     }

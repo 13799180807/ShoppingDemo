@@ -28,10 +28,6 @@ require 'config.php';
 
             $waresSortData="";
 
-
-        //    $currentPage=1;
-        //    $perPage=8;
-        //    $sortname=$sortname;
         }else{
             $waresSortData=$result['wares'];
             $callBackData=$result['callBack'];

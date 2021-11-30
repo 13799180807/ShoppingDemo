@@ -1,8 +1,31 @@
 <?php
 
 
+//新的
+function indexCurlPost(){
+    $url="http://localhost:8080/index/all";
+    $datalist=array();
+    $datalist["method"]="list";
+    $json=curl_post($url,$datalist);
+    $resArr=json_decode($json,true);
+    if($resArr["status"]=="200"){
+        return $resArr["data"];
+    }else{
+        return -1;
+    }
 
+}
 
+//结束
+
+function registerUri($account,$password){
+    $url="http://localhost:8080/index/register/reg";
+    $datalist=array();
+    $datalist["account"]=$account;
+    $datalist["password"]=$password;
+    $json=curl_post($url,$datalist);
+    return $json;
+}
 function waresLookup($name){
     $url="http://localhost:8080/index/search/all/";
     $datalist=array();
