@@ -1,6 +1,7 @@
 <?php
 require 'SortServiceImpl.php';
-interface SortService{
+interface SortService
+{
 
     /**
      * @return mixed

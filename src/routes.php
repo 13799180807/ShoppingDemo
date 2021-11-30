@@ -25,6 +25,9 @@
         }elseif (uri($_SERVER["REQUEST_URI"])=="/index/sort/waresall"){
             $json=SortController::sortPageWaresAll($parame);
             echo $json;
+        }elseif (uri($_SERVER["REQUEST_URI"])=="/index/search"){
+            $json=WaresController::waresFuzzySearchDisplay($parame);
+            echo $json;
         }
         else{
             echo "<h2>404</h2>";

@@ -1,7 +1,8 @@
 <?php
 require 'SortDaoImpl.php';
 
-interface SortDao{
+interface SortDao
+{
 
     /**
      * @param $conn

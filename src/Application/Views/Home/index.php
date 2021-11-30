@@ -197,8 +197,8 @@ $newestGoods=JsonList($newestGoods);
                 <!-- Button Close End -->
 
                 <!-- Offcanvas Search Form Start -->
-                <form class="offcanvas-search-form" action="#">
-                    <input type="text" placeholder="Search Product..." class="offcanvas-search-input">
+                <form class="offcanvas-search-form" action="lookup.php" method="post">
+                    <input type="text" name="lookupName" placeholder="Search Product..." class="offcanvas-search-input">
                 </form>
                 <!-- Offcanvas Search Form End -->
 

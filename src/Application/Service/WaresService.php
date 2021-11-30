@@ -1,6 +1,7 @@
 <?php
 require 'WaresServiceImpl.php';
-interface WaresService{
+interface WaresService
+{
 
     /**
      * @param $typea
@@ -31,5 +32,12 @@ interface WaresService{
      * 显示一个商品的查询
      */
     public function waresOneAll($sp_uid);
+
+    /**
+     * @param $name
+     * @return mixed
+     * 模糊查询
+     */
+    public function waresFuzzySearch($name);
 
 }

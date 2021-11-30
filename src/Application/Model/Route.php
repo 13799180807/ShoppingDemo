@@ -13,6 +13,7 @@ class Route
             "/index/waressort",
             "/index/sort/page",
             "/index/sort/waresall",
+            "/index/search",
         );
         return $routeList;
     }

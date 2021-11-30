@@ -3,6 +3,14 @@
 
 
 
+function waresLookup($name){
+    $url="http://localhost:8080/index/search/all/";
+    $datalist=array();
+    $datalist['seach']=$name;
+    $json=curl_post($url,$datalist);
+    $list=JsonList($json);
+    return $list;
+}
 function waresSortQuery($sortName,$page,$num){
     $url="http://localhost:8080/index/sort/waresall/all/";
     $datalist=array();

@@ -1,7 +1,8 @@
 <?php
 require 'WaresDaoImpl.php';
 
-interface  waresDao{
+interface  waresDao
+{
 
 
     /**
@@ -38,6 +39,33 @@ interface  waresDao{
      * 当个商品查询
      */
     public function waresOneQuery($conn,$sp_uid);
+
+    /**
+     * @param $conn
+     * @param $name
+     * @return mixed
+     */
+    public function waresVagueQuery($conn,$name);
+
+
+    /**
+     * @param $conn
+     * @param $id
+     * @return mixed
+     * 管理员删除商品
+     */
+    public function deleteById($conn,$id);
+
+    /**
+     * @return mixed
+     */
+    public function insert($conn,$list);
+
+
+    public function updateById($conn,$list);
+
+
+
 
 
 }

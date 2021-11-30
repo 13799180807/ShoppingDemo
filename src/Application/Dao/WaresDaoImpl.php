@@ -2,7 +2,8 @@
 
 
 
-class WaresDaoImpl implements waresDao{
+class WaresDaoImpl implements waresDao
+{
 
     /**
      * @param $conn
@@ -88,11 +89,58 @@ class WaresDaoImpl implements waresDao{
         return $rows;
     }
 
+    /**
+     * @param $conn
+     * @param $name
+     * @return mixed
+     * 模糊查找
+     */
+    public function waresVagueQuery($conn, $name)
+    {
+        $sql="SELECT *FROM shop_wares WHERE sp_name LIKE ?";
+        $stmt=$conn->stmt_init();//构建空白的语句对象
+        $stmt->prepare($sql);
+        $stmt->bind_param("s",$name);
+        $stmt->execute();
+        $result=$stmt->get_result();
+        $rows=$result->fetch_all(2);
+        $stmt->free_result();
+        $stmt->close();
+        return $rows;
+    }
 
+    /**
+     * @param $conn
+     * @param $id
+     * @return bool|mixed
+     * 管理员删除商品sql语句
+     */
+    public function deleteById($conn, $id)
+    {
+        $row=DelectBuilder::delectAll($conn,"shop_wares","id=?","i",$id);
+        return $row;
+    }
 
+    /**
+     * @param $conn
+     * @param $list
+     * @return mixed|void
+     * 添加
+     */
+    public function insert($conn, $list)
+    {
+        // TODO: Implement insert() method.
+    }
 
-
-
+    /**
+     * @param $conn
+     * @param $list
+     * 修改
+     */
+    public function updateById($conn, $list)
+    {
+        // TODO: Implement updateById() method.
+    }
 }
 
 

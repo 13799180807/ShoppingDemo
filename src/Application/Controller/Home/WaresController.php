@@ -8,6 +8,32 @@ class WaresController
     /**
      * @param $parameter
      * @return false|string
+     * 根据名字模糊查找
+     */
+    public static function waresFuzzySearchDisplay($parameter){
+        if (isset($parameter["seach"]) && $parameter["seach"]!="" ){
+            $name=$parameter["seach"];
+            $dao=new WaresServiceImpl();
+            $res=$dao->waresFuzzySearch($name);
+            if ($res=="-1"){
+            }else{
+                $arr=WaresModelAll::waresOneDereils($res);
+                $json=successJson("请求成功",$arr);
+                return $json;
+            }
+        }
+        $arr=array(
+            0=>array('','','','','','','','','','','','',''),
+        );
+        $arr=WaresModelAll::waresOneDereils($arr);
+        $json=successJson("请求成功,数据为空",$arr,"0");
+        return $json;
+
+    }
+
+    /**
+     * @param $parameter
+     * @return false|string
      * 商品分类信息显示
      */
     public static function waresSortAll($parameter){

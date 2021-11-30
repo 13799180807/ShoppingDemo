@@ -1,78 +1,29 @@
-<?php
-require 'curl.php';
-require 'config.php';
-
-    //显示出所有分类
-    $sortListAll=sortListUri();
-
-    //根据初始化数据给出相对应初始化页面
-    $PageNumber=pagingUri(8,"查询全部");
-    $totalPage=$PageNumber['page'];    //总页面
-
-
-
-    //表单提交查询
-    if (isset($_POST['sort_Name'])){
-        $sortname=$_POST['sort_Name'];
-        $perPage=$_POST['select_num'];
-        $currentPage=$_POST['page_num'];
-
-        $PageNumber=pagingUri($perPage,$sortname);
-        if($PageNumber['page']=="0"){
-            $totalPage="1";
-        }else{
-            $totalPage=$PageNumber['page'];    //总页面
-        }
-        $result=waresSortQuery($sortname,$currentPage,$perPage);
-        if($result=="-1"){
-
-            $waresSortData="";
-
-
-        //    $currentPage=1;
-        //    $perPage=8;
-        //    $sortname=$sortname;
-        }else{
-            $waresSortData=$result['wares'];
-            $callBackData=$result['callBack'];
-            $sortname=$callBackData['name'];  //名字
-            $currentPage=$callBackData['page'];  //当前页面
-            $perPage=$callBackData['num'];  //一个页面显示几个
-            if ($currentPage==0){
-                $totalPage="1";
-            }
-        }
-    }else{
-        //初始化商品信息
-        $result=waresSortQuery("查询全部",1,8);
-        $waresSortData=$result['wares'];
-        $callBackData=$result['callBack'];
-        $sortname=$callBackData['name'];  //名字
-        $currentPage=$callBackData['page'];  //当前页面
-        $perPage=$callBackData['num'];  //一个页面显示几个
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>商品分类查看</title>
-    <link rel="shortcut icon" href="<?php echo ASSETS; ?>images/favicon.ico">
-    <link rel="stylesheet"    href="<?php echo ASSETS; ?>css/vendor/vendor.min.css">
-    <link rel="stylesheet"    href="<?php echo ASSETS; ?>css/plugins/plugins.min.css">
-    <link rel="stylesheet"    href="<?php echo ASSETS; ?>css/style.min.css">
+    <title>Toyqo - Kids Store Bootstrap 5 Template</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Vendor CSS (Icon Font) -->
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+
+
+
+
 </head>
 
 <body>
 
-
     <!-- Header Section Start -->
     <div class="header section">
-
-
 
         <!-- Offcanvas Search Start -->
         <div class="offcanvas-search">
@@ -85,7 +36,7 @@ require 'config.php';
                 <!-- Button Close End -->
 
                 <!-- Offcanvas Search Form Start -->
-                <form class="offcanvas-search-form" action="#" >
+                <form class="offcanvas-search-form" action="#">
                     <input type="text" placeholder="Search Product..." class="offcanvas-search-input">
                 </form>
                 <!-- Offcanvas Search Form End -->
@@ -223,201 +174,88 @@ require 'config.php';
     <!-- Header Section End -->
 
 
+    <!-- Breadcrumb Section Start -->
+    <div class="section">
 
-
-    <!-- Header Section Start -->
-    <div class="header section">
-
-        <!-- Header Bottom Start -->
-        <div class="header-bottom">
-            <div class="header-sticky">
-                <div class="container">
-                    <div class="row align-items-center position-relative">
-                        <!-- Header Menu Start -->
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="main-menu">
-                                <ul>
-                                    <li><a href="index.php">首页</a></li>
-                                    <li><a href="lookup.php">搜索</a></li>
-                                    <li><a href="shop.php">更多商品</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Header Menu End -->
-
-                        <!-- Header Action Start -->
-                        <div class="col-md-6 col-lg-3 col-xl-4 col-6 justify-content-end">
-                            <div class="header-actions">
-                                <a href="javascript:void(0)" class="header-action-btn header-action-btn-search d-none d-lg-block"><i class="pe-7s-search"></i></a>
-                            </div>
-                        </div>
-                        <!-- Header Action End -->
-
-                    </div>
+        <!-- Breadcrumb Area Start -->
+        <div class="breadcrumb-area bg-primary">
+            <div class="container">
+                <div class="breadcrumb-content">
+                    <ul>
+                        <li>
+                            <a href="index.php"><i class="fa fa-home"></i> </a>
+                        </li>
+                        <a href="login.php"><li class="active">前往登入</li></a>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- Header Bottom End -->
-
-        <!-- Offcanvas Search Start -->
-        <div class="offcanvas-search">
-            <div class="offcanvas-search-inner">
-
-                <!-- Button Close Start -->
-                <div class="offcanvas-btn-close">
-                    <i class="pe-7s-close"></i>
-                </div>
-                <!-- Button Close End -->
-
-                <!-- Offcanvas Search Form Start -->
-                <form class="offcanvas-search-form" action="lookup.php" method="post">
-                    <input type="text" name="lookupName" placeholder="Search Product..." class="offcanvas-search-input">
-                </form>
-                <!-- Offcanvas Search Form End -->
-
-            </div>
-        </div>
-        <!-- Offcanvas Search End -->
-
+        <!-- Breadcrumb Area End -->
 
     </div>
-    <!-- Header Section End -->
+    <!-- Breadcrumb Section End -->
 
-    <!-- Shop Section Start -->
-
+    <!-- Register Section Start -->
     <div class="section section-margin">
-
         <div class="container">
-
             <div class="row">
-                <div class="col-12">
-                    <form action="shop.php" method="post" >
-                    <!--shop toolbar start-->
-                    <div class="shop_toolbar_wrapper flex-column flex-md-row pb-10 mb-n4">
+                <div class="col-lg-6 col-md-8 m-auto">
+                    <!-- Register Wrapper Start -->
+                    <div class="register-wrapper">
 
-                        <!-- Shop Top Bar Left start -->
-                        <div class="shop-top-bar-left mb-4">
-
-                            <div class="shop_toolbar_btn">
-                                <button data-role="grid_4" type="button" class="active btn-grid-4" title="Grid"><i class="fa fa-th"></i></button>
-                                <button data-role="grid_list" type="button" class="btn-list" title="List"><i class="fa fa-list"></i></button>
-                            </div>
-                            <div class="shop-top-show">
-                                <span><?php
-                                    echo "当前查询到类别： {$sortname} ，当前为第：{$currentPage} 页，每页显示：{$perPage} 条数据"
-                                    ?></span>
-                            </div>
+                        <!-- Login Title & Content Start -->
+                        <div class="section-content text-center mb-5">
+                            <h2 class="title mb-2">创建账号</h2>
+                            <p class="desc-content">请使用下面的帐户详细信息注册。</p>
                         </div>
-                        <!-- Shop Top Bar Left end -->
+                        <!-- Login Title & Content End -->
 
-                        <!-- Shopt Top Bar Right Start -->
-                        <div class="shop-top-bar-right mb-4">
-                            <!--表单请求-->
+                        <!-- Form Action Start -->
+                        <form action="#" method="post">
 
-                                <div class="shop-short-by">
-                                    <select   name="sort_Name" class="nice-select"   >
-                                        <option value="<?php  echo $sortname; ?>"><?php  echo $sortname; ?></option>
-                                        <option value="查询全部">查询全部</option>
-                                        <?php
-                                        if ($sortListAll=="-1" || $sortListAll==""){
-                                        }else{
-                                            foreach ($sortListAll as $row){
-                                                $sortname=$row['sort_name'];
-                                        ?>
-                                        <option value="<?php  echo $sortname; ?>"><?php  echo $sortname; ?></option>
-                                        <?php
-                                            }
-                                        }
-                                        ?>
-                                    </select>
-                                </div>
-                                <input class="btn btn-whited btn-hover-primary text-capitalize add-to-cart" type="submit" value="点击查询">
+                            <!-- Input First Name Start -->
+                            <div class="single-input-item mb-3">
+                                <input type="text" placeholder="请输入你的账号">
+                            </div>
+                            <!-- Input First Name End -->
 
-                            <!--表单请求结束-->
-                        </div>
-                        <!-- Shopt Top Bar Right End -->
+                            <!-- Input Last Name Start -->
+                            <div class="single-input-item mb-3">
+                                <input type="password" placeholder="请输入你的密码">
+                            </div>
+                            <!-- Input Last Name End -->
+
+                            <!-- Input Password Start -->
+                            <div class="single-input-item mb-3">
+                                <input type="password" placeholder="再次输入你的密码">
+                            </div>
+                            <!-- Input Password Start -->
+                            <div class="single-input-item mb-3">
+                                <input type="text" placeholder="请输入验证码" style="width: 200px" >
+                                <img src="demo1.jpg" style="margin-left: 10px; height: 40px; width: 150px;padding: 1px;" >
+                                <a href="#">
+                                    <span style="margin-left: 3px;font-size: 15px;font-family: 楷体 ">点击刷新</span>
+                                </a>
+                            </div>
+                            <!-- Input Password End -->
+
+                            <!-- Input Password End -->
+                            <!-- Register Button Start -->
+                            <div class="single-input-item mb-3">
+                                <button class="btn btn btn-dark btn-hover-primary rounded-0">注册</button>
+                            </div>
+                            <!-- Register Button End -->
+
+                        </form>
+                        <!-- Form Action End -->
 
                     </div>
-                    <!--shop toolbar end-->
-
-                    <!-- Shop Wrapper Start -->
-                    <div class="row shop_wrapper grid_4">
-
-<!--开始-->
-                        <?php
-
-                        if($waresSortData==""){
-                            echo "<span style='margin-left: 45%;font-size: 23px'>空空如也......</span>";
-                        }else{
-                            foreach ($waresSortData as $row){
-
-                        ?>
-                        <!-- Single Product Start -->
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
-                            <div class="product-inner">
-                                <div class="thumb">
-                                    <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
-                                        <img class="first-image" src="<?php echo IMG_PATH.$row['sp_imgpath'] ; ?>" alt="Product" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>"><?php echo $row['sp_name'] ;?></a></h5>
-                                    <span class="price">
-                                            <span class="new">￥<?php echo $row['sp_price'] ;?></span>
-                                    <span class="old">  </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Product End -->
-                        <?php
-                            }
-                        }
-                        ?>
-<!--结束-->
-                    </div>
-                    <!-- Shop Wrapper End -->
-
-                    <!--shop toolbar start-->
-                    <div class="shop_toolbar_wrapper mt-10 mb-n4">
-                        <!-- Shop Top Bar Left start -->
-                        <div class="shop-bottom-bar-left mb-4">
-                            <div class="shop-short-by">
-                                <select  name="select_num"   class="nice-select rounded-0" aria-label=".form-select-sm example">
-                                    <option value="<?php echo $perPage; ?>" selected> 每页显示<?php echo $perPage; ?>条</option>
-                                    <option value="4">每页显示4条</option>
-                                    <option value="8">每页显示8条</option>
-                                    <option value="12">每页显示12条</option>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Shop Top Bar Left end -->
-
-                        <!-- Shopt Top Bar Right Start -->
-                        <div class="shop-top-bar-right mb-4">
-
-                                <select  name="page_num"   class="nice-select rounded-0" aria-label=".form-select-sm example">
-                                    <option value="<?php echo $currentPage; ?>" selected>当前为第 <?php echo $currentPage; ?> 页</option>
-                                    <?php
-                                    for ($ye=1;$ye<=$totalPage;$ye++){
-                                    ?>
-                                        <option value="<?php echo $ye; ?>"><?php echo $ye; ?>页</option>
-                                    <?php
-                                    }
-                                    ?>
-                                </select>
-                            <input class="btn btn-whited btn-hover-primary text-capitalize add-to-cart" type="submit" value="点击前往">
-
-                        </div>
-                        <!-- Shopt Top Bar Right End -->
-                    </div>
-                    <!--shop toolbar end-->
-                    </form>
+                    <!-- Register Wrapper End -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- Shop Section End -->
+    <!-- Register Section End -->
 
     <!-- Footer Section Start -->
     <footer class="section footer-section">
@@ -505,152 +343,6 @@ require 'config.php';
         <!-- Footer Bottom End -->
     </footer>
     <!-- Footer Section End -->
-
-
-    <!-- Modal Start  -->
-    <div class="modalquickview modal fade" id="quick-view" tabindex="-1" aria-labelledby="quick-view" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <button class="btn close" data-bs-dismiss="modal">×</button>
-                <div class="row">
-                    <div class="col-md-6 col-12">
-
-                        <!-- Product Details Image Start -->
-                        <div class="modal-product-carousel">
-
-                            <!-- Single Product Image Start -->
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/1.jpg" alt="Product">
-                                    </a>
-                                    <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/2.jpg" alt="Product">
-                                    </a>
-                                    <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/3.jpg" alt="Product">
-                                    </a>
-                                    <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/4.jpg" alt="Product">
-                                    </a>
-                                    <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/5.jpg" alt="Product">
-                                    </a>
-                                </div>
-
-                                <!-- Swiper Pagination Start -->
-                                <!-- <div class="swiper-pagination d-md-none"></div> -->
-                                <!-- Swiper Pagination End -->
-
-                                <!-- Next Previous Button Start -->
-                                <div class="swiper-product-button-next swiper-button-next"><i class="pe-7s-angle-right"></i></div>
-                                <div class="swiper-product-button-prev swiper-button-prev"><i class="pe-7s-angle-left"></i></div>
-                                <!-- Next Previous Button End -->
-                            </div>
-                            <!-- Single Product Image End -->
-
-                        </div>
-                        <!-- Product Details Image End -->
-
-                    </div>
-                    <div class="col-md-6 col-12 overflow-hidden position-relative">
-
-                        <!-- Product Summery Start -->
-                        <div class="product-summery position-relative">
-
-                            <!-- Product Head Start -->
-                            <div class="product-head mb-3">
-                                <h2 class="product-title">Sample product title</h2>
-                            </div>
-                            <!-- Product Head End -->
-
-                            <!-- Rating Start -->
-                            <span class="ratings justify-content-start mb-2">
-                            <span class="rating-wrap">
-                                <span class="star" style="width: 100%"></span>
-                            </span>
-                            <span class="rating-num">(4)</span>
-                            </span>
-                            <!-- Rating End -->
-
-                            <!-- Price Box Start -->
-                            <div class="price-box mb-2">
-                                <span class="regular-price">$80.00</span>
-                                <span class="old-price"><del>$90.00</del></span>
-                            </div>
-                            <!-- Price Box End -->
-
-                            <!-- Description Start -->
-                            <p class="desc-content mb-5">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
-                            <!-- Description End -->
-
-                            <!-- Quantity Start -->
-                            <div class="quantity d-flex align-items-center mb-5">
-                                <span class="me-2"><strong>Qty: </strong></span>
-                                <div class="cart-plus-minus">
-                                    <input class="cart-plus-minus-box" value="1" type="text">
-                                    <div class="dec qtybutton"></div>
-                                    <div class="inc qtybutton"></div>
-                                </div>
-                            </div>
-                            <!-- Quantity End -->
-
-                            <!-- Cart Button Start -->
-                            <div class="cart-btn mb-4">
-                                <div class="add-to_cart">
-                                    <a class="btn btn-dark btn-hover-primary" href="cart.html">Add to cart</a>
-                                </div>
-                            </div>
-                            <!-- Cart Button End -->
-
-                            <!-- Action Button Start -->
-                            <div class="actions border-bottom mb-4 pb-4">
-                                <a href="compare.html" title="Compare" class="action compare"><i class="pe-7s-refresh-2"></i> Compare</a>
-                                <a href="wishlist.html" title="Wishlist" class="action wishlist"><i class="pe-7s-like"></i> Wishlist</a>
-                            </div>
-                            <!-- Action Button End -->
-
-                            <!-- Social Shear Start -->
-                            <div class="social-share">
-                                <span><strong>Social: </strong></span>
-                                <a href="#" class="facebook-color"><i class="fa fa-facebook"></i> Like</a>
-                                <a href="#" class="twitter-color"><i class="fa fa-twitter"></i> Tweet</a>
-                                <a href="#" class="pinterest-color"><i class="fa fa-pinterest"></i> Save</a>
-                            </div>
-                            <!-- Social Shear End -->
-
-                            <!-- Payment Option Start -->
-                            <div class="payment-option mt-4 d-flex">
-                                <span><strong>Payment: </strong></span>
-                                <a href="#">
-                                    <img class="fit-image ms-1" src="assets/images/payment/payment.png" alt="Payment Option Image">
-                                </a>
-                            </div>
-                            <!-- Payment Option End -->
-
-                            <!-- Product Delivery Policy Start -->
-                            <ul class="product-delivery-policy border-top pt-4 mt-4 border-bottom pb-4">
-                                <li> <i class="fa fa-check-square"></i> <span>Security Policy (Edit With Customer Reassurance Module)</span></li>
-                                <li><i class="fa fa-truck"></i><span>Delivery Policy (Edit With Customer Reassurance Module)</span></li>
-                                <li><i class="fa fa-refresh"></i><span>Return Policy (Edit With Customer Reassurance Module)</span></li>
-                            </ul>
-                            <!-- Product Delivery Policy End -->
-
-                        </div>
-                        <!-- Product Summery End -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal End  -->
-
-    <a href="#" class="scroll-top show" id="scroll-top">
-        <i class="arrow-top pe-7s-angle-up-circle"></i>
-        <i class="arrow-bottom pe-7s-angle-up-circle"></i>
-    </a>
-
     <!-- Mobile Menu Start -->
     <div class="mobile-menu-wrapper">
         <div class="offcanvas-overlay"></div>

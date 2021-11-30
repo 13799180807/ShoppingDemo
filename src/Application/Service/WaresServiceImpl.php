@@ -1,6 +1,7 @@
 <?php
 
-class WaresServiceImpl implements WaresService{
+class WaresServiceImpl implements WaresService
+{
 
     /**
      * @param $typea
@@ -76,4 +77,23 @@ class WaresServiceImpl implements WaresService{
         }
     }
 
+    /**
+     * @param $name
+     * @return int|mixed
+     * 模糊查找
+     */
+    public function waresFuzzySearch($name)
+    {
+        // TODO: Implement waresFuzzySearch() method.
+        $conn=Connection::conn();
+        $dao=new WaresDaoImpl();
+        $name="%".$name."%";
+        $rows=$dao->waresVagueQuery($conn,$name);
+        $conn->close();
+        if (count($rows)>0){
+            return $rows;
+        }else{
+            return -1;
+        }
+    }
 }

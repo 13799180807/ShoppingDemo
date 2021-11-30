@@ -8,9 +8,8 @@ require '../src/settings.php';
 //var_dump(SortController::waresSortDel());
 
 
-
-
-
+//$a=WaresController::waresFuzzySearchDisplay("木");
+//var_dump($a);
 
 
 //$s=SortController::waresSortPageList();
