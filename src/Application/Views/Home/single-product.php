@@ -3,41 +3,55 @@ require 'curl.php';
 require 'config.php';
 
     if(isset($_GET['commodity'])){
-        $singleall=uriSingle();
-        if($singleall=="-1"){
-            echo "<script>alert('非法操作,请通过正确途径进入！');
-            location.href='index.php';</script>";
-            exit;
-        }else{
-            $imgrows=uriSingleImg();
-            $textrow=testUri();
-            foreach ($singleall as $value){
-                $spId=$value["sp_uid"];  //id
-                $spVarieties=$value["sp_varieties"]; //分类
-                $spName=$value["sp_name"];     //名字
-                $spPrice=$value["sp_price"];     //价格
-                $spNum=$value["sp_num"];     //库存
-                $spImgpath=$value["sp_imgpath"];     //主图
-                $spHot=$value["sp_hot"];     //访问量  星级
-                $spSold=$value["sp_sold"];     //已卖出
-                $spText=$value["sp_text"];     //描述
-                $xingxing="0%";
-                $img=IMG_PATH.$value["sp_imgpath"];
-                $star5=$value["sp_hot"];
-                if ($star5>=9){
-                    $xingxing="100%";
-                }elseif ($star5>=6){
-                    $xingxing="80%";
-                }elseif ($star5>=3){
-                    $xingxing="60%";
-                }else{
-                    $xingxing="40%";
+        $id=$_GET['commodity'];
+        if( $id!="" && is_numeric($id))
+        {
+            $resData=productCurlPost($id);
+            if (count($resData)>0){
+                $goods=$resData['goods'];
+                $goodsIntroduce=$resData['goodsIntroduce'];
+                $goodsPicture=$resData['goodsPicture'];
+
+
+                foreach ($goods as $row) {
+                    $name = $row["goodsName"];
+                    $price = $row["goodsPrice"];
+                    $stock = $row["goodsStock"];
+                    $hot = $row["goodsHot"];
+                    $recommend =$row["goodsRecommend"];
+                    $category=$row['goodsCategoryId'];
+                    $describe = $row["goodsDescribe"];
+                    $img = IMG_PATH.$row["goodsImg"];
+                    $created = $row["createdAt"];
+                    if( $category==1)
+                    {
+                        $label="数码产品";
+                    }elseif ( $category==2){
+                        $label="玩具系列";
+                    }
+                    elseif ( $category==3){
+                        $label="电子配件";
+                    }
+                    elseif ( $category==4){
+                        $label="影视系列";
+                    }
+                    else{
+                        $label="其他系列";
+                    }
+
                 }
+
+            }else{
+                echo "<script>alert('请求失败请重新进入！'); location.href='index.php';</script>";
+                exit;
             }
         }
+        else{
+            echo "<script>alert('非法操作'); location.href='index.php';</script>";
+            exit;
+        }
     }else{
-        echo "<script>alert('非法操作！');
-           location.href='index.php';</script>";
+        echo "<script>alert('你的操作已经被记录下来了！'); location.href='index.php';</script>";
         exit;
     }
 ?>
@@ -48,7 +62,7 @@ require 'config.php';
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?php echo$spName ;?>商品详情页面</title>
+    <title><?php echo $name ;?>商品详情页面</title>
     <link rel="shortcut icon" href="<?php echo ASSETS; ?>images/favicon.ico">
     <link rel="stylesheet" href="<?php echo ASSETS; ?>css/vendor/vendor.min.css">
     <link rel="stylesheet" href="<?php echo ASSETS; ?>css/plugins/plugins.min.css">
@@ -56,158 +70,6 @@ require 'config.php';
 </head>
 
 <body>
-
-<!-- Header Section Start -->
-<div class="header section">
-
-
-    <!-- Offcanvas Search Start -->
-    <div class="offcanvas-search">
-        <div class="offcanvas-search-inner">
-
-            <!-- Button Close Start -->
-            <div class="offcanvas-btn-close">
-                <i class="pe-7s-close"></i>
-            </div>
-            <!-- Button Close End -->
-
-            <!-- Offcanvas Search Form Start -->
-            <form class="offcanvas-search-form" action="#">
-                <input type="text" placeholder="Search Product..." class="offcanvas-search-input">
-            </form>
-            <!-- Offcanvas Search Form End -->
-
-        </div>
-    </div>
-    <!-- Offcanvas Search End -->
-
-    <!-- Cart Offcanvas Start -->
-    <div class="cart-offcanvas-wrapper">
-        <div class="offcanvas-overlay"></div>
-
-        <!-- Cart Offcanvas Inner Start -->
-        <div class="cart-offcanvas-inner">
-
-            <!-- Button Close Start -->
-            <div class="offcanvas-btn-close">
-                <i class="pe-7s-close"></i>
-            </div>
-            <!-- Button Close End -->
-
-            <!-- Offcanvas Cart Content Start -->
-            <div class="offcanvas-cart-content">
-
-                <!-- Cart Product/Price Start -->
-                <div class="cart-product-wrapper mb-4 pb-4 border-bottom">
-
-                    <!-- Single Cart Product Start -->
-                    <div class="single-cart-product">
-                        <div class="cart-product-thumb">
-                            <a href="single-product.html"><img src="assets/images/products/small-product/1.jpg" alt="Cart Product"></a>
-                        </div>
-                        <div class="cart-product-content">
-                            <h3 class="title"><a href="single-product.html">New badge product</a></h3>
-                            <div class="product-quty-price">
-                                <span class="cart-quantity">3 <strong> × </strong></span>
-                                <span class="price">
-									<span class="new">$70.00</span>
-                                    </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Cart Product End -->
-
-                    <!-- Product Remove Start -->
-                    <div class="cart-product-remove">
-                        <a href="#"><i class="pe-7s-close"></i></a>
-                    </div>
-                    <!-- Product Remove End -->
-
-                </div>
-                <!-- Cart Product/Price End -->
-
-                <!-- Cart Product/Price Start -->
-                <div class="cart-product-wrapper mb-4 pb-4 border-bottom">
-
-                    <!-- Single Cart Product Start -->
-                    <div class="single-cart-product">
-                        <div class="cart-product-thumb">
-                            <a href="single-product.html"><img src="assets/images/products/small-product/2.jpg" alt="Cart Product"></a>
-                        </div>
-                        <div class="cart-product-content">
-                            <h3 class="title"><a href="single-product.html">Soldout new product</a></h3>
-                            <div class="product-quty-price">
-                                <span class="cart-quantity">4 <strong> × </strong></span>
-                                <span class="price">
-									<span class="new">$80.00</span>
-                                    </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Cart Product End -->
-
-                    <!-- Product Remove Start -->
-                    <div class="cart-product-remove">
-                        <a href="#"><i class="pe-7s-close"></i></a>
-                    </div>
-                    <!-- Product Remove End -->
-
-                </div>
-                <!-- Cart Product/Price End -->
-
-                <!-- Cart Product/Price Start -->
-                <div class="cart-product-wrapper mb-4 pb-4 border-bottom">
-
-                    <!-- Single Cart Product Start -->
-                    <div class="single-cart-product">
-                        <div class="cart-product-thumb">
-                            <a href="single-product.html"><img src="assets/images/products/small-product/1.jpg" alt="Cart Product"></a>
-                        </div>
-                        <div class="cart-product-content">
-                            <h3 class="title"><a href="single-product.html">New badge product</a></h3>
-                            <div class="product-quty-price">
-                                <span class="cart-quantity">2 <strong> × </strong></span>
-                                <span class="price">
-									<span class="new">$50.00</span>
-                                    </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Cart Product End -->
-
-                    <!-- Product Remove Start -->
-                    <div class="cart-product-remove">
-                        <a href="#"><i class="pe-7s-close"></i></a>
-                    </div>
-                    <!-- Product Remove End -->
-
-                </div>
-                <!-- Cart Product/Price End -->
-
-                <!-- Cart Product Total Start -->
-                <div class="cart-product-total mb-4 pb-4 border-bottom">
-                    <span class="value">Total</span>
-                    <span class="price">220$</span>
-                </div>
-                <!-- Cart Product Total End -->
-
-                <!-- Cart Product Button Start -->
-                <div class="cart-product-btn mt-4">
-                    <a href="cart.html" class="btn btn-light btn-hover-primary w-100"><i class="fa fa-shopping-cart"></i> View cart</a>
-                    <a href="checkout.html" class="btn btn-light btn-hover-primary w-100 mt-4"><i class="fa fa-share"></i> Checkout</a>
-                </div>
-                <!-- Cart Product Button End -->
-
-            </div>
-            <!-- Offcanvas Cart Content End -->
-
-        </div>
-        <!-- Cart Offcanvas Inner End -->
-    </div>
-    <!-- Cart Offcanvas End -->
-
-</div>
-<!-- Header Section End -->
 
 
 <!-- Breadcrumb Section Start -->
@@ -221,7 +83,7 @@ require 'config.php';
                     <li>
                         <a href="index.php"><i class="fa fa-home"></i> </a>
                     </li>
-                    <li class="active"><?php echo $spName; ?></li>
+                    <li class="active"><?php echo $name; ?></li>
                 </ul>
             </div>
         </div>
@@ -255,22 +117,18 @@ require 'config.php';
                     <div class="single-product-thumb swiper-container product-gallery-thumbs">
 
                         <div class="swiper-wrapper">
-
-                            <div class="swiper-slide">
-                                <img src="<?php echo $img; ?>" alt="Product">
-                            </div>
                             <?php
-                            if ($imgrows=="-1"){
-                                $img1=$row["sp_imgpath"]="#";
-                            }else{
-                                foreach ($imgrows as $row){
-                                    $img1=IMG_PATH.$row["sp_Path"];
+                            foreach ($goodsPicture as $row){
+                                if($row["goodsPicturePath"]==""){
+                                    $img1=$img;
+                                }else{
+                                    $img1=IMG_PATH.$row["goodsPicturePath"];
+                                }
                                     ?>
                             <div class="swiper-slide">
-                                <img src="<?php echo $img1; ?>" alt="Product">
+                                <img  src="<?php echo $img1; ?>" alt="Product">
                             </div>
                             <?php
-                              }
                             }
                             ?>
                         </div>
@@ -289,42 +147,34 @@ require 'config.php';
 
                     <!-- Product Head Start -->
                     <div class="product-head mb-3">
-                        <h2 class="product-title"><?php echo $spName ?></h2>
+                        <h2 class="product-title"><?php echo $name; ?></h2>
                     </div>
                     <!-- Product Head End -->
 
-                    <!-- Rating Start -->
-                    <span class="ratings justify-content-start mb-2">
-                                <span class="rating-wrap">
-                                    <span class="star" style="width: <?php echo $xingxing; ?>"></span>
-                        </span>
-                        <span class="rating-num"> 热门程度</span>
-                        </span>
-                    <!-- Rating End -->
 
                     <!-- Price Box Start -->
                     <div class="price-box mb-2">
-                        <span class="regular-price">￥<?php echo $spPrice; ?></span>
-                        <span class="old-price"><del>￥<?php echo $spPrice*1.3; ?> </del></span>
+                        <span class="regular-price">￥<?php echo $price; ?></span>
+                        <span class="old-price"><del>￥<?php echo round($price*1.3,2); ?> </del></span>
                     </div>
                     <!-- Price Box End -->
 
                     <!-- SKU Start -->
                     <div class="sku mb-3">
-                        <span>商品标签: <?php echo $spVarieties  ;?></span>
+                        <span>商品标签: <?php echo $label ; ?></span>
                     </div>
                     <!-- SKU End -->
 
                     <!-- Product Inventory Start -->
                     <div class="product-inventroy mb-3">
                         <span class="inventroy-title"> <strong>库存:</strong></span>
-                        <span class="inventory-varient"><?php echo $spNum ;?></span>
+                        <span class="inventory-varient"><?php echo $stock ;?></span>
                     </div>
                     <!-- Product Inventory End -->
 
                     <!-- Description Start -->
                     <p class="desc-content mb-5">
-                        <strong>产品描述： </strong> <?php echo $spText; ?>
+                        <strong>产品描述： </strong> <?php echo $describe; ?>
                     </p>
                     <!-- Description End -->
 
@@ -425,16 +275,11 @@ require 'config.php';
                         <div class="desc-content p-3">
                             <p class="mb-3">
                                <?php
-                                   if ($textrow=="-1"){
-                                       $text00="该商品没有具体描述......";
-                                   }else{
-                                       foreach ($textrow as $row) {
-                                           $text00 =$row["spuidtext"];
-                                       }
-                                   }
+                                    foreach ($goodsIntroduce as $row) {
+                                         $text00 =$row["goodsIntroduce"];
+                                    }
                                    ?>
                                 <?php   echo $text00; ?>
-
                             </p>
 
                         </div>

@@ -2,7 +2,9 @@
 
 
 //新的
-function indexCurlPost(){
+
+function indexCurlPost():array
+{
     $url="http://localhost:8080/index/all";
     $datalist=array();
     $datalist["method"]="list";
@@ -11,9 +13,44 @@ function indexCurlPost(){
     if($resArr["status"]=="200"){
         return $resArr["data"];
     }else{
-        return -1;
+      return array();
     }
+}
 
+/**
+ * @param $id
+ * @return array
+ * 详情页面
+ */
+function productCurlPost($id) :array
+{
+    $url="http://localhost:8080/index/product/all";
+    $datalist=array();
+    $datalist["id"]=$id;
+    $json=curl_post($url,$datalist);
+    $resArr=json_decode($json,true);
+    if($resArr["status"]=="200"){
+        return $resArr["data"];
+    }
+    return array();
+}
+
+/**
+ * @param $name
+ * @return array
+ * 模糊查找
+ */
+function fuzzyCurlPost($name) :array
+{
+    $url="http://localhost:8080/index/search/all/";
+    $datalist=array();
+    $datalist['fuzzy']=$name;
+    $json=curl_post($url,$datalist);
+    $resArr=json_decode($json,true);
+    if($resArr["status"]=="200"){
+        return $resArr["data"];
+    }
+    return array();
 }
 
 //结束
@@ -26,14 +63,7 @@ function registerUri($account,$password){
     $json=curl_post($url,$datalist);
     return $json;
 }
-function waresLookup($name){
-    $url="http://localhost:8080/index/search/all/";
-    $datalist=array();
-    $datalist['seach']=$name;
-    $json=curl_post($url,$datalist);
-    $list=JsonList($json);
-    return $list;
-}
+
 function waresSortQuery($sortName,$page,$num){
     $url="http://localhost:8080/index/sort/waresall/all/";
     $datalist=array();
@@ -61,30 +91,9 @@ function sortListUri(){
     $list=JsonList($json);
     return $list;
 }
-function testUri(){
-    $url="http://localhost:8080/index/details/text/sin/";
-    $datalist=array();
-    $datalist["uid"]=$_GET['commodity'];
-    $json=curl_post($url,$datalist);
-    $tesrlist=JsonList($json);
-    return $tesrlist;
-}
-function uriSingleImg(){
-    $url="http://localhost:8080/index/details/img/sin/";
-    $datalist=array();
-    $datalist["uid"]=$_GET['commodity'];
-    $json=curl_post($url,$datalist);
-    $imgall=JsonList($json);
-    return $imgall;
-}
-function uriSingle(){
-    $url="http://localhost:8080/index/details/sin/";
-    $datalist=array();
-    $datalist["uid"]=$_GET['commodity'];
-    $json=curl_post($url,$datalist);
-    $singleall=JsonList($json);
-    return $singleall;
-}
+
+
+
 function JsonList($json){
     $json=json_decode($json,true);
     if ($json["status"]=="200"){

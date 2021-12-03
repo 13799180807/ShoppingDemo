@@ -2,6 +2,73 @@
 require '../src/settings.php';
 //require '../src/Application/Views/Home/curl.php';
 
+//ini_set("memory_limit",-1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//$conn=Connection::conn();
+//$a=GoodsPictureDaoImpl::getGoodsId($conn,"5");
+//var_dump($a);
+
+
+
+
+        //    $a1=GoodsIntroduceServiceImpl::getGoodsId(5);
+           // var_dump($a1);
+//$a=GoodsModel::productInformationDisplay($a1);
+//var_dump($a);
+
+
+
+
+
+
+//$a=GoodsServiceImpl::getById(1);
+//var_dump($a);
+
+//$a=GoodsIntroduceServiceImpl::getGoodsId("10");
+//var_dump($a);
+//$dao=new GoodsIntroduceServiceImpl();
+//$a=$dao->getGoodsId("5");
+//var_dump($a);
+
+
+//$conn=Connection::conn();
+//$res=GoodsPictureDaoImpl::getGoodsId($conn,"5");
+//$conn->close();
+//var_dump($res);
+
+
+//
+//$a=GoodsPictureServiceImpl::getGoodsId("5");
+//var_dump($a);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9,23 +76,25 @@ require '../src/settings.php';
 //
 //$hot=GoodsServiceImpl::listByfield("goods_hot","1","1",5);
 //$recommend=GoodsServiceImpl::listByfield("goods_recommend","1","1",5);
-//$newest=GoodsServiceImpl::listByfield("created_at","1","1",5);
+//$newest=GoodsServiceImpl::listByfield("created_at","1","1",7);
 //
-//$hot=GoodsModel::homePageinformationDisplay("hot",$hot);
-//$recommend=GoodsModel::homePageinformationDisplay("recommend",$recommend);
-//$newest=GoodsModel::homePageinformationDisplay("newest",$newest);
+//$hot=GoodsModel::homePageinformationDisplay($hot);
+//$recommend=GoodsModel::homePageinformationDisplay($recommend);
+//$newest=GoodsModel::homePageinformationDisplay($newest);
 //
 //$res=array(
-//    "hor"=>$hot,
+//    "hot"=>$hot,
 //    "recommend"=>$recommend,
 //    "newest"=>$newest
 //);
-//
 //$a=successJson("获取成功",$res);
 //echo $a;
-////var_dump($res);
 
 
+
+
+//$a=GoodsServiceImpl::getById(1);
+//var_dump($a);
 
 
 

@@ -117,7 +117,7 @@ class WaresDaoImpl implements waresDao
      */
     public static function deleteById($conn, $id)
     {
-        $row=DelectBuilder::delectAll($conn,"shop_wares","id=?","i",$id);
+        $row=DeleteBuilder::delectAll($conn,"shop_wares","id=?","i",$id);
         return $row;
     }
 

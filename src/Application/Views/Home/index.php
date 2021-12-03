@@ -1,9 +1,7 @@
 <?php
 require 'curl.php';
 require 'config.php';
-
 $dataArray=indexCurlPost();
-
 ?>
 
 <!DOCTYPE html>

@@ -8,50 +8,82 @@ class GoodsController
      * @return false|string
      * 主页页面显示信息
      */
-    public static function homePageInformation($parameter){
-
+    public static function homePageInformation($parameter)
+    {
         if (isset($parameter["method"]) && $parameter["method"]!="" && $parameter["method"]=="list"){
             //热门  推荐产品  最新商品
-            $hot=GoodsServiceImpl::listByfield("goods_hot","1","1",5);
-            $recommend=GoodsServiceImpl::listByfield("goods_recommend","1","1",5);
-            $newest=GoodsServiceImpl::listByfield("created_at","1","1",7);
+            $hot=GoodsServiceImpl::listField("goods_hot","1","1",5);
+            $recommend=GoodsServiceImpl::listField("goods_recommend","1","1",5);
+            $newest=GoodsServiceImpl::listField("created_at","1","1",7);
 
-            $hot=GoodsModel::homePageinformationDisplay($hot);
-            $recommend=GoodsModel::homePageinformationDisplay($recommend);
-            $newest=GoodsModel::homePageinformationDisplay($newest);
+            $hot=GoodsModel::homeInformationDisplay($hot);
+            $recommend=GoodsModel::homeInformationDisplay($recommend);
+            $newest=GoodsModel::homeInformationDisplay($newest);
 
             $res=array(
                 "hot"=>$hot,
                 "recommend"=>$recommend,
                 "newest"=>$newest
             );
-            $json=successJson("获取成功",$res);
-            return $json;
+
+            return successJson("获取成功",$res);
 
         }else{
-            $errlist=array();
-            $errlist['err']="请输入正确值";
-            $json=failJson("请求失败，参数不正确", $errlist);
-            return $json;
+            $error=array();
+            $error['err']="请输入正确值";
+            return failJson("请求失败，参数不正确", $error);
         }
     }
 
-    public static function productPageInformation($parameter){
-
+    /**
+     * @param $parameter
+     * @return false|string
+     * 详情页面使用
+     */
+    public static function productPageInformation($parameter)
+    {
         if(isset($parameter["id"]) && $parameter["id"]!="" && is_numeric($parameter['id'])){
-//            $goodsId=$parameter["id"];
-//            $a=GoodsServiceImpl::getById(1);
-//            var_dump($a);
+              $goodsId=$parameter["id"];
 
+            $goods=GoodsServiceImpl::getById($goodsId);
+            $goodsPicture=GoodsPictureServiceImpl::getGoodsId($goodsId);
+            $goodsIntroduce=GoodsIntroduceServiceImpl::getGoodsId($goodsId);
+
+            $goods=GoodsModel::productPageInformationDisplay($goods);
+            $goodsIntroduce=GoodsModel::GoodsIntroduceInformationDisplay($goodsIntroduce);
+            $goodsPicture=GoodsModel::GoodsPictureInformationDisplay($goodsPicture);
+
+            $res=array(
+                "goods"=>$goods,
+                "goodsIntroduce"=>$goodsIntroduce,
+                "goodsPicture"=>$goodsPicture
+            );
+
+            return successJson("获取成功",$res);
 
 
         }else{
-            $errlist=array();
-            $errlist['err']="请输入正确值";
-            $json=failJson("请求失败，参数不正确", $errlist);
-            return $json;
+            $error=array();
+            $error['err']="请输入正确值";
+            return failJson("请求失败，参数不正确", $error);
         }
-
+    }
+    /**
+     * var_dump(GoodsServiceImpl::getByGoodsName("车1"));
+     */
+    public static function fuzzyQuery($parameter)
+    {
+        if(isset($parameter["fuzzy"]) && $parameter["fuzzy"]!="")
+        {
+            $fuzzy=GoodsServiceImpl::getByGoodsName($parameter["fuzzy"]);
+            $res=GoodsModel::homeInformationDisplay($fuzzy);
+            return successJson("获取成功",$res);
+        }
+        else{
+            $error=array();
+            $error['err']="请输入正确值";
+            return failJson("请求失败，参数不正确", $error);
+        }
 
     }
 

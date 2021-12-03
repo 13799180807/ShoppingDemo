@@ -17,6 +17,13 @@ interface GoodsService{
      * @return mixed
      * 根据一个字段名进行查询获取多个对象
      */
-    public static function listByfield($field,$value,$status,$num);
+    public static function listField($field, $value, $status, $num);
+
+    /**
+     * @param $goodsName
+     * @return mixed
+     * 根据名字模糊查询
+     */
+    public static function getByGoodsName($goodsName);
 
 }

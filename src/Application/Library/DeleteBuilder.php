@@ -1,12 +1,12 @@
 <?php
 
 
-class DelectBuilder
+class DeleteBuilder
 {
     /**
      * @param $table
      * @return bool
-     * 使用方法例子： DelectBuilder::delectAll($conn,"demo","id=?","s","30");
+     * 使用方法例子： DeleteBuilder::delectAll($conn,"demo","id=?","s","30");
      */
     public static  function delectAll($conn,$table,$condtion,$types,$stmtinit){
 

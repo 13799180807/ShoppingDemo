@@ -6,9 +6,7 @@ class GoodsServiceImpl implements GoodsService
 
     /**
      * @param $id
-     * @return mixed|void
-     * 获取一条信息
-     * 没有结果返回-1，有结果就返回结果
+     * @return string
      */
     public static function getById($id)
     {
@@ -29,20 +27,31 @@ class GoodsServiceImpl implements GoodsService
      * @param $value
      * @param $status
      * @param $num
-     * @return mixed|void
+     * @return array
      */
-    public static function listByfield($field, $value, $status, $num)
+    public static function listField($field, $value, $status, $num) :array
     {
-        // TODO: Implement listByfield() method.
         $conn=Connection::conn();
-        $res=GoodsDaoImpl::listByfield($conn,$field,$value,$status,$num);
+        $res=GoodsDaoImpl::listField($conn,$field,$value,$status,$num);
         $conn->close();
         if (count($res)>0){
             return $res;
         }else{
-            return -1;
+            return array();
         }
+    }
 
+    /**
+     * @param $goodsName
+     * @return array
+     * 模糊查询
+     */
+    public static function getByGoodsName($goodsName) : array
+    {
+        $conn=Connection::conn();
+        $goodsName="%".$goodsName."%";
+        return GoodsDaoImpl::getByGoodsName($conn,$goodsName);
 
     }
+
 }

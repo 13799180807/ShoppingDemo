@@ -7,9 +7,7 @@ class Route
     public static function define(){
         $routeList=array(
             "/index",
-            "/index/details",
-            "/index/details/img",
-            "/index/details/text",
+            "/index/product",
             "/index/waressort",
             "/index/sort/page",
             "/index/sort/waresall",

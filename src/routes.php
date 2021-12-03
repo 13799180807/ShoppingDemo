@@ -1,22 +1,22 @@
 <?php
 
-    Route::any(function (){
+        Route::any(function (){
         header("Content-type:Application/json;charset=utf-8");
 
         $parame=parameterList($_REQUEST);
-        if(uri($_SERVER["REQUEST_URI"])=="/index"){
-              $json=GoodsController::homePageInformation($parame);
-              echo $json;
-        }elseif(uri($_SERVER["REQUEST_URI"])=="/index/details"){
-            $json=WaresController::waresDetailsAll($parame);
-            echo $json;
-        }elseif(uri($_SERVER["REQUEST_URI"])=="/index/details/img"){
-            $json=WaresController::waresImgAll($parame);
-            echo $json;
-        }elseif(uri($_SERVER["REQUEST_URI"])=="/index/details/text"){
-            $json=WaresController::waresTextAll($parame);
-            echo $json;
-        }elseif (uri($_SERVER["REQUEST_URI"])=="/index/waressort"){
+        if(uri($_SERVER["REQUEST_URI"])=="/index")
+        {
+              echo GoodsController::homePageInformation($parame);
+        }
+        elseif(uri($_SERVER["REQUEST_URI"])=="/index/product")
+        {
+            echo GoodsController::productPageInformation($parame);
+        }
+        elseif (uri($_SERVER["REQUEST_URI"])=="/index/search")
+        {
+            echo GoodsController::fuzzyQuery($parame);
+        }
+        elseif (uri($_SERVER["REQUEST_URI"])=="/index/waressort"){
              $json=SortController::waresSortList($parame);
              echo $json;
         }elseif (uri($_SERVER["REQUEST_URI"])=="/index/sort/page"){
@@ -24,9 +24,6 @@
             echo $json;
         }elseif (uri($_SERVER["REQUEST_URI"])=="/index/sort/waresall"){
             $json=SortController::sortPageWaresAll($parame);
-            echo $json;
-        }elseif (uri($_SERVER["REQUEST_URI"])=="/index/search"){
-            $json=WaresController::waresFuzzySearchDisplay($parame);
             echo $json;
         }elseif (uri($_SERVER["REQUEST_URI"])=="/index/register"){
                 $json=UserController::userRegister($parame);

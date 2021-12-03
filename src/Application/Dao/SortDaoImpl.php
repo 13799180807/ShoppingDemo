@@ -82,7 +82,7 @@ class SortDaoImpl implements SortDao
     public static function sortOneDelect($conn, $id)
     {
         // TODO: Implement sortOneDel() method.
-        $rows=DelectBuilder::delectAll($conn,"shop_sort","id=?","i",$id);
+        $rows=DeleteBuilder::delectAll($conn,"shop_sort","id=?","i",$id);
         return $rows;
     }
 

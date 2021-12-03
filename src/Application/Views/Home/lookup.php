@@ -2,10 +2,19 @@
 require 'config.php';
 require 'curl.php';
 
-    if (isset($_POST['lookupName'])){
-        $lookupRes=waresLookup($_POST['lookupName']);
-        if ($lookupRes=="-1"){
-        }else{
+    if (isset($_POST['lookupName']))
+    {
+        $lookupRes=fuzzyCurlPost($_POST['lookupName']);
+        if (count($lookupRes)>0)
+        {
+            foreach ($lookupRes as $row)
+            {
+                if($row["goodsId"]=="")
+                {
+                    $lookupRes="-1";
+                    break;
+                }
+            }
         }
     }else{
         $lookupRes="-1";
@@ -234,14 +243,14 @@ require 'curl.php';
                                     <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
                                         <div class="product-inner">
                                             <div class="thumb">
-                                                <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
-                                                    <img class="first-image" src="<?php echo IMG_PATH.$row['sp_imgpath'] ; ?>" alt="Product" />
+                                                <a href="single-product.php?commodity=<?php echo $row["goodsId"]; ?>" class="image">
+                                                    <img class="first-image" src="<?php echo IMG_PATH.$row['goodsImg'] ; ?>" alt="Product" />
                                                 </a>
                                             </div>
                                             <div class="content">
-                                                <h5 class="title"><a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>"><?php echo $row['sp_name'] ;?></a></h5>
+                                                <h5 class="title"><a href="single-product.php?commodity=<?php echo $row["goodsId"]; ?>"><?php echo $row['goodsName'] ;?></a></h5>
                                                 <span class="price">
-                                            <span class="new">￥<?php echo $row['sp_price'] ;?></span>
+                                            <span class="new">￥<?php echo $row['goodsPrice'] ;?></span>
                                     <span class="old">  </span>
                                     </span>
                                             </div>

@@ -228,3 +228,1150 @@
 [02-Dec-2021 17:35:24 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
 [02-Dec-2021 17:35:24 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
 [02-Dec-2021 17:35:24 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 620
+[02-Dec-2021 17:56:30 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[02-Dec-2021 17:56:30 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[02-Dec-2021 17:56:30 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 423
+[02-Dec-2021 17:56:30 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 426
+[02-Dec-2021 17:56:30 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 517
+[02-Dec-2021 17:56:30 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 518
+[02-Dec-2021 17:56:30 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 521
+[02-Dec-2021 17:56:30 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 590
+[02-Dec-2021 17:56:30 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 591
+[02-Dec-2021 17:56:30 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 594
+[02-Dec-2021 17:56:36 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[02-Dec-2021 17:56:36 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[02-Dec-2021 17:56:36 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 423
+[02-Dec-2021 17:56:36 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 426
+[02-Dec-2021 17:56:36 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 517
+[02-Dec-2021 17:56:36 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 518
+[02-Dec-2021 17:56:36 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 521
+[02-Dec-2021 17:56:36 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 590
+[02-Dec-2021 17:56:36 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 591
+[02-Dec-2021 17:56:36 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 594
+[02-Dec-2021 17:57:30 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[02-Dec-2021 17:57:30 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[02-Dec-2021 17:57:30 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 423
+[02-Dec-2021 17:57:30 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 426
+[02-Dec-2021 17:57:30 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 517
+[02-Dec-2021 17:57:30 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 518
+[02-Dec-2021 17:57:30 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 521
+[02-Dec-2021 17:57:30 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 590
+[02-Dec-2021 17:57:30 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 591
+[02-Dec-2021 17:57:30 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 594
+[02-Dec-2021 17:58:04 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[02-Dec-2021 17:58:04 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[02-Dec-2021 17:58:04 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 423
+[02-Dec-2021 17:58:04 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 426
+[02-Dec-2021 17:58:04 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 517
+[02-Dec-2021 17:58:04 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 518
+[02-Dec-2021 17:58:04 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 521
+[02-Dec-2021 17:58:04 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 590
+[02-Dec-2021 17:58:04 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 591
+[02-Dec-2021 17:58:04 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 594
+[02-Dec-2021 17:58:30 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[02-Dec-2021 17:58:30 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[02-Dec-2021 17:58:30 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 423
+[02-Dec-2021 17:58:30 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 426
+[02-Dec-2021 17:58:30 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 517
+[02-Dec-2021 17:58:30 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 518
+[02-Dec-2021 17:58:30 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 521
+[02-Dec-2021 17:58:30 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 590
+[02-Dec-2021 17:58:30 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 591
+[02-Dec-2021 17:58:30 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 594
+[02-Dec-2021 17:58:46 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[02-Dec-2021 17:58:46 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[02-Dec-2021 17:58:46 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 423
+[02-Dec-2021 17:58:46 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 426
+[02-Dec-2021 17:58:46 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 517
+[02-Dec-2021 17:58:46 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 518
+[02-Dec-2021 17:58:46 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 521
+[02-Dec-2021 17:58:46 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 590
+[02-Dec-2021 17:58:46 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 591
+[02-Dec-2021 17:58:46 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 594
+[02-Dec-2021 17:58:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 90
+[02-Dec-2021 17:58:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 90
+[02-Dec-2021 17:58:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 10
+[02-Dec-2021 17:58:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 90
+[02-Dec-2021 17:58:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 44
+[02-Dec-2021 17:58:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 45
+[02-Dec-2021 17:58:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 46
+[02-Dec-2021 17:58:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 47
+[02-Dec-2021 17:58:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 48
+[02-Dec-2021 18:01:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[02-Dec-2021 18:01:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[02-Dec-2021 18:01:02 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 423
+[02-Dec-2021 18:01:02 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 426
+[02-Dec-2021 18:01:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 517
+[02-Dec-2021 18:01:02 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 518
+[02-Dec-2021 18:01:02 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 521
+[02-Dec-2021 18:01:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 590
+[02-Dec-2021 18:01:02 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 591
+[02-Dec-2021 18:01:02 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 594
+[02-Dec-2021 18:01:05 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 90
+[02-Dec-2021 18:01:05 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 90
+[02-Dec-2021 18:01:05 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 10
+[02-Dec-2021 18:01:06 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 90
+[02-Dec-2021 18:01:06 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 44
+[02-Dec-2021 18:01:06 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 45
+[02-Dec-2021 18:01:06 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 46
+[02-Dec-2021 18:01:06 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 47
+[02-Dec-2021 18:01:06 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 48
+[02-Dec-2021 18:03:00 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 90
+[02-Dec-2021 18:03:00 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 90
+[02-Dec-2021 18:03:00 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 10
+[02-Dec-2021 18:03:00 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 90
+[02-Dec-2021 18:03:00 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 44
+[02-Dec-2021 18:03:00 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 45
+[02-Dec-2021 18:03:00 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 46
+[02-Dec-2021 18:03:00 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 47
+[02-Dec-2021 18:03:00 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 48
+[02-Dec-2021 18:03:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[02-Dec-2021 18:03:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[02-Dec-2021 18:03:02 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 423
+[02-Dec-2021 18:03:02 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 426
+[02-Dec-2021 18:03:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 517
+[02-Dec-2021 18:03:02 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 518
+[02-Dec-2021 18:03:02 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 521
+[02-Dec-2021 18:03:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 590
+[02-Dec-2021 18:03:02 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 591
+[02-Dec-2021 18:03:02 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 594
+[03-Dec-2021 08:54:14 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[03-Dec-2021 08:54:14 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[03-Dec-2021 08:54:14 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 423
+[03-Dec-2021 08:54:14 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 426
+[03-Dec-2021 08:54:14 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 517
+[03-Dec-2021 08:54:14 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 518
+[03-Dec-2021 08:54:14 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 521
+[03-Dec-2021 08:54:14 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 590
+[03-Dec-2021 08:54:14 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 591
+[03-Dec-2021 08:54:14 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 594
+[03-Dec-2021 09:00:58 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 609
+[03-Dec-2021 09:00:58 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 609
+[03-Dec-2021 09:00:58 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 609
+[03-Dec-2021 09:00:58 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 609
+[03-Dec-2021 09:00:58 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 609
+[03-Dec-2021 09:10:04 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[03-Dec-2021 09:10:04 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[03-Dec-2021 09:10:04 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 423
+[03-Dec-2021 09:10:04 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 426
+[03-Dec-2021 09:10:04 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 517
+[03-Dec-2021 09:10:04 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 518
+[03-Dec-2021 09:10:04 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 521
+[03-Dec-2021 09:10:04 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 590
+[03-Dec-2021 09:10:04 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 591
+[03-Dec-2021 09:10:04 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 594
+[03-Dec-2021 09:10:39 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 609
+[03-Dec-2021 09:10:39 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 609
+[03-Dec-2021 09:10:39 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 609
+[03-Dec-2021 09:10:39 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 609
+[03-Dec-2021 09:10:39 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 609
+[03-Dec-2021 09:22:11 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:22:11 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:22:11 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:22:11 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:22:11 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:22:14 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:22:14 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:22:14 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:22:14 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:22:14 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:23:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:23:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:23:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:23:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:23:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:23:03 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:23:03 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:23:03 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:23:03 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:23:03 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:53:43 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:53:43 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:53:43 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:53:43 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 09:53:43 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:24:37 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 90
+[03-Dec-2021 11:24:41 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[03-Dec-2021 11:24:41 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 419
+[03-Dec-2021 11:24:41 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[03-Dec-2021 11:24:41 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 424
+[03-Dec-2021 11:24:41 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 515
+[03-Dec-2021 11:24:41 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 516
+[03-Dec-2021 11:24:41 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 519
+[03-Dec-2021 11:24:41 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 588
+[03-Dec-2021 11:24:41 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 589
+[03-Dec-2021 11:24:41 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 592
+[03-Dec-2021 11:44:04 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[03-Dec-2021 11:44:04 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 419
+[03-Dec-2021 11:44:04 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[03-Dec-2021 11:44:04 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 424
+[03-Dec-2021 11:44:04 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 515
+[03-Dec-2021 11:44:04 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 516
+[03-Dec-2021 11:44:04 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 519
+[03-Dec-2021 11:44:04 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 588
+[03-Dec-2021 11:44:04 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 589
+[03-Dec-2021 11:44:04 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 592
+[03-Dec-2021 11:44:37 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 11
+[03-Dec-2021 11:44:37 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 419
+[03-Dec-2021 11:44:37 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[03-Dec-2021 11:44:37 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 424
+[03-Dec-2021 11:44:37 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 515
+[03-Dec-2021 11:44:37 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 516
+[03-Dec-2021 11:44:37 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 519
+[03-Dec-2021 11:44:37 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 588
+[03-Dec-2021 11:44:37 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 589
+[03-Dec-2021 11:44:37 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 592
+[03-Dec-2021 11:44:51 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:51 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:51 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:51 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:51 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:52 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:52 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:52 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:52 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:52 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:56 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:56 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:56 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:56 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:56 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:57 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:57 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:57 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:57 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:57 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:57 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:57 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:57 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:57 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 11:44:57 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 13:33:35 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 13:33:35 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 13:33:35 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 13:33:35 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 13:33:35 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 14:21:10 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 14:21:10 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 14:21:10 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 14:21:10 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 14:21:10 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 54
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 227
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 250
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 263
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 266
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 295
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 302
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 310
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 317
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 324
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 330
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 431
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:27:15 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 439
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 54
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 227
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 250
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 263
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 266
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 295
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 302
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 310
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 317
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 324
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 330
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 431
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:27:21 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 439
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 54
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 227
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 250
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 263
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 266
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 295
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 302
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 310
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 317
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 324
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 330
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 431
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 439
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 54
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 227
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 250
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 263
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 266
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 295
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 302
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 310
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 317
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 324
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 330
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 431
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 439
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 54
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 227
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 250
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 263
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 266
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 295
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 302
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 310
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 317
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 324
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 330
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 431
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 439
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 54
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 227
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 250
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 263
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 266
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 295
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 302
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 310
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 317
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 324
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 330
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 431
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:27:23 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 439
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 54
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 227
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 250
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 263
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 266
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 295
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 302
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 310
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 317
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 324
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 330
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 431
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:28:02 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 439
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 54
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 227
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 250
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 263
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 266
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 295
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 302
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 310
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 317
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 324
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 330
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 431
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 439
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 54
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 227
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 250
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 263
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 266
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 295
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 302
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 310
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 317
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 324
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 330
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 431
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 439
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 54
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 227
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 250
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 263
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 266
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 295
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 302
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 310
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 317
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 324
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 330
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 431
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:28:03 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 439
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 30
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 54
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 227
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 250
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 263
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 266
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 295
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 302
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 310
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 317
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 324
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 330
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 431
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:28:26 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 439
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 30
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 54
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 227
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 250
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 263
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 266
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 295
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 302
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 310
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 317
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 324
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 330
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 431
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 14:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 439
+[03-Dec-2021 14:56:54 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 14:56:54 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 14:56:54 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 14:56:54 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 14:56:54 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Array to string conversion in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 10
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Array to string conversion in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 11
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 78
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 251
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 274
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 275
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 287
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 290
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 293
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 293
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 319
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 326
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 334
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 335
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 341
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 348
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 354
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 455
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 458
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 458
+[03-Dec-2021 14:57:32 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 463
+[03-Dec-2021 15:16:04 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:16:04 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:16:04 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:16:04 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:16:04 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 70
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: name in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 264
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 287
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 288
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 300
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 306
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 306
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: name in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 332
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 339
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 347
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 348
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 354
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 361
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 367
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 468
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 471
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 471
+[03-Dec-2021 15:16:06 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 476
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 34
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 35
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 92
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 306
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 342
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 350
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 351
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 357
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 364
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 370
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 471
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:10 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 479
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 34
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 35
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 92
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 306
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 342
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 350
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 351
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 357
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 364
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 370
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 471
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:11 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 479
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 34
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 35
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 92
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 306
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 342
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 350
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 351
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 357
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 364
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 370
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 471
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:19 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 479
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 34
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 35
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 92
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 306
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 342
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 350
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 351
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 357
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 364
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 370
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 471
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:34 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 479
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 34
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 35
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 92
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 306
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 342
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 350
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 351
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 357
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 364
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 370
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 471
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 479
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 34
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 35
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 92
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 306
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 342
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 350
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 351
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 357
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 364
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 370
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 471
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 479
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 34
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 35
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 92
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 306
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 342
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 350
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 351
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 357
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 364
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 370
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 471
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 479
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 34
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 35
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 92
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 306
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 342
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 350
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 351
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 357
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 364
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 370
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 471
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:35 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 479
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 34
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 35
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined variable: spName in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 92
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 306
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 309
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 342
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 350
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined variable: spPrice in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 351
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 357
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined variable: spNum in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 364
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined variable: spText in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 370
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 471
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 474
+[03-Dec-2021 15:17:37 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 479
+[03-Dec-2021 15:20:14 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[03-Dec-2021 15:20:14 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 34
+[03-Dec-2021 15:20:14 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 35
+[03-Dec-2021 15:20:14 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 305
+[03-Dec-2021 15:20:14 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 308
+[03-Dec-2021 15:20:14 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 308
+[03-Dec-2021 15:20:14 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 341
+[03-Dec-2021 15:20:14 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 356
+[03-Dec-2021 15:20:14 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 470
+[03-Dec-2021 15:20:14 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 473
+[03-Dec-2021 15:20:14 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 473
+[03-Dec-2021 15:20:14 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 478
+[03-Dec-2021 15:21:02 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[03-Dec-2021 15:21:02 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 34
+[03-Dec-2021 15:21:02 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 35
+[03-Dec-2021 15:21:02 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 305
+[03-Dec-2021 15:21:02 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 308
+[03-Dec-2021 15:21:02 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 308
+[03-Dec-2021 15:21:02 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 341
+[03-Dec-2021 15:21:02 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 356
+[03-Dec-2021 15:21:02 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 470
+[03-Dec-2021 15:21:02 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 473
+[03-Dec-2021 15:21:02 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 473
+[03-Dec-2021 15:21:02 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 478
+[03-Dec-2021 15:25:44 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:25:44 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:25:44 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:25:44 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:25:44 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:25:46 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:25:46 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:25:46 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 32
+[03-Dec-2021 15:25:46 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 270
+[03-Dec-2021 15:25:46 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 273
+[03-Dec-2021 15:25:46 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 273
+[03-Dec-2021 15:25:46 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 306
+[03-Dec-2021 15:25:46 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 321
+[03-Dec-2021 15:25:46 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:25:46 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 438
+[03-Dec-2021 15:25:46 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 438
+[03-Dec-2021 15:25:46 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 443
+[03-Dec-2021 15:27:04 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:27:04 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:27:04 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:27:04 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 270
+[03-Dec-2021 15:27:04 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 301
+[03-Dec-2021 15:27:04 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 316
+[03-Dec-2021 15:27:04 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 430
+[03-Dec-2021 15:27:04 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 433
+[03-Dec-2021 15:27:04 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 433
+[03-Dec-2021 15:27:04 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 438
+[03-Dec-2021 15:27:22 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:27:22 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:27:22 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:27:22 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 270
+[03-Dec-2021 15:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 301
+[03-Dec-2021 15:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 316
+[03-Dec-2021 15:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 430
+[03-Dec-2021 15:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 433
+[03-Dec-2021 15:27:22 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 433
+[03-Dec-2021 15:27:22 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 438
+[03-Dec-2021 15:27:26 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:27:26 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:27:26 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:27:26 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 270
+[03-Dec-2021 15:27:26 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 301
+[03-Dec-2021 15:27:26 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 316
+[03-Dec-2021 15:27:26 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 430
+[03-Dec-2021 15:27:26 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 433
+[03-Dec-2021 15:27:26 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 433
+[03-Dec-2021 15:27:26 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 438
+[03-Dec-2021 15:27:53 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:27:53 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:27:53 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:27:53 Asia/Shanghai] PHP Notice:  Undefined index: goods_picture_path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 270
+[03-Dec-2021 15:27:53 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 301
+[03-Dec-2021 15:27:53 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 316
+[03-Dec-2021 15:27:53 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 430
+[03-Dec-2021 15:27:53 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 433
+[03-Dec-2021 15:27:53 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 433
+[03-Dec-2021 15:27:53 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 438
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 273
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 305
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 320
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 437
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 437
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 442
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 273
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 305
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 320
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 437
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 437
+[03-Dec-2021 15:28:15 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 442
+[03-Dec-2021 15:28:27 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:27 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:27 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 15:28:27 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 273
+[03-Dec-2021 15:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 305
+[03-Dec-2021 15:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 320
+[03-Dec-2021 15:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 15:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 437
+[03-Dec-2021 15:28:27 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 437
+[03-Dec-2021 15:28:27 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 442
+[03-Dec-2021 15:28:30 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:30 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:30 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:30 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 269
+[03-Dec-2021 15:28:30 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 273
+[03-Dec-2021 15:28:30 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 305
+[03-Dec-2021 15:28:30 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 320
+[03-Dec-2021 15:28:30 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 434
+[03-Dec-2021 15:28:30 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 437
+[03-Dec-2021 15:28:30 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 437
+[03-Dec-2021 15:28:30 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 442
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 267
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 271
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 267
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 271
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 267
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 271
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:54 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 267
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 271
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 267
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 271
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 267
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 271
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 267
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 271
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 267
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 271
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 267
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 271
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:55 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:28:56 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:28:56 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:28:56 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:28:56 Asia/Shanghai] PHP Notice:  Undefined variable: imgrows in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 267
+[03-Dec-2021 15:28:56 Asia/Shanghai] PHP Notice:  Undefined index: sp_Path in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 271
+[03-Dec-2021 15:28:56 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:28:56 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:28:56 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:28:56 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:56 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:28:56 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:31:20 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:31:20 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:31:20 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:31:20 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:31:20 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:31:20 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:31:20 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:31:20 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:31:20 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined index: goods_describe in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 29
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined index: goods_img in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 30
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined index: created_at in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 31
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:31:57 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:34:24 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:34:24 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:34:24 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 432
+[03-Dec-2021 15:34:24 Asia/Shanghai] PHP Notice:  Undefined variable: textrow in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:34:24 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 435
+[03-Dec-2021 15:34:24 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 440
+[03-Dec-2021 15:36:23 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:36:23 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:36:30 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:36:30 Asia/Shanghai] PHP Warning:  A non-numeric value encountered in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 312
+[03-Dec-2021 15:36:30 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:36:37 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:36:37 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:36:52 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 303
+[03-Dec-2021 15:36:52 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 318
+[03-Dec-2021 15:38:03 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:38:03 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:38:03 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:38:03 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:38:03 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:38:06 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 296
+[03-Dec-2021 15:38:06 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 311
+[03-Dec-2021 15:38:34 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 281
+[03-Dec-2021 15:38:34 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 296
+[03-Dec-2021 15:38:35 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 281
+[03-Dec-2021 15:38:35 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 296
+[03-Dec-2021 15:38:35 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 281
+[03-Dec-2021 15:38:35 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 296
+[03-Dec-2021 15:38:35 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 281
+[03-Dec-2021 15:38:35 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 296
+[03-Dec-2021 15:38:36 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 281
+[03-Dec-2021 15:38:36 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 296
+[03-Dec-2021 15:38:37 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 281
+[03-Dec-2021 15:38:37 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 296
+[03-Dec-2021 15:38:38 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 281
+[03-Dec-2021 15:38:38 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 296
+[03-Dec-2021 15:38:38 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 281
+[03-Dec-2021 15:38:38 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 296
+[03-Dec-2021 15:38:40 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 281
+[03-Dec-2021 15:38:40 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 296
+[03-Dec-2021 15:38:42 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:38:42 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:38:42 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:38:42 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:38:42 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 15:38:45 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 281
+[03-Dec-2021 15:38:45 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 296
+[03-Dec-2021 15:39:15 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 242
+[03-Dec-2021 15:39:15 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 257
+[03-Dec-2021 15:39:15 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 242
+[03-Dec-2021 15:39:15 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 257
+[03-Dec-2021 15:39:16 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 242
+[03-Dec-2021 15:39:16 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 257
+[03-Dec-2021 15:39:59 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 190
+[03-Dec-2021 15:39:59 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 205
+[03-Dec-2021 15:39:59 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 190
+[03-Dec-2021 15:39:59 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 205
+[03-Dec-2021 15:40:00 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 190
+[03-Dec-2021 15:40:00 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 205
+[03-Dec-2021 15:40:00 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 190
+[03-Dec-2021 15:40:00 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 205
+[03-Dec-2021 15:40:00 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 190
+[03-Dec-2021 15:40:00 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 205
+[03-Dec-2021 15:40:19 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:40:19 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:40:19 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:40:19 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:40:19 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:40:19 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:40:20 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:40:20 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:40:20 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:40:20 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:42:02 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 141
+[03-Dec-2021 15:42:02 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 156
+[03-Dec-2021 15:42:03 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 141
+[03-Dec-2021 15:42:03 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 156
+[03-Dec-2021 15:42:03 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 141
+[03-Dec-2021 15:42:03 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 156
+[03-Dec-2021 15:42:05 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 141
+[03-Dec-2021 15:42:05 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 156
+[03-Dec-2021 15:43:01 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 141
+[03-Dec-2021 15:43:01 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 156
+[03-Dec-2021 15:43:05 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:43:05 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:43:05 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:43:05 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:43:05 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:43:05 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:43:05 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:43:05 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:43:37 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:43:37 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:43:37 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:43:37 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:43:40 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:43:40 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:43:40 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 146
+[03-Dec-2021 15:43:40 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 161
+[03-Dec-2021 15:46:55 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 148
+[03-Dec-2021 15:46:55 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 163
+[03-Dec-2021 15:46:55 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 148
+[03-Dec-2021 15:46:55 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 163
+[03-Dec-2021 15:47:46 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 148
+[03-Dec-2021 15:47:46 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 163
+[03-Dec-2021 15:47:46 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 148
+[03-Dec-2021 15:47:46 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 163
+[03-Dec-2021 15:47:54 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 148
+[03-Dec-2021 15:47:54 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 163
+[03-Dec-2021 15:47:54 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 148
+[03-Dec-2021 15:47:54 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 163
+[03-Dec-2021 15:50:28 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 147
+[03-Dec-2021 15:50:28 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 162
+[03-Dec-2021 15:50:39 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 143
+[03-Dec-2021 15:50:39 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 158
+[03-Dec-2021 15:50:40 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 143
+[03-Dec-2021 15:50:40 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 158
+[03-Dec-2021 15:50:43 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 143
+[03-Dec-2021 15:50:43 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 158
+[03-Dec-2021 15:50:52 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 143
+[03-Dec-2021 15:50:52 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 158
+[03-Dec-2021 15:51:42 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 141
+[03-Dec-2021 15:51:42 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 156
+[03-Dec-2021 15:51:45 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 141
+[03-Dec-2021 15:51:45 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 156
+[03-Dec-2021 15:51:49 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 141
+[03-Dec-2021 15:51:49 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 156
+[03-Dec-2021 15:51:52 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 141
+[03-Dec-2021 15:51:52 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 156
+[03-Dec-2021 15:52:00 Asia/Shanghai] PHP Notice:  Undefined variable: xingxing in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 141
+[03-Dec-2021 15:52:00 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 156
+[03-Dec-2021 15:53:33 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 155
+[03-Dec-2021 15:53:34 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 155
+[03-Dec-2021 15:53:49 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 152
+[03-Dec-2021 15:53:50 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 152
+[03-Dec-2021 15:54:23 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 152
+[03-Dec-2021 15:56:03 Asia/Shanghai] PHP Notice:  Undefined variable: spVarieties in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 147
+[03-Dec-2021 16:16:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:16:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:16:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:16:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:16:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:16:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:16:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:16:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:16:55 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:32:19 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:32:19 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:32:19 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:32:19 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:32:19 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:34:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:34:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:34:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:34:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:34:02 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:37:31 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:37:31 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:37:31 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:37:31 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:37:31 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:40:49 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:40:49 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:40:49 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:40:49 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 16:40:49 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[03-Dec-2021 17:26:38 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:26:38 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:26:46 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:26:46 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:27:28 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:27:28 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:27:32 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:27:32 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:27:37 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:27:37 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:27:41 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:27:41 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:29:08 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:29:08 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:29:50 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:29:50 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:29:59 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:29:59 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:31:01 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:31:01 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:31:01 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:31:01 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:31:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:31:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:31:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:31:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:31:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:31:02 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:31:03 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:31:03 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:31:08 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 107
+[03-Dec-2021 17:31:08 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:31:37 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:31:38 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:31:38 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:31:50 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:31:53 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:32:41 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:32:42 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:32:42 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:32:42 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:32:42 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:34:19 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:34:19 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:34:21 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:34:21 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:34:33 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:34:33 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:34:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:34:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:34:58 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:34:58 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type int in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49
+[03-Dec-2021 17:35:15 Asia/Shanghai] PHP Notice:  Undefined index: status in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 49

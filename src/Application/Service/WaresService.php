@@ -40,11 +40,6 @@ interface WaresService
      */
     public static function waresFuzzySearch($name);
 
-    /**
-     * @param $name
-     * @return mixed
-     * 模糊查询
-     */
-    public function waresFuzzySearch($name);
+
 
 }
