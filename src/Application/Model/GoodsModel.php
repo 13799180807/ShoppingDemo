@@ -14,13 +14,15 @@ class GoodsModel
     public static function homeInformationDisplay($rows) :array
     {
         $dataList=array();
-        if(count($rows)=="0"){
+        if(count($rows)=="0")
+        {
             $rows=array(
                 0=>array('','','','','','','','','','','',''),
             );
         }
         $i=0;
-        foreach ($rows as $row){
+        foreach ($rows as $row)
+        {
             $c=new Goods();
             $c->goodsId=$row[0];
             $c->goodsName=$row[1];

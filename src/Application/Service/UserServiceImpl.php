@@ -18,7 +18,7 @@ class UserServiceImpl implements UserService
         $fStr="";
         foreach ($User as $row){
             $i=$i+1;
-           if(QueryBuilder::innserQuery($conn,"shop_user","user=?","s",$row['user'])==1 && $row['user']!="" && $row['password']!=""){
+           if(QueryBuilder::insertQuery($conn,"shop_user","user=?","s",$row['user'])==1 && $row['user']!="" && $row['password']!=""){
                UserDaoImpl::insert($conn,$row);
                $sStr=$sStr."[{$row['user']}]";
            }else{

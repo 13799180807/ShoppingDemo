@@ -10,7 +10,6 @@ class User
     public $create_time; //创建时间
 
 
-
     /**
      * @return mixed
      */

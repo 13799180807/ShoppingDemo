@@ -3,7 +3,7 @@
 //$a=ChaerCode::randomCode();
 //ChaerCode::verificationCode($a);
 
-class ChaerCode
+class CharCode
 {
     public static function verificationCode($str){
         header("Content-Type:image/jpeg");
@@ -25,11 +25,12 @@ class ChaerCode
         imagejpeg($img);
         imagedestroy($img); //销毁图像
     }
+
     /**
      * @return string
-     * 随机生成4个数字
      */
-    public static function randomCode(){
+    public static function randomCode() :string
+    {
         $element=array('q','w','e','r','t','y','u','i','o','p','l','k','j','h','g','f','d','s','a','z','x','c','v','b','n','m');
         rand(0,count($element)-1);
         $str='';

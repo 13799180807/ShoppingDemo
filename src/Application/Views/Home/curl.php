@@ -43,12 +43,36 @@ function productCurlPost($id) :array
 function fuzzyCurlPost($name) :array
 {
     $url="http://localhost:8080/index/search/all/";
-    $datalist=array();
-    $datalist['fuzzy']=$name;
-    $json=curl_post($url,$datalist);
+    $dataList=array();
+    $dataList['fuzzy']=$name;
+    $json=curl_post($url,$dataList);
     $resArr=json_decode($json,true);
-    if($resArr["status"]=="200"){
+    if($resArr["status"]=="200")
+    {
         return $resArr["data"];
+    }
+    return array();
+}
+
+/**
+ * @param $id
+ * @param $page
+ * @param $num
+ * @return array
+ * 分类显示
+ */
+function categoryCurlPost($id,$page,$num) : array
+{
+    $url="http://localhost:8080/index/category/all/";
+    $dataList=array();
+    $dataList['id']=$id;
+    $dataList['page']=$page;
+    $dataList['num']=$num;
+    $json=curl_post($url,$dataList);
+    $resArr=json_decode($json,true);
+    if ($resArr["status"]=="200")
+    {
+        return $resArr;
     }
     return array();
 }
@@ -64,48 +88,7 @@ function registerUri($account,$password){
     return $json;
 }
 
-function waresSortQuery($sortName,$page,$num){
-    $url="http://localhost:8080/index/sort/waresall/all/";
-    $datalist=array();
-    $datalist["sortName"]=$sortName;
-    $datalist["page"]=$page;
-    $datalist["num"]=$num;
-    $json=curl_post($url,$datalist);
-    $list=JsonList($json);
-    return $list;
-}
-function pagingUri($num,$sortName){
-    $url="http://localhost:8080/index/sort/page/num/";
-    $datalist=array();
-    $datalist["num"]=$num;
-    $datalist["sortName"]=$sortName;
-    $json=curl_post($url,$datalist);
-    $list=JsonList($json);
-    return $list;
-}
-function sortListUri(){
-    $url="http://localhost:8080/index/waressort/sort/";
-    $datalist=array();
-    $datalist["method"]="all";
-    $json=curl_post($url,$datalist);
-    $list=JsonList($json);
-    return $list;
-}
 
-
-
-function JsonList($json){
-    $json=json_decode($json,true);
-    if ($json["status"]=="200"){
-        if($json["code"]=="1"){
-            $list=$json["data"];
-            return $list;
-        }else{
-            return -1;
-        }
-    }
-     return -1;
-}
 function curl_get($url)
 {
     $header = array(
@@ -128,7 +111,7 @@ function curl_get($url)
         return $data;
     }
 }
-function curl_post( $url, $postdata ) {
+function curl_post($url, $postdate ) {
     $header = array(
         'Accept: Application/json',
     );
@@ -141,7 +124,7 @@ function curl_post( $url, $postdata ) {
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE );
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE );
     curl_setopt($curl, CURLOPT_POST, 1);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdate);
     $data = curl_exec($curl);
     if (curl_error($curl)) {
         print "Error: " . curl_error($curl);

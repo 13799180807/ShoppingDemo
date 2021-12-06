@@ -2,51 +2,44 @@
 require 'curl.php';
 require 'config.php';
 
-    //显示出所有分类
-    $sortListAll=sortListUri();
-
-    //根据初始化数据给出相对应初始化页面
-    $PageNumber=pagingUri(8,"查询全部");
-    $totalPage=$PageNumber['page'];    //总页面
 
 
+      if (isset($_POST['name']))
+      {
 
-    //表单提交查询
-    if (isset($_POST['sort_Name'])){
-        $sortname=$_POST['sort_Name'];
-        $perPage=$_POST['select_num'];
-        $currentPage=$_POST['page_num'];
+          $res=categoryCurlPost($_POST['name'],$_POST['page_num'],$_POST['select_num']);
+          $data=$res["data"];
+          if (count($data)>0){
+              //正确
+              $categoryList=$data["category"];
+              $callBack=$data["callBack"];
+              $goodsList=$data["goodsList"];
 
-        $PageNumber=pagingUri($perPage,$sortname);
-        if($PageNumber['page']=="0"){
-            $totalPage="1";
-        }else{
-            $totalPage=$PageNumber['page'];    //总页面
-        }
-        $result=waresSortQuery($sortname,$currentPage,$perPage);
-        if($result=="-1"){
+          }else{
+              //报错
+          }
 
-            $waresSortData="";
+      }else{
+          //初始化数据
+          $res=categoryCurlPost(0,1,8);
+          $data=$res["data"];
+          if (count($data)>0){
+              //正确
+              $categoryList=$data["category"];
+              $callBack=$data["callBack"];
+              $goodsList=$data["goodsList"];
 
-        }else{
-            $waresSortData=$result['wares'];
-            $callBackData=$result['callBack'];
-            $sortname=$callBackData['name'];  //名字
-            $currentPage=$callBackData['page'];  //当前页面
-            $perPage=$callBackData['num'];  //一个页面显示几个
-            if ($currentPage==0){
-                $totalPage="1";
-            }
-        }
-    }else{
-        //初始化商品信息
-        $result=waresSortQuery("查询全部",1,8);
-        $waresSortData=$result['wares'];
-        $callBackData=$result['callBack'];
-        $sortname=$callBackData['name'];  //名字
-        $currentPage=$callBackData['page'];  //当前页面
-        $perPage=$callBackData['num'];  //一个页面显示几个
-    }
+          }else{
+              //报错
+          }
+      }
+        $categoryName=$callBack['categoryName'];
+        $categoryId=$callBack['categoryId'];
+        $totalPage=$callBack["totalPage"];  //总页面
+        $page=$callBack["page"];           //当前页面
+        $num=$callBack["num"];             //页面显示几条数据
+
+
 ?>
 
 <!DOCTYPE html>
@@ -280,7 +273,6 @@ require 'config.php';
     <!-- Header Section End -->
 
     <!-- Shop Section Start -->
-
     <div class="section section-margin">
 
         <div class="container">
@@ -300,7 +292,7 @@ require 'config.php';
                             </div>
                             <div class="shop-top-show">
                                 <span><?php
-                                    echo "当前查询到类别： {$sortname} ，当前为第：{$currentPage} 页，每页显示：{$perPage} 条数据"
+                                    echo "当前查询到类别：{$categoryName}；总页面为：{$totalPage}页；当前为第：{$page}页；每页显示：{$num}条数据"
                                     ?></span>
                             </div>
                         </div>
@@ -311,18 +303,14 @@ require 'config.php';
                             <!--表单请求-->
 
                                 <div class="shop-short-by">
-                                    <select   name="sort_Name" class="nice-select"   >
-                                        <option value="<?php  echo $sortname; ?>"><?php  echo $sortname; ?></option>
-                                        <option value="查询全部">查询全部</option>
+                                    <select   name="name" class="nice-select"   >
+                                        <option value="<?php  echo $categoryId; ?>"><?php  echo $categoryName; ?></option>
+                                        <option value="0">查询全部</option>
                                         <?php
-                                        if ($sortListAll=="-1" || $sortListAll==""){
-                                        }else{
-                                            foreach ($sortListAll as $row){
-                                                $sortname=$row['sort_name'];
+                                            foreach ($categoryList as $row){
                                         ?>
-                                        <option value="<?php  echo $sortname; ?>"><?php  echo $sortname; ?></option>
+                                        <option value="<?php  echo $row['goodsCategoryId']; ?>"><?php  echo $row['goodsCategoryName']; ?></option>
                                         <?php
-                                            }
                                         }
                                         ?>
                                     </select>
@@ -341,25 +329,33 @@ require 'config.php';
 
 <!--开始-->
                         <?php
-
-                        if($waresSortData==""){
+                        $a=false;
+                        foreach ($goodsList as $row)
+                        {
+                            if($row["goodsId"]=="")
+                            {
+                                $a=true;
+                                break;
+                            }
+                        }
+                        if($a){
                             echo "<span style='margin-left: 45%;font-size: 23px'>空空如也......</span>";
                         }else{
-                            foreach ($waresSortData as $row){
+                            foreach ($goodsList as $row){
 
                         ?>
                         <!-- Single Product Start -->
                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>" class="image">
-                                        <img class="first-image" src="<?php echo IMG_PATH.$row['sp_imgpath'] ; ?>" alt="Product" />
+                                    <a href="single-product.php?commodity=<?php echo $row["goodsId"]; ?>" class="image">
+                                        <img class="first-image" src="<?php echo IMG_PATH.$row['goodsImg'] ; ?>" alt="Product" />
                                     </a>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>"><?php echo $row['sp_name'] ;?></a></h5>
+                                    <h5 class="title"><a href="single-product.php?commodity=<?php echo $row["goodsId"]; ?>"><?php echo $row['goodsName'] ;?></a></h5>
                                     <span class="price">
-                                            <span class="new">￥<?php echo $row['sp_price'] ;?></span>
+                                            <span class="new">￥<?php echo $row['goodsPrice'] ;?></span>
                                     <span class="old">  </span>
                                     </span>
                                 </div>
@@ -380,7 +376,7 @@ require 'config.php';
                         <div class="shop-bottom-bar-left mb-4">
                             <div class="shop-short-by">
                                 <select  name="select_num"   class="nice-select rounded-0" aria-label=".form-select-sm example">
-                                    <option value="<?php echo $perPage; ?>" selected> 每页显示<?php echo $perPage; ?>条</option>
+                                    <option value="<?php echo $num; ?>" selected> 每页显示<?php echo $num; ?>条</option>
                                     <option value="4">每页显示4条</option>
                                     <option value="8">每页显示8条</option>
                                     <option value="12">每页显示12条</option>
@@ -393,7 +389,7 @@ require 'config.php';
                         <div class="shop-top-bar-right mb-4">
 
                                 <select  name="page_num"   class="nice-select rounded-0" aria-label=".form-select-sm example">
-                                    <option value="<?php echo $currentPage; ?>" selected>当前为第 <?php echo $currentPage; ?> 页</option>
+                                    <option value="<?php echo $page; ?>" selected>当前为第 <?php echo $page; ?> 页</option>
                                     <?php
                                     for ($ye=1;$ye<=$totalPage;$ye++){
                                     ?>

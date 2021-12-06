@@ -8,10 +8,9 @@ class Route
         $routeList=array(
             "/index",
             "/index/product",
-            "/index/waressort",
-            "/index/sort/page",
-            "/index/sort/waresall",
             "/index/search",
+            "/index/category",
+
             "/index/register",
             "/index/verificationCode",
 

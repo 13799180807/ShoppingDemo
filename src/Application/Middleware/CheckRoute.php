@@ -9,7 +9,7 @@ class CheckRoute
      * @param $key
      * @return bool
      */
-    public static function matching($rows,$key)
+    public static function matching($rows,$key): bool
     {
         foreach (array_keys($rows) as $val) {
 

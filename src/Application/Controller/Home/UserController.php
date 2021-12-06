@@ -32,9 +32,9 @@ class UserController
             }
 
         }else{
-            $errlist=array();
-            $errlist['err']="请输入正确值";
-            $json=failJson("请求失败", $errlist);
+            $earliest=array();
+            $earliest['err']="请输入正确值";
+            $json=failJson("请求失败", $earliest);
             return $json;
 
         }

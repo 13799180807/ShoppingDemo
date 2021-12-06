@@ -12,13 +12,10 @@ class GoodsController
     {
         if (isset($parameter["method"]) && $parameter["method"]!="" && $parameter["method"]=="list"){
             //热门  推荐产品  最新商品
-            $hot=GoodsServiceImpl::listField("goods_hot","1","1",5);
-            $recommend=GoodsServiceImpl::listField("goods_recommend","1","1",5);
-            $newest=GoodsServiceImpl::listField("created_at","1","1",7);
 
-            $hot=GoodsModel::homeInformationDisplay($hot);
-            $recommend=GoodsModel::homeInformationDisplay($recommend);
-            $newest=GoodsModel::homeInformationDisplay($newest);
+            $hot=GoodsModel::homeInformationDisplay(GoodsServiceImpl::listField("goods_hot","1","1",5));
+            $recommend=GoodsModel::homeInformationDisplay(GoodsServiceImpl::listField("goods_recommend","1","1",5));
+            $newest=GoodsModel::homeInformationDisplay(GoodsServiceImpl::listField("created_at","1","1",7));
 
             $res=array(
                 "hot"=>$hot,

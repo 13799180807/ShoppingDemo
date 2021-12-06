@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 /**
  * @param $uri
  * @return int|string
@@ -36,22 +34,20 @@ function parameterList($arr){
     if ($arr==""){
         return -1;
     }
-    $arrlist=array();
+    $arraylist=array();
     foreach (array_keys($arr) as $val){
-        $arrlist[$val]=$arr[$val];
+        $arraylist[$val]=$arr[$val];
     }
-    return $arrlist;
+    return $arraylist;
 }
-function successJson($msg,$dataList,$code="1"){
+function successJson($msg,$dataList){
     /**
      * 成功返回的
-     * code默认等于1，没有数据等于0
      */
     $status=SUCCESS;
     $json = array(
         'status' => $status,
         'msg' => $msg,
-        'code'=>$code,
         'data' =>$dataList
     );
     return json_encode($json);

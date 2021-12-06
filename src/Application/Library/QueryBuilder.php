@@ -1,14 +1,16 @@
 <?php
 
 
-class QueryBuilder{
+class QueryBuilder
+{
     /**
      * @param $conn
      * @param $table
-     * @return mixed
-     * $rows=QueryBuilder::queryAll($conn,"demo");
+     * @return array
+     * 查询表全部信息
      */
-    public static function queryAll($conn,$table){
+    public static function queryAll($conn,$table) :array
+    {
         $sql="select * from {$table}";
         $stmt = $conn->stmt_init();
         $stmt->prepare($sql);
@@ -20,22 +22,23 @@ class QueryBuilder{
         return $rows;
     }
 
+
     /**
      * @param $conn
      * @param $table
-     * @param $condtion
+     * @param $condition
      * @param $types
-     * @param $stmtinit
+     * @param $stint
      * @return int
-     * 判断数据存在不存在在表格里面
-     * 不存在1，存在-1
+     * 没有结果为1，有结果-1
      */
-    public static function innserQuery($conn,$table,$condtion,$types,$stmtinit){
+    public static function insertQuery($conn, $table, $condition, $types, $stint) : int
+    {
 
-        $sql="SELECT *FROM {$table} WHERE {$condtion}";
+        $sql="SELECT *FROM {$table} WHERE {$condition}";
         $stmt = $conn->stmt_init();
         $stmt->prepare($sql);
-        $stmt->bind_param($types,$stmtinit);
+        $stmt->bind_param($types,$stint);
         $stmt->execute();
         $result=$stmt->get_result();
         $rows=$result->fetch_all(2);

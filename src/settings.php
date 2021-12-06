@@ -8,9 +8,12 @@ date_default_timezone_set("Asia/Shanghai");
 require '../src/functions.php';
 require '../src/constants.php';
 
+
+
 require '../src/Application/Middleware/CheckRoute.php';
 require '../src/Application/Model/Route.php';
-require '../src/Application/Model/WaresModelAll.php';
+
+
 require '../src/Application/Model/UserModel.php';
 
 require '../src/Application/Library/Connection.php';
@@ -19,39 +22,39 @@ require '../src/Application/Library/QueryBuilder.php';
 
 require '../src/Application/Dao/GoodsDao.php';
 require '../src/Application/Service/GoodsService.php';
-require '../src/Application/Model/GoodsModel.php';
+
+
 require '../src/Application/Controller/GoodsController.php';
+require '../src/Application/Controller/GoodsCategoryController.php';
 
 
 
-
+require '../src/Application/Dao/GoodsCategoryDao.php';
 require '../src/Application/Dao/GoodsIntroduceDao.php';
 require '../src/Application/Service/GoodsIntroduceService.php';
+
+require '../src/Application/Model/GoodsModel.php';
+require '../src/Application/Model/GoodsCategoryModel.php';
+
 
 
 require '../src/Application/Dao/GoodsPictureDao.php';
 require '../src/Application/Service/GoodsPictureService.php';
+require '../src/Application/Service/GoodsCategoryService.php';
 
 
 
-
-require '../src/Application/Dao/WaresDao.php';
-require '../src/Application/Dao/SortDao.php';
 require '../src/Application/Dao/UserDao.php';
-
-
-require '../src/Application/Service/WaresService.php';
-require '../src/Application/Service/SortService.php';
 require '../src/Application/Service/UserService.php';
 
-require '../src/Application/Domain/Sort.php';
 require '../src/Application/Domain/User.php';
 
 
-require '../src/Application/Controller/Home/SortController.php';
 require '../src/Application/Controller/Home/UserController.php';
 
-require '../src/Application/Helper/ChaerCode.php';
+
+
+require '../src/Application/Helper/CharCode.php';
 
 
 
