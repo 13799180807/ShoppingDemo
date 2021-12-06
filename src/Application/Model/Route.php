@@ -4,18 +4,15 @@
 class Route
 {
 
-    public static function define(){
-        $routeList=array(
+    public static function define() :array
+    {
+        return array(
             "/index",
             "/index/product",
             "/index/search",
             "/index/category",
 
-            "/index/register",
-            "/index/verificationCode",
-
         );
-        return $routeList;
     }
 
     /**

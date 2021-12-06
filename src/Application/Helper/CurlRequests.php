@@ -31,10 +31,10 @@ class CurlRequests
 
     /**
      * @param $url
-     * @param $postdata
+     * @param $postData
      * @return bool|string
      */
-    public static function post( $url, $postdata ){
+    public static function post( $url, $postData ){
             $header = array(
                 'Accept: application/json',
             );
@@ -47,7 +47,7 @@ class CurlRequests
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE );
             curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE );
             curl_setopt($curl, CURLOPT_POST, 1);
-            curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $postData);
             $data = curl_exec($curl);
             if (curl_error($curl)) {
                 print "Error: " . curl_error($curl);

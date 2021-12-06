@@ -19,17 +19,6 @@
         elseif (uri($_SERVER["REQUEST_URI"])=="/index/category"){
             echo GoodsCategoryController::categoryPageInformation($parame);
         }
-        elseif (uri($_SERVER["REQUEST_URI"])=="/index/register"){
-            $json=UserController::userRegister($parame);
-            echo $json;
-        }elseif (uri($_SERVER["REQUEST_URI"])=="/index/verificationCode"){
-            header("Content-Type:image/jpeg");
-        //    $clientIP=$_SERVER['REMOTE_ADDR'];
-          //  session_start();
-            $str=CharCode::randomCode();
-          //  $_SESSION[$clientIP]=$str;
-            CharCode::verificationCode($str);
-        }
         else{
             echo "<h2>404</h2>";
         }
