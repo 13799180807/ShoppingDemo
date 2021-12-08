@@ -10,7 +10,7 @@ class Goods
     public $goodsStock; //库存
     public $goodsStatus; //状态
     public $goodsHot; //热门
-    public $goodsRecommend; //推荐
+    public $goodsRecommendation; //推荐
     public $goodsDescribe; //简单描述
     public $goodsImg;    //主图
     public $createdAt;  //创建时间
@@ -131,17 +131,17 @@ class Goods
     /**
      * @return mixed
      */
-    public function getGoodsRecommend()
+    public function getGoodsRecommendation()
     {
-        return $this->goodsRecommend;
+        return $this->goodsRecommendation;
     }
 
     /**
-     * @param mixed $goodsRecommend
+     * @param mixed $goodsRecommendation
      */
-    public function setGoodsRecommend($goodsRecommend): void
+    public function setGoodsRecommendation($goodsRecommendation): void
     {
-        $this->goodsRecommend = $goodsRecommend;
+        $this->goodsRecommendation = $goodsRecommendation;
     }
 
     /**

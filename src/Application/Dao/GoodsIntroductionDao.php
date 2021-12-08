@@ -1,6 +1,6 @@
 <?php
-require 'GoodsIntroduceDaoImpl.php';
-interface GoodsIntroduceDao
+require 'GoodsIntroductionDaoImpl.php';
+interface GoodsIntroductionDao
 {
     /**
      * @param $conn

@@ -1,7 +1,7 @@
 <?php
 
 
-class GoodsIntroduceDaoImpl implements GoodsIntroduceDao
+class GoodsIntroductionDaoImpl implements GoodsIntroductionDao
 {
 
     /**
@@ -12,7 +12,7 @@ class GoodsIntroduceDaoImpl implements GoodsIntroduceDao
     public static function getGoodsId($conn, $goodsId) : array
     {
         // TODO: Implement getById() method.
-        $sql="SELECT * FROM tb_goods_introduce WHERE goods_id=?";
+        $sql="SELECT * FROM tb_goods_introduction WHERE goods_id=?";
         $stmt=$conn->stmt_init();
         $stmt->prepare($sql);
         $stmt->bind_param("i",$goodsId);

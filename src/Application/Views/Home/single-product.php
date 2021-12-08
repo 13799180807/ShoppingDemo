@@ -276,7 +276,7 @@ require 'config.php';
                             <p class="mb-3">
                                <?php
                                     foreach ($goodsIntroduce as $row) {
-                                         $text00 =$row["goodsIntroduce"];
+                                         $text00 =$row["goodsIntroduction"];
                                     }
                                    ?>
                                 <?php   echo $text00; ?>

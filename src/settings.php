@@ -23,12 +23,12 @@ require '../src/Application/Model/GoodsCategoryModel.php';
 require '../src/Application/Dao/GoodsDao.php';
 require '../src/Application/Dao/GoodsPictureDao.php';
 require '../src/Application/Dao/GoodsCategoryDao.php';
-require '../src/Application/Dao/GoodsIntroduceDao.php';
+require '../src/Application/Dao/GoodsIntroductionDao.php';
 
 require '../src/Application/Service/GoodsService.php';
 require '../src/Application/Service/GoodsPictureService.php';
 require '../src/Application/Service/GoodsCategoryService.php';
-require '../src/Application/Service/GoodsIntroduceService.php';
+require '../src/Application/Service/GoodsIntroductionService.php';
 
 require '../src/Application/Controller/GoodsController.php';
 require '../src/Application/Controller/GoodsCategoryController.php';

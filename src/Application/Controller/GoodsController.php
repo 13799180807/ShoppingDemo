@@ -14,7 +14,7 @@ class GoodsController
             //热门  推荐产品  最新商品
 
             $hot=GoodsModel::homeInformationDisplay(GoodsServiceImpl::listField("goods_hot","1","1",5));
-            $recommend=GoodsModel::homeInformationDisplay(GoodsServiceImpl::listField("goods_recommend","1","1",5));
+            $recommend=GoodsModel::homeInformationDisplay(GoodsServiceImpl::listField("goods_recommendation","1","1",5));
             $newest=GoodsModel::homeInformationDisplay(GoodsServiceImpl::listField("created_at","1","1",7));
 
             $res=array(
@@ -44,7 +44,7 @@ class GoodsController
 
             $goods=GoodsServiceImpl::getById($goodsId);
             $goodsPicture=GoodsPictureServiceImpl::getGoodsId($goodsId);
-            $goodsIntroduce=GoodsIntroduceServiceImpl::getGoodsId($goodsId);
+            $goodsIntroduce=GoodsIntroductionServiceImpl::getGoodsId($goodsId);
 
             $goods=GoodsModel::productPageInformationDisplay($goods);
             $goodsIntroduce=GoodsModel::GoodsIntroduceInformationDisplay($goodsIntroduce);

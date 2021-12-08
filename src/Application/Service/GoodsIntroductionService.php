@@ -1,6 +1,6 @@
 <?php
-require 'GoodsIntroduceServiceImpl.php';
-interface GoodsIntroduceService
+require 'GoodsIntroductionServiceImpl.php';
+interface GoodsIntroductionService
 {
     /**
      * @param $goodsId

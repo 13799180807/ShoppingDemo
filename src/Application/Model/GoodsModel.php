@@ -1,6 +1,6 @@
 <?php
 require '../src/Application/Domain/Goods.php';
-require '../src/Application/Domain/GoodsIntroduce.php';
+require '../src/Application/Domain/GoodsIntroduction.php';
 require '../src/Application/Domain/GoodsPicture.php';
 
 class GoodsModel
@@ -50,7 +50,7 @@ class GoodsModel
         $dataList=array();
         $i=0;
         foreach ($rows as $row){
-            $c=new GoodsIntroduce($row[0],$row[1],$row[2]);
+            $c=new GoodsIntroduction($row[0],$row[1],$row[2]);
             $dataList[$i]=$c;
             $i++;
         }
@@ -103,7 +103,7 @@ class GoodsModel
             $c->goodsPrice=$row[3];
             $c->goodsStock=$row[4];
             $c->goodsHot=$row[6];
-            $c->goodsRecommend=$row[7];
+            $c->goodsRecommendation=$row[7];
             $c->goodsDescribe=$row[8];
             $c->goodsImg=$row[9];
             $c->createdAt=$row[10];

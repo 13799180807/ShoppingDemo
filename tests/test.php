@@ -8,12 +8,3 @@ require '../src/settings.php';
 
 
 
-
-
-
-
-
-
-
-
-

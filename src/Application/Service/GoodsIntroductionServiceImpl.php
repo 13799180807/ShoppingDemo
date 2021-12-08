@@ -1,7 +1,7 @@
 <?php
 
 
-class GoodsIntroduceServiceImpl implements GoodsIntroduceService
+class GoodsIntroductionServiceImpl implements GoodsIntroductionService
 {
 
 
@@ -13,7 +13,7 @@ class GoodsIntroduceServiceImpl implements GoodsIntroduceService
     {
         // TODO: Implement getById() method.
         $conn=Connection::conn();
-        $res=GoodsIntroduceDaoImpl::getGoodsId($conn,$goodsId);
+        $res=GoodsIntroductionDaoImpl::getGoodsId($conn,$goodsId);
         $conn->close();
         return $res;
     }
