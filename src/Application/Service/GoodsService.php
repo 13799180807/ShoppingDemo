@@ -1,29 +1,29 @@
 <?php
-require 'GoodsServiceImpl.php';
+namespace src\Application\Service;
 interface GoodsService{
 
     /**
-     * @param $id
+     * 根据id进行获取单个商品信息
+     * @param int $id
      * @return mixed
-     * 根据id获取单个信息
      */
-    public static function getById($id);
+    public static function getById(int $id);
 
     /**
-     * @param $field
-     * @param $value
-     * @param $status
-     * @param $num
-     * @return mixed
      * 根据一个字段名进行查询获取多个对象
+     * @param string $field
+     * @param string $value
+     * @param int $status
+     * @param int $num
+     * @return mixed
      */
-    public static function listField($field, $value, $status, $num);
+    public static function listField(string $field,string $value,int $status,int $num);
 
     /**
-     * @param $goodsName
-     * @return mixed
      * 根据名字模糊查询
+     * @param string $goodsName
+     * @return mixed
      */
-    public static function getByGoodsName($goodsName);
+    public static function getByGoodsName(string $goodsName);
 
 }

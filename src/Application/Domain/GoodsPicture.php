@@ -1,5 +1,5 @@
 <?php
-
+namespace src\Application\Domain;
 
 class GoodsPicture
 {
@@ -20,53 +20,6 @@ class GoodsPicture
         $this->goodsPicturePath = $goodsPicturePath;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getGoodsId()
-    {
-        return $this->goodsId;
-    }
-
-    /**
-     * @param mixed $goodsId
-     */
-    public function setGoodsId($goodsId): void
-    {
-        $this->goodsId = $goodsId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getGoodsPicturePath()
-    {
-        return $this->goodsPicturePath;
-    }
-
-    /**
-     * @param mixed $goodsPicturePath
-     */
-    public function setGoodsPicturePath($goodsPicturePath): void
-    {
-        $this->goodsPicturePath = $goodsPicturePath;
-    }
 
 
 

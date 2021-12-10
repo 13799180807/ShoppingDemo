@@ -1,25 +1,20 @@
 <?php
-require '../src/Application/Domain/Goods.php';
-require '../src/Application/Domain/GoodsIntroduction.php';
-require '../src/Application/Domain/GoodsPicture.php';
+
+namespace src\Application\Model;
+use src\Application\Domain\Goods;
+use src\Application\Domain\GoodsIntroduction;
+use src\Application\Domain\GoodsPicture;
 
 class GoodsModel
 {
     /**
-     * @param $name
-     * @param $rows
-     * @return array[]
      * 主页显示一些用的
+     * @param array $rows
+     * @return array
      */
-    public static function homeInformationDisplay($rows) :array
+    public static function homeInformationDisplay(array $rows) :array
     {
         $dataList=array();
-        if(count($rows)=="0")
-        {
-            $rows=array(
-                0=>array('','','','','','','','','','','',''),
-            );
-        }
         $i=0;
         foreach ($rows as $row)
         {
@@ -36,17 +31,12 @@ class GoodsModel
     }
 
     /**
-     * @param $rows
-     * @return array
      * 商品详情说明信息显示
+     * @param array $rows
+     * @return array
      */
-    public static function GoodsIntroduceInformationDisplay($rows) :array
+    public static function GoodsIntroduceInformationDisplay(array $rows) : array
     {
-        if(count($rows)==0){
-            $rows=array(
-                0=>array('','',''),
-            );
-        }
         $dataList=array();
         $i=0;
         foreach ($rows as $row){
@@ -58,16 +48,12 @@ class GoodsModel
     }
 
     /**
-     * @param $rows
+     * 商品图片信息显示
+     * @param array $rows
      * @return array
      */
-    public static function GoodsPictureInformationDisplay($rows) : array
+    public static function GoodsPictureInformationDisplay(array $rows) : array
     {
-        if(count($rows)==0){
-            $rows=array(
-                0=>array('','',''),
-            );
-        }
         $dataList=array();
         $i=0;
         foreach ($rows as $row){
@@ -76,24 +62,16 @@ class GoodsModel
             $i++;
         }
         return $dataList;
-
     }
 
-
-
     /**
-     * @param $rows
-     * @return array
      * 单个商品的详细信息
+     * @param array $rows
+     * @return array
      */
-    public static function productPageInformationDisplay($rows) :array
+    public static function productPageInformationDisplay(array $rows) :array
     {
         $dataList=array();
-        if($rows=="-1"){
-            $rows=array(
-                0=>array('','','','','','','','','','','',''),
-            );
-        }
         $i=0;
         foreach ($rows as $row){
             $c=new Goods();

@@ -1,24 +1,20 @@
 <?php
-require '../src/Application/Domain/GoodsCategory.php';
+
+namespace src\Application\Model;
+use src\Application\Domain\GoodsCategory;
 
 class GoodsCategoryModel
 {
 
     /**
-     * @param $rows
-     * @return array
      * 分类显示
+     * @param array $rows
+     * @return array
      */
-    public static function categoryInformation($rows) :array
+    public static function categoryInformation(array $rows) :array
     {
         $dataList=array();
         $i=0;
-        if(count($rows)=="0")
-        {
-            $rows=array(
-                0=>array('',''),
-            );
-        }
         foreach ($rows as $row)
         {
             $c=new GoodsCategory($row[0],$row[1]);

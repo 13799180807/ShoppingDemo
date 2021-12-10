@@ -1,12 +1,13 @@
 <?php
+namespace src\Application\Dao;
+ use src\Application\Library\QueryBuilder;
 
  class GoodsCategoryDaoImpl implements GoodsCategoryDao
  {
-
      /**
+      * 获取所有分类信息
       * @param $conn
       * @return array
-      * 获取所有分类信息
       */
      public static function listGoodsCategoryName($conn) :array
      {
@@ -14,13 +15,14 @@
      }
 
      /**
+      * 根据查询条件获取相对应数量的
       * @param $conn
-      * @param $categoryId
-      * @param $num
+      * @param int $categoryId
+      * @param int $num
       * @param int $status
       * @return int
       */
-     public static function  countGoodsCategoryId($conn,$categoryId,$num,$status=1) :int
+     public static function  countGoodsCategoryId($conn,int $categoryId,int $num,int $status=1) :int
      {
          if($categoryId==0)
          {
@@ -44,16 +46,17 @@
      }
 
      /**
+      * 获取分页信息
       * @param $conn
-      * @param $categoryId
-      * @param $page
-      * @param $num
+      * @param int $categoryId
+      * @param int $page
+      * @param int $num
       * @param int $status
       * @return array
       */
-     public static function listGoodsCategoryPagination($conn, $categoryId, $page, $num,$status=1) :array
+     public static function listGoodsCategoryPagination($conn,int $categoryId,int $page,int $num,int $status=1) :array
      {
-         // TODO: Implement listGoodsCategoryPagination() method.
+
          $page=($page-1)*$num;
          if($categoryId==0)
          {
@@ -77,12 +80,12 @@
      }
 
      /**
-      * @param $conn
-      * @param $categoryId
-      * @return array
       * 获取单个分类信息
+      * @param $conn
+      * @param int $categoryId
+      * @return array
       */
-     public static function getGoodsCategoryId($conn, $categoryId) :array
+     public static function getGoodsCategoryId($conn,int $categoryId) :array
      {
          $sql="SELECT * FROM tb_goods_category WHERE goods_category_id=? ";
          $stmt=$conn->stmt_init();//构建空白的语句对象

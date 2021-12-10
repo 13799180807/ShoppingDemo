@@ -1,7 +1,13 @@
 <?php
+namespace src\Application\Library;
+
+
+use mysqli;
+use mysqli_sql_exception;
 
 Class Connection{
-    public static function conn(){
+    public static function conn(): mysqli
+    {
         $ServerName=SERVER_NAME;
         $ServerUser=SERVER_USER;
         $ServerPassword=SERVER_PASSWORD;

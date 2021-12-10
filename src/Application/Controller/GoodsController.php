@@ -1,21 +1,21 @@
 <?php
-
+namespace src\Application\Controller;
+use src\Application\Helper\ResultJson;
+use src\Application\Service\GoodsIntroductionServiceImpl;
+use src\Application\Service\GoodsPictureServiceImpl;
+use src\Application\Service\GoodsServiceImpl;
 
 class GoodsController
 {
-    /**
-     * @param $parameter
-     * @return false|string
-     * 主页页面显示信息
-     */
-    public static function homePageInformation($parameter)
+    /** 首页界面显示用的 */
+    public  function homePageInformation()
     {
-        if (isset($parameter["method"]) && $parameter["method"]!="" && $parameter["method"]=="list"){
-            //热门  推荐产品  最新商品
+        if (isset($_POST['method']) && $_POST['method']=="list"){
 
-            $hot=GoodsModel::homeInformationDisplay(GoodsServiceImpl::listField("goods_hot","1","1",5));
-            $recommend=GoodsModel::homeInformationDisplay(GoodsServiceImpl::listField("goods_recommendation","1","1",5));
-            $newest=GoodsModel::homeInformationDisplay(GoodsServiceImpl::listField("created_at","1","1",7));
+            //热门  推荐产品  最新商品
+            $hot=GoodsServiceImpl::listField("goods_hot","1","1",5);
+            $recommend=GoodsServiceImpl::listField("goods_recommendation","1","1",5);
+            $newest=GoodsServiceImpl::listField("created_at","1","1",7);
 
             $res=array(
                 "hot"=>$hot,
@@ -23,63 +23,54 @@ class GoodsController
                 "newest"=>$newest
             );
 
-            return successJson("获取成功",$res);
+            echo ResultJson::result(200,"请求成功",$res);
 
         }else{
             $error=array();
-            $error['err']="请输入正确值";
-            return failJson("请求失败，参数不正确", $error);
+            $error['err']="参数错误";
+            echo ResultJson::result(400,"请求出错",$error);
         }
     }
 
-    /**
-     * @param $parameter
-     * @return false|string
-     * 详情页面使用
-     */
-    public static function productPageInformation($parameter)
+    /** 单个商品详情页面用的  */
+    public  function productPageInformation()
     {
-        if(isset($parameter["id"]) && $parameter["id"]!="" && is_numeric($parameter['id'])){
-              $goodsId=$parameter["id"];
+
+        if (isset($_POST['id']) && $_POST!="" && is_numeric($_POST['id'])){
+
+            $goodsId=$_POST["id"];
 
             $goods=GoodsServiceImpl::getById($goodsId);
             $goodsPicture=GoodsPictureServiceImpl::getGoodsId($goodsId);
             $goodsIntroduce=GoodsIntroductionServiceImpl::getGoodsId($goodsId);
-
-            $goods=GoodsModel::productPageInformationDisplay($goods);
-            $goodsIntroduce=GoodsModel::GoodsIntroduceInformationDisplay($goodsIntroduce);
-            $goodsPicture=GoodsModel::GoodsPictureInformationDisplay($goodsPicture);
 
             $res=array(
                 "goods"=>$goods,
                 "goodsIntroduce"=>$goodsIntroduce,
                 "goodsPicture"=>$goodsPicture
             );
-
-            return successJson("获取成功",$res);
-
+            echo ResultJson::result(200,"请求成功",$res);
 
         }else{
             $error=array();
-            $error['err']="请输入正确值";
-            return failJson("请求失败，参数不正确", $error);
+            $error['err']="参数错误";
+            echo ResultJson::result(400,"请求出错",$error);
         }
+
     }
-    /**
-     * var_dump(GoodsServiceImpl::getByGoodsName("车1"));
-     */
-    public static function fuzzyQuery($parameter)
+
+    /** 模糊查询 */
+    public  function fuzzyQuery()
     {
-        if(isset($parameter["fuzzy"]) && $parameter["fuzzy"]!="")
+        if (isset($_POST['fuzzy']) && $_POST['fuzzy']!="" )
         {
-            $fuzzy=GoodsServiceImpl::getByGoodsName($parameter["fuzzy"]);
-            $res=GoodsModel::homeInformationDisplay($fuzzy);
-            return successJson("获取成功",$res);
+            $res=GoodsServiceImpl::getByGoodsName($_POST['fuzzy']);
+            echo ResultJson::result(200,"请求成功",$res);
         }
         else{
             $error=array();
-            $error['err']="请输入正确值";
-            return failJson("请求失败，参数不正确", $error);
+            $error['err']="参数错误";
+            echo ResultJson::result(400,"请求出错",$error);
         }
 
     }

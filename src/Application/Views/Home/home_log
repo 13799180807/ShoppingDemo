@@ -15,3 +15,61 @@
 [08-Dec-2021 15:05:37 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
 [08-Dec-2021 15:05:37 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
 [08-Dec-2021 15:05:43 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
+[08-Dec-2021 17:49:25 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[08-Dec-2021 17:49:25 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[08-Dec-2021 17:49:25 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[08-Dec-2021 17:49:25 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[08-Dec-2021 17:49:25 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 09:01:04 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 09:01:04 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 09:01:04 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 09:01:04 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 09:01:04 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 09:01:10 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
+[09-Dec-2021 15:24:36 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
+[09-Dec-2021 15:24:39 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:24:39 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:24:39 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:24:39 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:24:39 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:24:41 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
+[09-Dec-2021 15:24:47 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
+[09-Dec-2021 15:26:12 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
+[09-Dec-2021 15:26:16 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:26:16 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:26:16 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:26:16 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:26:16 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:32:33 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 50
+[09-Dec-2021 15:32:38 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 50
+[09-Dec-2021 15:32:40 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 13
+[09-Dec-2021 15:32:40 Asia/Shanghai] PHP Notice:  Undefined index: newest in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 419
+[09-Dec-2021 15:32:40 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[09-Dec-2021 15:32:40 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 424
+[09-Dec-2021 15:32:40 Asia/Shanghai] PHP Notice:  Undefined index: recommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 515
+[09-Dec-2021 15:32:40 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 516
+[09-Dec-2021 15:32:40 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 519
+[09-Dec-2021 15:32:40 Asia/Shanghai] PHP Notice:  Undefined index: hot in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 588
+[09-Dec-2021 15:32:40 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 589
+[09-Dec-2021 15:32:40 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 592
+[09-Dec-2021 15:33:22 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:33:22 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:33:22 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:33:22 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:33:22 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:33:29 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:33:29 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:33:29 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:33:29 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 15:33:29 Asia/Shanghai] PHP Notice:  Undefined index: sp_uid in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 607
+[09-Dec-2021 16:07:53 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
+[10-Dec-2021 17:23:26 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 13
+[10-Dec-2021 17:23:26 Asia/Shanghai] PHP Notice:  Undefined index: newest in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 419
+[10-Dec-2021 17:23:26 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 421
+[10-Dec-2021 17:23:26 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 424
+[10-Dec-2021 17:23:26 Asia/Shanghai] PHP Notice:  Undefined index: recommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 515
+[10-Dec-2021 17:23:26 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 516
+[10-Dec-2021 17:23:26 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 519
+[10-Dec-2021 17:23:26 Asia/Shanghai] PHP Notice:  Undefined index: hot in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 588
+[10-Dec-2021 17:23:26 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 589
+[10-Dec-2021 17:23:26 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 592

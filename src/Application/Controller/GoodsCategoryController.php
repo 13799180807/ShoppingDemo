@@ -1,42 +1,41 @@
 <?php
+namespace src\Application\Controller;
 
+use src\Application\Helper\ResultJson;
+use src\Application\Service\GoodsCategoryServiceImpl;
 
 class GoodsCategoryController
 {
-    /**
-     * @param $parameter
-     * @return false|string
-     * 分类页面显示信息
-     */
-    public static function categoryPageInformation($parameter)
+    /** 分类页面 */
+    public function categoryPageInformation()
     {
-        if( isset($parameter['id']) && is_numeric($parameter['id']) && isset($parameter['page']) && is_numeric($parameter['page']) && isset($parameter['num']) && is_numeric($parameter['num']))
+        if (isset($_POST['id']) && is_numeric($_POST['id']) && isset($_POST['page']) && is_numeric($_POST['page']) && isset($_POST['num']) && is_numeric($_POST['num']) )
         {
             //显示分类列表
-            $category=GoodsCategoryModel::categoryInformation(GoodsCategoryServiceImpl::listGoodsCategoryName());
+            $category=GoodsCategoryServiceImpl::listGoodsCategoryName();
             //页码
-            $totalPage=GoodsCategoryServiceImpl::countGoodsCategoryId($parameter['id'],$parameter['num']);
+            $totalPage=GoodsCategoryServiceImpl::countGoodsCategoryId($_POST['id'],$_POST['num']);
             //信息
-            $goodsList=GoodsModel::homeInformationDisplay(GoodsCategoryServiceImpl::listGoodsCategoryPagination($parameter['id'],$parameter['page'],$parameter['num']));
+            $goodsList=GoodsCategoryServiceImpl::listGoodsCategoryPagination($_POST['id'],$_POST['page'],$_POST['num']);
+
             //分类信息
-            if($parameter['id']==0)
+            if($_POST['id']==0)
             {
                 $categoryId="0";
                 $categoryName="查询全部";
             }
             else{
-                $categoryOne=GoodsCategoryServiceImpl::getGoodsCategoryId($parameter['id']);
+                $categoryOne=GoodsCategoryServiceImpl::getGoodsCategoryId($_POST['id']);
                 foreach ($categoryOne as $value){
                     $categoryId=$value[0];
                     $categoryName=$value[1];
                 }
             }
 
-
             $callBack=array();
             $callBack['totalPage']=$totalPage;
-            $callBack['page']=$parameter['page'];
-            $callBack['num']=$parameter['num'];
+            $callBack['page']=$_POST['page'];
+            $callBack['num']=$_POST['num'];
             $callBack['categoryId']=$categoryId;
             $callBack['categoryName']=$categoryName;
 
@@ -47,13 +46,13 @@ class GoodsCategoryController
 
             );
 
-            return successJson("获取成功",$res);
+            echo ResultJson::result(200,"请求成功",$res);
 
         }else{
 
             $error=array();
-            $error['err']="请输入正确值";
-            return failJson("请求失败，参数不正确", $error);
+            $error['err']="参数错误";
+            echo ResultJson::result(400,"请求出错",$error);
 
         }
     }

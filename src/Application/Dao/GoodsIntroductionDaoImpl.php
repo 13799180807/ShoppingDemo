@@ -1,17 +1,17 @@
 <?php
-
+namespace src\Application\Dao;
 
 class GoodsIntroductionDaoImpl implements GoodsIntroductionDao
 {
 
     /**
+     * 根据id进行商品查询
      * @param $conn
-     * @param $goodsId
-     * @return mixed
+     * @param int $goodsId
+     * @return array
      */
-    public static function getGoodsId($conn, $goodsId) : array
+    public static function getGoodsId($conn,int $goodsId) : array
     {
-        // TODO: Implement getById() method.
         $sql="SELECT * FROM tb_goods_introduction WHERE goods_id=?";
         $stmt=$conn->stmt_init();
         $stmt->prepare($sql);

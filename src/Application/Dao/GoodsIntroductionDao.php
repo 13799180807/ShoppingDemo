@@ -1,14 +1,14 @@
 <?php
-require 'GoodsIntroductionDaoImpl.php';
+namespace src\Application\Dao;
 interface GoodsIntroductionDao
 {
     /**
-     * @param $conn
-     * @param $goodsId
-     * @return mixed
      * 根据商品id进行查询
+     * @param $conn
+     * @param int $goodsId
+     * @return mixed
      */
-    public static function getGoodsId($conn, $goodsId);
+    public static function getGoodsId($conn,int $goodsId);
 
 
 }

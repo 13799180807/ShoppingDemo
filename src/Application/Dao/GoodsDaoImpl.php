@@ -1,15 +1,16 @@
 <?php
-
+namespace src\Application\Dao;
 
 class GoodsDaoImpl implements  GoodsDao
 {
 
     /**
+     * 根据id进行查询商品的某个信息
      * @param $conn
-     * @param $id
+     * @param int $id
      * @return array
      */
-    public static function getById($conn, $id) : array
+    public static function getById($conn,int $id) : array
     {
         $sql="SELECT * FROM tb_goods WHERE goods_id=?";
         $stmt=$conn->stmt_init();//构建空白的语句对象
@@ -24,16 +25,17 @@ class GoodsDaoImpl implements  GoodsDao
     }
 
     /**
-     * @param $conn
-     * @param $field
-     * @param $value
-     * @param $status
-     * @param $num
-     * @return array
      * 根据进来不同字段获取不同东西
+     * @param $conn
+     * @param string $field
+     * @param string $value
+     * @param int $status
+     * @param int $num
+     * @return array
      */
-    public static function listField($conn, $field, $value, $status, $num) : array
+    public static function listField($conn, string $field,string $value,int $status,int $num) : array
     {
+
         if ($field=="created_at"){
             $sql="SELECT * FROM tb_goods WHERE  goods_status='{$status}'   ORDER BY created_at DESC limit {$num}";
         }else{
@@ -50,12 +52,12 @@ class GoodsDaoImpl implements  GoodsDao
     }
 
     /**
+     * 根据名字进行模糊查询商品信息
      * @param $conn
-     * @param $goodsName
+     * @param string $goodsName
      * @return array
-     * 根据名字进行模糊查询
      */
-    public static function getByGoodsName($conn, $goodsName) : array
+    public static function getByGoodsName($conn, string $goodsName) : array
     {
         $sql="SELECT * FROM tb_goods WHERE goods_name LIKE ? ";
         $stmt=$conn->stmt_init();//构建空白的语句对象

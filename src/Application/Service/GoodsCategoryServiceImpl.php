@@ -1,4 +1,9 @@
 <?php
+namespace src\Application\Service;
+use src\Application\Dao\GoodsCategoryDaoImpl;
+use src\Application\Library\Connection;
+use src\Application\Model\GoodsCategoryModel;
+use src\Application\Model\GoodsModel;
 
 class GoodsCategoryServiceImpl implements GoodsCategoryService
 {
@@ -9,23 +14,25 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
      */
     public static function listGoodsCategoryName() : array
     {
-        // TODO: Implement listGoodsCategoryName() method.
         $conn=Connection::conn();
         $res=GoodsCategoryDaoImpl::listGoodsCategoryName($conn);
         $conn->close();
-        return $res;
+        if (count($res)>0)
+        {
+            return GoodsCategoryModel::categoryInformation($res);
+        }
+        return array();
     }
 
     /**
-     * @param $categoryId
-     * @param $num
+     * 根据分类名数量得出页码
+     * @param int $categoryId
+     * @param int $num
      * @param int $status
      * @return int
-     * 根据分类名数量得出页码
      */
-    public static function countGoodsCategoryId($categoryId, $num, $status = 1) : int
+    public static function countGoodsCategoryId(int $categoryId,int $num,int $status = 1) : int
     {
-        // TODO: Implement countGoodsCategoryId() method.
         $conn=Connection::conn();
         $res=GoodsCategoryDaoImpl::countGoodsCategoryId($conn,$categoryId,$num,$status);
         $conn->close();
@@ -34,28 +41,33 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
     }
 
     /**
-     * @param $categoryId
-     * @param $page
-     * @param $num
+     * 根据分类内容进行查询显示
+     * @param int $categoryId
+     * @param int $page
+     * @param int $num
      * @param int $status
      * @return array
-     * 根据分类内容进行查询显示
      */
-    public static function listGoodsCategoryPagination($categoryId, $page, $num, $status = 1) :array
+    public static function listGoodsCategoryPagination(int $categoryId,int $page,int $num,int $status = 1) :array
     {
         $conn=Connection::conn();
         $res=GoodsCategoryDaoImpl::listGoodsCategoryPagination($conn,$categoryId,$page,$num);
         $conn->close();
-        return $res;
+        if (count($res) >0)
+        {
+            return GoodsModel::homeInformationDisplay($res);
+        }
+        return array();
 
     }
 
     /**
-     * @param $categoryId
+     * 获取当个信息分类信息
+     * @param int $categoryId
      * @return array
-     * 获取当个信息
+     *
      */
-    public static function getGoodsCategoryId($categoryId) :array
+    public static function getGoodsCategoryId(int $categoryId) : array
     {
         $conn=Connection::conn();
         $res=GoodsCategoryDaoImpl::getGoodsCategoryId($conn,$categoryId);

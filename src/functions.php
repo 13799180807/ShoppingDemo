@@ -1,66 +1,35 @@
 <?php
 
 
-/**
- * @param $uri
- * @return int|string
- * 获取$_SERVER["REQUEST_URI"]处理得到我要的结果
- */
-function uri($uri){
-    if ($uri==""){
-        return -1;
-    }
-    $uri=trim($uri,"/");
-    $uriArr=explode('/', $uri);
-    $str="";
-    $d=1;
-    foreach ($uriArr as $value){
-        if(count($uriArr)==$d){
-
-        }else{
-            $str=$str."/".$value;
-        }
-        $d=$d+1;
-    }
-    return $str;
-}
-
-/**
- * @param $arr
- * @return array|int
- * 对请求数据的获取得到想要的数组
- */
-function parameterList($arr){
-    if ($arr==""){
-        return -1;
-    }
-    $arraylist=array();
-    foreach (array_keys($arr) as $val){
-        $arraylist[$val]=$arr[$val];
-    }
-    return $arraylist;
-}
-function successJson($msg,$dataList){
+if(!function_exists('underscoreToHump')){
     /**
-     * 成功返回的
+     * 下划线转驼峰命名
+     * step1.原字符串转小写,原字符串中的分隔符用空格替换,在字符串开头加上分隔符
+     * step2.将字符串中每个单词的首字母转换为大写,再去空格,去字符串首部附加的分隔符.
+     * @param $str
+     * @param string $val
+     * @return string
      */
-    $status=SUCCESS;
-    $json = array(
-        'status' => $status,
-        'msg' => $msg,
-        'data' =>$dataList
-    );
-    return json_encode($json);
+    function underscoreToHump($str, $val='_'): string
+    {
+        $str = $val. str_replace($val, " ", strtolower($str));
+        return ltrim(str_replace(" ", "", ucwords($str)), $val );
+    }
 }
-function failJson($msg,$dataList){
+if(!function_exists('humpToUnderLine')){
     /**
-     * 失败返回值
+     * 驼峰转下划线
+     * step:小写和大写紧挨一起的地方,加上分隔符,然后全部转小写
+     * @param $str
+     * @param string $val
+     * @return string
      */
-    $status=FAIL;
-    $json = array(
-        'status' => $status,
-        'msg' => $msg,
-        'data' =>$dataList
-    );
-    return json_encode($json);
+    function humpToUnderLine($str, $val='_'): string
+    {
+        return strtolower(preg_replace('/([a-z])([A-Z])/', "$1" . $val . "$2", $str));
+    }
 }
+
+
+
+

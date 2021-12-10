@@ -1,15 +1,15 @@
 <?php
-
+namespace src\Application\Library;
 
 class QueryBuilder
 {
     /**
-     * @param $conn
-     * @param $table
-     * @return array
      * 查询表全部信息
+     * @param $conn
+     * @param string $table
+     * @return array
      */
-    public static function queryAll($conn,$table) :array
+    public static function queryAll($conn,string $table) :array
     {
         $sql="select * from {$table}";
         $stmt = $conn->stmt_init();

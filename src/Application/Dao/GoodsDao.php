@@ -1,36 +1,35 @@
 <?php
-require 'GoodsDaoImpl.php';
+namespace src\Application\Dao;
 interface GoodsDao
 {
 
 
     /**
+     * 根据id获取当个商品信息
      * @param $conn
-     * @param $id
+     * @param int $id
      * @return mixed
-     * 根据id获取单个信息
      */
-    public static function getById($conn,$id);
-
+    public static function getById($conn,int $id);
 
     /**
-     * @param $conn
-     * @param $field
-     * @param $value
-     * @param $status
-     * @param $num
-     * @return mixed
      * 根据一个字段名进行查询获取多个对象
+     * @param $conn
+     * @param string $field
+     * @param string $value
+     * @param int $status
+     * @param int $num
+     * @return mixed
      */
-    public static function listField($conn, $field, $value, $status, $num);
+    public static function listField($conn, string $field, string $value, int $status, int $num);
 
     /**
+     * 根据名字进行模糊查询商品信息
      * @param $conn
-     * @param $goodsName
+     * @param string $goodsName
      * @return mixed
-     * 根据名字进行模糊查询
      */
-    public static function getByGoodsName($conn,$goodsName);
+    public static function getByGoodsName($conn,string $goodsName);
 
 
 

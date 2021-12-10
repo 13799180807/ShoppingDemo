@@ -1,5 +1,5 @@
 <?php
-
+namespace src\Application\Helper;
 
 class CurlRequests
 {

@@ -1,14 +1,15 @@
 <?php
-
+namespace src\Application\Dao;
 class GoodsPictureDaoImpl implements GoodsPictureDao
 {
 
     /**
+     * 获取更多图片信息
      * @param $conn
-     * @param $goodsId
+     * @param int $goodsId
      * @return array
      */
-    public static function getGoodsId($conn, $goodsId): array
+    public static function getGoodsId($conn, int $goodsId): array
     {
         // TODO: Implement getGoodsId() method.
         $sql="SELECT * FROM tb_goods_picture WHERE goods_id=?";

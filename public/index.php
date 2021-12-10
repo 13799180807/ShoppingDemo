@@ -1,16 +1,28 @@
 <?php
-    require '../src/settings.php';
+/** 引用配置文件*/
+require './../src/constants.php';
+date_default_timezone_set("Asia/Shanghai");
+/** 错误收集 */
+if (DEBUG)
+{
+    error_reporting(-1);
+    ini_set('display_errors',0);
+    ini_set('log_errors',1);
+    ini_set('error_log','../logs/sys_log');
+}
+
+/** 引入文件 */
+include APP_PATH . 'core/Frame.php';
+
+/** 自动载入 */
+spl_autoload_register('\core\Frame::loader');
+
+/** 启动框架 */
+\core\Frame::run();
 
 
-    if(CheckRoute::matching(Route::define(),uri($_SERVER["REQUEST_URI"]))){
-         include "../src/routes.php";
-    }else{
-     //   header("Content-type:Application/json;charset=utf-8");
-           echo "<div style='color:grey ;font-family: 微软雅黑; margin-left: 45%;margin-top: 5%;' >
-                         <span style='color: #d4f8ff; font-size: 100px;' >404</span>
-                         </br>我进来了但是迷路了......
-                 </div>";
-    }
+
+
 
 
 

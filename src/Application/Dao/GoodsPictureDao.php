@@ -1,12 +1,13 @@
 <?php
-require 'GoodsPictureDaoImpl.php';
+namespace src\Application\Dao;
 interface GoodsPictureDao
 {
     /**
+     * 根据商品id获取该商品的详情普片信息
      * @param $conn
-     * @param $goodsId
+     * @param int $goodsId
      * @return mixed
      */
-    public static function getGoodsId($conn,$goodsId);
+    public static function getGoodsId($conn,int $goodsId);
 
 }
