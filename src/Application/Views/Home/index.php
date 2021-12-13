@@ -417,8 +417,7 @@ $dataArray=indexCurlPost();
                                 <!--开始 -->
                                 <?php
                                 $newest=$dataArray["newest"];
-
-                                if (count($newest)=="1"){
+                                if (count($newest)=="0"){
 
                                 }else{
                                     foreach ( $newest as $row){
@@ -513,7 +512,7 @@ $dataArray=indexCurlPost();
                                         <?php
                                         $xing=110;
                                         $recommend=$dataArray["recommend"];
-                                        if (count($recommend)=="1"){
+                                        if (count($recommend)=="0"){
 
                                         }else{
                                             foreach ( $recommend as $row){
@@ -586,7 +585,7 @@ $dataArray=indexCurlPost();
                                         <?php
                                         $xing=110;
                                         $hot=$dataArray["hot"];
-                                        if (count($hot)=="-1"){
+                                        if (count($hot)=="0"){
 
                                         }else{
                                             foreach ( $hot as $row){
@@ -604,7 +603,7 @@ $dataArray=indexCurlPost();
                                                 </div>
                                                 <div class="product-list-content">
                                                     <h6 class="product-name">
-                                                        <a href="single-product.php?commodity=<?php echo $row["sp_uid"]; ?>"><?php echo $row["goodsName"] ?></a>
+                                                        <a href="single-product.php?commodity=<?php echo $row["goodsId"]; ?>"><?php echo $row["goodsName"] ?></a>
                                                     </h6>
                                                     <span class="ratings justify-content-start mb-3">
 														<span class="rating-wrap">

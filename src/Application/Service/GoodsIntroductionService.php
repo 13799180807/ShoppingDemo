@@ -9,4 +9,7 @@ interface GoodsIntroductionService
      */
     public static function getGoodsId(int $goodsId);
 
+
+
+
 }

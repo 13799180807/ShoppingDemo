@@ -3,7 +3,6 @@ namespace src\Application\Dao;
 interface GoodsDao
 {
 
-
     /**
      * 根据id获取当个商品信息
      * @param $conn

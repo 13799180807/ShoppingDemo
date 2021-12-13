@@ -1,6 +1,7 @@
 <?php
 namespace src\Application\Service;
 use src\Application\Dao\GoodsCategoryDaoImpl;
+use src\Application\Helper\FilterHelper;
 use src\Application\Library\Connection;
 use src\Application\Model\GoodsCategoryModel;
 use src\Application\Model\GoodsModel;
@@ -33,8 +34,15 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
      */
     public static function countGoodsCategoryId(int $categoryId,int $num,int $status = 1) : int
     {
+        $data=array(
+            'id'=>$categoryId,
+            'num'=>$num,
+            'status'=>$status
+        );
+        /** 安全过滤 */
+        $data=FilterHelper::safeReplace($data);
         $conn=Connection::conn();
-        $res=GoodsCategoryDaoImpl::countGoodsCategoryId($conn,$categoryId,$num,$status);
+        $res=GoodsCategoryDaoImpl::countGoodsCategoryId($conn,$data['id'],$data['num'],$data['status']);
         $conn->close();
         return $res;
 
@@ -50,8 +58,16 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
      */
     public static function listGoodsCategoryPagination(int $categoryId,int $page,int $num,int $status = 1) :array
     {
+        $data=array(
+          'id'=>$categoryId,
+          'page'=>$page,
+          'num'=>$num,
+          'status'=>$status
+        );
+        /** 安全过滤 */
+        $data=FilterHelper::safeReplace($data);
         $conn=Connection::conn();
-        $res=GoodsCategoryDaoImpl::listGoodsCategoryPagination($conn,$categoryId,$page,$num);
+        $res=GoodsCategoryDaoImpl::listGoodsCategoryPagination($conn,$data['id'],$data['page'],$data['num'],$data['status']);
         $conn->close();
         if (count($res) >0)
         {
@@ -69,8 +85,13 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
      */
     public static function getGoodsCategoryId(int $categoryId) : array
     {
+        $data=array(
+          'id'=>$categoryId,
+        );
+        /** 安全过滤 */
+        $data=FilterHelper::safeReplace($data);
         $conn=Connection::conn();
-        $res=GoodsCategoryDaoImpl::getGoodsCategoryId($conn,$categoryId);
+        $res=GoodsCategoryDaoImpl::getGoodsCategoryId($conn,$data['id']);
         $conn->close();
         return $res;
     }

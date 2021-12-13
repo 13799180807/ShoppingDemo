@@ -1,7 +1,7 @@
 <?php
 namespace src\Application\Controller;
 
-use src\Application\Helper\ResultJson;
+use src\Application\Helper\FeedBack;
 use src\Application\Service\GoodsCategoryServiceImpl;
 
 class GoodsCategoryController
@@ -9,6 +9,11 @@ class GoodsCategoryController
     /** 分类页面 */
     public function categoryPageInformation()
     {
+        if (count($_POST)!=3){
+            echo FeedBack::fail("请求不正确，请正确传参");
+            return;
+        }
+        /** 进行是不是数字和空值检测 */
         if (isset($_POST['id']) && is_numeric($_POST['id']) && isset($_POST['page']) && is_numeric($_POST['page']) && isset($_POST['num']) && is_numeric($_POST['num']) )
         {
             //显示分类列表
@@ -46,13 +51,10 @@ class GoodsCategoryController
 
             );
 
-            echo ResultJson::result(200,"请求成功",$res);
+            echo FeedBack::result(200,"请求成功",$res);
 
         }else{
-
-            $error=array();
-            $error['err']="参数错误";
-            echo ResultJson::result(400,"请求出错",$error);
+            echo FeedBack::fail("请求失败，参数错误");
 
         }
     }

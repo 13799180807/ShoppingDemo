@@ -1,7 +1,7 @@
 <?php
 
 namespace core;
-use src\Application\Helper\ResultJson;
+use src\Application\Helper\FeedBack;
 use src\Application\Middleware\CheckRoute;
 
 class Route
@@ -126,13 +126,14 @@ class Route
                 /** 方法不存在 */
                 $error=array();
                 $error['err']="请联系管理员";
-                echo ResultJson::result(404,"请求出错",$error);
+                echo FeedBack::result(404,"请求出错",$error);
             }
 
         } else{
              /** 控制器不存在 */
-           //  echo ResultJson::result(500,"服务器出错","");
-            include APP_PATH.'tests/test.php';
+      //      header("Content-type:Application/json;charset=utf-8");
+       //     echo FeedBack::result(500,"服务器出错","");
+           include APP_PATH.'tests/test.php';
         }
 
     }

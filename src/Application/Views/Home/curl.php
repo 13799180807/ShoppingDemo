@@ -2,10 +2,13 @@
 
 
 //新的
-
+/**
+ * 主页查询用的接口
+ * @return array
+ */
 function indexCurlPost():array
 {
-    $url="http://localhost:8080/index/all";
+    $url="http://localhost:8080/goods/home";
     $datalist=array();
     $datalist["method"]="list";
     $json=curl_post($url,$datalist);
@@ -18,13 +21,13 @@ function indexCurlPost():array
 }
 
 /**
+ * 详情页面
  * @param $id
  * @return array
- * 详情页面
  */
 function productCurlPost($id) :array
 {
-    $url="http://localhost:8080/index/product/all";
+    $url="http://localhost:8080/goods/product";
     $datalist=array();
     $datalist["id"]=$id;
     $json=curl_post($url,$datalist);
@@ -42,7 +45,7 @@ function productCurlPost($id) :array
  */
 function fuzzyCurlPost($name) :array
 {
-    $url="http://localhost:8080/index/search/all/";
+    $url="http://localhost:8080/goods/fuzzy";
     $dataList=array();
     $dataList['fuzzy']=$name;
     $json=curl_post($url,$dataList);
@@ -63,7 +66,7 @@ function fuzzyCurlPost($name) :array
  */
 function categoryCurlPost($id,$page,$num) : array
 {
-    $url="http://localhost:8080/index/category/all/";
+    $url="http://localhost:8080/goodsCategory/page";
     $dataList=array();
     $dataList['id']=$id;
     $dataList['page']=$page;

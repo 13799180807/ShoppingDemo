@@ -1,5 +1,6 @@
 <?php
 namespace src\Application\Dao;
+ use src\Application\Library\Connection;
  use src\Application\Library\QueryBuilder;
 
  class GoodsCategoryDaoImpl implements GoodsCategoryDao
@@ -71,11 +72,7 @@ namespace src\Application\Dao;
              $stmt->bind_param("iiii",$categoryId,$status,$page,$num);
          }
          $stmt->execute();
-         $result=$stmt->get_result();
-         $rows=$result->fetch_all(2);
-         $stmt->free_result();
-         $stmt->close();
-         return $rows;
+         return Connection::releaseRes($stmt);
 
      }
 
@@ -92,11 +89,7 @@ namespace src\Application\Dao;
          $stmt->prepare($sql);
          $stmt->bind_param("i",$categoryId);
          $stmt->execute();
-         $result=$stmt->get_result();
-         $rows=$result->fetch_all(2);
-         $stmt->free_result();
-         $stmt->close();
-         return $rows;
+         return Connection::releaseRes($stmt);
      }
  }
 

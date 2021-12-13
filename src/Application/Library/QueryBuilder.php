@@ -15,35 +15,27 @@ class QueryBuilder
         $stmt = $conn->stmt_init();
         $stmt->prepare($sql);
         $stmt->execute();
-        $result=$stmt->get_result();
-        $rows=$result->fetch_all(2);
-        $stmt->free_result();
-        $stmt->close();
-        return $rows;
+        return Connection::releaseRes($stmt);
     }
 
 
     /**
+     * 判断表中是否可以进行插入
      * @param $conn
-     * @param $table
-     * @param $condition
-     * @param $types
-     * @param $stint
+     * @param string $table
+     * @param string $condition
+     * @param string $types
+     * @param string $stint
      * @return int
-     * 没有结果为1，有结果-1
      */
-    public static function insertQuery($conn, $table, $condition, $types, $stint) : int
+    public static function insertQuery($conn,string $table,string $condition,string $types,string $stint) : int
     {
-
         $sql="SELECT *FROM {$table} WHERE {$condition}";
         $stmt = $conn->stmt_init();
         $stmt->prepare($sql);
         $stmt->bind_param($types,$stint);
         $stmt->execute();
-        $result=$stmt->get_result();
-        $rows=$result->fetch_all(2);
-        $stmt->free_result();
-        $stmt->close();
+        $rows=Connection::releaseRes($stmt);
         if (count($rows)=="0"){
             return 1;
         }else{

@@ -2,7 +2,6 @@
 
 namespace core;
 
-
 class Config
 {
     public static array $configData;
@@ -38,38 +37,6 @@ class Config
         }
     }
 
-    /**
-     * @param string $name
-     * @return false|mixed
-     * 获取配置信息
-     */
-    public function config(string $name)
-    {
-        $dirName=$name;
-        $configName='';
 
-        /** 分割配置信息 */
-        if (strpos($name,'.'))
-        {
-            list($dirName,$configName)=explode('.',$name);
-        }
-
-        /** 获取信息 */
-        $config=self::$configData;
-
-        /** 拿到一级配置信息 */
-        if ($configName=="" && isset($config[$dirName]))
-        {
-            return $config[$dirName];
-        }
-
-        /** 拿到二级配置信息 */
-        if ($configName !== "" && isset($config[$dirName][$configName]))
-        {
-            return $config[$dirName][$configName];
-        }
-        return  false;
-
-    }
 
 }

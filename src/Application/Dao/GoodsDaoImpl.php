@@ -1,6 +1,8 @@
 <?php
 namespace src\Application\Dao;
 
+use src\Application\Library\Connection;
+
 class GoodsDaoImpl implements  GoodsDao
 {
 
@@ -17,11 +19,7 @@ class GoodsDaoImpl implements  GoodsDao
         $stmt->prepare($sql);
         $stmt->bind_param("i",$id);
         $stmt->execute();
-        $result=$stmt->get_result();
-        $rows=$result->fetch_all(2);
-        $stmt->free_result();
-        $stmt->close();
-        return $rows;
+        return Connection::releaseRes($stmt);
     }
 
     /**
@@ -44,11 +42,7 @@ class GoodsDaoImpl implements  GoodsDao
         $stmt = $conn->stmt_init();
         $stmt->prepare($sql);
         $stmt->execute();
-        $result=$stmt->get_result();
-        $rows=$result->fetch_all(2);
-        $stmt->free_result();
-        $stmt->close();
-        return $rows;
+        return Connection::releaseRes($stmt);
     }
 
     /**
@@ -64,11 +58,7 @@ class GoodsDaoImpl implements  GoodsDao
         $stmt->prepare($sql);
         $stmt->bind_param("s",$goodsName);
         $stmt->execute();
-        $result=$stmt->get_result();
-        $rows=$result->fetch_all(2);
-        $stmt->free_result();
-        $stmt->close();
-        return $rows;
+        return Connection::releaseRes($stmt);
     }
 
 }

@@ -6,6 +6,10 @@ use mysqli;
 use mysqli_sql_exception;
 
 Class Connection{
+    /**
+     * 数据库连接
+     * @return mysqli
+     */
     public static function conn(): mysqli
     {
         $ServerName=SERVER_NAME;
@@ -30,4 +34,20 @@ Class Connection{
             return $conn;
         }
     }
+
+    /**
+     * @param $stmt
+     * @return mixed
+     */
+    public static function releaseRes($stmt){
+
+        $result=$stmt->get_result();
+        $rows=$result->fetch_all(2);
+        $stmt->free_result();
+        $stmt->close();
+        return $rows;
+    }
+
+
+
 }

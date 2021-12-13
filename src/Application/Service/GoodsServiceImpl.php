@@ -2,6 +2,7 @@
 namespace src\Application\Service;
 
 use src\Application\Dao\GoodsDaoImpl;
+use src\Application\Helper\FilterHelper;
 use src\Application\Library\Connection;
 use src\Application\Model\GoodsModel;
 
@@ -15,9 +16,13 @@ class GoodsServiceImpl implements GoodsService
      */
     public static function getById(int $id) : array
     {
-
+        $data=array(
+            'id'=>$id
+        );
+        /** 安全过滤 */
+        $data=FilterHelper::safeReplace($data);
         $conn=Connection::conn();
-        $res=GoodsDaoImpl::getById($conn,$id);
+        $res=GoodsDaoImpl::getById($conn,$data['id']);
         $conn->close();
 
         if(count($res)>0)
@@ -39,8 +44,16 @@ class GoodsServiceImpl implements GoodsService
      */
     public static function listField(string $field, string $value, int $status, int $num) :array
     {
+        $data=array(
+            'field'=>$field,
+            'value'=>$value,
+            'status'=>$status,
+            'num'=>$num
+        );
+        /** 安全过滤 */
+        $data=FilterHelper::safeReplace($data);
         $conn=Connection::conn();
-        $res=GoodsDaoImpl::listField($conn,$field,$value,$status,$num);
+        $res=GoodsDaoImpl::listField($conn,$data['field'],$data['value'],$data['status'],$data['num']);
         $conn->close();
 
         /** 判断有没数据 */
@@ -59,8 +72,13 @@ class GoodsServiceImpl implements GoodsService
      */
     public static function getByGoodsName(string $goodsName) : array
     {
+        $data=array(
+            'goodsName'=>$goodsName,
+        );
+        /** 安全过滤 */
+        $data=FilterHelper::safeReplace($data);
         $conn=Connection::conn();
-        $goodsName="%".$goodsName."%";
+        $goodsName="%".$data['goodsName']."%";
         $res=GoodsDaoImpl::getByGoodsName($conn,$goodsName);
         $conn->close();
         if (count($res)>0)

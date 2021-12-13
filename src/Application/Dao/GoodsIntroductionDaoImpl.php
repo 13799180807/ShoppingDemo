@@ -1,6 +1,8 @@
 <?php
 namespace src\Application\Dao;
 
+use src\Application\Library\Connection;
+
 class GoodsIntroductionDaoImpl implements GoodsIntroductionDao
 {
 
@@ -17,9 +19,6 @@ class GoodsIntroductionDaoImpl implements GoodsIntroductionDao
         $stmt->prepare($sql);
         $stmt->bind_param("i",$goodsId);
         $stmt->execute();
-        $result=$stmt->get_result();
-        $rows=$result->fetch_all(2);
-        $stmt->free_result();
-        return $rows;
+        return Connection::releaseRes($stmt);
     }
 }

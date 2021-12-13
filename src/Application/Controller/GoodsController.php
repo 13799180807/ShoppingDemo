@@ -1,6 +1,6 @@
 <?php
 namespace src\Application\Controller;
-use src\Application\Helper\ResultJson;
+use src\Application\Helper\FeedBack;
 use src\Application\Service\GoodsIntroductionServiceImpl;
 use src\Application\Service\GoodsPictureServiceImpl;
 use src\Application\Service\GoodsServiceImpl;
@@ -10,6 +10,10 @@ class GoodsController
     /** 首页界面显示用的 */
     public  function homePageInformation()
     {
+        if (count($_POST)!=1){
+            echo FeedBack::fail("请求不正确，请正确传参");
+            return;
+        }
         if (isset($_POST['method']) && $_POST['method']=="list"){
 
             //热门  推荐产品  最新商品
@@ -23,12 +27,12 @@ class GoodsController
                 "newest"=>$newest
             );
 
-            echo ResultJson::result(200,"请求成功",$res);
+            echo FeedBack::result(200,"请求成功",$res);
 
         }else{
             $error=array();
             $error['err']="参数错误";
-            echo ResultJson::result(400,"请求出错",$error);
+            echo FeedBack::result(400,"请求出错",$error);
         }
     }
 
@@ -36,10 +40,13 @@ class GoodsController
     public  function productPageInformation()
     {
 
+        if (count($_POST)!=1){
+            echo FeedBack::fail();
+            return;
+        }
         if (isset($_POST['id']) && $_POST!="" && is_numeric($_POST['id'])){
 
             $goodsId=$_POST["id"];
-
             $goods=GoodsServiceImpl::getById($goodsId);
             $goodsPicture=GoodsPictureServiceImpl::getGoodsId($goodsId);
             $goodsIntroduce=GoodsIntroductionServiceImpl::getGoodsId($goodsId);
@@ -49,12 +56,10 @@ class GoodsController
                 "goodsIntroduce"=>$goodsIntroduce,
                 "goodsPicture"=>$goodsPicture
             );
-            echo ResultJson::result(200,"请求成功",$res);
+            echo FeedBack::result(200,"请求成功",$res);
 
         }else{
-            $error=array();
-            $error['err']="参数错误";
-            echo ResultJson::result(400,"请求出错",$error);
+            echo FeedBack::fail("请求失败，参数不对");
         }
 
     }
@@ -62,15 +67,17 @@ class GoodsController
     /** 模糊查询 */
     public  function fuzzyQuery()
     {
+        if (count($_POST)!=1){
+            echo FeedBack::fail("请求不正确，请正确传参");
+            return;
+        }
         if (isset($_POST['fuzzy']) && $_POST['fuzzy']!="" )
         {
             $res=GoodsServiceImpl::getByGoodsName($_POST['fuzzy']);
-            echo ResultJson::result(200,"请求成功",$res);
+            echo FeedBack::result(200,"请求成功",$res);
         }
         else{
-            $error=array();
-            $error['err']="参数错误";
-            echo ResultJson::result(400,"请求出错",$error);
+            echo FeedBack::fail("请求失败，请正确传参");
         }
 
     }
