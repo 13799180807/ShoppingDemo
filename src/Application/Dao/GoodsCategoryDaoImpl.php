@@ -5,6 +5,26 @@ namespace src\Application\Dao;
 
  class GoodsCategoryDaoImpl implements GoodsCategoryDao
  {
+
+
+     /**
+      * 根据id删除这个分类
+      * @param $conn
+      * @param int $categoryId
+      * @return bool
+      */
+     public static function deleteGoodsCategoryId($conn, int $categoryId): bool
+     {
+         $sql="DELETE FROM tb_goods_category WHERE goods_category_id=? ";
+         $stmt=$conn->stmt_init();
+         $stmt->prepare($sql);
+         $stmt->bind_param("i",$categoryId);
+         $stmt->execute();
+         $stmt->close();
+         return true;
+
+     }
+
      /**
       * 获取所有分类信息
       * @param $conn
@@ -91,5 +111,7 @@ namespace src\Application\Dao;
          $stmt->execute();
          return Connection::releaseRes($stmt);
      }
+
+
  }
 

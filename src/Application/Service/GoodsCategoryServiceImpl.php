@@ -1,6 +1,7 @@
 <?php
 namespace src\Application\Service;
 use src\Application\Dao\GoodsCategoryDaoImpl;
+use src\Application\Dao\GoodsDaoImpl;
 use src\Application\Helper\FilterHelper;
 use src\Application\Library\Connection;
 use src\Application\Model\GoodsCategoryModel;
@@ -8,6 +9,30 @@ use src\Application\Model\GoodsModel;
 
 class GoodsCategoryServiceImpl implements GoodsCategoryService
 {
+
+    /**
+     * 删除一个分类
+     * @param int $categoryId
+     * @return bool
+     */
+    public static function deleteGoodsCategoryId(int $categoryId): bool
+    {
+        $conn=Connection::conn();
+        $data=array(
+            'id'=>$categoryId,
+        );
+        /** 安全过滤 */
+        $data=FilterHelper::safeReplace($data);
+
+        /** 执行删除 */
+         GoodsCategoryDaoImpl::deleteGoodsCategoryId($conn,$data['id']);
+
+         /** 查询该分类下存在的商品id 以数组形式返回,然后根据这些进行删除操作*/
+         // GoodsDaoImpl::deleteGoodsCategoryId($conn,$data['id']);
+
+        return true;
+
+    }
 
     /**
      * @return array
@@ -95,4 +120,5 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
         $conn->close();
         return $res;
     }
+
 }

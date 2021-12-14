@@ -14,7 +14,7 @@ if(isset($_POST["btn"])){
             if ($password==$_POST['password1']){
                 $res=registerUri($account,$password);
                 $res=json_decode($res,true);
-                $msg=$res["msg"].'<a href="login.html" style="color: #0D6EFD">前往登入</a>';
+                $msg=$res["msg"]. '<a href="login.html" style="color: #0d6efd">前往登入</a>';
             }else{
                 $msg="两次密码输入不一致";
             }

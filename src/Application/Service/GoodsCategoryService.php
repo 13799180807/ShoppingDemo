@@ -2,6 +2,14 @@
 namespace src\Application\Service;
 interface GoodsCategoryService
 {
+
+    /**
+     * 根据分类id进行删除这个分类
+     * @param int $categoryId
+     * @return mixed
+     */
+    public static function deleteGoodsCategoryId(int $categoryId);
+
     /**
      * @return mixed
      *获取分类所有信息

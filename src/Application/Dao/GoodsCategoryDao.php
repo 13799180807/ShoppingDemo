@@ -38,5 +38,15 @@ interface GoodsCategoryDao
      */
     public static function getGoodsCategoryId($conn,int $categoryId);
 
+    /**
+     * 根据id删除这个分类
+     * @param $conn
+     * @param int $categoryId
+     * @return mixed
+     */
+    public static function deleteGoodsCategoryId($conn,int $categoryId);
+
+
+
 
 }

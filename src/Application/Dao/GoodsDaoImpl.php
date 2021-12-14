@@ -7,6 +7,23 @@ class GoodsDaoImpl implements  GoodsDao
 {
 
     /**
+     * 删除商品表中一个分类
+     * @param $conn
+     * @param int $goodsCategoryId
+     * @return bool
+     */
+    public static function deleteGoodsCategoryId($conn, int $goodsCategoryId) :bool
+    {
+        $sql="DELETE FROM tb_goods WHERE goods_category_id=? ";
+        $stmt=$conn->stmt_init();
+        $stmt->prepare($sql);
+        $stmt->bind_param("i",$goodsCategoryId);
+        $stmt->execute();
+        $stmt->close();
+        return true;
+    }
+
+    /**
      * 根据id进行查询商品的某个信息
      * @param $conn
      * @param int $id
@@ -14,7 +31,7 @@ class GoodsDaoImpl implements  GoodsDao
      */
     public static function getById($conn,int $id) : array
     {
-        $sql="SELECT * FROM tb_goods WHERE goods_id=?";
+        $sql="SELECT * FROM tb_goods WHERE goods_id=? and goods_status=1 ";
         $stmt=$conn->stmt_init();//构建空白的语句对象
         $stmt->prepare($sql);
         $stmt->bind_param("i",$id);
@@ -53,7 +70,7 @@ class GoodsDaoImpl implements  GoodsDao
      */
     public static function getByGoodsName($conn, string $goodsName) : array
     {
-        $sql="SELECT * FROM tb_goods WHERE goods_name LIKE ? ";
+        $sql="SELECT * FROM tb_goods WHERE  goods_status=1 and goods_name  LIKE ? ";
         $stmt=$conn->stmt_init();//构建空白的语句对象
         $stmt->prepare($sql);
         $stmt->bind_param("s",$goodsName);

@@ -6,6 +6,8 @@ namespace core;
 
 
 
+use src\Application\Exception\Log;
+
 class Frame
 {
     /**
@@ -33,6 +35,7 @@ class Frame
     public static function loader( string $nameSpace) :bool
     {
       //  echo "自动载入:".$nameSpace;
+
         /** 判断是否已经引入 */
         if (isset(self::$classMap[$nameSpace]))
         {

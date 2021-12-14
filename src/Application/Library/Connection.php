@@ -12,12 +12,8 @@ Class Connection{
      */
     public static function conn(): mysqli
     {
-        $ServerName=SERVER_NAME;
-        $ServerUser=SERVER_USER;
-        $ServerPassword=SERVER_PASSWORD;
-        $DbName=SERVER_DBNAME;
-        $DbCode=DB_CODE;
-        $conn=new mysqli($ServerName,$ServerUser,$ServerPassword);
+        $conf=database();
+        $conn=new mysqli($conf['link'],$conf['user'],$conf['password']);
 
         try{
             if($conn->connect_errno){
@@ -25,8 +21,8 @@ Class Connection{
             }
             else
             {
-                $conn->select_db($DbName);
-                $conn->query("set names {$DbCode}");
+                $conn->select_db($conf['dbName']);
+                $conn->query("set names {$conf['dbCode']}");
                 return $conn;
             }
         }catch(mysqli_sql_exception $e){

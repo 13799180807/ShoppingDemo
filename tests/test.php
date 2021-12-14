@@ -1,26 +1,28 @@
 <?php
 
+//use src\Application\Service\GoodsCategoryServiceImpl;
 
-//use src\Application\Library\Connection;
 //use src\Application\Library\QueryBuilder;
 //
-echo "测试页面了";
+//use src\Application\Library\Connection;
+//
+
+
+echo " 测试页面 <hr>";
+
+echo 1;
+
 
 //$da1 =;
 //$row=$GLOBAL($da1);
-
-//
 ////
 //$conn=Connection::conn();
-////
-////
+
 //$a=QueryBuilder::queryAll($conn,"demo");
 //var_dump($a);
 
-
-//
 //var_dump($_GET);
-//echo "<br/>";
+
 //var_dump($_POST);
 //echo "<br />";
 //$arr=array();

@@ -1,6 +1,8 @@
 <?php
 /** 引用配置文件*/
-require './../src/constants.php';
+define('APP_PATH',__DIR__.'/../');
+define('APP_NAME','src/Application');
+define('DEBUG',false);
 date_default_timezone_set("Asia/Shanghai");
 /** 错误收集 */
 if (DEBUG)

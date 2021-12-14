@@ -1,6 +1,7 @@
 <?php
 
 namespace core;
+use src\Application\Exception\Log;
 use src\Application\Helper\FeedBack;
 use src\Application\Middleware\CheckRoute;
 
@@ -131,6 +132,7 @@ class Route
 
         } else{
              /** 控制器不存在 */
+        //    (new Log())->run("控制器不存在：".$ctrlPath);
       //      header("Content-type:Application/json;charset=utf-8");
        //     echo FeedBack::result(500,"服务器出错","");
            include APP_PATH.'tests/test.php';

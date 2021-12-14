@@ -50,7 +50,6 @@ class GoodsCategoryController
                 "callBack"=>$callBack
 
             );
-
             echo FeedBack::result(200,"请求成功",$res);
 
         }else{

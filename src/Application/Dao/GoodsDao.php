@@ -4,6 +4,14 @@ interface GoodsDao
 {
 
     /**
+     * 根据分类id进行把这个商品表的分类删除
+     * @param $conn
+     * @param int $goodsCategoryId
+     * @return mixed
+     */
+    public static function deleteGoodsCategoryId($conn, int $goodsCategoryId);
+
+    /**
      * 根据id获取当个商品信息
      * @param $conn
      * @param int $id

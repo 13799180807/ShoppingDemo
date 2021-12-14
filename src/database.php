@@ -1,6 +1,16 @@
 <?php
-define("SERVER_NAME","localhost:3306"); //连接名
-define("SERVER_USER","igg"); //账号
-define("SERVER_PASSWORD","igg123456"); //密码
-define("SERVER_DBNAME","iggdemo");//数据库名
-define("DB_CODE","utf8");//字符串编码
+/** 数据库连接配置 */
+if (!function_exists('database'))
+{
+    function database(): array
+    {
+        return array(
+            'link'=>'localhost:3306',
+            'user'=>'igg',
+            'password'=>'igg123456',
+            'dbName'=>'iggdemo',
+            'dbCode'=>'utf8'
+        );
+    }
+
+}
