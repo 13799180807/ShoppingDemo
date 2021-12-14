@@ -12,7 +12,7 @@ class GoodsDaoImpl implements  GoodsDao
      * @param int $goodsCategoryId
      * @return bool
      */
-    public static function deleteGoodsCategoryId($conn, int $goodsCategoryId) :bool
+    public static function deleteByGoodsCategoryId($conn, int $goodsCategoryId) :bool
     {
         $sql="DELETE FROM tb_goods WHERE goods_category_id=? ";
         $stmt=$conn->stmt_init();
@@ -78,4 +78,23 @@ class GoodsDaoImpl implements  GoodsDao
         return Connection::releaseRes($stmt);
     }
 
+    /**
+     * 获取这个分类下的所有id
+     * @param $conn
+     * @param int $goodsCategoryId
+     * @return mixed
+     */
+    public static function listGoodsCategoryId($conn, int $goodsCategoryId)
+    {
+        $sql="SELECT goods_id FROM tb_goods WHERE goods_category_id=? ";
+        $stmt=$conn->stmt_init();//构建空白的语句对象
+        $stmt->prepare($sql);
+        $stmt->bind_param("i",$goodsCategoryId);
+        $stmt->execute();
+        $result=$stmt->get_result();
+        $rows=$result->fetch_all(1);
+        $stmt->free_result();
+        $stmt->close();
+        return $rows;
+    }
 }

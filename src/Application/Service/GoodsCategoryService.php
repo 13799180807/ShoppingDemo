@@ -8,7 +8,7 @@ interface GoodsCategoryService
      * @param int $categoryId
      * @return mixed
      */
-    public static function deleteGoodsCategoryId(int $categoryId);
+    public static function deleteByGoodsCategoryId(int $categoryId);
 
     /**
      * @return mixed

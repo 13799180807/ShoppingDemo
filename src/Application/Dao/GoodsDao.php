@@ -9,7 +9,7 @@ interface GoodsDao
      * @param int $goodsCategoryId
      * @return mixed
      */
-    public static function deleteGoodsCategoryId($conn, int $goodsCategoryId);
+    public static function deleteByGoodsCategoryId($conn, int $goodsCategoryId);
 
     /**
      * 根据id获取当个商品信息
@@ -37,6 +37,14 @@ interface GoodsDao
      * @return mixed
      */
     public static function getByGoodsName($conn,string $goodsName);
+
+    /**
+     * 获取这个分类下的商品所有信息
+     * @param $conn
+     * @param int $goodsCategoryId
+     * @return mixed
+     */
+    public static function listGoodsCategoryId($conn,int $goodsCategoryId);
 
 
 

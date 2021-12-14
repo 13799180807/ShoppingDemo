@@ -10,4 +10,12 @@ interface GoodsPictureDao
      */
     public static function getGoodsId($conn,int $goodsId);
 
+    /**
+     * 根据goods_id进行删除操作
+     * @param $conn
+     * @param int $goodsId
+     * @return mixed
+     */
+    public static function deleteByGoodsId($conn,int $goodsId);
+
 }

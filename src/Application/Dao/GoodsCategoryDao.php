@@ -44,7 +44,7 @@ interface GoodsCategoryDao
      * @param int $categoryId
      * @return mixed
      */
-    public static function deleteGoodsCategoryId($conn,int $categoryId);
+    public static function deleteByGoodsCategoryId($conn, int $categoryId);
 
 
 

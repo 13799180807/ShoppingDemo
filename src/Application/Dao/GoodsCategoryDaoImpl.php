@@ -13,7 +13,7 @@ namespace src\Application\Dao;
       * @param int $categoryId
       * @return bool
       */
-     public static function deleteGoodsCategoryId($conn, int $categoryId): bool
+     public static function deleteByGoodsCategoryId($conn, int $categoryId): bool
      {
          $sql="DELETE FROM tb_goods_category WHERE goods_category_id=? ";
          $stmt=$conn->stmt_init();

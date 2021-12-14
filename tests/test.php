@@ -7,12 +7,32 @@
 //use src\Application\Library\Connection;
 //
 
+//
+//use src\Application\Dao\GoodsDaoImpl;
+//use src\Application\Library\Connection;
+//
+use src\Application\Dao\GoodsDaoImpl;
+use src\Application\Library\Connection;
+use src\Application\Service\GoodsCategoryServiceImpl;
 
 echo " 测试页面 <hr>";
 
-echo 1;
+//GoodsCategoryServiceImpl::deleteByGoodsCategoryId(6);
+//$conn=Connection::conn();
+//$row=GoodsDaoImpl::listGoodsCategoryId($conn,1);
+//if (count($row)>0)
+//{
+//    foreach ($row as $value)
+//    {
+//        echo $value['goods_id']."<br/>";
+//    }
+//}
 
 
+
+
+echo "<hr>";
+echo "end";
 //$da1 =;
 //$row=$GLOBAL($da1);
 ////

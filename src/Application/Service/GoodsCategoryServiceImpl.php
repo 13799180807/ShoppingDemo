@@ -2,6 +2,9 @@
 namespace src\Application\Service;
 use src\Application\Dao\GoodsCategoryDaoImpl;
 use src\Application\Dao\GoodsDaoImpl;
+use src\Application\Dao\GoodsIntroductionDaoImpl;
+use src\Application\Dao\GoodsPictureDaoImpl;
+use src\Application\Exception\Log;
 use src\Application\Helper\FilterHelper;
 use src\Application\Library\Connection;
 use src\Application\Model\GoodsCategoryModel;
@@ -15,8 +18,10 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
      * @param int $categoryId
      * @return bool
      */
-    public static function deleteGoodsCategoryId(int $categoryId): bool
+    public static function deleteByGoodsCategoryId(int $categoryId): bool
     {
+        /** 未进行权限比对 */
+
         $conn=Connection::conn();
         $data=array(
             'id'=>$categoryId,
@@ -25,12 +30,26 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
         $data=FilterHelper::safeReplace($data);
 
         /** 执行删除 */
-         GoodsCategoryDaoImpl::deleteGoodsCategoryId($conn,$data['id']);
+         GoodsCategoryDaoImpl::deleteByGoodsCategoryId($conn,$data['id']);
 
-         /** 查询该分类下存在的商品id 以数组形式返回,然后根据这些进行删除操作*/
-         // GoodsDaoImpl::deleteGoodsCategoryId($conn,$data['id']);
+         /** 获取这个分类在商品表中有几个数值 */
+         $resData=GoodsDaoImpl::listGoodsCategoryId($conn,$data['id']);
 
-        return true;
+         if (count($resData)>0)
+         {
+             foreach ($resData as $row)
+             {
+                 $goodsId=$row['goods_id'];
+                 /** 执行删除图片和详情表信息 */
+                 GoodsIntroductionDaoImpl::deleteByGoodsId($conn,$goodsId);
+                 GoodsPictureDaoImpl::deleteByGoodsId($conn,$goodsId);
+             }
+         }
+         /** 删除商品表中该分类所有信息*/
+          GoodsDaoImpl::deleteByGoodsCategoryId($conn,$data['id']);
+         (new Log())->run("删除了一个分类");
+
+         return true;
 
     }
 
