@@ -3,13 +3,11 @@
 
 namespace core;
 
-
-
-
-use src\Application\Exception\Log;
+use Application\Exception\Log;
 
 class Frame
 {
+
     /**
      * 存放已经引入的类
      * @var array
@@ -34,7 +32,8 @@ class Frame
      */
     public static function loader( string $nameSpace) :bool
     {
-      //  echo "自动载入:".$nameSpace;
+//        echo "自动载入:".$nameSpace;
+//        echo "<br/>";
 
         /** 判断是否已经引入 */
         if (isset(self::$classMap[$nameSpace]))
@@ -42,21 +41,32 @@ class Frame
             return true;
         }
 
-        /** 组合路径 */
-        $class=str_replace('\\','/',$nameSpace);
-        $classPath=APP_PATH.$class.'.php';
+        /** 进行分割 */
+        $dirName=explode("\\",$nameSpace);
 
-        /** 去掉不存在的类 */
-        if (!is_file($classPath))
+        /** 进行替换 */
+        $class=str_replace('\\','/',$nameSpace);
+
+        /** 判断是不是core开头的的，不是就进入src目录下 */
+        if ( $dirName[0]=="core")
         {
-            return false;
+            /** 组合路径 */
+            $classPath=APP_PATH.$class.'.php';
+        }else {
+            /** 组合路径 */
+            $classPath=APPLICATION.$class.'.php';
         }
 
-        /** 引入类文件 */
-        include $classPath;
-        self::$classMap[$nameSpace]=$classPath;
-        return true;
+        /**  判断该文件存在不存在  存在引入 不存在去掉不存在的类 */
+        if (is_file($classPath))
+        {
+            /** 引入类文件 */
+            include $classPath;
+            self::$classMap[$nameSpace]=$classPath;
+            return true;
+        }
 
+        return false;
     }
 
 }

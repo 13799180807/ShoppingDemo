@@ -1,5 +1,5 @@
 <?php
-namespace src\Application\Domain;
+namespace Application\Domain;
 
 class GoodsPicture
 {

@@ -1,7 +1,8 @@
 <?php
-namespace src\Application\Dao;
+namespace Application\Dao;
 
-use src\Application\Library\Connection;
+use Application\Library\Connection;
+use Application\Library\DeleteBuilder;
 
 class GoodsDaoImpl implements  GoodsDao
 {
@@ -14,13 +15,8 @@ class GoodsDaoImpl implements  GoodsDao
      */
     public static function deleteByGoodsCategoryId($conn, int $goodsCategoryId) :bool
     {
-        $sql="DELETE FROM tb_goods WHERE goods_category_id=? ";
-        $stmt=$conn->stmt_init();
-        $stmt->prepare($sql);
-        $stmt->bind_param("i",$goodsCategoryId);
-        $stmt->execute();
-        $stmt->close();
-        return true;
+
+        return (new DeleteBuilder())->deleteByField($conn,"tb_goods","goods_category_id",$goodsCategoryId);
     }
 
     /**

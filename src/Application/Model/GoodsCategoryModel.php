@@ -1,7 +1,7 @@
 <?php
 
-namespace src\Application\Model;
-use src\Application\Domain\GoodsCategory;
+namespace Application\Model;
+use Application\Domain\GoodsCategory;
 
 class GoodsCategoryModel
 {

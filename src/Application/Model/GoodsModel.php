@@ -1,9 +1,9 @@
 <?php
 
-namespace src\Application\Model;
-use src\Application\Domain\Goods;
-use src\Application\Domain\GoodsIntroduction;
-use src\Application\Domain\GoodsPicture;
+namespace Application\Model;
+use Application\Domain\Goods;
+use Application\Domain\GoodsIntroduction;
+use Application\Domain\GoodsPicture;
 
 class GoodsModel
 {

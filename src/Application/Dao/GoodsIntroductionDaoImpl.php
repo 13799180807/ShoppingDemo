@@ -1,7 +1,8 @@
 <?php
-namespace src\Application\Dao;
+namespace Application\Dao;
 
-use src\Application\Library\Connection;
+use Application\Library\Connection;
+use Application\Library\DeleteBuilder;
 
 class GoodsIntroductionDaoImpl implements GoodsIntroductionDao
 {
@@ -30,13 +31,6 @@ class GoodsIntroductionDaoImpl implements GoodsIntroductionDao
      */
     public static function deleteByGoodsId($conn, int $goodsId): bool
     {
-        $sql="DELETE FROM tb_goods_introduction WHERE goods_id=? ";
-        $stmt=$conn->stmt_init();
-        $stmt->prepare($sql);
-        $stmt->bind_param("i",$goodsId);
-        $stmt->execute();
-        $stmt->close();
-        return true;
-
+        return (new DeleteBuilder())->deleteByField($conn,"tb_goods_introduction","goods_id",$goodsId);
     }
 }

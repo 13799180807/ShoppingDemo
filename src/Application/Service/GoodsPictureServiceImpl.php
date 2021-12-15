@@ -1,10 +1,10 @@
 <?php
-namespace src\Application\Service;
+namespace Application\Service;
 
-use src\Application\Dao\GoodsPictureDaoImpl;
-use src\Application\Helper\FilterHelper;
-use src\Application\Library\Connection;
-use src\Application\Model\GoodsModel;
+use Application\Dao\GoodsPictureDaoImpl;
+use Application\Helper\FilterHelper;
+use Application\Library\Connection;
+use Application\Model\GoodsModel;
 
 class GoodsPictureServiceImpl implements GoodsPictureService
 {

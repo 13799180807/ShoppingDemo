@@ -1,14 +1,14 @@
 <?php
-namespace src\Application\Service;
-use src\Application\Dao\GoodsCategoryDaoImpl;
-use src\Application\Dao\GoodsDaoImpl;
-use src\Application\Dao\GoodsIntroductionDaoImpl;
-use src\Application\Dao\GoodsPictureDaoImpl;
-use src\Application\Exception\Log;
-use src\Application\Helper\FilterHelper;
-use src\Application\Library\Connection;
-use src\Application\Model\GoodsCategoryModel;
-use src\Application\Model\GoodsModel;
+namespace Application\Service;
+use Application\Dao\GoodsCategoryDaoImpl;
+use Application\Dao\GoodsDaoImpl;
+use Application\Dao\GoodsIntroductionDaoImpl;
+use Application\Dao\GoodsPictureDaoImpl;
+use Application\Exception\Log;
+use Application\Helper\FilterHelper;
+use Application\Library\Connection;
+use Application\Model\GoodsCategoryModel;
+use Application\Model\GoodsModel;
 
 class GoodsCategoryServiceImpl implements GoodsCategoryService
 {
@@ -47,7 +47,8 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
          }
          /** 删除商品表中该分类所有信息*/
           GoodsDaoImpl::deleteByGoodsCategoryId($conn,$data['id']);
-         (new Log())->run("删除了一个分类");
+          $msg="xxx执行了：删除一个分类";
+         (new Log())->run($msg);
 
          return true;
 

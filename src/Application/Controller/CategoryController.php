@@ -1,13 +1,13 @@
 <?php
-namespace src\Application\Controller;
+namespace Application\Controller;
 
-use src\Application\Helper\FeedBack;
-use src\Application\Service\GoodsCategoryServiceImpl;
+use Application\Helper\FeedBack;
+use Application\Service\GoodsCategoryServiceImpl;
 
-class GoodsCategoryController
+class CategoryController
 {
     /** 分类页面 */
-    public function categoryPageInformation()
+    public function actionIndex()
     {
         if (count($_POST)!=3){
             echo FeedBack::fail("请求不正确，请正确传参");

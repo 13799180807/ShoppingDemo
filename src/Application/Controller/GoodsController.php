@@ -1,15 +1,21 @@
 <?php
-namespace src\Application\Controller;
-use src\Application\Helper\FeedBack;
-use src\Application\Service\GoodsIntroductionServiceImpl;
-use src\Application\Service\GoodsPictureServiceImpl;
-use src\Application\Service\GoodsServiceImpl;
+namespace Application\Controller;
+use Application\Helper\FeedBack;
+use Application\Helper\FilterHelper;
+use Application\Service\GoodsIntroductionServiceImpl;
+use Application\Service\GoodsPictureServiceImpl;
+use Application\Service\GoodsServiceImpl;
 
 class GoodsController
 {
+
+
     /** 首页界面显示用的 */
-    public  function homePageInformation()
+    public function actionIndex()
     {
+        /** 初级统一过滤*/
+        (new FilterHelper())->filterAny();
+
         if (count($_POST)!=1){
             echo FeedBack::fail("请求不正确，请正确传参");
             return;
@@ -37,7 +43,7 @@ class GoodsController
     }
 
     /** 单个商品详情页面用的  */
-    public  function productPageInformation()
+    public  function actionShow()
     {
 
         if (count($_POST)!=1){
@@ -65,7 +71,7 @@ class GoodsController
     }
 
     /** 模糊查询 */
-    public  function fuzzyQuery()
+    public  function actionFuzzy()
     {
         if (count($_POST)!=1){
             echo FeedBack::fail("请求不正确，请正确传参");

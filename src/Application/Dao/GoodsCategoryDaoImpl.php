@@ -1,7 +1,8 @@
 <?php
-namespace src\Application\Dao;
- use src\Application\Library\Connection;
- use src\Application\Library\QueryBuilder;
+namespace Application\Dao;
+ use Application\Library\Connection;
+ use Application\Library\DeleteBuilder;
+ use Application\Library\QueryBuilder;
 
  class GoodsCategoryDaoImpl implements GoodsCategoryDao
  {
@@ -15,13 +16,7 @@ namespace src\Application\Dao;
       */
      public static function deleteByGoodsCategoryId($conn, int $categoryId): bool
      {
-         $sql="DELETE FROM tb_goods_category WHERE goods_category_id=? ";
-         $stmt=$conn->stmt_init();
-         $stmt->prepare($sql);
-         $stmt->bind_param("i",$categoryId);
-         $stmt->execute();
-         $stmt->close();
-         return true;
+         return (new DeleteBuilder())->deleteByField($conn,"tb_goods_category","goods_category_id",$categoryId);
 
      }
 

@@ -8,7 +8,7 @@
  */
 function indexCurlPost():array
 {
-    $url="http://localhost:8080/goods/home";
+    $url="http://localhost:8080/goods/index";
     $datalist=array();
     $datalist["method"]="list";
     $json=curl_post($url,$datalist);
@@ -27,7 +27,7 @@ function indexCurlPost():array
  */
 function productCurlPost($id) :array
 {
-    $url="http://localhost:8080/goods/product";
+    $url="http://localhost:8080/goods/show";
     $datalist=array();
     $datalist["id"]=$id;
     $json=curl_post($url,$datalist);
@@ -66,7 +66,7 @@ function fuzzyCurlPost($name) :array
  */
 function categoryCurlPost($id,$page,$num) : array
 {
-    $url="http://localhost:8080/goodsCategory/page";
+    $url="http://localhost:8080/category/index";
     $dataList=array();
     $dataList['id']=$id;
     $dataList['page']=$page;

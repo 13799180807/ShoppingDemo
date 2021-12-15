@@ -1,5 +1,5 @@
 <?php
-namespace src\Application\Dao;
+namespace Application\Dao;
 interface GoodsPictureDao
 {
     /**

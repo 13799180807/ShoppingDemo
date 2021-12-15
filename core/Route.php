@@ -1,9 +1,7 @@
 <?php
 
 namespace core;
-use src\Application\Exception\Log;
-use src\Application\Helper\FeedBack;
-use src\Application\Middleware\CheckRoute;
+use Application\Helper\FeedBack;
 
 class Route
 {
@@ -61,7 +59,7 @@ class Route
         /** 判断分割后的有几个 */
         while ($i<=count($param))
         {
-            /** 一个名字，一个键值 用post存入 */
+            /** 一个名字，一个键值 用get存入 */
             if (isset($param[$i]) && isset($param[$i+1]))
             {
                 $_GET[$param[$i]]=$param[$i+1];
@@ -115,18 +113,26 @@ class Route
         /** 检查控制器存在不存在 */
         if (is_file($ctrlPath))
         {
-            /** 文件存在 进行方法判断是否存在 */
-            $key=ucfirst($this->controller).ucfirst($this->action);
+            /** 控制器存在，引入控制器 组装一下路径 new一个对象 */
+            include $ctrlPath;
+            $nameSpace='\Application\Controller\\'.$this->controller.'Controller';
+            $ctrl=new $nameSpace();
 
-            if((new CheckRoute())->matching($key))
+            /** 对控制器的方法进行组装 */
+            $method='action'.ucfirst($this->action);
+
+            /** 判断该方法存在不存在 */
+            if (method_exists($ctrl,$method))
             {
-                /** 方法存在 跑到该去的事情里 */
-                (new Web())->run($key);
+                /** 方法存在 调用这个方法 */
+                header("Content-type:Application/json;charset=utf-8");
+                $ctrl->$method();
 
-            }else{
+            } else {
                 /** 方法不存在 */
                 $error=array();
                 $error['err']="请联系管理员";
+                header("Content-type:Application/json;charset=utf-8");
                 echo FeedBack::result(404,"请求出错",$error);
             }
 

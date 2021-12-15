@@ -1,10 +1,10 @@
 <?php
-namespace src\Application\Service;
+namespace Application\Service;
 
-use src\Application\Dao\GoodsDaoImpl;
-use src\Application\Helper\FilterHelper;
-use src\Application\Library\Connection;
-use src\Application\Model\GoodsModel;
+use Application\Dao\GoodsDaoImpl;
+use Application\Helper\FilterHelper;
+use Application\Library\Connection;
+use Application\Model\GoodsModel;
 
 class GoodsServiceImpl implements GoodsService
 {
@@ -80,7 +80,9 @@ class GoodsServiceImpl implements GoodsService
         $conn=Connection::conn();
         $goodsName="%".$data['goodsName']."%";
         $res=GoodsDaoImpl::getByGoodsName($conn,$goodsName);
-        $conn->close();
+
+
+
         if (count($res)>0)
         {
            return GoodsModel::homeInformationDisplay($res);

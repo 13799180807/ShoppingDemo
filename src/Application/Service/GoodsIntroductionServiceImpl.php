@@ -1,10 +1,10 @@
 <?php
-namespace src\Application\Service;
+namespace Application\Service;
 
-use src\Application\Dao\GoodsIntroductionDaoImpl;
-use src\Application\Helper\FilterHelper;
-use src\Application\Library\Connection;
-use src\Application\Model\GoodsModel;
+use Application\Dao\GoodsIntroductionDaoImpl;
+use Application\Helper\FilterHelper;
+use Application\Library\Connection;
+use Application\Model\GoodsModel;
 
 class GoodsIntroductionServiceImpl implements GoodsIntroductionService
 {

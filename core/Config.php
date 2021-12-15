@@ -11,18 +11,18 @@ class Config
      */
     public function run()
     {
-
       // echo __CLASS__."配置入口"."<hr/>";
 
         /** 组合路径 */
         $dirPath=APP_PATH.'src';
-     //   $dirPath=APP_PATH.'tests';
+     // $dirPath=APP_PATH.'tests';
+
         $config=scandir($dirPath);
 
         foreach ($config as $item)
         {
             /** 跳出本次循环  */
-            if ($item=="." || $item==".." || $item=="constants"  )
+            if ($item=="." || $item==".." || $item==""  )
             {
                 continue;
             }
@@ -35,6 +35,7 @@ class Config
                 self::$configData[$configName]=$class;
             }
         }
+
     }
 
 

@@ -1,23 +1,30 @@
 <?php
-namespace src\Application\Library;
+namespace Application\Library;
 
 class DeleteBuilder
 {
-//    /**
-//     * @param $table
-//     * @return bool
-//     * 使用方法例子： DeleteBuilder::delectAll($conn,"demo","id=?","s","30");
-//     */
-//    public  function delectAll($conn,$table,$condtion,$types,$stmtinit): bool
-//    {
-//
-//        $sql="DELETE FROM {$table} WHERE {$condtion}";
-//        $stmt=$conn->prepare($sql);
-//        $stmt->bind_param("{$types}",$stmtinit);
-//        $stmt->execute();
-//        $stmt->close();
-//        return true;
-//    }
+
+    /**
+     * 根据字段删除
+     * @param $conn
+     * @param $table
+     * @param $field
+     * @param $key
+     * @return bool
+     */
+    public function deleteByField($conn,$table,$field,$key): bool
+    {
+        $sql="DELETE FROM {$table} WHERE {$field}=? ";
+        $stmt=$conn->stmt_init();
+        $stmt->prepare($sql);
+        $stmt->bind_param("s",$key);
+        $stmt->execute();
+        $stmt->close();
+        return true;
+    }
+
+
+
 
 }
 

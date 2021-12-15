@@ -1,5 +1,5 @@
 <?php
-namespace src\Application\Service;
+namespace Application\Service;
 interface GoodsCategoryService
 {
 

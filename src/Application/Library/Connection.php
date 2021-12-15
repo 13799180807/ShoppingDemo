@@ -1,5 +1,5 @@
 <?php
-namespace src\Application\Library;
+namespace Application\Library;
 
 
 use mysqli;

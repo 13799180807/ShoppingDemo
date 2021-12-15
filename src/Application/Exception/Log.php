@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Application\Exception;
+namespace Application\Exception;
 class Log
 {
     public string $logName;
