@@ -2,36 +2,35 @@
 namespace Application\Service;
 
 use Application\Dao\GoodsDaoImpl;
+use Application\Domain\Goods;
 use Application\Helper\FilterHelper;
-use Application\Library\Connection;
-use Application\Model\GoodsModel;
 
 class GoodsServiceImpl implements GoodsService
 {
-
     /**
      * 根据id获取一条商品信息
      * @param int $id
      * @return array
      */
-    public static function getById(int $id) : array
+    public function getById(int $id) : array
     {
         $data=array(
             'id'=>$id
         );
         /** 安全过滤 */
         $data=FilterHelper::safeReplace($data);
-        $conn=Connection::conn();
-        $res=GoodsDaoImpl::getById($conn,$data['id']);
-        $conn->close();
+        $fields=array(
+            'goodsId','goodsName','goodsCategoryId','goodsPrice','goodsStock',
+            'goodsHot','goodsRecommendation','goodsDescribe','goodsImg', 'createdAt',
+            );
+        $fields=splicing($fields);
+        $res=(new GoodsDaoImpl())->getById($fields,$data['id'],1);
 
         if(count($res)>0)
         {
-            return GoodsModel::productPageInformationDisplay($res);
-
+           return (new Goods())->GoodsModel($res);
         }
         return array();
-
     }
 
     /**
@@ -42,7 +41,7 @@ class GoodsServiceImpl implements GoodsService
      * @param int $num
      * @return array
      */
-    public static function listField(string $field, string $value, int $status, int $num) :array
+    public function listField(string $field, string $value, int $status, int $num) :array
     {
         $data=array(
             'field'=>$field,
@@ -52,17 +51,18 @@ class GoodsServiceImpl implements GoodsService
         );
         /** 安全过滤 */
         $data=FilterHelper::safeReplace($data);
-        $conn=Connection::conn();
-        $res=GoodsDaoImpl::listField($conn,$data['field'],$data['value'],$data['status'],$data['num']);
-        $conn->close();
+        $fields=array(
+            'goodsId','goodsName','goodsCategoryId','goodsPrice','goodsImg',
+        );
+        $fields=splicing($fields);
+        $res=(new GoodsDaoImpl())->listField($fields,$data['field'],$data['value'],$data['status'],$data['num']);
 
         /** 判断有没数据 */
         if (count($res)>0)
         {
-            return GoodsModel::homeInformationDisplay($res);
+            return (new Goods())->GoodsModel($res);
         }
         return array();
-
     }
 
     /**
@@ -70,22 +70,24 @@ class GoodsServiceImpl implements GoodsService
      * @param string $goodsName
      * @return array
      */
-    public static function getByGoodsName(string $goodsName) : array
+    public function getByGoodsName(string $goodsName) : array
     {
         $data=array(
             'goodsName'=>$goodsName,
         );
         /** 安全过滤 */
         $data=FilterHelper::safeReplace($data);
-        $conn=Connection::conn();
+
+        $fields=array(
+            'goodsId','goodsName','goodsCategoryId','goodsPrice','goodsImg',
+        );
+        $fields=splicing($fields);
         $goodsName="%".$data['goodsName']."%";
-        $res=GoodsDaoImpl::getByGoodsName($conn,$goodsName);
-
-
+        $res=(new GoodsDaoImpl())->getByGoodsName($fields,1,$goodsName);
 
         if (count($res)>0)
         {
-           return GoodsModel::homeInformationDisplay($res);
+            return (new Goods())->GoodsModel($res);
         }
         return array();
 

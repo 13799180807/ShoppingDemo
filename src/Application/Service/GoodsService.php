@@ -7,7 +7,7 @@ interface GoodsService{
      * @param int $id
      * @return mixed
      */
-    public static function getById(int $id);
+    public function getById(int $id);
 
     /**
      * 根据一个字段名进行查询获取多个对象
@@ -17,13 +17,18 @@ interface GoodsService{
      * @param int $num
      * @return mixed
      */
-    public static function listField(string $field,string $value,int $status,int $num);
+    public function listField(string $field,string $value,int $status,int $num);
 
     /**
      * 根据名字模糊查询
      * @param string $goodsName
      * @return mixed
      */
-    public static function getByGoodsName(string $goodsName);
+    public function getByGoodsName(string $goodsName);
+
+
+
+
+
 
 }

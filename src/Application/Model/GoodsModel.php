@@ -80,16 +80,15 @@ class GoodsModel
             $c->goodsCategoryId=$row[2];
             $c->goodsPrice=$row[3];
             $c->goodsStock=$row[4];
-            $c->goodsHot=$row[6];
-            $c->goodsRecommendation=$row[7];
-            $c->goodsDescribe=$row[8];
-            $c->goodsImg=$row[9];
-            $c->createdAt=$row[10];
+            $c->goodsHot=$row[5];
+            $c->goodsRecommendation=$row[6];
+            $c->goodsDescribe=$row[7];
+            $c->goodsImg=$row[8];
+            $c->createdAt=$row[9];
             $dataList[$i]=$c;
             $i++;
         }
         return $dataList;
-
     }
 
 }

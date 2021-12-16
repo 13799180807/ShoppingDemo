@@ -30,3 +30,55 @@
 [15-Dec-2021 16:22:58 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 282
 [15-Dec-2021 16:22:58 Asia/Shanghai] PHP Stack trace:
 [15-Dec-2021 16:22:58 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 16
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP   2. indexCurlPost() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:4
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Notice:  Undefined index: newest in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 419
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 420
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Notice:  Undefined index: recommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 514
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 515
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Notice:  Undefined index: hot in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 587
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 588
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:34:20 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:35:12 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 35
+[16-Dec-2021 17:35:12 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:35:12 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[16-Dec-2021 17:35:12 Asia/Shanghai] PHP   2. productCurlPost($id = '2') E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:9
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 16
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP   2. indexCurlPost() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:4
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Notice:  Undefined index: newest in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 419
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 420
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Notice:  Undefined index: recommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 514
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 515
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Notice:  Undefined index: hot in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 587
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 588
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:35:18 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[16-Dec-2021 17:48:49 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 35
+[16-Dec-2021 17:48:49 Asia/Shanghai] PHP Stack trace:
+[16-Dec-2021 17:48:49 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[16-Dec-2021 17:48:49 Asia/Shanghai] PHP   2. productCurlPost($id = '13') E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:9

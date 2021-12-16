@@ -17,6 +17,29 @@ class Goods
     public $updatedAt;   //最后更新时间
 
     /**
+     * 自动匹配
+     * @param array $rows
+     * @return array
+     */
+    public function GoodsModel(array $rows) :array
+    {
+        $dataList=array();
+        $i=0;
+        foreach ($rows as  $row){
+            $c= new Goods();
+            foreach ($row as $key =>$value)
+            {
+                $key=underscoreToHump($key);
+                $c->$key=$value;
+            }
+            $dataList[$i]=$c;
+            $i++;
+        }
+        return $dataList;
+
+    }
+
+    /**
      * @return mixed
      */
     public function getGoodsId()

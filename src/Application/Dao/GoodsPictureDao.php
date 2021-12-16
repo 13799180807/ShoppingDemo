@@ -2,20 +2,20 @@
 namespace Application\Dao;
 interface GoodsPictureDao
 {
+
     /**
      * 根据商品id获取该商品的详情普片信息
-     * @param $conn
+     * @param string $field
      * @param int $goodsId
-     * @return mixed
+     * @return array
      */
-    public static function getGoodsId($conn,int $goodsId);
+    public function getGoodsId(string $field,int $goodsId) :array;
 
     /**
      * 根据goods_id进行删除操作
-     * @param $conn
      * @param int $goodsId
-     * @return mixed
+     * @return bool
      */
-    public static function deleteByGoodsId($conn,int $goodsId);
+    public function deleteByGoodsId(int $goodsId) :bool;
 
 }

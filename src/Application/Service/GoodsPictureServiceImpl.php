@@ -13,12 +13,15 @@ class GoodsPictureServiceImpl implements GoodsPictureService
      * @param int $goodsId
      * @return array
      */
-    public static function getGoodsId(int $goodsId) :array
+    public function getGoodsId(int $goodsId) :array
     {
         $data=array(
             'id'=>$goodsId
         );
         /** 安全过滤 */
+
+
+
         $data=FilterHelper::safeReplace($data);
         $conn=Connection::conn();
         $res=GoodsPictureDaoImpl::getGoodsId($conn,$data['id']);

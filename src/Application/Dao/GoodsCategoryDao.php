@@ -3,48 +3,49 @@ namespace Application\Dao;
 interface GoodsCategoryDao
 {
     /**
-     * 获取所有的分类
-     * @param $conn
-     * @return mixed
+     * 获取商品表所有分类
+     * @param string $fields
+     * @return array
      */
-    public static function listGoodsCategoryName($conn);
+    public function listGoodsCategoryName(string $fields) : array;
 
     /**
-     * 统计页码
-     * @param $conn
+     * 统计页码 传入分类,显示数量得到页码
      * @param int $categoryId
      * @param int $num
      * @param int $status
-     * @return mixed
+     * @return int
      */
-    public static function countGoodsCategoryId($conn, int $categoryId, int $num,int $status=1);
+    public function countGoodsCategoryId(int $categoryId, int $num,int $status=1) : int;
 
     /**
      * 分页查询显示
-     * @param $conn
+     * @param string $fields
      * @param int $categoryId
      * @param int $page
      * @param int $num
      * @param int $status
-     * @return mixed
+     * @return array
      */
-    public static function listGoodsCategoryPagination($conn,int $categoryId,int $page,int $num,int $status=1);
+    public function listGoodsCategoryPagination(string $fields,int $categoryId,int $page,int $num,int $status=1) :array;
 
     /**
      * 获取一个分类信息
-     * @param $conn
+     * @param string $fields
      * @param int $categoryId
-     * @return mixed
+     * @return array
      */
-    public static function getGoodsCategoryId($conn,int $categoryId);
+    public function getGoodsCategoryId(string $fields,int $categoryId) :array;
 
     /**
      * 根据id删除这个分类
-     * @param $conn
      * @param int $categoryId
-     * @return mixed
+     * @return bool
      */
-    public static function deleteByGoodsCategoryId($conn, int $categoryId);
+    public function deleteByGoodsCategoryId(int $categoryId) :bool;
+
+
+
 
 
 

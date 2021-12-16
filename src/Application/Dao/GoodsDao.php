@@ -2,49 +2,52 @@
 namespace Application\Dao;
 interface GoodsDao
 {
-
     /**
-     * 根据分类id进行把这个商品表的分类删除
-     * @param $conn
+     * 根据分类id进行删除商品表中的数据删除这个分类
      * @param int $goodsCategoryId
-     * @return mixed
+     * @return bool
      */
-    public static function deleteByGoodsCategoryId($conn, int $goodsCategoryId);
+    public function deleteByGoodsCategoryId(int $goodsCategoryId) :bool;
 
     /**
-     * 根据id获取当个商品信息
-     * @param $conn
+     * 根据id获取单个商品信息
+     * @param string $fields
      * @param int $id
-     * @return mixed
+     * @param int $status
+     * @return array
      */
-    public static function getById($conn,int $id);
+    public function getById(string $fields,int $id,int $status) :array;
 
     /**
      * 根据一个字段名进行查询获取多个对象
-     * @param $conn
+     * @param string $fields
      * @param string $field
      * @param string $value
      * @param int $status
      * @param int $num
-     * @return mixed
+     * @return array
      */
-    public static function listField($conn, string $field, string $value, int $status, int $num);
+    public function listField(string $fields,string $field, string $value, int $status, int $num) :array;
 
     /**
      * 根据名字进行模糊查询商品信息
-     * @param $conn
+     * @param string $field
+     * @param int $status
      * @param string $goodsName
-     * @return mixed
+     * @return array
      */
-    public static function getByGoodsName($conn,string $goodsName);
+    public function getByGoodsName(string $field,int $status,string $goodsName) :array;
 
     /**
      * 获取这个分类下的商品所有信息
-     * @param $conn
+     * @param string $field
      * @param int $goodsCategoryId
-     * @return mixed
+     * @return array
      */
-    public static function listGoodsCategoryId($conn,int $goodsCategoryId);
+    public function listGoodsCategoryId(string $field,int $goodsCategoryId) :array;
+
+
+
 
 
 

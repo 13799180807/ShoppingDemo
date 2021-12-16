@@ -1,96 +1,88 @@
 <?php
 namespace Application\Dao;
-
-use Application\Library\Connection;
 use Application\Library\DeleteBuilder;
+use Application\Library\QueryBuilder;
 
 class GoodsDaoImpl implements  GoodsDao
 {
-
     /**
-     * 删除商品表中一个分类
-     * @param $conn
+     * 删除商品表中一个分类的数据
      * @param int $goodsCategoryId
      * @return bool
      */
-    public static function deleteByGoodsCategoryId($conn, int $goodsCategoryId) :bool
+    public function deleteByGoodsCategoryId(int $goodsCategoryId): bool
     {
-
-        return (new DeleteBuilder())->deleteByField($conn,"tb_goods","goods_category_id",$goodsCategoryId);
+        $sql="DELETE FROM tb_goods WHERE goods_category_id=?";
+        $data=array($goodsCategoryId);
+        return (new DeleteBuilder())->run(2,$sql,"i",$data);
     }
 
     /**
      * 根据id进行查询商品的某个信息
-     * @param $conn
+     * @param string $fields
      * @param int $id
+     * @param int $status
      * @return array
      */
-    public static function getById($conn,int $id) : array
+    public function getById(string $fields,int $id,int $status): array
     {
-        $sql="SELECT * FROM tb_goods WHERE goods_id=? and goods_status=1 ";
-        $stmt=$conn->stmt_init();//构建空白的语句对象
-        $stmt->prepare($sql);
-        $stmt->bind_param("i",$id);
-        $stmt->execute();
-        return Connection::releaseRes($stmt);
+        $sql="SELECT {$fields} FROM tb_goods WHERE goods_id=? and goods_status=? ";
+        $data=array($id,$status);
+        return (new QueryBuilder())->run(2,$sql,"ii",$data);
     }
 
     /**
-     * 根据进来不同字段获取不同东西
-     * @param $conn
+     * 根据进来不同字段获取不同数据
+     * @param string $fields
      * @param string $field
      * @param string $value
      * @param int $status
      * @param int $num
      * @return array
      */
-    public static function listField($conn, string $field,string $value,int $status,int $num) : array
+    public function listField(string $fields,string $field,string $value,int $status,int $num) : array
     {
-
         if ($field=="created_at"){
-            $sql="SELECT * FROM tb_goods WHERE  goods_status='{$status}'   ORDER BY created_at DESC limit {$num}";
+            $sql="SELECT {$fields} FROM tb_goods WHERE  goods_status=?  ORDER BY created_at DESC limit ?";
+            $data=array($status,$num);
+            return (new QueryBuilder())->run(2,$sql,"ii",$data);
         }else{
-            $sql="SELECT * FROM tb_goods WHERE {$field}='{$value}' and goods_status='{$status}'   ORDER BY updated_at DESC limit {$num}";
+            $sql="SELECT {$fields} FROM tb_goods WHERE {$field}=? and goods_status=?  ORDER BY updated_at DESC limit ? ";
+            $data=array($value,$status,$num);
+            return (new QueryBuilder())->run(2,$sql,"sii",$data);
         }
-        $stmt = $conn->stmt_init();
-        $stmt->prepare($sql);
-        $stmt->execute();
-        return Connection::releaseRes($stmt);
+
     }
 
     /**
      * 根据名字进行模糊查询商品信息
-     * @param $conn
+     * @param string $field
+     * @param int $status
      * @param string $goodsName
      * @return array
      */
-    public static function getByGoodsName($conn, string $goodsName) : array
+    public function getByGoodsName(string $field,int $status,string $goodsName) : array
     {
-        $sql="SELECT * FROM tb_goods WHERE  goods_status=1 and goods_name  LIKE ? ";
-        $stmt=$conn->stmt_init();//构建空白的语句对象
-        $stmt->prepare($sql);
-        $stmt->bind_param("s",$goodsName);
-        $stmt->execute();
-        return Connection::releaseRes($stmt);
+        $sql="SELECT {$field} FROM tb_goods WHERE  goods_status=? and goods_name  LIKE ? ";
+        $data=array($status,$goodsName);
+        return (new QueryBuilder())->run(2,$sql,"is",$data);
     }
 
     /**
      * 获取这个分类下的所有id
-     * @param $conn
+     * @param string $field
      * @param int $goodsCategoryId
-     * @return mixed
+     * @return array
      */
-    public static function listGoodsCategoryId($conn, int $goodsCategoryId)
+    public function listGoodsCategoryId(string $field,int $goodsCategoryId) :array
     {
-        $sql="SELECT goods_id FROM tb_goods WHERE goods_category_id=? ";
-        $stmt=$conn->stmt_init();//构建空白的语句对象
-        $stmt->prepare($sql);
-        $stmt->bind_param("i",$goodsCategoryId);
-        $stmt->execute();
-        $result=$stmt->get_result();
-        $rows=$result->fetch_all(1);
-        $stmt->free_result();
-        $stmt->close();
-        return $rows;
+        $sql="SELECT {$field} FROM tb_goods WHERE goods_category_id=? ";
+        $data=array($goodsCategoryId);
+        return (new QueryBuilder())->run(2,$sql,"i",$data);
     }
+
+
+
+
+
 }

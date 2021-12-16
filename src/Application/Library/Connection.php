@@ -1,7 +1,5 @@
 <?php
 namespace Application\Library;
-
-
 use mysqli;
 use mysqli_sql_exception;
 
@@ -10,7 +8,7 @@ Class Connection{
      * 数据库连接
      * @return mysqli
      */
-    public static function conn(): mysqli
+    public  function conn(): mysqli
     {
         $conf=database();
         $conn=new mysqli($conf['link'],$conf['user'],$conf['password']);
@@ -30,20 +28,6 @@ Class Connection{
             return $conn;
         }
     }
-
-    /**
-     * @param $stmt
-     * @return mixed
-     */
-    public static function releaseRes($stmt){
-
-        $result=$stmt->get_result();
-        $rows=$result->fetch_all(2);
-        $stmt->free_result();
-        $stmt->close();
-        return $rows;
-    }
-
 
 
 }

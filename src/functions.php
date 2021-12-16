@@ -1,6 +1,34 @@
 <?php
 
 
+
+
+if (!function_exists('Splicing'))
+{
+    /**
+     * 查询字段拼接
+     * @param array $fields
+     * @return string
+     */
+    function splicing(array $fields):string
+    {
+        $str="";
+        foreach ($fields as $value)
+        {
+            if ($value=="*")
+            {
+
+            }else{
+                $value=humpToUnderLine($value);
+                $str=$str.$value.",";
+            }
+        }
+        return trim($str,",");
+    }
+
+}
+
+
 if (!function_exists('safeReplace'))
 {
     /**

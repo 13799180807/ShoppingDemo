@@ -1,45 +1,51 @@
 <?php
+
+
 namespace Application\Library;
 
-class DeleteBuilder
+
+class CountBuilder
 {
     public $conn; //数据库连接
-    public int $type; //删除类型：1无条件删除，2有条件删除
+    public int $type; //统计类型 1无条件统计 2有条件统计
     public string $sql; //sql语句
     public string $fieldsType; //字段类型
     public array $key; //字段值
-    public bool $res; //删除结果
+    public int $res; //统计结果
 
     /**
-     * 删除：1无条件统计，2有条件统计,sql语句，字段类型，字段值
+     * 统计：1无条件统计2有条件统计，sql语句,字段类型,字段值
      * @param int $type
      * @param string $sql
      * @param string $types
      * @param array $key
-     * @return bool
+     * @return int
      */
-    public function run(int $type,string $sql,string $types="",array $key=array()) :bool
+    public function run(int $type,string $sql,string $types="",array $key=array()) :int
     {
         $this->setParameter($type,$sql,$types,$key);
-        $this->delete();
+        $this->count();
         return $this->res;
     }
 
-    /** 执行删除 */
-    public function delete()
+    /** 执行统计 */
+    public function count()
     {
         if ($this->type==1)
         {
-            /** 无条件删除 */
+            /** 无条件统计 */
 
-        } else {
-            /** 有条件删除 */
+        } else{
+            /** 有条件统计 */
             $stmt = $this->conn->prepare($this->sql);
             $stmt->bind_param($this->fieldsType, ...$this->key);
             $stmt->execute();
+            $result=$stmt->get_result();
+            $stmt->free_result();
             $stmt->close();
-            $this->res =true;
+            $this->res = $result -> num_rows; //查到几条数据
         }
+
     }
 
     /**
@@ -49,18 +55,14 @@ class DeleteBuilder
      * @param string $types
      * @param array $key
      */
-    public function setParameter(int $type,string $sql,string $types,array $key)
+    public function setParameter(int $type, string $sql, string $types,array $key)
     {
         $this->conn=(new Connection())->conn();
         $this->type=$type;
         $this->sql=$sql;
         $this->fieldsType=$types;
         $this->key=$key;
-
     }
 
 
-
-
 }
-

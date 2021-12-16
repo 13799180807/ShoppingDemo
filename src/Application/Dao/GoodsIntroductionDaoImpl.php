@@ -1,36 +1,36 @@
 <?php
 namespace Application\Dao;
 
-use Application\Library\Connection;
 use Application\Library\DeleteBuilder;
+use Application\Library\QueryBuilder;
 
 class GoodsIntroductionDaoImpl implements GoodsIntroductionDao
 {
 
     /**
-     * 根据id进行商品查询
-     * @param $conn
+     * 根据商品id进行商品详细说明查询
+     * @param string $field
      * @param int $goodsId
      * @return array
      */
-    public static function getGoodsId($conn,int $goodsId) : array
+    public function getGoodsId(string $field,int $goodsId): array
     {
-        $sql="SELECT * FROM tb_goods_introduction WHERE goods_id=?";
-        $stmt=$conn->stmt_init();
-        $stmt->prepare($sql);
-        $stmt->bind_param("i",$goodsId);
-        $stmt->execute();
-        return Connection::releaseRes($stmt);
+        $sql="SELECT {$field} FROM tb_goods_introduction WHERE goods_id=?";
+        $data=array($goodsId);
+        return (new QueryBuilder())->run(2,$sql,"i",$data);
     }
 
     /**
      * 根据goods_id进行删除
-     * @param $conn
      * @param int $goodsId
      * @return bool
      */
-    public static function deleteByGoodsId($conn, int $goodsId): bool
+    public function deleteByGoodsId(int $goodsId): bool
     {
-        return (new DeleteBuilder())->deleteByField($conn,"tb_goods_introduction","goods_id",$goodsId);
+        $sql="DELETE FROM tb_goods_introduction WHERE goods_id=?";
+        $data=array($goodsId);
+        return (new DeleteBuilder())->run(2,$sql,"i",$data);
     }
+
+
 }
