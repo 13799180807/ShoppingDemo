@@ -16,7 +16,14 @@ use Application\Service\GoodsPictureServiceImpl;
 use Application\Service\GoodsServiceImpl;
 
 echo " 测试页面 <hr>";
-(new GoodsCategoryServiceImpl())->deleteByGoodsCategoryId(8);
+//$sql="SELECT\s''  FROM tb_goods  WHERE goods_status=? ORDER BY created_at LIMIT ?,?";
+
+$pattern = "/(select[\s])|(insert[\s])|(update[\s])|(delete[\s])|(from[\s])|(where[\s])|(drop[\s])/i";
+$sql="/(select[\s])";
+$res=escapeString($pattern);
+echo $res;
+
+//(new GoodsCategoryServiceImpl())->deleteByGoodsCategoryId(8);
 //(new GoodsIntroductionDaoImpl())->deleteByGoodsId(19);
 
 //(new GoodsCategoryDaoImpl())->deleteByGoodsCategoryId(8);
@@ -62,11 +69,9 @@ echo " 测试页面 <hr>";
 
 //var_dump(GoodsCategoryDaoImpl::listGoodsCategoryPagination(0,1,6));
 
-
 //var_dump(GoodsCategoryDaoImpl::getGoodsCategoryId(1));
 //$a=GoodsCategoryDaoImpl::countGoodsCategoryId(0,10);
 //var_dump($a);
-
 
 //$sql="SELECT * FROM tb_goods WHERE goods_category_id=? and goods_status=? ORDER BY created_at LIMIT ?,?";
 //$key=array("2","1","1","3");
@@ -78,50 +83,12 @@ echo " 测试页面 <hr>";
 //$key=array("1","1","1","3");
 //QueryBuilder::listField($conn,$sql,"iiii",$key);
 
-
-
 //$refArr = array("iiii",1,1,1,8);
 //$ref = new ReflectionClass('mysqli_stmt');
 //$method = $ref->getMethod("bind_param");
 //$method->invokeArgs($res,$refArr);
 //$res->execute();
 //var_dump($res->execute());
-
-
-function listGoodsCategoryPagination($conn,int $categoryId,int $page,int $num,int $status=1) :array
-{
-
-    $sql="SELECT * FROM tb_goods WHERE goods_category_id=? and goods_status=? ORDER BY created_at LIMIT ?,?";
-    $stmt = $conn->prepare($sql);
-
-    $arr=array('2','1','1','3');
-    $stmt->bind_param('ssss', ...$arr);
-    $stmt->execute();
-
-
-    $result=$stmt->get_result();
-    $rows=$result->fetch_all(2);
-    $stmt->free_result();
-    $stmt->close();
-    var_dump($rows);
-
-
-//
-//    $page=($page-1)*$num;
-//    $sql="SELECT * FROM tb_goods WHERE goods_category_id=? and goods_status=? ORDER BY created_at LIMIT ?,?";
-//    $stmt = $conn->stmt_init();
-//    $stmt->prepare($sql);
-////    $stmt->bind_param(0,"i",$categoryId);
-////    $stmt->bind_param(1,"i",$status);
-////    $stmt->bind_param(2,"i",$page);
-////    $stmt->bind_param(3,"i",$num);
-//    $stmt->bind_param("iiii",$categoryId,$status,$page,$num);
-////    $stmt->bind_param("iiii",$categoryId,$status,$page,$num);
-//
-//    $stmt->execute();
-//    return Connection::releaseRes($stmt);
-
-}
 
 //GoodsCategoryServiceImpl::deleteByGoodsCategoryId(5);
 //

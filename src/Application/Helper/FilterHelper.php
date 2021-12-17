@@ -6,6 +6,30 @@ namespace Application\Helper;
 
 class FilterHelper
 {
+
+
+    /**
+     * 过滤部分post请求
+     * @param array $data
+     * @return bool
+     */
+    public function filterPost(array $data) :bool
+    {
+        foreach ($data as $val)
+        {
+            /** 存在这个post 判断 */
+            if (isset($_POST[$val])) {
+                /** 处理post请求 */
+                $_POST[$val]=escapeString($_POST[$val]);
+            } else{
+                return false;
+            }
+        }
+        return true;
+
+    }
+
+
     /** 统一对post get 请求做处理防止 sql 注入 */
     public  function filterAny()
     {

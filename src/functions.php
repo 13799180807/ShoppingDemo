@@ -66,18 +66,27 @@ if (!function_exists('escapeString'))
     function escapeString(string $str) : string
     {
         $pattern = "/(select[\s])|(insert[\s])|(update[\s])|(delete[\s])|(from[\s])|(where[\s])|(drop[\s])/i";
+
+        /** 检测变量是否是数组 */
         if (is_array($str))
         {
+
             foreach ($str as $key=> $value)
             {
+                /** 使用反斜线引用字符串 去除首位字符串 */
                 $str[$key] = addslashes(trim($value));
+
+                /** 执行匹配正则表达式 */
                 if(preg_match($pattern,$str[$key]))
                 {
                     $str[$key] = '';
                 }
             }
         } else {
+            /** 使用反斜线引用字符串  去除首位字符串*/
             $str=addslashes(trim($str));
+
+            /** 执行匹配正则表达式 */
             if(preg_match($pattern,$str))
             {
                 $str = '';
