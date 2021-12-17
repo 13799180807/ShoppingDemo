@@ -3,28 +3,24 @@ namespace Application\Service;
 interface GoodsService{
 
     /**
-     * 根据id进行获取单个商品信息
-     * @param int $id
-     * @return mixed
+     * 主页显示用的
+     * @return array
      */
-    public function getById(int $id);
+    public function listIndex() :array;
 
     /**
-     * 根据一个字段名进行查询获取多个对象
-     * @param string $field
-     * @param string $value
-     * @param int $status
-     * @param int $num
-     * @return mixed
+     * 单个商品详情页面使用
+     * @param int $id
+     * @return array
      */
-    public function listField(string $field,string $value,int $status,int $num);
+    public function listGoodsIdShow(int $id) :array;
 
     /**
      * 根据名字模糊查询
      * @param string $goodsName
-     * @return mixed
+     * @return array
      */
-    public function getByGoodsName(string $goodsName);
+    public function getGoodsNameFuzzy(string $goodsName) :array;
 
 
 

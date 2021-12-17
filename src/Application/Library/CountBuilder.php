@@ -3,7 +3,11 @@
 
 namespace Application\Library;
 
-
+/**
+ * 统计
+ * Class CountBuilder
+ * @package Application\Library
+ */
 class CountBuilder
 {
     public $conn; //数据库连接

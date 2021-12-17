@@ -1,6 +1,5 @@
 <?php
 namespace Application\Dao;
-
 use Application\Library\DeleteBuilder;
 use Application\Library\QueryBuilder;
 

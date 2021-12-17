@@ -7,7 +7,7 @@ interface GoodsIntroductionService
      * @param int $goodsId
      * @return mixed
      */
-    public static function getGoodsId(int $goodsId);
+    public function getGoodsId(int $goodsId);
 
 
 

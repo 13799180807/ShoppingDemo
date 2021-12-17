@@ -3,6 +3,11 @@ namespace Application\Library;
 use mysqli;
 use mysqli_sql_exception;
 
+/**
+ * 数据库连接
+ * Class Connection
+ * @package Application\Library
+ */
 Class Connection{
     /**
      * 数据库连接

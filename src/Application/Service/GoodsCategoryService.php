@@ -2,45 +2,50 @@
 namespace Application\Service;
 interface GoodsCategoryService
 {
-
     /**
-     * 根据分类id进行删除这个分类
+     * 获取一个分类信息
      * @param int $categoryId
      * @return mixed
      */
-    public static function deleteByGoodsCategoryId(int $categoryId);
-
-    /**
-     * @return mixed
-     *获取分类所有信息
-     */
-    public static function listGoodsCategoryName();
+    public function getGoodsCategoryId(int $categoryId) :array;
 
     /**
      * 根据分类获取页码
      * @param int $categoryId
      * @param int $num
-     * @param int $status
-     * @return mixed
+     * @return int
      */
-    public static function countGoodsCategoryId(int $categoryId,int $num,int  $status=1);
+    public function countGoodsCategoryId(int $categoryId,int $num) :int;
+
+    /**
+     * 获取分类所有信息
+     * @return array
+     */
+    public function listGoodsCategoryName() :array;
+
 
     /**
      * 分页分类查询获取对应结果
      * @param int $categoryId
      * @param int $page
      * @param int $num
-     * @param int $status
-     * @return mixed
+     * @return array
      */
-    public static function listGoodsCategoryPagination(int $categoryId,int  $page,int  $num,int $status=1);
+    public function listGoodsCategoryIndex(int $categoryId,int  $page,int  $num) :array;
 
     /**
-     * 获取一个分类信息
+     * 删除一个分类
      * @param int $categoryId
-     * @return mixed
+     * @return bool
      */
-    public static function getGoodsCategoryId(int $categoryId);
+    public function deleteByGoodsCategoryId(int $categoryId) :bool;
+
+
+
+
+
+
+
 
 
 

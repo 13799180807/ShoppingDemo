@@ -1,6 +1,11 @@
 <?php
 namespace Application\Library;
 
+/**
+ * 删除
+ * Class DeleteBuilder
+ * @package Application\Library
+ */
 class DeleteBuilder
 {
     public $conn; //数据库连接

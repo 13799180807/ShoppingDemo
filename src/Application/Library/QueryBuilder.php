@@ -1,6 +1,11 @@
 <?php
 namespace Application\Library;
 
+/**
+ * 查询
+ * Class QueryBuilder
+ * @package Application\Library
+ */
 class QueryBuilder
 {
 

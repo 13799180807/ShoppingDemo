@@ -1,22 +1,37 @@
 <?php
 namespace Application\Domain;
 
+/**
+ * 分类表
+ * Class GoodsCategory
+ * @package Application\Domain
+ */
 class GoodsCategory
 {
-    public $goodsCategoryId;
-    public $goodsCategoryName;
+    public int $goodsCategoryId;  //分类id
+    public string $goodsCategoryName; //分类名
 
     /**
-     * GoodsCategory constructor.
-     * @param $goodsCategoryId
-     * @param $goodsCategoryName
+     * 显示
+     * @param array $rows
+     * @return array
      */
-    public function __construct($goodsCategoryId="", $goodsCategoryName="")
+    public function categoryModel(array $rows): array
     {
-        $this->goodsCategoryId = $goodsCategoryId;
-        $this->goodsCategoryName = $goodsCategoryName;
+        $dataList=array();
+        $i=0;
+        foreach ($rows as  $row){
+            $c= new GoodsCategory();
+            foreach ($row as $key =>$value)
+            {
+                $key=underscoreToHump($key);
+                $c->$key=$value;
+            }
+            $dataList[$i]=$c;
+            $i++;
+        }
+        return $dataList;
     }
-
 
 
 }

@@ -2,9 +2,8 @@
 namespace Application\Service;
 
 use Application\Dao\GoodsIntroductionDaoImpl;
+use Application\Domain\GoodsIntroduction;
 use Application\Helper\FilterHelper;
-use Application\Library\Connection;
-use Application\Model\GoodsModel;
 
 class GoodsIntroductionServiceImpl implements GoodsIntroductionService
 {
@@ -13,20 +12,18 @@ class GoodsIntroductionServiceImpl implements GoodsIntroductionService
      * @param int $goodsId
      * @return array
      */
-    public static function getGoodsId(int $goodsId) : array
+    public function getGoodsId(int $goodsId) : array
     {
         $data=array(
             'id'=>$goodsId,
         );
         /** 安全过滤 */
         $data=FilterHelper::safeReplace($data);
+        $res=(new GoodsIntroductionDaoImpl())->getGoodsId("*",$data['id']);
 
-        $conn=Connection::conn();
-        $res=GoodsIntroductionDaoImpl::getGoodsId($conn,$data['id']);
-        $conn->close();
         if (count($res)>0)
         {
-            return GoodsModel::GoodsIntroduceInformationDisplay($res);
+            return (new GoodsIntroduction())->introductionModel($res);
         }else{
             return array();
         }

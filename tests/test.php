@@ -11,10 +11,25 @@ use Application\Library\CountBuilder;
 use Application\Library\DeleteBuilder;
 use Application\Library\QueryBuilder;
 use Application\Service\GoodsCategoryServiceImpl;
+use Application\Service\GoodsIntroductionServiceImpl;
+use Application\Service\GoodsPictureServiceImpl;
 use Application\Service\GoodsServiceImpl;
 
 echo " 测试页面 <hr>";
+(new GoodsCategoryServiceImpl())->deleteByGoodsCategoryId(8);
+//(new GoodsIntroductionDaoImpl())->deleteByGoodsId(19);
 
+//(new GoodsCategoryDaoImpl())->deleteByGoodsCategoryId(8);
+//var_dump((new GoodsCategoryServiceImpl())->listGoodsCategoryIndex(1,1,5));
+
+
+//var_dump((new GoodsCategoryServiceImpl())->listGoodsCategoryName());
+
+//echo (new GoodsCategoryDaoImpl())->countGoodsCategoryId(1,20);
+//$data=(new GoodsServiceImpl())->listGoodsIdShow(0);
+//var_dump($data);
+//var_dump((new GoodsIntroductionServiceImpl())->getGoodsId(5));
+//var_dump((new GoodsPictureServiceImpl())->getGoodsId(3));
 
 
 

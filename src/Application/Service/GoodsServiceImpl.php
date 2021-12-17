@@ -2,17 +2,48 @@
 namespace Application\Service;
 
 use Application\Dao\GoodsDaoImpl;
+use Application\Dao\GoodsIntroductionDaoImpl;
+use Application\Dao\GoodsPictureDaoImpl;
 use Application\Domain\Goods;
 use Application\Helper\FilterHelper;
 
 class GoodsServiceImpl implements GoodsService
 {
+
     /**
-     * 根据id获取一条商品信息
+     * 商城主页显示信息用的
+     * @return array[]
+     */
+    public function listIndex(): array
+    {
+        $fields=array(
+            'goodsId','goodsName','goodsCategoryId','goodsPrice','goodsImg',
+        );
+        $fields=splicing($fields);
+
+        //热门  推荐产品  最新商品
+        $resHot=(new GoodsDaoImpl())->listField($fields,"goods_hot","1",1,5);
+        $resRecommendation=(new GoodsDaoImpl())->listField($fields,"goods_recommendation","1",1,5);
+        $resNewest=(new GoodsDaoImpl())->listField($fields,"created_at","1",1,7);
+
+        $hot=(new Goods())->GoodsModel($resHot);
+        $recommend=(new Goods())->GoodsModel($resRecommendation);
+        $newest=(new Goods())->GoodsModel($resNewest);
+
+         return array(
+            "hot"=>$hot,
+            "recommend"=>$recommend,
+            "newest"=>$newest
+        );
+
+    }
+
+    /**
+     * 单个商品详情页面
      * @param int $id
      * @return array
      */
-    public function getById(int $id) : array
+    public function listGoodsIdShow(int $id): array
     {
         $data=array(
             'id'=>$id
@@ -22,75 +53,50 @@ class GoodsServiceImpl implements GoodsService
         $fields=array(
             'goodsId','goodsName','goodsCategoryId','goodsPrice','goodsStock',
             'goodsHot','goodsRecommendation','goodsDescribe','goodsImg', 'createdAt',
-            );
+        );
         $fields=splicing($fields);
-        $res=(new GoodsDaoImpl())->getById($fields,$data['id'],1);
 
-        if(count($res)>0)
-        {
-           return (new Goods())->GoodsModel($res);
-        }
-        return array();
+        /** 查询对应数据 */
+        $resGoods=(new GoodsDaoImpl())->getById($fields,$data['id'],1);
+        $resImg=(new GoodsPictureDaoImpl())->getGoodsId("*",$data['id']);
+        $resText=(new GoodsIntroductionDaoImpl())->getGoodsId("*",$data['id']);
+
+        /** 判断是否有数据 */
+        $goods=(new Goods())->GoodsModel($resGoods);
+        $img=(new Goods())->GoodsModel($resImg);
+        $text=(new Goods())->GoodsModel($resText);
+
+        return array(
+            "goods"=>$goods,
+            "goodsIntroduce"=>$text,
+            "goodsPicture"=>$img
+        );
+
     }
 
     /**
-     * 根据不同字段名获取对应的信息
-     * @param string $field
-     * @param string $value
-     * @param int $status
-     * @param int $num
-     * @return array
-     */
-    public function listField(string $field, string $value, int $status, int $num) :array
-    {
-        $data=array(
-            'field'=>$field,
-            'value'=>$value,
-            'status'=>$status,
-            'num'=>$num
-        );
-        /** 安全过滤 */
-        $data=FilterHelper::safeReplace($data);
-        $fields=array(
-            'goodsId','goodsName','goodsCategoryId','goodsPrice','goodsImg',
-        );
-        $fields=splicing($fields);
-        $res=(new GoodsDaoImpl())->listField($fields,$data['field'],$data['value'],$data['status'],$data['num']);
-
-        /** 判断有没数据 */
-        if (count($res)>0)
-        {
-            return (new Goods())->GoodsModel($res);
-        }
-        return array();
-    }
-
-    /**
-     * 模糊查询
+     * 根据名字进行模糊查询
      * @param string $goodsName
      * @return array
      */
-    public function getByGoodsName(string $goodsName) : array
+    public function getGoodsNameFuzzy(string $goodsName): array
     {
         $data=array(
             'goodsName'=>$goodsName,
         );
-        /** 安全过滤 */
         $data=FilterHelper::safeReplace($data);
-
         $fields=array(
             'goodsId','goodsName','goodsCategoryId','goodsPrice','goodsImg',
         );
         $fields=splicing($fields);
         $goodsName="%".$data['goodsName']."%";
         $res=(new GoodsDaoImpl())->getByGoodsName($fields,1,$goodsName);
-
-        if (count($res)>0)
-        {
-            return (new Goods())->GoodsModel($res);
-        }
-        return array();
+        return (new Goods())->GoodsModel($res);
 
     }
+
+
+
+
 
 }

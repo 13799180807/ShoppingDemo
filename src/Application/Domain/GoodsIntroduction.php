@@ -1,23 +1,37 @@
 <?php
 namespace Application\Domain;
 
+/**
+ * 商品详情介绍表
+ * Class GoodsIntroduction
+ * @package Application\Domain
+ */
 class GoodsIntroduction
 {
-    public $id; //id
-    public $goodsId; //商品id
-    public $goodsIntroduction;//详情说明
+    public int $id; //id
+    public int $goodsId; //商品id
+    public string $goodsIntroduction;//详情说明
 
     /**
-     * GoodsIntroduction constructor.
-     * @param $id
-     * @param $goodsId
-     * @param $goodsIntroduce
+     * 显示
+     * @param array $rows
+     * @return array
      */
-    public function __construct($id="", $goodsId="", $goodsIntroduce="")
+    public function introductionModel(array $rows): array
     {
-        $this->id = $id;
-        $this->goodsId = $goodsId;
-        $this->goodsIntroduction = $goodsIntroduce;
+        $dataList=array();
+        $i=0;
+        foreach ($rows as  $row){
+            $c= new GoodsIntroduction();
+            foreach ($row as $key =>$value)
+            {
+                $key=underscoreToHump($key);
+                $c->$key=$value;
+            }
+            $dataList[$i]=$c;
+            $i++;
+        }
+        return $dataList;
     }
 
 

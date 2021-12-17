@@ -2,9 +2,8 @@
 namespace Application\Service;
 
 use Application\Dao\GoodsPictureDaoImpl;
+use Application\Domain\GoodsPicture;
 use Application\Helper\FilterHelper;
-use Application\Library\Connection;
-use Application\Model\GoodsModel;
 
 class GoodsPictureServiceImpl implements GoodsPictureService
 {
@@ -19,17 +18,12 @@ class GoodsPictureServiceImpl implements GoodsPictureService
             'id'=>$goodsId
         );
         /** 安全过滤 */
-
-
-
         $data=FilterHelper::safeReplace($data);
-        $conn=Connection::conn();
-        $res=GoodsPictureDaoImpl::getGoodsId($conn,$data['id']);
-        $conn->close();
+        $res=(new GoodsPictureDaoImpl())->getGoodsId("*",$data['id']);
 
         if (count($res)>0)
         {
-            return GoodsModel:: GoodsPictureInformationDisplay($res);
+            return (new GoodsPicture())->pictureModel($res);
         }else{
             return array();
         }
