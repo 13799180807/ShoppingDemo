@@ -6,10 +6,26 @@ namespace Application\Helper;
 
 class FilterHelper
 {
+    /**
+     * 检测数字判断
+     * @param array $arr
+     * @return bool
+     */
+    public function numeric(array $arr) :bool
+    {
+        foreach ($arr as $val)
+        {
+            if (isset($_POST[$val]) && is_numeric($_POST[$val])) {
 
+            }else{
+                return false;
+            }
+        }
+        return true;
+    }
 
     /**
-     * 过滤部分post请求
+     * 过滤部分post请求防止sql注入
      * @param array $data
      * @return bool
      */
@@ -30,7 +46,7 @@ class FilterHelper
     }
 
 
-    /** 统一对post get 请求做处理防止 sql 注入 */
+    /** 统一对post get 请求做处理防止 sql 注入 暂时用不到 */
     public  function filterAny()
     {
         /** 统一过滤post里面的高位词防止sql注入 */

@@ -18,7 +18,7 @@ class RegularExpression
     public array $res=array();
 
     /**
-     * 判断str,num
+     * 判断str,num,account
      * @param array $data
      * @return array
      */
@@ -37,10 +37,30 @@ class RegularExpression
                 $this->strMax=$data[4];
                 $this->res=self::strLength($data[0],$data[1]);
                 break;
+            case 'account':
+                $this->res=self::verificationAccount($data[0],$data[1],$data[3]);
+                break;
             default:
                 $this->res=array($data[0],false,$data[2],"参数传输错误");
         }
         return $this->res;
+    }
+
+
+    /**
+     * 验证账号密码是否符合条件
+     * @param $name
+     * @param $str
+     * @param $msg
+     * @return array
+     */
+    public function verificationAccount($name,$str,$msg="必须为6-15位的数字和字母的组合") :array
+    {
+        if(!preg_match('/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,15}$/',$str)){
+            return array($name,$str,false,$msg);
+        }else{
+           return array($name,$str,true,"符合要求");
+        }
     }
 
     /**

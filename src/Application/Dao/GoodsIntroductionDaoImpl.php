@@ -1,7 +1,6 @@
 <?php
 namespace Application\Dao;
-use Application\Library\DeleteBuilder;
-use Application\Library\QueryBuilder;
+use Application\Library\SqlUtil;
 
 class GoodsIntroductionDaoImpl implements GoodsIntroductionDao
 {
@@ -15,8 +14,7 @@ class GoodsIntroductionDaoImpl implements GoodsIntroductionDao
     public function getGoodsId(string $field,int $goodsId): array
     {
         $sql="SELECT {$field} FROM tb_goods_introduction WHERE goods_id=?";
-        $data=array($goodsId);
-        return (new QueryBuilder())->run(2,$sql,"i",$data);
+        return (new SqlUtil())->run("query",$sql,"i",array($goodsId));
     }
 
     /**
@@ -24,11 +22,10 @@ class GoodsIntroductionDaoImpl implements GoodsIntroductionDao
      * @param int $goodsId
      * @return bool
      */
-    public function deleteByGoodsId(int $goodsId): bool
+    public function removeByGoodsId(int $goodsId): bool
     {
         $sql="DELETE FROM tb_goods_introduction WHERE goods_id=?";
-        $data=array($goodsId);
-        return (new DeleteBuilder())->run(2,$sql,"i",$data);
+        return (new SqlUtil())->run("remove",$sql,"i",array($goodsId));
     }
 
 

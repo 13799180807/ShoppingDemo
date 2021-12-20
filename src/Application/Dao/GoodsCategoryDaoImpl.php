@@ -1,8 +1,6 @@
 <?php
 namespace Application\Dao;
- use Application\Library\CountBuilder;
- use Application\Library\DeleteBuilder;
- use Application\Library\QueryBuilder;
+ use Application\Library\SqlUtil;
 
  class GoodsCategoryDaoImpl implements GoodsCategoryDao
  {
@@ -14,8 +12,7 @@ namespace Application\Dao;
      public function listGoodsCategoryName(string $fields) : array
      {
          $sql="SELECT {$fields} FROM tb_goods_category ";
-         return (new QueryBuilder())->run(1,$sql);
-
+         return (new SqlUtil())->run("queryAll",$sql);
      }
 
      /**
@@ -30,13 +27,11 @@ namespace Application\Dao;
          if($categoryId==0)
          {
              $sql="SELECT goods_id FROM tb_goods where goods_status=?";
-             $data=array($status);
-             $res=(new CountBuilder())->run(2,$sql,"i",$data);
+             $res=(new SqlUtil())->run("count",$sql,"i",array($status));
          }
          else{
              $sql="SELECT goods_id FROM tb_goods WHERE goods_category_id=? and goods_status=? ";
-             $data=array($categoryId,$status);
-             $res=(new CountBuilder())->run(2,$sql,"ii",$data);
+             $res=(new SqlUtil())->run("count",$sql,"ii",array($categoryId,$status));
          }
          return ceil($res/$num); //有小数就取整加一
      }
@@ -56,13 +51,12 @@ namespace Application\Dao;
          if($categoryId==0)
          {
              $sql="SELECT {$fields} FROM tb_goods  WHERE goods_status=? ORDER BY created_at LIMIT ?,?";
-             $data=array($status,$page,$num);
-             return (new QueryBuilder())->run(2,$sql,"iii",$data);
+             return (new SqlUtil())->run("query",$sql,"iii",array($status,$page,$num));
 
          }else{
              $sql="SELECT {$fields} FROM tb_goods WHERE goods_category_id=? and goods_status=? ORDER BY created_at LIMIT ?,?";
              $data=array($categoryId,$status,$page,$num);
-             return (new QueryBuilder())->run(2,$sql,"iiii",$data);
+             return (new SqlUtil())->run("query",$sql,"iiii",array($categoryId,$status,$page,$num));
          }
 
      }
@@ -76,8 +70,7 @@ namespace Application\Dao;
      public function getGoodsCategoryId(string $fields,int $categoryId) : array
      {
          $sql="SELECT {$fields} FROM tb_goods_category WHERE goods_category_id=? ";
-         $data=array($categoryId);
-         return (new QueryBuilder())->run(2,$sql,"i",$data);
+         return (new SqlUtil())->run("query",$sql,"i",array($categoryId));
      }
 
      /**
@@ -85,11 +78,10 @@ namespace Application\Dao;
       * @param int $categoryId
       * @return bool
       */
-     public function deleteByGoodsCategoryId(int $categoryId): bool
+     public function removeByGoodsCategoryId(int $categoryId): bool
      {
          $sql="DELETE FROM tb_goods_category WHERE goods_category_id=?";
-         $data=array($categoryId);
-         return (new DeleteBuilder())->run(2,$sql,"i",$data);
+         return (new SqlUtil())->run("remove",$sql,"i",array($categoryId));
      }
 
 

@@ -7,7 +7,7 @@ interface GoodsDao
      * @param int $goodsCategoryId
      * @return bool
      */
-    public function deleteByGoodsCategoryId(int $goodsCategoryId) :bool;
+    public function removeByGoodsCategoryId(int $goodsCategoryId) :bool;
 
     /**
      * 根据id获取单个商品信息

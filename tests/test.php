@@ -6,22 +6,106 @@ use Application\Dao\GoodsDaoImpl;
 use Application\Dao\GoodsIntroductionDaoImpl;
 use Application\Dao\GoodsPictureDaoImpl;
 use Application\Helper\FeedBack;
+use Application\Helper\FilterHelper;
+use Application\Helper\RegularExpression;
 use Application\Library\Connection;
-use Application\Library\CountBuilder;
-use Application\Library\DeleteBuilder;
-use Application\Library\QueryBuilder;
+use Application\Library\SqlUtil;
 use Application\Service\GoodsCategoryServiceImpl;
 use Application\Service\GoodsIntroductionServiceImpl;
 use Application\Service\GoodsPictureServiceImpl;
 use Application\Service\GoodsServiceImpl;
 
 echo " 测试页面 <hr>";
-//$sql="SELECT\s''  FROM tb_goods  WHERE goods_status=? ORDER BY created_at LIMIT ?,?";
+echo "<hr>";
 
-$pattern = "/(select[\s])|(insert[\s])|(update[\s])|(delete[\s])|(from[\s])|(where[\s])|(drop[\s])/i";
-$sql="/(select[\s])";
-$res=escapeString($pattern);
-echo $res;
+
+//$sql="SELECT * FROM tb_goods_category ";
+//var_dump((new SqlUtil())->run("queryAll",$sql));
+
+//$sql="SELECT * FROM tb_goods WHERE goods_category_id=? and goods_status=? ORDER BY created_at LIMIT ?,?";
+//
+//var_dump((new SqlUtil())->run("query",$sql,"iiii",array(1,1,1,3)));
+
+
+
+
+
+///** 新版本统计 */
+//$sql="SELECT goods_id FROM tb_goods WHERE goods_category_id=? and goods_status=? ";
+//var_dump((new SqlUtil())->run("count",$sql,"ii",array(1,1)));
+
+
+
+//新版本插入
+//$sql = "INSERT INTO demo (name, pwd) VALUES (?,?)";
+//var_dump((new SqlUtil())->run("save",$sql,"ss",array("6去","2")));
+
+
+
+
+/** 删除一个分类  */
+//(new GoodsCategoryServiceImpl())->removeByGoodsCategoryId(6);
+
+
+
+
+
+
+//新版本插入
+//$sql = "INSERT INTO demo (name, pwd) VALUES (?,?)";
+//var_dump((new SqlUtil())->run("save",$sql,"ss",array("asd","1234")));
+
+//新版本更新
+//$sql = "update demo set name=?,pwd=? where id=?";
+//var_dump((new SqlUtil())->run("update",$sql,"ssi",array("5asd","51234",5)));
+
+//新版本删除
+//$sql="DELETE FROM demo WHERE id=?";
+//var_dump((new SqlUtil())->run("remove",$sql,"i",array(5)));
+
+
+
+//$type="save";
+//
+//if ($type=="save" || $type=="update") {
+//
+//    echo 1;
+//}else{
+//    echo 2;
+//}
+
+//$sql = "update demo set name=?,pwd=? where id=?";
+//if ((new UpdateBuilder())->run($sql,"sss",array("336","333","500"))){
+//    echo "yes";
+//}else{
+//    echo "失败";
+//}
+
+//$sql = "INSERT INTO demo (name, pwd) VALUES (?,?)";
+//if ((new SaveBuilder())->run($sql,"ss",array("636","yes"))) {
+//    echo "成功";
+//}else{
+//    echo "失败";
+//}
+
+//(new SaveBuilder())->run("aaa");
+//
+//(new SaveBuilder())->run("aaa");
+//(new SaveBuilder())->run("aaa");
+//(new SaveBuilder())->run("aaa");
+//(new SaveBuilder())->run("aaa");
+//(new SaveBuilder())->run("aaa");
+//echo SaveBuilder::$conn;
+//$arr=array("account","s1234",'account',"");
+//$res=(new RegularExpression)->run($arr);
+//var_dump($res);
+
+//$sql="SELECT\s''  FROM tb_goods  WHERE goods_status=? ORDER BY created_at LIMIT ?,?";
+//
+//$pattern = "/(select[\s])|(insert[\s])|(update[\s])|(delete[\s])|(from[\s])|(where[\s])|(drop[\s])/i";
+//$sql="/(select[\s])";
+//$res=escapeString($pattern);
+//echo $res;
 
 //(new GoodsCategoryServiceImpl())->deleteByGoodsCategoryId(8);
 //(new GoodsIntroductionDaoImpl())->deleteByGoodsId(19);

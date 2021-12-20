@@ -1,7 +1,6 @@
 <?php
 namespace Application\Dao;
-use Application\Library\DeleteBuilder;
-use Application\Library\QueryBuilder;
+use Application\Library\SqlUtil;
 
 class GoodsDaoImpl implements  GoodsDao
 {
@@ -10,11 +9,11 @@ class GoodsDaoImpl implements  GoodsDao
      * @param int $goodsCategoryId
      * @return bool
      */
-    public function deleteByGoodsCategoryId(int $goodsCategoryId): bool
+    public function removeByGoodsCategoryId(int $goodsCategoryId): bool
     {
         $sql="DELETE FROM tb_goods WHERE goods_category_id=?";
-        $data=array($goodsCategoryId);
-        return (new DeleteBuilder())->run(2,$sql,"i",$data);
+        return (new SqlUtil())->run("remove",$sql,"i",array($goodsCategoryId));
+
     }
 
     /**
@@ -27,8 +26,7 @@ class GoodsDaoImpl implements  GoodsDao
     public function getById(string $fields,int $id,int $status): array
     {
         $sql="SELECT {$fields} FROM tb_goods WHERE goods_id=? and goods_status=? ";
-        $data=array($id,$status);
-        return (new QueryBuilder())->run(2,$sql,"ii",$data);
+        return (new SqlUtil())->run("query",$sql,"ii",array($id,$status));
     }
 
     /**
@@ -44,12 +42,10 @@ class GoodsDaoImpl implements  GoodsDao
     {
         if ($field=="created_at"){
             $sql="SELECT {$fields} FROM tb_goods WHERE  goods_status=?  ORDER BY created_at DESC limit ?";
-            $data=array($status,$num);
-            return (new QueryBuilder())->run(2,$sql,"ii",$data);
+            return (new SqlUtil())->run("query",$sql,"ii",array($status,$num));
         }else{
             $sql="SELECT {$fields} FROM tb_goods WHERE {$field}=? and goods_status=?  ORDER BY updated_at DESC limit ? ";
-            $data=array($value,$status,$num);
-            return (new QueryBuilder())->run(2,$sql,"sii",$data);
+            return (new SqlUtil())->run("query",$sql,"sii",array($value,$status,$num));
         }
 
     }
@@ -64,8 +60,7 @@ class GoodsDaoImpl implements  GoodsDao
     public function getByGoodsName(string $field,int $status,string $goodsName) : array
     {
         $sql="SELECT {$field} FROM tb_goods WHERE  goods_status=? and goods_name  LIKE ? ";
-        $data=array($status,$goodsName);
-        return (new QueryBuilder())->run(2,$sql,"is",$data);
+        return (new SqlUtil())->run("query",$sql,"is",array($status,$goodsName));
     }
 
     /**
@@ -77,8 +72,7 @@ class GoodsDaoImpl implements  GoodsDao
     public function listGoodsCategoryId(string $field,int $goodsCategoryId) :array
     {
         $sql="SELECT {$field} FROM tb_goods WHERE goods_category_id=? ";
-        $data=array($goodsCategoryId);
-        return (new QueryBuilder())->run(2,$sql,"i",$data);
+        return (new SqlUtil())->run("query",$sql,"i",array($goodsCategoryId));
     }
 
 

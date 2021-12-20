@@ -15,7 +15,7 @@ interface GoodsIntroductionDao
      * @param int $goodsId
      * @return bool
      */
-    public function deleteByGoodsId(int $goodsId) :bool;
+    public function removeByGoodsId(int $goodsId) :bool;
 
 
 

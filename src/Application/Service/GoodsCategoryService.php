@@ -38,7 +38,7 @@ interface GoodsCategoryService
      * @param int $categoryId
      * @return bool
      */
-    public function deleteByGoodsCategoryId(int $categoryId) :bool;
+    public function removeByGoodsCategoryId(int $categoryId) :bool;
 
 
 
