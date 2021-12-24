@@ -1,14 +1,11 @@
 <?php
 namespace Application\Controller;
-use Application\Helper\Dd;
 use Application\Helper\FeedBack;
 use Application\Helper\FilterHelper;
-use Application\Service\Ddd;
 use Application\Service\GoodsServiceImpl;
 
 class GoodsController
 {
-
 
     /** 首页界面显示用的 */
     public function actionIndex()
@@ -53,7 +50,6 @@ class GoodsController
                 echo FeedBack::result(200,"请求成功",$data);
                 return;
             }
-
         }
         echo FeedBack::fail("请求不正确，请正确传参");
     }

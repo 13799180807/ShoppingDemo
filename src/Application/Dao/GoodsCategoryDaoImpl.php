@@ -85,8 +85,32 @@ namespace Application\Dao;
      }
 
 
+     /**
+      * 管理员分类组合管理查询
+      * @param array $dataList
+      * @return array
+      */
+     public function listAdminIndex(array $dataList): array
+     {
+         $sql="SELECT * FROM tb_goods WHERE  goods_name  LIKE ? AND goods_status LIKE ? AND goods_category_id LIKE ?
+                          AND goods_hot LIKE ?   AND goods_recommendation LIKE ? ORDER BY created_at LIMIT ?,? ";
+         return (new  SqlUtil())->run("query",$sql,"sssssii",$dataList);
 
+     }
 
+     /**
+      * 统计页码
+      * @param int $num
+      * @param array $dataList
+      * @return int
+      */
+     public function countListAdminIndex(int $num, array $dataList): int
+     {
+         $sql="SELECT * FROM tb_goods WHERE  goods_name  LIKE ? AND goods_status LIKE ? AND goods_category_id LIKE ?
+                          AND goods_hot LIKE ?   AND goods_recommendation LIKE ?  ";
+         $res=(new SqlUtil())->run("count",$sql,"sssss",$dataList);
 
+         return ceil($res/$num); //有小数就取整加一
+     }
  }
 

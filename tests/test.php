@@ -1,6 +1,4 @@
 <?php
-
-
 use Application\Dao\GoodsCategoryDaoImpl;
 use Application\Dao\GoodsDaoImpl;
 use Application\Dao\GoodsIntroductionDaoImpl;
@@ -19,15 +17,28 @@ echo " 测试页面 <hr>";
 echo "<hr>";
 
 
+
+//$arr=array(
+//    'name'=>'0',
+//    'status'=>'1',
+//    'label'=>'2',
+//    'category'=>'0',
+//    'num'=>'10',
+//    'page'=>'1'
+//);
+//var_dump((new GoodsCategoryServiceImpl())->listAdminIndex($arr));
+
+
+
+//var_dump((new GoodsCategoryDaoImpl())->countListAdminIndex(20,array("%","%","%","%","%")));
+
+
 //$sql="SELECT * FROM tb_goods_category ";
 //var_dump((new SqlUtil())->run("queryAll",$sql));
 
 //$sql="SELECT * FROM tb_goods WHERE goods_category_id=? and goods_status=? ORDER BY created_at LIMIT ?,?";
 //
 //var_dump((new SqlUtil())->run("query",$sql,"iiii",array(1,1,1,3)));
-
-
-
 
 
 ///** 新版本统计 */

@@ -41,6 +41,14 @@ interface GoodsCategoryService
     public function removeByGoodsCategoryId(int $categoryId) :bool;
 
 
+    /**
+     * 管理员界面管理商品分类查询
+     * @param array $dataArr
+     * @return array
+     */
+    public function listAdminIndex(array $dataArr) :array;
+
+
 
 
 

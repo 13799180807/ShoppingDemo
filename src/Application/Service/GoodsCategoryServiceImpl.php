@@ -52,7 +52,7 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
     public function listGoodsCategoryName() : array
     {
         $res=(new GoodsCategoryDaoImpl())->listGoodsCategoryName("*");
-         return (new GoodsCategory())->categoryModel($res);
+        return (new GoodsCategory())->categoryModel($res);
 
     }
 
@@ -145,6 +145,75 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
 
     }
 
+    /**
+     * 管理员界面分类查询
+     * @param array $dataArr
+     * @return array
+     */
+    public function listAdminIndex(array $dataArr): array
+    {
+        /** 安全过滤 */
+        $data=FilterHelper::safeReplace($dataArr);
+
+        /** 取出数据并判断 */
+        if ($data['name']=="") {
+            $name="%";
+        } else {
+            $name="%".$data['name']."%";
+        }
+
+        if ($data['status']==2) {
+            $status="%";
+        } else {
+            $status=$data['status'];
+        }
+
+        /** 1热门，2推荐，3全部 */
+        if ($data['label']==1) {
+            $hot="1";
+            $recommendation="%";
+        } elseif ($data['label']==2) {
+            $hot="%";
+            $recommendation="1";
+        } else {
+            $hot="%";
+            $recommendation="%";
+        }
+
+        /** 分类 */
+        if ($data['category']==0) {
+            $category="%";
+            $categoryOne=array(
+                0=>array(
+                    'goodsCategoryId'=>0,
+                    'goodsCategoryName'=>'不限'
+                )
+            );
+        } else {
+            $category=$data['category'];
+            /** 当前查询分类 */
+            $res=(new GoodsCategoryDaoImpl())->getGoodsCategoryId("*",$data['category']);
+            $categoryOne=(new GoodsCategory())->categoryModel($res);
+        }
+
+        $num=$data['num'];
+        $start=($data['page']-1)*$num;
+
+        /** 查询结果  */
+        $res=(new GoodsCategoryDaoImpl())->listAdminIndex(array($name,$status,$category,$hot,$recommendation,$start,$num));
+        $goodsList=(new Goods())->GoodsModel($res);
+        /** 统计数量  */
+        $count=(new GoodsCategoryDaoImpl())->countListAdminIndex($num,array($name,$status,$category,$hot,$recommendation));
+
+        /** 所有分类 */
+        $categoryList=$this->listGoodsCategoryName();
 
 
+        return array(
+            "goodsList"=>$goodsList,
+            "category"=>$categoryList,
+            "categoryOne"=>$categoryOne,
+            "totalPage"=>$count, //根据查询返回的总页面
+        );
+    }
 }

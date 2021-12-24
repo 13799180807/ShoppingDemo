@@ -44,6 +44,20 @@ interface GoodsCategoryDao
      */
     public function removeByGoodsCategoryId(int $categoryId) :bool;
 
+    /**
+     * 管理员分类接口管理
+     * @param array $dataList
+     * @return array
+     */
+    public function listAdminIndex(array $dataList) :array;
+
+    /**
+     * 管理员界面分类查询统计
+     * @param int $num
+     * @param array $dataList
+     * @return int
+     */
+    public function countListAdminIndex(int $num,array $dataList) :int;
 
 
 

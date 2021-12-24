@@ -1,5 +1,6 @@
 <?php
 namespace Application\Library;
+use Application\Exception\Log;
 use mysqli;
 use mysqli_sql_exception;
 
@@ -9,6 +10,7 @@ use mysqli_sql_exception;
  * @package Application\Library
  */
 Class Connection{
+
     /**
      * 数据库连接
      * @return mysqli
@@ -29,7 +31,9 @@ Class Connection{
                 return $conn;
             }
         }catch(mysqli_sql_exception $e){
-            die("Connection failed: " . $conn->connect_error);
+            $msg="Connection failed: " . $conn->connect_error;
+            (new Log())->run($msg);
+            die();
             return $conn;
         }
     }

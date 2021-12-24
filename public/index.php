@@ -1,6 +1,7 @@
 <?php
 /** 引用配置文件*/
 define('APP_PATH',__DIR__.'/../');
+//$composerData = json_decode(file_get_contents(APP_PATH."composer.json"),true);
 define('APP_NAME','src/Application');
 define('APPLICATION',APP_PATH.'src/');
 define('DEBUG',false);
