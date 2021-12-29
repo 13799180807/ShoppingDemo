@@ -17,7 +17,7 @@ if (!function_exists('Splicing'))
         {
             if ($value=="*")
             {
-
+                return "*";
             }else{
                 $value=humpToUnderLine($value);
                 $str=$str.$value.",";

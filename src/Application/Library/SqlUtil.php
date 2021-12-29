@@ -15,7 +15,7 @@ class SqlUtil
 
 
     /**
-     * 查询的类型(save)(update)(remove)(count)(query)(queryAll无条件查询)
+     * 查询的类型(save)(update)(remove)(count)(countAll无条件查询)(query)(queryAll无条件查询)
      * @param string $sqlType
      * @param string $sql
      * @param string $fieldsType
@@ -55,6 +55,12 @@ class SqlUtil
                 return $res;
             case "count":
                 /** 有条件的统计数量 */
+                $result=$stmt->get_result();
+                $stmt->free_result();
+                $stmt->close();
+                return $result -> num_rows; //int
+            case "countAll":
+                /** 无条件统计 */
                 $result=$stmt->get_result();
                 $stmt->free_result();
                 $stmt->close();

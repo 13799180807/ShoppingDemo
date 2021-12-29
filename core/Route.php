@@ -5,6 +5,8 @@ use Application\Helper\FeedBack;
 
 class Route
 {
+    /** 用户 */
+    public string $userType='';
     /** 控制器 */
     public string $controller='';
 
@@ -18,6 +20,7 @@ class Route
     public function run()
     {
        // echo '初始化路由';
+        //第一个区分用户类别(admin/home) 第二个（指向控制器）第三个（控制器方法）
         $this->setRoute($_SERVER['REQUEST_URI']);
         $this->setCtrl();
         $this->makeCtrl();
@@ -52,10 +55,13 @@ class Route
 
     }
 
-    /** 处理前端get传进来的值 用get保存*/
+    /**
+     * 处理前端get传进来的值 用get保存
+     * @param $param
+     */
     public function setParam($param)
     {
-        $i=2;
+        $i=3;
         /** 判断分割后的有几个 */
         while ($i<=count($param))
         {
@@ -74,20 +80,28 @@ class Route
         $pathArr=$this->ctrlArr;
 
         /** 完整的uri */
-        if (count($pathArr)>=2)
+        if (count($pathArr)>=3)
         {
-            /** 控制器 */
+            /** 使用者类型 */
             if (isset($pathArr[0]))
             {
-                $this->controller=$pathArr[0];
+                $this->userType=$pathArr[0];
                 unset($pathArr[0]);
             }
 
-            /** 方法名 */
+
+            /** 控制器 */
             if (isset($pathArr[1]))
             {
-                $this->action=$pathArr[1];
+                $this->controller=$pathArr[1];
                 unset($pathArr[1]);
+            }
+
+            /** 方法名 */
+            if (isset($pathArr[2]))
+            {
+                $this->action=$pathArr[2];
+                unset($pathArr[2]);
             }
 
             /** 处理get信息存入post */
@@ -105,17 +119,30 @@ class Route
     /** 制作路由靠控制器的转发进行判断 */
     public function makeCtrl()
     {
-        /** 地址名字拼接组装 */
 
+        /** 地址名字拼接组装 */
         $ctrlName=$this->controller.'Controller.php';
-        $ctrlPath=APP_PATH.APP_NAME.'/Controller/'.$ctrlName;
+        if ($this->userType=="admin") {
+            $ctrlPath=APP_PATH.APP_NAME.'/Controller/Admin/'.$ctrlName;
+            $nameSpace='\Application\Controller\Admin\\';
+        } elseif ($this->userType=="home") {
+            $ctrlPath=APP_PATH.APP_NAME.'/Controller/Home/'.$ctrlName;
+            $nameSpace='\Application\Controller\Home\\';
+        } else {
+            include APP_PATH.'tests/test.php';
+//            header("Content-type:Application/json;charset=utf-8");
+//            echo FeedBack::result(500,"服务器出错","");
+            return;
+        }
 
         /** 检查控制器存在不存在 */
         if (is_file($ctrlPath))
         {
+
             /** 控制器存在，引入控制器 组装一下路径 new一个对象 */
             include $ctrlPath;
-            $nameSpace='\Application\Controller\\'.$this->controller.'Controller';
+
+            $nameSpace=$nameSpace.$this->controller.'Controller';
             $ctrl=new $nameSpace();
 
             /** 对控制器的方法进行组装 */
@@ -124,6 +151,7 @@ class Route
             /** 判断该方法存在不存在 */
             if (method_exists($ctrl,$method))
             {
+
                 /** 方法存在 调用这个方法 */
                 header("Content-type:Application/json;charset=utf-8");
                 $ctrl->$method();

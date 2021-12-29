@@ -8,7 +8,7 @@
  */
 function indexCurlPost():array
 {
-    $url="http://localhost:8080/goods/index";
+    $url="http://localhost:8080/home/goods/index";
     $datalist=array();
     $datalist["method"]="list";
     $json=curl_post($url,$datalist);
@@ -27,7 +27,7 @@ function indexCurlPost():array
  */
 function productCurlPost($id) :array
 {
-    $url="http://localhost:8080/goods/show";
+    $url="http://localhost:8080/home/goods/show";
     $datalist=array();
     $datalist["id"]=$id;
     $json=curl_post($url,$datalist);
@@ -45,7 +45,7 @@ function productCurlPost($id) :array
  */
 function fuzzyCurlPost($name) :array
 {
-    $url="http://localhost:8080/goods/fuzzy";
+    $url="http://localhost:8080/home/goods/fuzzy";
     $dataList=array();
     $dataList['fuzzy']=$name;
     $json=curl_post($url,$dataList);
@@ -66,7 +66,7 @@ function fuzzyCurlPost($name) :array
  */
 function categoryCurlPost($id,$page,$num) : array
 {
-    $url="http://localhost:8080/category/index";
+    $url="http://localhost:8080/home/category/Classification";
     $dataList=array();
     $dataList['id']=$id;
     $dataList['page']=$page;
@@ -83,7 +83,7 @@ function categoryCurlPost($id,$page,$num) : array
 //结束
 
 function registerUri($account,$password){
-    $url="http://localhost:8080/index/register/reg";
+    $url="http://localhost:8080/home/index/register/reg";
     $datalist=array();
     $datalist["account"]=$account;
     $datalist["password"]=$password;

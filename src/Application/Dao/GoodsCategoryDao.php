@@ -4,38 +4,43 @@ interface GoodsCategoryDao
 {
     /**
      * 获取商品表所有分类
-     * @param string $fields
      * @return array
      */
-    public function listGoodsCategoryName(string $fields) : array;
+    public function listCategory() : array;
 
     /**
-     * 统计页码 传入分类,显示数量得到页码
-     * @param int $categoryId
-     * @param int $num
-     * @param int $status
+     * 根据商品表中的条件进行统计一共满足条件有多少个数量返回int
+     * @param string $goods_name
+     * @param int $goods_status
+     * @param int $category_id
+     * @param int $goods_hot
+     * @param int $goods_recommendation
      * @return int
      */
-    public function countGoodsCategoryId(int $categoryId, int $num,int $status=1) : int;
-
+    public function countCategoryByGoodsCondition(string $goods_name="",int $goods_status=0,
+                                                  int $category_id=0,int $goods_hot=0 ,
+                                                  int $goods_recommendation=0) :int;
     /**
-     * 分页查询显示
-     * @param string $fields
-     * @param int $categoryId
+     * 根据条件进行查询分页输出
+     * @param string $userType
+     * @param string $goods_name
+     * @param int $goods_status
+     * @param int $goods_category_id
+     * @param int $goods_hot
+     * @param int $goods_recommendation
      * @param int $page
      * @param int $num
-     * @param int $status
      * @return array
      */
-    public function listGoodsCategoryPagination(string $fields,int $categoryId,int $page,int $num,int $status=1) :array;
+    public function listGoodsCategory(string $userType, string $goods_name, int $goods_status, int $goods_category_id,
+                                      int $goods_hot, int $goods_recommendation, int $page, int $num) :array;
 
     /**
      * 获取一个分类信息
-     * @param string $fields
      * @param int $categoryId
      * @return array
      */
-    public function getGoodsCategoryId(string $fields,int $categoryId) :array;
+    public function getGoodsCategoryId(int $categoryId) :array;
 
     /**
      * 根据id删除这个分类
@@ -44,20 +49,12 @@ interface GoodsCategoryDao
      */
     public function removeByGoodsCategoryId(int $categoryId) :bool;
 
-    /**
-     * 管理员分类接口管理
-     * @param array $dataList
-     * @return array
-     */
-    public function listAdminIndex(array $dataList) :array;
 
-    /**
-     * 管理员界面分类查询统计
-     * @param int $num
-     * @param array $dataList
-     * @return int
-     */
-    public function countListAdminIndex(int $num,array $dataList) :int;
+
+
+
+
+
 
 
 

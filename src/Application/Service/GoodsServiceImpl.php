@@ -5,26 +5,21 @@ use Application\Dao\GoodsDaoImpl;
 use Application\Dao\GoodsIntroductionDaoImpl;
 use Application\Dao\GoodsPictureDaoImpl;
 use Application\Domain\Goods;
+use Application\Domain\GoodsIntroduction;
+use Application\Domain\GoodsPicture;
 use Application\Helper\FilterHelper;
 
 class GoodsServiceImpl implements GoodsService
 {
-
     /**
      * 商城主页显示信息用的
      * @return array[]
      */
     public function listIndex(): array
     {
-        $fields=array(
-            'goodsId','goodsName','goodsCategoryId','goodsPrice','goodsImg',
-        );
-        $fields=splicing($fields);
-
-        //热门  推荐产品  最新商品
-        $resHot=(new GoodsDaoImpl())->listField($fields,"goods_hot","1",1,5);
-        $resRecommendation=(new GoodsDaoImpl())->listField($fields,"goods_recommendation","1",1,5);
-        $resNewest=(new GoodsDaoImpl())->listField($fields,"created_at","1",1,7);
+        $resHot=(new GoodsDaoImpl())->listField(5,1,"goods_hot","1");
+        $resRecommendation=(new GoodsDaoImpl())->listField(5,1,"goods_recommendation","1");
+        $resNewest=(new GoodsDaoImpl())->listField(7,1,"goods_hot","1");
 
         $hot=(new Goods())->GoodsModel($resHot);
         $recommend=(new Goods())->GoodsModel($resRecommendation);
@@ -40,31 +35,43 @@ class GoodsServiceImpl implements GoodsService
 
     /**
      * 单个商品详情页面
+     * @param string $userType
      * @param int $id
      * @return array
      */
-    public function listGoodsIdShow(int $id): array
+    public function listGoodsIdShow(string $userType,int $id): array
     {
-        $data=array(
-            'id'=>$id
-        );
-        /** 安全过滤 */
-        $data=FilterHelper::safeReplace($data);
-        $fields=array(
-            'goodsId','goodsName','goodsCategoryId','goodsPrice','goodsStock',
-            'goodsHot','goodsRecommendation','goodsDescribe','goodsImg', 'createdAt',
-        );
-        $fields=splicing($fields);
+        /** 判断用户还是管理员 */
+        if ($userType=='admin') {
+            /** 管理员执行的 */
+            $resGoods=(new GoodsDaoImpl())->getById('admin',$id);
+            if (count($resGoods) >0 ) {
+                /** 商品存在 */
+                $resImg=(new GoodsPictureDaoImpl())->getGoodsId($id);
+                $resText=(new GoodsIntroductionDaoImpl())->getGoodsId($id);
+            } else {
+                /** 没有这个商品 */
+                $resImg=array();
+                $resText=array();
+            }
+        } else {
+            /** 用户查询的 */
+            $resGoods=(new GoodsDaoImpl())->getById('user',$id,1);
+            if (count($resGoods) >0 ) {
+                $resImg=(new GoodsPictureDaoImpl())->getGoodsId($id);
+                $resText=(new GoodsIntroductionDaoImpl())->getGoodsId($id);
+            }  else {
+                /** 没有这个商品 */
+                $resImg=array();
+                $resText=array();
+            }
 
-        /** 查询对应数据 */
-        $resGoods=(new GoodsDaoImpl())->getById($fields,$data['id'],1);
-        $resImg=(new GoodsPictureDaoImpl())->getGoodsId("*",$data['id']);
-        $resText=(new GoodsIntroductionDaoImpl())->getGoodsId("*",$data['id']);
+        }
 
-        /** 判断是否有数据 */
+        /** 数据进行组装输出*/
         $goods=(new Goods())->GoodsModel($resGoods);
-        $img=(new Goods())->GoodsModel($resImg);
-        $text=(new Goods())->GoodsModel($resText);
+        $img=(new GoodsPicture())->pictureModel($resImg);
+        $text=(new GoodsIntroduction())->introductionModel($resText);
 
         return array(
             "goods"=>$goods,
@@ -74,29 +81,16 @@ class GoodsServiceImpl implements GoodsService
 
     }
 
-    /**
-     * 根据名字进行模糊查询
-     * @param string $goodsName
-     * @return array
-     */
-    public function getGoodsNameFuzzy(string $goodsName): array
-    {
-        $data=array(
-            'goodsName'=>$goodsName,
-        );
-        $data=FilterHelper::safeReplace($data);
-        $fields=array(
-            'goodsId','goodsName','goodsCategoryId','goodsPrice','goodsImg',
-        );
-        $fields=splicing($fields);
-        $goodsName="%".$data['goodsName']."%";
-        $res=(new GoodsDaoImpl())->getByGoodsName($fields,1,$goodsName);
-        return (new Goods())->GoodsModel($res);
-
-    }
-
-
-
+//    /**
+//     * 根据名字进行模糊查询
+//     * @param string $goodsName
+//     * @return array
+//     */
+//    public function getByGoodsName(string $goodsName): array
+//    {
+//        $res=(new GoodsDaoImpl())->getByGoodsName($goodsName,1);
+//        return (new Goods())->GoodsModel($res);
+//    }
 
 
 }

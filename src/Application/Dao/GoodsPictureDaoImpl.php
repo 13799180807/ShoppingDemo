@@ -7,13 +7,12 @@ class GoodsPictureDaoImpl implements GoodsPictureDao
 
     /**
      * 根据商品id获取更多图片信息
-     * @param string $field
      * @param int $goodsId
      * @return array
      */
-    public function getGoodsId(string $field,int $goodsId): array
+    public function getGoodsId(int $goodsId): array
     {
-        $sql="SELECT {$field} FROM tb_goods_picture WHERE goods_id=?";
+        $sql="SELECT * FROM tb_goods_picture WHERE goods_id=?";
         return (new SqlUtil())->run("query",$sql,"i",array($goodsId));
     }
 

@@ -3,6 +3,7 @@ use Application\Dao\GoodsCategoryDaoImpl;
 use Application\Dao\GoodsDaoImpl;
 use Application\Dao\GoodsIntroductionDaoImpl;
 use Application\Dao\GoodsPictureDaoImpl;
+use Application\Helper\DetectRequest;
 use Application\Helper\FeedBack;
 use Application\Helper\FilterHelper;
 use Application\Helper\RegularExpression;
@@ -18,6 +19,146 @@ echo "<hr>";
 
 
 
+
+/** 用户获取分类信息 */
+//$data=(new GoodsCategoryServiceImpl())->listGoodsCategory('user',1,5,1,5);
+//var_dump($data);
+/** 用户获取分页信息 */
+//var_dump((new GoodsCategoryServiceImpl())->listGoodsCategory("admin",0,0,1,3,"",0,0));
+
+
+/** 用户的模糊查询 */
+//var_dump((new GoodsServiceImpl())->getByGoodsName("小"));
+/** 单个商品的详细信息查看 */
+//var_dump((new GoodsServiceImpl())->listGoodsIdShow("admin",5));
+/** 主页显示的信息 */
+//var_dump((new GoodsServiceImpl())->listIndex());
+
+//var_dump((new GoodsDaoImpl())->listGoodsCategoryId(1));
+//var_dump((new GoodsDaoImpl())->getByGoodsName("小"));
+//var_dump((new GoodsDaoImpl())->listField(5,0,"goods_hot","21"));
+//var_dump((new GoodsDaoImpl())->listField(5,0,"goods_hot",1,));
+//var_dump((new GoodsDaoImpl())->getById("user",40,1));
+
+
+
+
+
+//$a1="insert into from table value ('ss',''s);";
+//$a2="delete from table ";
+//$a3="select * from table where and where ";
+//$a4="12345qwert";
+/*$a5="?><:{}+_)*&^%$##@";*/
+//$a6="~~@@!#$%^&*(){}][';<>.,//";
+//
+//
+//$c="abc";
+//$c1=(int)$c;
+//var_dump($c);
+//var_dump($c1);
+//
+//$c2="123";
+//$c3=(string)$c2;
+//var_dump($c2);
+//var_dump($c3);
+
+
+
+//echo "<hr>";
+//
+//$b1=escapeshellcmd($a1);
+//echo $a1." || ".$b1;
+//echo "<hr>";
+//
+//$b2=addslashes($a2);
+//echo $a2." || ".$b2;
+//echo "<hr>";
+//
+//$b3=escapeshellcmd($a3);
+//echo $a3." || ".$b3;
+//echo "<hr>";
+//
+//$b4=quotemeta($a4);
+//echo $a4." || ".$b4;
+//echo "<hr>";
+//
+//$b5=quotemeta($a5);
+//echo $a5." || ".$b5;
+//echo "<hr>";
+//
+//$b6=quotemeta($a6);
+//echo $a6." || ".$b6;
+//echo "<hr>";
+//$var='123456Bob sd bob';
+//echo str_replace("sd","A",$var);
+
+//var_dump((new GoodsCategoryDaoImpl())->listGoodsCategoryPagination("admin","","0","0","0","0","1","5"));
+
+
+//var_dump((new GoodsCategoryDaoImpl())->countCategoryByGoodsCondition(''));
+
+
+
+
+
+//$a=splicing(array("AAAAAAAAAAasa",'demo_a_aaa_aas',"asAs",'*'));
+//echo $a;
+
+
+//var_dump((new GoodsCategoryDaoImpl())->countCategoryByGoodsCondition("","0","0","0","0"));
+//var_dump((new GoodsCategoryDaoImpl())->countCategoryByGoodsCondition("","0","0","0","0"));
+
+
+
+
+//$dataList=array();
+//$dataList[]=2;
+//$dataList[]=3;
+//$dataList[]=1;
+//var_dump($dataList);
+
+
+
+
+//$requestData = array(
+//    'name'=>"goodsName",
+//    'status'=>"goodsStatus",
+//    'label'=>"goodsLabel",
+//    'category'=>"goodsCategory",
+//    'num'=>"num",
+//    'page'=>"page"
+//);
+//var_dump($requestData);
+
+
+//$detectData=array(
+//    0=>array('name',"11","str",0,10),
+//    1=>array('status',"2","num",0,5),
+//    2=>array('label',"2","num",0,5),
+//    3=>array('category',"3","num",0,10),
+//    4=>array('num',"6","num",5,50),
+//    5=>array('page',"1","num",0,1000),
+//);
+//
+//$res=DetectRequest::detectRun($detectData);
+//
+//var_dump(count($res));
+
+
+
+//$requestData=array(
+//    'name'=>'0',
+//    'status'=>'1',
+//    'label'=>'2',
+//    'category'=>'0',
+//    'num'=>'10',
+//    'page'=>'1'
+//);
+//$res=array(true,$requestData);
+//var_dump($res[0]);
+//foreach ($requestData as $key=>$val ) {
+//  echo $key.":".$val."<br/>";
+//}
 //$arr=array(
 //    'name'=>'0',
 //    'status'=>'1',

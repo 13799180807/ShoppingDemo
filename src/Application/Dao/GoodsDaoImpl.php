@@ -18,65 +18,111 @@ class GoodsDaoImpl implements  GoodsDao
 
     /**
      * 根据id进行查询商品的某个信息
-     * @param string $fields
-     * @param int $id
-     * @param int $status
+     * @param string $userType
+     * @param int $goods_id
+     * @param int $goods_status
      * @return array
      */
-    public function getById(string $fields,int $id,int $status): array
+    public function getById(string $userType, int $goods_id, int $goods_status=0): array
     {
-        $sql="SELECT {$fields} FROM tb_goods WHERE goods_id=? and goods_status=? ";
-        return (new SqlUtil())->run("query",$sql,"ii",array($id,$status));
+        /** 组装sql */
+        $dataList=array();
+
+        if ($userType == "admin" ) {
+            $sql="SELECT * FROM tb_goods WHERE goods_id=? AND";
+        } else {
+            $sql="SELECT goods_id,goods_name,goods_category_id,goods_price,goods_stock, goods_hot,goods_recommendation,goods_describe,goods_img,created_at FROM tb_goods WHERE goods_id=? AND";
+        }
+        $fieldsType="i";
+        $dataList[]=$goods_id;
+
+        if ($goods_status != 0) {
+            /** 增加条件 */
+            $sql=$sql." goods_status=?";
+            $fieldsType=$fieldsType."i";
+            $dataList[]=$goods_status;
+        } else {
+            /** 去掉多余的AND */
+            $sql=trim($sql,"AND");
+
+        }
+        return (new SqlUtil())->run("query",$sql,$fieldsType,$dataList);
+
     }
 
     /**
-     * 根据进来不同字段获取不同数据
-     * @param string $fields
+     * 根据不同字段进行查询该字段的信息
+     * @param int $num
+     * @param int $status
      * @param string $field
      * @param string $value
-     * @param int $status
-     * @param int $num
      * @return array
      */
-    public function listField(string $fields,string $field,string $value,int $status,int $num) : array
+    public function listField(int $num,int $status, string $field="",string $value="") : array
     {
-        if ($field=="created_at"){
-            $sql="SELECT {$fields} FROM tb_goods WHERE  goods_status=?  ORDER BY created_at DESC limit ?";
-            return (new SqlUtil())->run("query",$sql,"ii",array($status,$num));
-        }else{
-            $sql="SELECT {$fields} FROM tb_goods WHERE {$field}=? and goods_status=?  ORDER BY updated_at DESC limit ? ";
-            return (new SqlUtil())->run("query",$sql,"sii",array($value,$status,$num));
+        $sql = "SELECT goods_id,goods_name,goods_category_id,goods_price,goods_img FROM tb_goods WHERE";
+        $dataList = array();
+        $fieldsType="";
+
+        if ($status != 0) {
+            $sql=$sql." goods_status=? AND";
+            $dataList[]=$status;
+            $fieldsType=$fieldsType."i";
         }
+
+        /** 拼接sql */
+        if ( $field !="") {
+            $sql=$sql." ".$field."=? ORDER BY updated_at DESC limit ?";
+            $dataList[]=$value;
+            $dataList[]=$num;
+            $fieldsType=$fieldsType."si";
+        } else {
+            $sql=trim($sql,"WHERE");
+            $sql=trim($sql,"AND");
+            $sql=$sql." ORDER BY created_at DESC limit ?";
+            $dataList[]=$num;
+            $fieldsType=$fieldsType."i";
+        }
+        return (new SqlUtil())->run("query",$sql,$fieldsType,$dataList);
 
     }
 
     /**
      * 根据名字进行模糊查询商品信息
-     * @param string $field
-     * @param int $status
      * @param string $goodsName
+     * @param int $status
      * @return array
      */
-    public function getByGoodsName(string $field,int $status,string $goodsName) : array
+    public function getByGoodsName(string $goodsName,int $status=0) : array
     {
-        $sql="SELECT {$field} FROM tb_goods WHERE  goods_status=? and goods_name  LIKE ? ";
-        return (new SqlUtil())->run("query",$sql,"is",array($status,$goodsName));
+        $sql="SELECT goods_id,goods_name,goods_category_id,goods_price,goods_img FROM tb_goods WHERE";
+        $dataList=array();
+        $goodsName=str_replace("%"," ",addslashes($goodsName));
+        $goodsName="%".$goodsName."%";
+        /** 拼装 */
+        if ($status !=0) {
+            $sql=$sql." goods_status=? and goods_name  LIKE ?";
+            $fieldsType="is";
+            $dataList[]=$status;
+            $dataList[]=$goodsName;
+        } else {
+            $sql=$sql." goods_name  LIKE ?";
+            $fieldsType="s";
+            $dataList[]=$goodsName;
+        }
+        return (new SqlUtil())->run("query",$sql,$fieldsType,$dataList);
     }
 
     /**
-     * 获取这个分类下的所有id
-     * @param string $field
+     * 获取这个分类下的商品的id
      * @param int $goodsCategoryId
      * @return array
      */
-    public function listGoodsCategoryId(string $field,int $goodsCategoryId) :array
+    public function listGoodsCategoryId(int $goodsCategoryId) :array
     {
-        $sql="SELECT {$field} FROM tb_goods WHERE goods_category_id=? ";
+        $sql="SELECT goods_id FROM tb_goods WHERE goods_category_id=? ";
         return (new SqlUtil())->run("query",$sql,"i",array($goodsCategoryId));
     }
-
-
-
 
 
 }

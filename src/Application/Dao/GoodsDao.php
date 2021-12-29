@@ -10,41 +10,38 @@ interface GoodsDao
     public function removeByGoodsCategoryId(int $goodsCategoryId) :bool;
 
     /**
-     * 根据id获取单个商品信息
-     * @param string $fields
-     * @param int $id
-     * @param int $status
+     * 根据id进行查询商品的某个信息
+     * @param string $userType
+     * @param int $goods_id
+     * @param int $goods_status
      * @return array
      */
-    public function getById(string $fields,int $id,int $status) :array;
+    public function getById(string $userType, int $goods_id, int $goods_status=0) :array;
 
     /**
-     * 根据一个字段名进行查询获取多个对象
-     * @param string $fields
+     * 根据不同字段进行查询该字段的信息
+     * @param int $num
+     * @param int $status
      * @param string $field
      * @param string $value
-     * @param int $status
-     * @param int $num
      * @return array
      */
-    public function listField(string $fields,string $field, string $value, int $status, int $num) :array;
+    public function listField(int $num ,int $status,string $field="", string $value="") :array;
 
     /**
      * 根据名字进行模糊查询商品信息
-     * @param string $field
-     * @param int $status
      * @param string $goodsName
+     * @param int $status
      * @return array
      */
-    public function getByGoodsName(string $field,int $status,string $goodsName) :array;
+    public function getByGoodsName(string $goodsName,int $status=0) :array;
 
     /**
-     * 获取这个分类下的商品所有信息
-     * @param string $field
+     * 获取这个分类下的商品的id
      * @param int $goodsCategoryId
      * @return array
      */
-    public function listGoodsCategoryId(string $field,int $goodsCategoryId) :array;
+    public function listGoodsCategoryId(int $goodsCategoryId) :array;
 
 
 

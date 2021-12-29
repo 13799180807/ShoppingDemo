@@ -47,6 +47,7 @@ class RegularExpression
     }
 
 
+
     /**
      * 验证账号密码是否符合条件
      * @param $name
@@ -93,6 +94,9 @@ class RegularExpression
         return array($name,false,$str,'长度不符合');
 
     }
+
+
+
 
 
 }
