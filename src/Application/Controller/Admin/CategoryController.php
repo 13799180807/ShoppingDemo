@@ -36,11 +36,11 @@ class CategoryController
             /** 对数据进行检测是否符合我要的规范 */
             $detectData=array(
               0=>array('goodsName',$requestData['name'],"str",0,10),
-              1=>array('goodsStatus',$requestData['status'],"num",0,5),
-              2=>array('goodsLabel',$requestData['label'],"num",0,5),
-              3=>array('goodsCategory',$requestData['category'],"num",0,10),
-              4=>array('num',$requestData['num'],"num",5,50),
-              5=>array('page',$requestData['page'],"num",0,1000),
+              1=>array('goodsStatus',$requestData['status'],"numInt",0,5),
+              2=>array('goodsLabel',$requestData['label'],"numInt",0,5),
+              3=>array('goodsCategory',$requestData['category'],"numInt",0,10),
+              4=>array('num',$requestData['num'],"numInt",5,50),
+              5=>array('page',$requestData['page'],"numInt",0,1000),
             );
 
             $resDetectData=DetectRequest::detectRun($detectData);

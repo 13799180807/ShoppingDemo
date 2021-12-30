@@ -1,13 +1,14 @@
 <?php
 namespace Application\Service;
 
+use Application\Dao\GoodsCategoryDaoImpl;
 use Application\Dao\GoodsDaoImpl;
 use Application\Dao\GoodsIntroductionDaoImpl;
 use Application\Dao\GoodsPictureDaoImpl;
 use Application\Domain\Goods;
 use Application\Domain\GoodsIntroduction;
 use Application\Domain\GoodsPicture;
-use Application\Helper\FilterHelper;
+use Application\Helper\Filter;
 
 class GoodsServiceImpl implements GoodsService
 {
@@ -72,9 +73,10 @@ class GoodsServiceImpl implements GoodsService
         $goods=(new Goods())->GoodsModel($resGoods);
         $img=(new GoodsPicture())->pictureModel($resImg);
         $text=(new GoodsIntroduction())->introductionModel($resText);
-
+        $categoryList=(new GoodsCategoryDaoImpl())->listCategory();
         return array(
             "goods"=>$goods,
+            "categoryList"=>$categoryList,
             "goodsIntroduce"=>$text,
             "goodsPicture"=>$img
         );
@@ -93,4 +95,16 @@ class GoodsServiceImpl implements GoodsService
 //    }
 
 
+    public function updateGoodsById(int $goodsId, string $name, int $categoryId, float $prick, int $stock, int $status = 1,
+                                    int $hot = 2, int $recommendation = 2, string $describe = "", string $img = ""): bool
+    {
+        // TODO: Implement updateGoodsById() method.
+        /**  检验数据类型*/
+        /** 判断这个商品id存在不存在 */
+        /** 检查商品名是否已经存在 */
+        /** 权限比对 */
+        /** 执行修改商品信息操作 */
+        /** 回调函数 */
+        /** ...... */
+    }
 }

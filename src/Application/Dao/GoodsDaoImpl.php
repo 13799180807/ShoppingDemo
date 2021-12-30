@@ -1,5 +1,6 @@
 <?php
 namespace Application\Dao;
+use Application\Helper\Filter;
 use Application\Library\SqlUtil;
 
 class GoodsDaoImpl implements  GoodsDao
@@ -124,5 +125,39 @@ class GoodsDaoImpl implements  GoodsDao
         return (new SqlUtil())->run("query",$sql,"i",array($goodsCategoryId));
     }
 
+    /**
+     * 根据商品id进行这个分类更新
+     * @param int $goodsId
+     * @param string $name
+     * @param int $categoryId
+     * @param float $prick
+     * @param int $stock
+     * @param int $status
+     * @param int $hot
+     * @param int $recommendation
+     * @param string $describe
+     * @param string $img
+     * @return bool
+     */
+    public function updateGoodsById(int $goodsId, string $name, int $categoryId, float $prick, int $stock, int $status = 1,
+                                    int $hot = 2, int $recommendation = 2, string $describe = "", string $img = ""): bool
+    {
+        /** 数据检测过滤 */
+        //mysqli_real_escape_string()没必要了意思不大
 
+        /** 过滤转义字符 */
+        $filterArr=array(
+            "name"=>$name,
+            "describe"=>$describe,
+            "img"=>$img,
+        );
+        $resFilter=Filter::setEntities($filterArr);
+
+        /** 执行操作 */
+        $sql="UPDATE tb_goods SET goods_name=?,goods_category_id=?,goods_price=?,goods_stock=?,goods_status=?,
+                  goods_hot=?, goods_recommendation=? ,goods_describe=?,goods_img=? WHERE goods_id=? ";
+        $dataList=array($resFilter['name'],$categoryId,$prick,$stock,$status,$hot,$recommendation,$resFilter['describe'],$resFilter['img'],$goodsId);
+        return (new SqlUtil())->run("update",$sql,"sisiiiissi",$dataList);
+
+    }
 }

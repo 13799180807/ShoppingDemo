@@ -48,9 +48,11 @@ class SqlUtil
         switch ($type)
         {
             case "save":
+                $stmt->close();
+                return mysqli_insert_id(self::$conn);  //返回int类型插入的id
             case "update":
             case "remove":
-                /** 执行插入或者更新或者删除 返回的是 true,false */
+                /** 执行或者更新或者删除 返回的是 true,false */
                 $stmt->close();
                 return $res;
             case "count":

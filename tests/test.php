@@ -5,7 +5,7 @@ use Application\Dao\GoodsIntroductionDaoImpl;
 use Application\Dao\GoodsPictureDaoImpl;
 use Application\Helper\DetectRequest;
 use Application\Helper\FeedBack;
-use Application\Helper\FilterHelper;
+use Application\Helper\Filter;
 use Application\Helper\RegularExpression;
 use Application\Library\Connection;
 use Application\Library\SqlUtil;
@@ -14,11 +14,59 @@ use Application\Service\GoodsIntroductionServiceImpl;
 use Application\Service\GoodsPictureServiceImpl;
 use Application\Service\GoodsServiceImpl;
 
-echo " 测试页面 <hr>";
-echo "<hr>";
 
 
 
+
+
+
+
+
+
+
+//$data=array(
+/*        "a"=>"<? W3S?h????>",*/
+//        "b"=>"123",
+//        "c"=>"!@#$%^&*(",
+//);
+//var_dump($data);
+//echo "<hr>";
+//$a=Filter::setEntities($data);
+//echo $a['a'];
+//echo "<hr>";
+
+
+
+
+
+//$a='1";drop table demo; ';
+//$sql = "update demo set name=?,pwd=? where id=?";
+//var_dump((new SqlUtil())->run("update",$sql,"ssi",array($str,"33",46)));
+//echo " 测试页面 <hr>";
+//echo "<hr>";
+
+//var_dump("1\r2\n3\4'5Control-Z");
+//echo "1\r2\n3\4'5Control-Z";
+////$sql = "update demo set name=?,pwd=? where id=?";
+////
+//$conn=(new Connection())->conn();
+//$user = mysqli_real_escape_string($conn,"1\r2\n3\4'5Control-Z");
+//$pwd = mysqli_real_escape_string($conn,"1\r2\n3\4'5Control-Z");
+//var_dump($user);
+//var_dump($pwd);
+//
+//$sql="UPDATE tb_goods SET goods_name=?,goods_category_id=?,goods_price=?,goods_stock=?,goods_status=?,
+//                  goods_hot=?, goods_recommendation=? ,goods_describe=?,goods_img=? WHERE goods_id=? ";
+//$test=array('修改01',2,'15.26',111,2,2,2,"更新测试","11.jpg",1);
+// (new SqlUtil())->run("update",$sql,"sisiiiissi",$test);
+
+
+/** 数据库更新 */
+//$sql = "update demo set name=?,pwd=? where id=?";
+//var_dump((new SqlUtil())->run("update",$sql,"ssi",array("小明","33",32)));
+/** 数据库插入 */
+//$sql = "INSERT INTO demo (name, pwd) VALUES (?,?)";
+//var_dump((new SqlUtil())->run("save",$sql,"ss",array("小明","222")));
 
 /** 用户获取分类信息 */
 //$data=(new GoodsCategoryServiceImpl())->listGoodsCategory('user',1,5,1,5);
@@ -39,9 +87,6 @@ echo "<hr>";
 //var_dump((new GoodsDaoImpl())->listField(5,0,"goods_hot","21"));
 //var_dump((new GoodsDaoImpl())->listField(5,0,"goods_hot",1,));
 //var_dump((new GoodsDaoImpl())->getById("user",40,1));
-
-
-
 
 
 //$a1="insert into from table value ('ss',''s);";
@@ -188,9 +233,6 @@ echo "<hr>";
 
 
 
-//新版本插入
-//$sql = "INSERT INTO demo (name, pwd) VALUES (?,?)";
-//var_dump((new SqlUtil())->run("save",$sql,"ss",array("6去","2")));
 
 
 
@@ -207,9 +249,7 @@ echo "<hr>";
 //$sql = "INSERT INTO demo (name, pwd) VALUES (?,?)";
 //var_dump((new SqlUtil())->run("save",$sql,"ss",array("asd","1234")));
 
-//新版本更新
-//$sql = "update demo set name=?,pwd=? where id=?";
-//var_dump((new SqlUtil())->run("update",$sql,"ssi",array("5asd","51234",5)));
+
 
 //新版本删除
 //$sql="DELETE FROM demo WHERE id=?";
@@ -349,12 +389,12 @@ echo "<hr>";
 //$arr['llo']="&quot;//into";
 //$arr['word']="elect\\to";
 //var_dump($arr);
-//$arr=\src\Application\Helper\FilterHelper::safeReplace($arr);
+//$arr=\src\Application\Helper\Filter::safeReplace($arr);
 //
-////$arr=FilterHelper::safeReplace($arr);
+////$arr=Filter::safeReplace($arr);
 //
 //echo "<br />";
 //var_dump($arr);
 
-  
+
 

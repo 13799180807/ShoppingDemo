@@ -3,7 +3,7 @@ namespace Application\Service;
 
 use Application\Dao\GoodsPictureDaoImpl;
 use Application\Domain\GoodsPicture;
-use Application\Helper\FilterHelper;
+use Application\Helper\Filter;
 
 class GoodsPictureServiceImpl implements GoodsPictureService
 {
@@ -18,7 +18,7 @@ class GoodsPictureServiceImpl implements GoodsPictureService
 //            'id'=>$goodsId
 //        );
 //        /** 安全过滤 */
-//        $data=FilterHelper::safeReplace($data);
+//        $data=Filter::safeReplace($data);
 //        $res=(new GoodsPictureDaoImpl())->getGoodsId("*",$data['id']);
 //
 //        if (count($res)>0)

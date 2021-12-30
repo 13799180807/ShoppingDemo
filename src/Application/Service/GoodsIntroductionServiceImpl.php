@@ -3,7 +3,7 @@ namespace Application\Service;
 
 use Application\Dao\GoodsIntroductionDaoImpl;
 use Application\Domain\GoodsIntroduction;
-use Application\Helper\FilterHelper;
+use Application\Helper\Filter;
 
 class GoodsIntroductionServiceImpl implements GoodsIntroductionService
 {
@@ -18,7 +18,7 @@ class GoodsIntroductionServiceImpl implements GoodsIntroductionService
 //            'id'=>$goodsId,
 //        );
 //        /** 安全过滤 */
-//        $data=FilterHelper::safeReplace($data);
+//        $data=Filter::safeReplace($data);
 //        $res=(new GoodsIntroductionDaoImpl())->getGoodsId("*",$data['id']);
 //
 //        if (count($res)>0)

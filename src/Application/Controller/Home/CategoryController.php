@@ -24,9 +24,9 @@ class CategoryController
             /** 获得前端请求的数据 */
             $requestData=$resRequest[1];
             $detectData=array(
-                0=>array('id',$requestData['categoryId'],"num",0,100),
-                1=>array('page',$requestData['page'],"num",1,9999),
-                2=>array('num',$requestData['num'],"num",1,99),
+                0=>array('id',$requestData['categoryId'],"numInt",0,100),
+                1=>array('page',$requestData['page'],"numInt",1,9999),
+                2=>array('num',$requestData['num'],"numInt",1,99),
             );
 
             $resDetectData=DetectRequest::detectRun($detectData);

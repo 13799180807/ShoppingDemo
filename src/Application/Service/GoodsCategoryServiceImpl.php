@@ -7,7 +7,7 @@ use Application\Dao\GoodsPictureDaoImpl;
 use Application\Domain\Goods;
 use Application\Domain\GoodsCategory;
 use Application\Exception\Log;
-use Application\Helper\FilterHelper;
+use Application\Helper\Filter;
 
 class GoodsCategoryServiceImpl implements GoodsCategoryService
 {
@@ -93,7 +93,7 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
 //            'id'=>$categoryId,
 //        );
 //        /** 安全过滤 */
-//        $data=FilterHelper::safeReplace($data);
+//        $data=Filter::safeReplace($data);
 //
 //        /** 执行删除 */
 //        (new GoodsCategoryDaoImpl())->removeByGoodsCategoryId($data['id']);

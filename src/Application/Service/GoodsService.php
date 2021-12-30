@@ -17,6 +17,23 @@ interface GoodsService{
      */
     public function listGoodsIdShow(string $userType,int $id) :array;
 
+    /**
+     * 根据商品id进行更新这个分类
+     * @param int $goodsId
+     * @param string $name
+     * @param int $categoryId
+     * @param float $prick
+     * @param int $stock
+     * @param int $status
+     * @param int $hot
+     * @param int $recommendation
+     * @param string $describe
+     * @param string $img
+     * @return bool
+     */
+    public function updateGoodsById(int $goodsId, string $name, int $categoryId, float $prick, int $stock, int $status = 1,
+                                    int $hot = 2, int $recommendation = 2, string $describe = "", string $img = "") :bool;
+
 
 
 

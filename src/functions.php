@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 if (!function_exists('Splicing'))
 {
     /**

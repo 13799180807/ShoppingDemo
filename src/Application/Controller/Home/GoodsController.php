@@ -2,7 +2,7 @@
 namespace Application\Controller\Home;
 use Application\Helper\DetectRequest;
 use Application\Helper\FeedBack;
-use Application\Helper\FilterHelper;
+use Application\Helper\Filter;
 use Application\Service\GoodsCategoryServiceImpl;
 use Application\Service\GoodsServiceImpl;
 
@@ -32,7 +32,7 @@ class GoodsController
             /** 获得前端请求的数据 */
             $requestData=$resRequest[1];
             $detectData=array(
-                0=>array('id',$requestData['id'],"num",1,100000),
+                0=>array('id',$requestData['id'],"numInt",1,100000),
             );
 
             $resDetectData=DetectRequest::detectRun($detectData);
