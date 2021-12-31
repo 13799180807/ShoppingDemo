@@ -1,6 +1,31 @@
 <?php
 
 
+if (!function_exists('encryption'))
+{
+    /**
+     * 密码加密处理
+     * @param string $account
+     * @param string $pwd
+     * @return string
+     */
+    function encryption(string $account,string $pwd): string
+    {
+        /** 截取账号前6位数字，进行MD5加密 */
+        $account=iconv_substr($account,0,6);
+
+        /** 截取加密后MD5 第6位开始到6位结束*/
+        $account=iconv_substr(MD5($account),6,6);
+
+        /** 对密码进行MD5加密 ,截取中间的10位*/
+        $pwd=iconv_substr(MD5($pwd),6,10);
+
+        /** 拼接密码 */
+        return $account.$pwd;
+
+    }
+}
+
 if (!function_exists('Splicing'))
 {
     /**
@@ -25,7 +50,6 @@ if (!function_exists('Splicing'))
     }
 
 }
-
 
 if (!function_exists('safeReplace'))
 {

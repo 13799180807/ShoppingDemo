@@ -26,7 +26,8 @@ class GoodsIntroduction
             foreach ($row as $key =>$value)
             {
                 $key=underscoreToHump($key);
-                $c->$key=$value;
+                /** 安全处理 */
+                $c->$key=htmlentities($value);
             }
             $dataList[$i]=$c;
             $i++;

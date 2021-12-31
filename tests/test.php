@@ -14,6 +14,7 @@ use Application\Service\GoodsIntroductionServiceImpl;
 use Application\Service\GoodsPictureServiceImpl;
 use Application\Service\GoodsServiceImpl;
 
+echo encryption("admin","123456");
 
 //$num="0";
 //if ( preg_match("/^[0-9][0-9]*$/" ,$num)) {
