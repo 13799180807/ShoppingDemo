@@ -60,6 +60,14 @@ interface GoodsDao
     public function updateGoodsById(int $goodsId,string $name,int $categoryId,float $prick,int $stock,int $status=1,
     int $hot=2,int $recommendation=2,string $describe="" ,string $img="") : bool;
 
+    /**
+     * 检测表中某个字段的值存在不存在这个表中
+     * @param string $field
+     * @param string $fieldType
+     * @param string $fieldKey
+     * @return array
+     */
+    public function getByField(string $field,string $fieldType,string $fieldKey) :array;
 
 
 

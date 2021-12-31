@@ -1253,3 +1253,168 @@
 [29-Dec-2021 11:13:28 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 282
 [29-Dec-2021 11:13:28 Asia/Shanghai] PHP Stack trace:
 [29-Dec-2021 11:13:28 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Undefined index: data in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 36
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 36
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 37
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 37
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 38
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 38
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 39
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 39
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 40
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 40
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Undefined variable: categoryList in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 310
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 310
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Undefined variable: goodsList in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 333
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 333
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Notice:  Undefined variable: goodsList in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 344
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 344
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:17:59 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Undefined index: data in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 36
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 36
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 37
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 37
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 38
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 38
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 39
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 39
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 40
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 40
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Undefined variable: categoryList in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 310
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 310
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Undefined variable: goodsList in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 333
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 333
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Notice:  Undefined variable: goodsList in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 344
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 344
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:51:58 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
+[31-Dec-2021 11:51:58 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:51:58 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Undefined index: data in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 25
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 26
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 36
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 36
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 37
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 37
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 38
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 38
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 39
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 39
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Undefined variable: callBack in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 40
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 40
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Undefined variable: categoryList in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 310
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 310
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Undefined variable: goodsList in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 333
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 333
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Notice:  Undefined variable: goodsList in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 344
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 344
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
+[31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0

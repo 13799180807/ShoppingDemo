@@ -29,10 +29,11 @@ interface GoodsService{
      * @param int $recommendation
      * @param string $describe
      * @param string $img
-     * @return bool
+     * @param string $introduction
+     * @return array
      */
     public function updateGoodsById(int $goodsId, string $name, int $categoryId, float $prick, int $stock, int $status = 1,
-                                    int $hot = 2, int $recommendation = 2, string $describe = "", string $img = "") :bool;
+                                    int $hot = 2, int $recommendation = 2, string $describe = "", string $img = "",string $introduction="") :array;
 
 
 

@@ -84,8 +84,11 @@ class DetectRequest
      */
     protected static function detectNumIntSize($name,$num,$min,$max) :array
     {
-        if ( is_numeric($num)  && is_int($num)  && $num >= $min && $num <= $max) {
-            return array($name,true,$num,"数值符合");
+
+        if ( preg_match("/^[0-9][0-9]*$/" ,$num)) {
+            if (  $num >= $min && $num <= $max) {
+                return array($name,true,$num,"数值符合");
+            }
         }
         return array($name,false,$num,"输入的数值不符合大小或类型不准确，请输入符合大小并输入正确类型");
     }
@@ -100,7 +103,7 @@ class DetectRequest
      */
     protected static function detectNumSize($name,$num,$min,$max) :array
     {
-        if ( is_numeric($num)  && is_int($num)  && $num >= $min && $num <= $max) {
+        if ( is_numeric($num) && $num >= $min && $num <= $max) {
             return array($name,true,$num,"数值符合");
         }
         return array($name,false,$num,"输入的数值不符合大小");

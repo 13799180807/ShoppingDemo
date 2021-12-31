@@ -2,8 +2,6 @@
 
 
 namespace Application\Controller\Admin;
-
-
 use Application\Exception\Log;
 use Application\Helper\DetectRequest;
 use Application\Helper\FeedBack;
@@ -27,6 +25,7 @@ class GoodsController
             $detect=array(
                 0=>array('id',$requestData['goodsId'],'numInt',1,100000),
             );
+
             $resDetect=DetectRequest::detectRun($detect);
             if (count($resDetect)==0) {
                 /** 数据合法执行查询 */
@@ -52,25 +51,14 @@ class GoodsController
             'goodsPrice'=>"price",//价格
             'goodsStock'=>"stock", //库存
             'goodsStatus'=>"status", //状态
-            'label'=>'typeLabel', //标签
             'goodsDescribe'=>"describe",//简要说明
-            'goodsIntroduction'=>"introduction" //详细说民
+            'goodsIntroduction'=>"introduction", //详细说明
+            'goodsHot'=>"hot",//热度
+            'recommendation'=>"recommendation",//推荐
         );
         $resRequest=DetectRequest::detectRequest($request);
         if ($resRequest[0] ) {
             $requestData=$resRequest[1];
-
-            if (array_key_exists('hot', $requestData['label'])) {
-                $goodsHot=1;
-            } else {
-                $goodsHot=2;
-            }
-
-            if (array_key_exists('recommendation', $requestData['label'])) {
-                $goodsRecommendation=1;
-            } else {
-                $goodsRecommendation=2;
-            }
 
             /** 检测提交的类型是不是正确的 */
             $detect=array(
@@ -82,11 +70,17 @@ class GoodsController
                 5=>array('status',$requestData['goodsStatus'],'numInt',0,10),
                 6=>array('describe',$requestData['goodsDescribe'],'str',1,100),
                 7=>array('introduction',$requestData['goodsIntroduction'],'str',1,10000),
+                8=>array('hot',$requestData['goodsHot'],'numInt',0,5),
+                9=>array('recommendation',$requestData['recommendation'],'numInt',0,5),
             );
             $resDetect=DetectRequest::detectRun($detect);
             if (count($resDetect)==0) {
                 /** 执行更新操作 */
-
+                $res=(new GoodsServiceImpl())->updateGoodsById($requestData['goodsId'],$requestData['goodsName'],$requestData['goodsCategoryId'],
+                    $requestData['goodsPrice'],$requestData['goodsStock'],$requestData['goodsStatus'],$requestData['goodsHot'],$requestData['recommendation'],
+                    $requestData['goodsDescribe'],'1.jpg',$requestData['goodsIntroduction']);
+                echo FeedBack::result('200',$res['msg']);
+                return;
             }
             /** 类型不符合 */
             echo FeedBack::result('404','请求的参数不规范，请联系管理员。',$resDetect);

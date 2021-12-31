@@ -94,17 +94,64 @@ class GoodsServiceImpl implements GoodsService
 //        return (new Goods())->GoodsModel($res);
 //    }
 
-
+    /**
+     * 更新一个商品表的信息根据id
+     * @param int $goodsId
+     * @param string $name
+     * @param int $categoryId
+     * @param float $prick
+     * @param int $stock
+     * @param int $status
+     * @param int $hot
+     * @param int $recommendation
+     * @param string $describe
+     * @param string $img
+     * @param string $introduction
+     * @return string[]
+     */
     public function updateGoodsById(int $goodsId, string $name, int $categoryId, float $prick, int $stock, int $status = 1,
-                                    int $hot = 2, int $recommendation = 2, string $describe = "", string $img = ""): bool
+                                    int $hot = 2, int $recommendation = 2, string $describe = "", string $img = "",string $introduction=""): array
     {
-        // TODO: Implement updateGoodsById() method.
+
         /**  检验数据类型*/
-        /** 判断这个商品id存在不存在 */
-        /** 检查商品名是否已经存在 */
+
         /** 权限比对 */
-        /** 执行修改商品信息操作 */
-        /** 回调函数 */
+
+        /** 判断这个商品id存在不存在 为了防止不通过表单进行操作进入数据库 */
+        if (count((new GoodsDaoImpl())->getByField("goods_id","i",$goodsId)) == 0) {
+            /** 数据不存在 */
+            return array(
+                "msg"=>"请正确操作，该数据不存在。你的行为已经被记录！！！"
+            );
+        }
+
+//        /** 检查这个名字可以不可以修改 */
+//        if (count((new GoodsDaoImpl())->getByField("goods_name","s",$name)) >0 ) {
+//            /** 名字重复，不允许操作 */
+//            return array(
+//                "msg"=>"修改失败，该商品存在。"
+//            );
+//        }
+
+        /** 执行修改商品表中的商品信息操作 */
+        (new GoodsDaoImpl())->updateGoodsById($goodsId,$name,$categoryId,$prick,$stock,$status,$hot,$recommendation,$describe,$img);
+
+        /** 检查商品详细表中存在不存在这条数据不存在则插入，存在则修改 */
+        if ( count((new GoodsIntroductionDaoImpl())->getGoodsId($goodsId)) ==0 )
+        {
+            /** 插入操作 */
+            (new GoodsIntroductionDaoImpl())->saveByGoodsId($goodsId,$introduction);
+
+        } else {
+            /** 修改操作 */
+            (new GoodsIntroductionDaoImpl())->updateByGoodsId($goodsId,$introduction);
+        }
+
         /** ...... */
+
+        /** 回调函数 */
+        return array(
+          "msg"=>"修改成功"
+        );
     }
 }

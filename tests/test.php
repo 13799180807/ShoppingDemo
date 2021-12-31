@@ -15,9 +15,49 @@ use Application\Service\GoodsPictureServiceImpl;
 use Application\Service\GoodsServiceImpl;
 
 
+//$num="0";
+//if ( preg_match("/^[0-9][0-9]*$/" ,$num)) {
+//    echo 1;
+//} else{
+//    echo 2;
+//}
+//
+//$detectData=array(
+//    0=>array('id',"55.3",'numInt',1,100000),
+//    1=>array('page',1,"numInt",1,9999),
+//    2=>array('num',3,"numInt",1,99),
+//);
+//
+//$resDetectData=DetectRequest::detectRun($detectData);
+//var_dump($resDetectData);
 
 
 
+//var_dump((new GoodsServiceImpl())->updateGoodsById(1,'Ok吗',7,99.99,90,1,1,
+//    1,'这是简单说明','1.jpg',"我是详细说名具体是什么你自己猜猜看呀哈哈哈"));
+//$id=10;
+//$str="修改了吗";
+//
+////
+//if ( count((new GoodsIntroductionDaoImpl())->getGoodsId($id)) ==0 )
+//{
+//    /** 插入操作 */
+//    var_dump((new GoodsIntroductionDaoImpl())->saveByGoodsId($id,$str));
+//} else {
+//    /** 修改操作 */
+//    var_dump((new GoodsIntroductionDaoImpl())->updateByGoodsId($id,$str));
+//}
+
+
+
+
+
+
+
+
+/** 修改商品信息 */
+//var_dump((new GoodsServiceImpl())->updateGoodsById(1,"01修改",3,1,1,1,
+//    1,1,"lueluelu","2.jpg"));
 
 
 
@@ -61,6 +101,10 @@ use Application\Service\GoodsServiceImpl;
 // (new SqlUtil())->run("update",$sql,"sisiiiissi",$test);
 
 
+
+
+/** 查询商品表中的某个数据存在不存在 */
+//var_dump((new GoodsDaoImpl())->getByField("goods_name","s","1"));
 /** 数据库更新 */
 //$sql = "update demo set name=?,pwd=? where id=?";
 //var_dump((new SqlUtil())->run("update",$sql,"ssi",array("小明","33",32)));

@@ -160,4 +160,18 @@ class GoodsDaoImpl implements  GoodsDao
         return (new SqlUtil())->run("update",$sql,"sisiiiissi",$dataList);
 
     }
+
+    public function getByField(string $field, string $fieldType, string $fieldKey): array
+    {
+        /** 过滤字符 */
+        $resFilter=Filter::setEntities(array("fieldKey"=>$fieldKey));
+
+        /** 组装sql */
+        $sql="SELECT * FROM tb_goods WHERE {$field}=? ";
+
+        /** 执行查询 */
+        return (new SqlUtil())->run("query",$sql,$fieldType,array($resFilter['fieldKey']));
+
+
+    }
 }
