@@ -1,4 +1,5 @@
 <?php
+
 namespace Application\Service;
 interface GoodsIntroductionService
 {
@@ -8,8 +9,6 @@ interface GoodsIntroductionService
 //     * @return mixed
 //     */
 //    public function getGoodsId(int $goodsId);
-
-
 
 
 }

@@ -13,11 +13,11 @@ class Filter
      * @param array $data
      * @return array
      */
-    public static function setEntities(array $data) :array
+    public static function setEntities(array $data): array
     {
-        $res=array();
-        foreach ($data as $key=>$value) {
-            $res[$key]=htmlentities($value);
+        $res = array();
+        foreach ($data as $key => $value) {
+            $res[$key] = htmlentities($value);
         }
         return $res;
     }
@@ -99,7 +99,6 @@ class Filter
 //        return $dataArr;
 //
 //    }
-
 
 
 }

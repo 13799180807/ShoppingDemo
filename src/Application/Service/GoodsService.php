@@ -1,12 +1,14 @@
 <?php
+
 namespace Application\Service;
-interface GoodsService{
+interface GoodsService
+{
 
     /**
      * 主页显示用的
      * @return array
      */
-    public function listIndex() :array;
+    public function listIndex(): array;
 
 
     /**
@@ -15,7 +17,7 @@ interface GoodsService{
      * @param int $id
      * @return array
      */
-    public function listGoodsIdShow(string $userType,int $id) :array;
+    public function listGoodsIdShow(string $userType, int $id): array;
 
     /**
      * 根据商品id进行更新这个分类
@@ -33,17 +35,25 @@ interface GoodsService{
      * @return array
      */
     public function updateGoodsById(int $goodsId, string $name, int $categoryId, float $prick, int $stock, int $status = 1,
-                                    int $hot = 2, int $recommendation = 2, string $describe = "", string $img = "",string $introduction="") :array;
+                                    int $hot = 2, int $recommendation = 2, string $describe = "", string $img = "", string $introduction = ""): array;
 
+    /**
+     * 添加商品
+     * @param string $goodsName
+     * @param int $goodsCategoryId
+     * @param float $goodsPrice
+     * @param int $goodsStock
+     * @param int $goodsStatus
+     * @param int $goodsHot
+     * @param int $goodsRecommendation
+     * @param string $goodsDescribe
+     * @param string $goodsImg
+     * @param string $introduction
+     * @return array
+     */
+    public function saveGoods(string $goodsName, int $goodsCategoryId, float $goodsPrice, int $goodsStock=0, int $goodsStatus=1,
+                              int $goodsHot=2, int $goodsRecommendation=2, string $goodsDescribe="", string $goodsImg="",string $introduction = ""): array;
 
-
-
-//    /**
-//     * 根据名字模糊查询
-//     * @param string $goodsName
-//     * @return array
-//     */
-//    public function getByGoodsName(string $goodsName) :array;
 
 
 }

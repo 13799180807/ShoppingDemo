@@ -1,4 +1,5 @@
 <?php
+
 namespace Application\Domain;
 
 class Goods
@@ -21,20 +22,19 @@ class Goods
      * @param array $rows
      * @return array
      */
-    public function GoodsModel(array $rows) :array
+    public function goodsModel(array $rows): array
     {
-        $dataList=array();
-        $i=0;
-        foreach ($rows as  $row){
-            $c= new Goods();
-            foreach ($row as $key =>$value)
-            {
-                $key=underscoreToHump($key);
+        $dataList = array();
+        $i = 0;
+        foreach ($rows as $row) {
+            $c = new Goods();
+            foreach ($row as $key => $value) {
+                $key = underscoreToHump($key);
                 /** 安全处理 */
-                $c->$key=htmlentities($value);
+                $c->$key = htmlentities($value);
 
             }
-            $dataList[$i]=$c;
+            $dataList[$i] = $c;
             $i++;
         }
         return $dataList;
@@ -232,10 +232,6 @@ class Goods
     {
         $this->updatedAt = $updatedAt;
     }
-
-
-
-
 
 
 }

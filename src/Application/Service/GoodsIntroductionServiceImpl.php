@@ -1,4 +1,5 @@
 <?php
+
 namespace Application\Service;
 
 use Application\Dao\GoodsIntroductionDaoImpl;

@@ -9,19 +9,19 @@ class DetectRequest
      * @param array $requestData
      * @return array
      */
-    public static function detectRequest(array $requestData) :array
+    public static function detectRequest(array $requestData): array
     {
-        $res=array();
-        foreach ($requestData as $key=>$val ) {
+        $res = array();
+        foreach ($requestData as $key => $val) {
 
             /** 检测是否存在这个post请求 存在则保存，不存在则退出 */
             if (isset($_POST[$val])) {
-                $res[$key]=$_POST[$val];
+                $res[$key] = $_POST[$val];
             } else {
-                return array(false,"请求参数不对,请核对以后再进行操作");
+                return array(false, "请求参数不对,请核对以后再进行操作");
             }
         }
-        return array(true,$res);
+        return array(true, $res);
     }
 
     /**
@@ -29,23 +29,23 @@ class DetectRequest
      * @param array $detectData
      * @return array
      */
-    public static function detectRun(array $detectData) :array
+    public static function detectRun(array $detectData): array
     {
-        $i=0;
-        $resArr=array();
-        $err=array();
+        $i = 0;
+        $resArr = array();
+        $err = array();
 
         /** 进行检测 */
         foreach ($detectData as $arr) {
-            $res=self::detect($arr);
-            $resArr[$i]=$res;
+            $res = self::detect($arr);
+            $resArr[$i] = $res;
             $i++;
         }
 
         /** 检测出来那个错误并返回数组 */
         foreach ($resArr as $row) {
-            if (!$row[1]){
-                $err[$row[0]]=$row[3];
+            if (!$row[1]) {
+                $err[$row[0]] = $row[3];
             }
         }
         /** 正确进来的值返回的会是空数组大小为0 */
@@ -58,19 +58,18 @@ class DetectRequest
      * @param array $arr
      * @return array
      */
-    protected static function detect(array $arr) :array
+    protected static function detect(array $arr): array
     {
-        $method=$arr[2];
-        switch ($method)
-        {
+        $method = $arr[2];
+        switch ($method) {
             case 'num':
-               return self::detectNumSize($arr[0],$arr[1],$arr[3],$arr[4]);
+                return self::detectNumSize($arr[0], $arr[1], $arr[3], $arr[4]);
             case 'str':
-                return self::detectLength($arr[0],$arr[1],$arr[3],$arr[4]);
+                return self::detectLength($arr[0], $arr[1], $arr[3], $arr[4]);
             case 'numInt':
-                return self::detectNumIntSize($arr[0],$arr[1],$arr[3],$arr[4]);
+                return self::detectNumIntSize($arr[0], $arr[1], $arr[3], $arr[4]);
         }
-        return array("",false,"","错误数据");
+        return array("", false, "", "错误数据");
     }
 
 
@@ -82,15 +81,15 @@ class DetectRequest
      * @param $max
      * @return array
      */
-    protected static function detectNumIntSize($name,$num,$min,$max) :array
+    protected static function detectNumIntSize($name, $num, $min, $max): array
     {
 
-        if ( preg_match("/^[0-9][0-9]*$/" ,$num)) {
-            if (  $num >= $min && $num <= $max) {
-                return array($name,true,$num,"数值符合");
+        if (preg_match("/^[0-9][0-9]*$/", $num)) {
+            if ($num >= $min && $num <= $max) {
+                return array($name, true, $num, "数值符合");
             }
         }
-        return array($name,false,$num,"输入的数值不符合大小或类型不准确，请输入符合大小并输入正确类型");
+        return array($name, false, $num, "输入的数值不符合大小或类型不准确，请输入符合大小并输入正确类型");
     }
 
     /**
@@ -101,12 +100,12 @@ class DetectRequest
      * @param $max
      * @return array
      */
-    protected static function detectNumSize($name,$num,$min,$max) :array
+    protected static function detectNumSize($name, $num, $min, $max): array
     {
-        if ( is_numeric($num) && $num >= $min && $num <= $max) {
-            return array($name,true,$num,"数值符合");
+        if (is_numeric($num) && $num >= $min && $num <= $max) {
+            return array($name, true, $num, "数值符合");
         }
-        return array($name,false,$num,"输入的数值不符合大小");
+        return array($name, false, $num, "输入的数值不符合大小");
     }
 
     /**
@@ -117,13 +116,13 @@ class DetectRequest
      * @param $max
      * @return array
      */
-    protected static function detectLength($name,$str,$min,$max): array
+    protected static function detectLength($name, $str, $min, $max): array
     {
         $length = strlen($str);
-        if ($length >=$min && $length <=$max) {
-            return array($name,true,$str,"长度符合");
+        if ($length >= $min && $length <= $max) {
+            return array($name, true, $str, "长度符合");
         }
-        return array($name,false,$str,"输入的值不符合长度范围规范");
+        return array($name, false, $str, "输入的值不符合长度范围规范");
     }
 
 }

@@ -1,0 +1,7 @@
+{
+  "link": "localhost:3306",
+  "user": "igg",
+  "password": "igg123456",
+  "dbName": "iggdemo",
+  "dbCode": "utf8"
+}

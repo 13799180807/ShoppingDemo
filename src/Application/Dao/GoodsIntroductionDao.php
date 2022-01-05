@@ -1,4 +1,5 @@
 <?php
+
 namespace Application\Dao;
 interface GoodsIntroductionDao
 {
@@ -7,14 +8,14 @@ interface GoodsIntroductionDao
      * @param int $goodsId
      * @return array
      */
-    public function getGoodsId(int $goodsId) :array;
+    public function getGoodsId(int $goodsId): array;
 
     /**
      * 根据商品的id进行删除详细说明
      * @param int $goodsId
      * @return bool
      */
-    public function removeByGoodsId(int $goodsId) :bool;
+    public function removeByGoodsId(int $goodsId): bool;
 
     /**
      * 根据商品id进行插入商品详细介绍
@@ -22,7 +23,7 @@ interface GoodsIntroductionDao
      * @param string $introduction
      * @return int
      */
-    public function saveByGoodsId(int $goodsId,string $introduction="") :int;
+    public function saveByGoodsId(int $goodsId, string $introduction = ""): int;
 
     /**
      * 商品详细表中根据goodsId进行修改修改商品详细说明
@@ -30,7 +31,7 @@ interface GoodsIntroductionDao
      * @param string $introduction
      * @return bool
      */
-    public function updateByGoodsId(int $goodsId,string $introduction="") :bool;
+    public function updateByGoodsId(int $goodsId, string $introduction = ""): bool;
 
 
 
@@ -44,9 +45,6 @@ interface GoodsIntroductionDao
 //     * @return array
 //     */
 //    public function getByField(string $field,string $fieldType,string $fieldKey) :array;
-
-
-
 
 
 }

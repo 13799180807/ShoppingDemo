@@ -14,7 +14,33 @@ use Application\Service\GoodsIntroductionServiceImpl;
 use Application\Service\GoodsPictureServiceImpl;
 use Application\Service\GoodsServiceImpl;
 
-echo encryption("admin","123456");
+
+echo " 测试页面 <hr>";
+echo "<hr>";
+
+
+
+
+
+/** 商品添加测试 */
+//var_dump((new GoodsServiceImpl())->saveGoods("1连载1",3,15.69,1,1,1,1,"测而已","3.jpg","sia"));
+
+/** 数据库插入 */
+//$sql = "INSERT INTO demo (name, pwd) VALUES (?,?)";
+//var_dump((new SqlUtil())->run("save",$sql,"ss",array("小1明","222")));
+
+///** 插入商品测试 */
+//var_dump((new GoodsDaoImpl())->saveGoods("测试save",3,15.69,1,1,1,1,"测试说明而已","3.jpg"));
+
+/** 查询商品表中的某个数据存在不存在 */
+//var_dump((new GoodsDaoImpl())->getByField("goods_name","s","小猪佩奇"));
+
+
+//var_dump($conf);
+//$conf=require_once './../src/database.json';
+//$conf=json_decode($conf, true);
+
+//echo encryption("admin","123456");
 
 //$num="0";
 //if ( preg_match("/^[0-9][0-9]*$/" ,$num)) {
@@ -83,8 +109,7 @@ echo encryption("admin","123456");
 //$a='1";drop table demo; ';
 //$sql = "update demo set name=?,pwd=? where id=?";
 //var_dump((new SqlUtil())->run("update",$sql,"ssi",array($str,"33",46)));
-//echo " 测试页面 <hr>";
-//echo "<hr>";
+
 
 //var_dump("1\r2\n3\4'5Control-Z");
 //echo "1\r2\n3\4'5Control-Z";
@@ -100,6 +125,8 @@ echo encryption("admin","123456");
 //                  goods_hot=?, goods_recommendation=? ,goods_describe=?,goods_img=? WHERE goods_id=? ";
 //$test=array('修改01',2,'15.26',111,2,2,2,"更新测试","11.jpg",1);
 // (new SqlUtil())->run("update",$sql,"sisiiiissi",$test);
+
+
 
 
 

@@ -1,4 +1,5 @@
 <?php
+
 namespace Application\Dao;
 interface GoodsPictureDao
 {
@@ -8,13 +9,13 @@ interface GoodsPictureDao
      * @param int $goodsId
      * @return array
      */
-    public function getGoodsId(int $goodsId) :array;
+    public function getGoodsId(int $goodsId): array;
 
     /**
      * 根据goods_id进行删除操作
      * @param int $goodsId
      * @return bool
      */
-    public function removeByGoodsId(int $goodsId) :bool;
+    public function removeByGoodsId(int $goodsId): bool;
 
 }

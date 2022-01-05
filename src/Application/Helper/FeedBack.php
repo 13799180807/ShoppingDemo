@@ -20,12 +20,12 @@ class FeedBack
      * @param string $dataList
      * @return mixed
      */
-    public static function result( $status,$msg="",$dataList="")
+    public static function result($status, $msg = "", $dataList = "")
     {
-        $json=array(
-            'status'=>$status,
-            'msg'=>$msg,
-            'data'=>$dataList
+        $json = array(
+            'status' => $status,
+            'msg' => $msg,
+            'data' => $dataList
         );
         return json_encode($json);
     }
@@ -37,11 +37,11 @@ class FeedBack
      */
     public static function fail(string $msg)
     {
-        $json=array(
-            'status'=>404,
-            'msg'=>$msg,
-            'data'=>array(
-                'err'=>"请联系管理员进行参数比对"
+        $json = array(
+            'status' => 404,
+            'msg' => $msg,
+            'data' => array(
+                'err' => "请联系管理员进行参数比对"
             )
         );
         return json_encode($json);

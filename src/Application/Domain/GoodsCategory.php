@@ -1,4 +1,5 @@
 <?php
+
 namespace Application\Domain;
 
 /**
@@ -18,17 +19,16 @@ class GoodsCategory
      */
     public function categoryModel(array $rows): array
     {
-        $dataList=array();
-        $i=0;
-        foreach ($rows as  $row){
-            $c= new GoodsCategory();
-            foreach ($row as $key =>$value)
-            {
-                $key=underscoreToHump($key);
+        $dataList = array();
+        $i = 0;
+        foreach ($rows as $row) {
+            $c = new GoodsCategory();
+            foreach ($row as $key => $value) {
+                $key = underscoreToHump($key);
                 /** 安全处理 */
-                $c->$key=htmlentities($value);
+                $c->$key = htmlentities($value);
             }
-            $dataList[$i]=$c;
+            $dataList[$i] = $c;
             $i++;
         }
         return $dataList;

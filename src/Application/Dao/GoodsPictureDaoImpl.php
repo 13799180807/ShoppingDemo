@@ -1,5 +1,7 @@
 <?php
+
 namespace Application\Dao;
+
 use Application\Library\SqlUtil;
 
 class GoodsPictureDaoImpl implements GoodsPictureDao
@@ -12,8 +14,8 @@ class GoodsPictureDaoImpl implements GoodsPictureDao
      */
     public function getGoodsId(int $goodsId): array
     {
-        $sql="SELECT * FROM tb_goods_picture WHERE goods_id=?";
-        return (new SqlUtil())->run("query",$sql,"i",array($goodsId));
+        $sql = "SELECT * FROM tb_goods_picture WHERE goods_id=?";
+        return (new SqlUtil())->run("query", $sql, "i", array($goodsId));
     }
 
     /**
@@ -23,7 +25,7 @@ class GoodsPictureDaoImpl implements GoodsPictureDao
      */
     public function removeByGoodsId(int $goodsId): bool
     {
-        $sql="DELETE FROM tb_goods_picture WHERE goods_id=?";
-        return (new SqlUtil())->run("remove",$sql,"i",array($goodsId));
+        $sql = "DELETE FROM tb_goods_picture WHERE goods_id=?";
+        return (new SqlUtil())->run("remove", $sql, "i", array($goodsId));
     }
 }

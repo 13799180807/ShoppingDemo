@@ -1418,3 +1418,6 @@
 [31-Dec-2021 11:52:03 Asia/Shanghai] PHP Warning:  Invalid argument supplied for foreach() in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php on line 344
 [31-Dec-2021 11:52:03 Asia/Shanghai] PHP Stack trace:
 [31-Dec-2021 11:52:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\shop.php:0
+[04-Jan-2022 10:05:18 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
+[04-Jan-2022 10:05:18 Asia/Shanghai] PHP Stack trace:
+[04-Jan-2022 10:05:18 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
