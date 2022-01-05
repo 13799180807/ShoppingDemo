@@ -19,8 +19,8 @@ echo " 测试页面 <hr>";
 echo "<hr>";
 
 
-
-
+/** 数据删除 */
+//(new GoodsServiceImpl())->removeByGoodsId(23);
 
 /** 商品添加测试 */
 //var_dump((new GoodsServiceImpl())->saveGoods("1连载1",3,15.69,1,1,1,1,"测而已","3.jpg","sia"));

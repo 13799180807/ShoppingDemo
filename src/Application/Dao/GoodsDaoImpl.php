@@ -191,4 +191,17 @@ class GoodsDaoImpl implements GoodsDao
         return (new SqlUtil())->run("save", $sql, "sisiiiiss", array(
             $resFilter['goodsName'], $goodsCategoryId, $goodsPrice, $goodsStock, $goodsStatus, $goodsHot, $goodsRecommendation, $resFilter['goodsDescribe'], $resFilter['goodsImg']));
     }
+
+    /**
+     * 根据指定字段删除商品表中的一条数据
+     * @param string $field
+     * @param string $fieldType
+     * @param string $fieldKey
+     * @return bool
+     */
+    public function removeByField(string $field, string $fieldType, string $fieldKey): bool
+    {
+        $sql = "DELETE FROM tb_goods WHERE {$field}=?";
+        return (new SqlUtil())->run("remove", $sql, $fieldType, array($fieldKey));
+    }
 }

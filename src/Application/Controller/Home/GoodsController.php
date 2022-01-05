@@ -63,7 +63,7 @@ class GoodsController
             );
             $resDetectData = DetectRequest::detectRun($detectData);
             if (count($resDetectData) == 0) {
-                $res = (new GoodsCategoryServiceImpl())->listGoodsCategory("user", 1, 1000, 1, 0, $requestData['fuzzy']);
+                $res = (new GoodsCategoryServiceImpl())->listCategoryGoods("user", 1, 1000, 1, 0, $requestData['fuzzy']);
                 echo FeedBack::result(200, "请求成功", $res['goodsList']);
                 return;
             }

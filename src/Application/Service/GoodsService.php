@@ -51,9 +51,15 @@ interface GoodsService
      * @param string $introduction
      * @return array
      */
-    public function saveGoods(string $goodsName, int $goodsCategoryId, float $goodsPrice, int $goodsStock=0, int $goodsStatus=1,
-                              int $goodsHot=2, int $goodsRecommendation=2, string $goodsDescribe="", string $goodsImg="",string $introduction = ""): array;
+    public function saveGoods(string $goodsName, int $goodsCategoryId, float $goodsPrice, int $goodsStock = 0, int $goodsStatus = 1,
+                              int $goodsHot = 2, int $goodsRecommendation = 2, string $goodsDescribe = "", string $goodsImg = "", string $introduction = ""): array;
 
+    /**
+     * 根据指定的商品id进行商品的删除
+     * @param int $goodsId
+     * @return array
+     */
+    public function removeByGoodsId(int $goodsId): array;
 
 
 }

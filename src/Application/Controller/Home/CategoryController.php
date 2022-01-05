@@ -34,7 +34,7 @@ class CategoryController
             /** 判断数据符合规范没有 */
             if (count($resDetectData) == 0) {
                 /** 获取数据 */
-                $data = (new GoodsCategoryServiceImpl())->listGoodsCategory('user', $requestData['page'], $requestData['num'], 1, $requestData['categoryId']);
+                $data = (new GoodsCategoryServiceImpl())->listCategoryGoods('user', $requestData['page'], $requestData['num'], 1, $requestData['categoryId']);
                 echo FeedBack::result(200, "请求成功", $data);
                 return;
             }

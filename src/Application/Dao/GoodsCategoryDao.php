@@ -34,7 +34,7 @@ interface GoodsCategoryDao
      * @param int $num
      * @return array
      */
-    public function listGoodsCategory(string $userType, string $goodsName, int $goodsStatus, int $goodsCategoryId,
+    public function listCategoryGoods(string $userType, string $goodsName, int $goodsStatus, int $goodsCategoryId,
                                       int $goodsHot, int $goodsRecommendation, int $page, int $num): array;
 
     /**

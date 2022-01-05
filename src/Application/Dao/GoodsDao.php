@@ -74,8 +74,8 @@ interface GoodsDao
      * @param string $goodsImg
      * @return int
      */
-    public function saveGoods(string $goodsName, int $goodsCategoryId, float $goodsPrice, int $goodsStock=0, int $goodsStatus=1,
-                              int $goodsHot=2, int $goodsRecommendation=2, string $goodsDescribe="", string $goodsImg=""): int;
+    public function saveGoods(string $goodsName, int $goodsCategoryId, float $goodsPrice, int $goodsStock = 0, int $goodsStatus = 1,
+                              int $goodsHot = 2, int $goodsRecommendation = 2, string $goodsDescribe = "", string $goodsImg = ""): int;
 
     /**
      * 检测表中某个字段的值存在不存在这个表中
@@ -85,6 +85,15 @@ interface GoodsDao
      * @return array
      */
     public function getByField(string $field, string $fieldType, string $fieldKey): array;
+
+    /**
+     * 根据指定字段删除商品表中的一条数据
+     * @param string $field
+     * @param string $fieldType
+     * @param string $fieldKey
+     * @return bool
+     */
+    public function removeByField(string $field, string $fieldType, string $fieldKey): bool;
 
 
 }

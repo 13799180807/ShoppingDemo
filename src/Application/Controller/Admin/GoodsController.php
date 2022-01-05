@@ -7,10 +7,22 @@ use Application\Exception\Log;
 use Application\Helper\DetectRequest;
 use Application\Helper\FeedBack;
 use Application\Library\SqlUtil;
+use Application\Service\GoodsCategoryServiceImpl;
 use Application\Service\GoodsServiceImpl;
 
 class GoodsController
 {
+
+    /**
+     * 获取分类归类
+     */
+    public function actionClassify()
+    {
+        $res=(new GoodsCategoryServiceImpl())->listCategory();
+        echo FeedBack::result('200', '数据获取成功', $res);
+
+    }
+
     /**
      * 管理员查看单个商品详细
      */
@@ -66,8 +78,8 @@ class GoodsController
                 2 => array('price', $requestData['goodsPrice'], 'num', 1, 100000),
                 3 => array('stock', $requestData['goodsStock'], 'numInt', 1, 100000),
                 4 => array('status', $requestData['goodsStatus'], 'numInt', 0, 10),
-                5 => array('describe', $requestData['goodsDescribe'], 'str', 1, 100),
-                6 => array('introduction', $requestData['goodsIntroduction'], 'str', 1, 10000),
+                5 => array('describe', $requestData['goodsDescribe'], 'str', 0, 100),
+                6 => array('introduction', $requestData['goodsIntroduction'], 'str', 0, 10000),
                 7 => array('hot', $requestData['goodsHot'], 'numInt', 0, 5),
                 8 => array('recommendation', $requestData['recommendation'], 'numInt', 0, 5),
             ));
@@ -86,10 +98,6 @@ class GoodsController
         echo FeedBack::fail($resRequest[1]);
 
 
-
-
-
-        /** 结束 */
 
     }
 

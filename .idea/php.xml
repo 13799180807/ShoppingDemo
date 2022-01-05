@@ -101,7 +101,7 @@
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
   <component name="PhpUnit">
     <phpunit_settings>
-      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/shop_laravel/vendor/autoload.php" />
+      <PhpUnitSettings load_method="PHPUNIT_PHAR" configuration_file_path="$PROJECT_DIR$/tests/test.php" custom_loader_path="$PROJECT_DIR$/shop_laravel/vendor/autoload.php" phpunit_phar_path="$PROJECT_DIR$/src/phpunit.phar" use_configuration_file="true" />
     </phpunit_settings>
   </component>
 </project>

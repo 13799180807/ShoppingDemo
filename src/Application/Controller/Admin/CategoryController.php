@@ -12,7 +12,8 @@ class CategoryController
 {
 
     public function actionDemo(){
-        echo FeedBack::result('200', '请求成功');
+
+        echo FeedBack::result('200', $_POST);
     }
 
 
@@ -63,7 +64,7 @@ class CategoryController
                     $recommendation = 0;
                 }
                 /** 数据查询 */
-                $res = (new GoodsCategoryServiceImpl())->listGoodsCategory("admin", $requestData['page'], $requestData['num'], $requestData['status'],
+                $res = (new GoodsCategoryServiceImpl())->listCategoryGoods("admin", $requestData['page'], $requestData['num'], $requestData['status'],
                     $requestData['category'], $requestData['name'], $hot, $recommendation);
                 echo FeedBack::result('200', '请求成功', $res);
                 return;

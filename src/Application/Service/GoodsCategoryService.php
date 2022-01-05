@@ -15,8 +15,14 @@ interface GoodsCategoryService
      * @param int $recommendation
      * @return array
      */
-    public function listGoodsCategory(string $userType, int $page, int $num, int $status, int $categoryId = 0, string $name = "",
+    public function listCategoryGoods(string $userType, int $page, int $num, int $status, int $categoryId = 0, string $name = "",
                                       int $hot = 0, int $recommendation = 0): array;
+
+    /**
+     * 获取分类所有信息
+     * @return array
+     */
+    public function listCategory() :array;
 
 //    /**
 //     * 删除一个分类
@@ -27,14 +33,10 @@ interface GoodsCategoryService
 //
 
 
-//
-//
-//    /**
-//     * 获取分类所有信息
-//     * @return array
-//     */
-//    public function listGoodsCategoryName() :array;
-//
+
+
+
+
 
 
 }

@@ -26,7 +26,7 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
      * @param int $recommendation
      * @return array
      */
-    public function listGoodsCategory(string $userType, int $page, int $num, int $status, int $categoryId = 0, string $name = "", int $hot = 0, int $recommendation = 0): array
+    public function listCategoryGoods(string $userType, int $page, int $num, int $status, int $categoryId = 0, string $name = "", int $hot = 0, int $recommendation = 0): array
     {
 
         /** 区分用户 */
@@ -34,14 +34,14 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
             /**获得数量*/
             $totalPage = (new GoodsCategoryDaoImpl())->countCategoryByGoodsCondition($name, $status, $categoryId, $hot, $recommendation);
             /** 查询对应分页信息 */
-            $goodsList = (new GoodsCategoryDaoImpl())->listGoodsCategory('admin', $name, $status, $categoryId, $hot, $recommendation, $page, $num);
+            $goodsList = (new GoodsCategoryDaoImpl())->listCategoryGoods('admin', $name, $status, $categoryId, $hot, $recommendation, $page, $num);
 
         } else {
             /** 获得数量 */
             $totalPage = (new GoodsCategoryDaoImpl())->countCategoryByGoodsCondition("", $status, $categoryId);
 
             /** 查询分页的商品信息 */
-            $goodsList = (new GoodsCategoryDaoImpl())->listGoodsCategory('user', $name, $status, $categoryId, 0, 0, $page, $num);
+            $goodsList = (new GoodsCategoryDaoImpl())->listCategoryGoods('user', $name, $status, $categoryId, 0, 0, $page, $num);
 
         }
 
@@ -81,6 +81,18 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
 
     }
 
+    /**
+     * 获取所有分类
+     * @return array
+     */
+    public function listCategory() : array
+    {
+        $res=(new GoodsCategoryDaoImpl())->listCategory();
+        return (new GoodsCategory())->categoryModel($res);
+    }
+
+
+
 //
 //    /**
 //     * 删除一个分类
@@ -119,15 +131,6 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
 //
 //    }
 
-//    /**
-//     * 获取所有分类
-//     * @return array
-//     */
-//    public function listGoodsCategoryName() : array
-//    {
-//        $res=(new GoodsCategoryDaoImpl())->listCategory();
-//        return (new GoodsCategory())->categoryModel($res);
-//    }
 
 
 }

@@ -188,4 +188,22 @@ class GoodsServiceImpl implements GoodsService
             'msg' => "商品添加成功"
         );
     }
+
+    /**
+     * 根据指定的商品id进行商品的删除
+     * @param int $goodsId
+     * @return array
+     */
+    public function removeByGoodsId(int $goodsId): array
+    {
+        // TODO: Implement removeByGoodsId() method.
+        /** 权限比对 */
+
+        /** 执行删除 */
+        (new GoodsDaoImpl())->removeByField("goods_id","i",$goodsId);
+
+        /** 返回数据 */
+        return array();
+
+    }
 }
