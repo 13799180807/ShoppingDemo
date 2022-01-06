@@ -120,8 +120,8 @@ class Route
             $ctrlPath = APP_PATH . APP_NAME . '/Controller/Home/' . $ctrlName;
             $nameSpace = '\Application\Controller\Home\\';
         } else {
-//            include APP_PATH . 'tests/test.php';
-            include APP_PATH . 'tests/uploadTest.php';
+            include APP_PATH . 'tests/test.php';
+//            include APP_PATH . 'tests/uploadTest.php';
 //            header("Content-type:Application/json;charset=utf-8");
 //            echo FeedBack::result(500,"服务器出错","");
             return;
@@ -159,8 +159,8 @@ class Route
             //    (new Log())->run("控制器不存在：".$ctrlPath);
             //      header("Content-type:Application/json;charset=utf-8");
             //     echo FeedBack::result(500,"服务器出错","");
-//            include APP_PATH . 'tests/test.php';
-            include APP_PATH . 'tests/uploadTest.php';
+            include APP_PATH . 'tests/test.php';
+//            include APP_PATH . 'tests/uploadTest.php';
         }
 
     }

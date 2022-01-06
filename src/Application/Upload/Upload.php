@@ -70,7 +70,6 @@ class Upload
         /** 初始化过滤设置, 如果$allow为字符串型时自动设置 $host = $allow */
         if (is_string($allow)) {
             $host = $allow;
-//            $allow = "";
         } else {
             $this->allow($allow);
         }
@@ -121,19 +120,32 @@ class Upload
 
                 /** 上传文件回调数据信息 */
                 $newArr['name'] = $fileList[0]['name']; # 文件上传时的原名称
-                $newArr['ext'] = $ext; # 文件后缀名
-                $newArr['mime'] = $fileList[0]['type']; # 文件MIME
-                $newArr['size'] = $fileList[0]['size']; # 文件大小(单位:字节)
-                $newArr['saveName'] = $fileName; # 文件保存在服务器上名称
-                $newArr['savePath'] = str_replace('\\', '/', $savePath . '/' . $fileName); # 文件存储绝对路径(包含文件名)
-                $newArr['url'] = str_replace($_SERVER['DOCUMENT_ROOT'], $this->host, $newArr['savePath']); # 文件访问URL地址
-                $newArr['uri'] = str_replace($_SERVER['DOCUMENT_ROOT'], '', $newArr['savePath']); # 文件访问URI相对地址
-                $newArr['md5'] = md5_file($newArr['savePath']); # 文件MD5
+                /** 文件后缀名 */
+                $newArr['ext'] = $ext;
+                /** 文件MIME */
+                $newArr['mime'] = $fileList[0]['type'];
+                /** 文件大小(单位:字节) */
+                $newArr['size'] = $fileList[0]['size'];
+                /** 文件保存在服务器上名称 */
+                $newArr['saveName'] = $fileName;
+                /** 文件存储绝对路径(包含文件名) */
+                $newArr['savePath'] = str_replace('\\', '/', $savePath . '/' . $fileName);
+
+                /** 需要进行一个替换不然实现不了 */
+                $search=str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']);
+
+                /**  文件访问URL地址 */
+                $newArr['url'] = str_replace($search, $this->host, $newArr['savePath']);
+                /** 文件访问URI相对地址 */
+                $newArr['uri'] = str_replace($search, '', $newArr['savePath']);
+                /** 文件MD5  */
+                $newArr['md5'] = md5_file($newArr['savePath']);
             }
 
             return array(
                 'status' => true,
-                'msg' => $newArr
+                'msg' => "上传成功",
+                'data'=>$newArr
             );
         } else {
             return array(
@@ -209,7 +221,7 @@ class Upload
             if ($file['size'] > $this->size) {
                 return array(
                     'status' => false,
-                    'msg' => "上传文件大小不符合"
+                    'msg' => "上传文件太大，上传失败"
                 );
             }
         }

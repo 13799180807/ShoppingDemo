@@ -60,7 +60,6 @@ class Frame
     {
         /** 载入配置 */
         (new Config())->run();
-
         /** 路由初始化 */
         (new Route())->run();
 

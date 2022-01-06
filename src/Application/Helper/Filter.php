@@ -22,11 +22,6 @@ class Filter
         return $res;
     }
 
-
-
-
-
-
 //    /**
 //     * 检测数字判断
 //     * @param array $arr

@@ -1,115 +1,123 @@
 <?php
 
 
-if (!function_exists('encryption'))
-{
+
+
+if (!function_exists('deleteFile')) {
+    /**
+     * 删除文件
+     * @param string $path
+     */
+    function deleteFile(string $path)
+    {
+        /** 检车文件是否存在 */
+        if (file_exists($path)) {
+            /** 文件存在 执行删除 */
+            unlink($path);
+        }
+    }
+}
+
+
+if (!function_exists('encryption')) {
     /**
      * 密码加密处理
      * @param string $account
      * @param string $pwd
      * @return string
      */
-    function encryption(string $account,string $pwd): string
+    function encryption(string $account, string $pwd): string
     {
         /** 截取账号前6位数字，进行MD5加密 */
-        $account=iconv_substr($account,0,6);
+        $account = iconv_substr($account, 0, 6);
 
         /** 截取加密后MD5 第6位开始到6位结束*/
-        $account=iconv_substr(MD5($account),6,6);
+        $account = iconv_substr(MD5($account), 6, 6);
 
         /** 对密码进行MD5加密 ,截取中间的10位*/
-        $pwd=iconv_substr(MD5($pwd),6,10);
+        $pwd = iconv_substr(MD5($pwd), 6, 10);
 
         /** 拼接密码 */
-        return $account.$pwd;
+        return $account . $pwd;
     }
 }
 
-if (!function_exists('Splicing'))
-{
+if (!function_exists('Splicing')) {
     /**
      * 查询字段拼接
      * @param array $fields
      * @return string
      */
-    function splicing(array $fields):string
+    function splicing(array $fields): string
     {
-        $str="";
-        foreach ($fields as $value)
-        {
-            if ($value=="*")
-            {
+        $str = "";
+        foreach ($fields as $value) {
+            if ($value == "*") {
                 return "*";
-            }else{
-                $value=humpToUnderLine($value);
-                $str=$str.$value.",";
+            } else {
+                $value = humpToUnderLine($value);
+                $str = $str . $value . ",";
             }
         }
-        return trim($str,",");
+        return trim($str, ",");
     }
 
 }
 
-if (!function_exists('safeReplace'))
-{
+if (!function_exists('safeReplace')) {
     /**
      * 安全过滤函数防止xss攻击代码
      * @param string $str
      * @return string
      */
-    function safeReplace(string $str) : string
+    function safeReplace(string $str): string
     {
-        $str = str_replace('%20','',$str);
-        $str = str_replace('%27','',$str);
-        $str = str_replace('%2527','',$str);
-        $str = str_replace('*','',$str);
-        $str = str_replace('"','&quot;',$str);
-        $str = str_replace("'",'',$str);
-        $str = str_replace('"','',$str);
-        $str = str_replace(';','',$str);
-        $str = str_replace('<','&lt;',$str);
-        $str = str_replace('>','&gt;',$str);
-        $str = str_replace("{",'',$str);
-        $str = str_replace('}','',$str);
-        $str = str_replace('\\','',$str);
+        $str = str_replace('%20', '', $str);
+        $str = str_replace('%27', '', $str);
+        $str = str_replace('%2527', '', $str);
+        $str = str_replace('*', '', $str);
+        $str = str_replace('"', '&quot;', $str);
+        $str = str_replace("'", '', $str);
+        $str = str_replace('"', '', $str);
+        $str = str_replace(';', '', $str);
+        $str = str_replace('<', '&lt;', $str);
+        $str = str_replace('>', '&gt;', $str);
+        $str = str_replace("{", '', $str);
+        $str = str_replace('}', '', $str);
+        $str = str_replace('\\', '', $str);
         return $str;
     }
 
 }
 
-if (!function_exists('escapeString'))
-{
+if (!function_exists('escapeString')) {
     /**
      * 转义字符串 防止sql注入
      * @param string $str
      * @return string
      */
-    function escapeString(string $str) : string
+    function escapeString(string $str): string
     {
         $pattern = "/(select[\s])|(insert[\s])|(update[\s])|(delete[\s])|(from[\s])|(where[\s])|(drop[\s])/i";
 
         /** 检测变量是否是数组 */
-        if (is_array($str))
-        {
+        if (is_array($str)) {
 
-            foreach ($str as $key=> $value)
-            {
+            foreach ($str as $key => $value) {
                 /** 使用反斜线引用字符串 去除首位字符串 */
                 $str[$key] = addslashes(trim($value));
 
                 /** 执行匹配正则表达式 */
-                if(preg_match($pattern,$str[$key]))
-                {
+                if (preg_match($pattern, $str[$key])) {
                     $str[$key] = '';
                 }
             }
         } else {
             /** 使用反斜线引用字符串  去除首位字符串*/
-            $str=addslashes(trim($str));
+            $str = addslashes(trim($str));
 
             /** 执行匹配正则表达式 */
-            if(preg_match($pattern,$str))
-            {
+            if (preg_match($pattern, $str)) {
                 $str = '';
             }
         }
@@ -118,8 +126,7 @@ if (!function_exists('escapeString'))
 
 }
 
-if(!function_exists('underscoreToHump'))
-{
+if (!function_exists('underscoreToHump')) {
     /**
      * 下划线转驼峰命名
      * step1.原字符串转小写,原字符串中的分隔符用空格替换,在字符串开头加上分隔符
@@ -128,15 +135,14 @@ if(!function_exists('underscoreToHump'))
      * @param string $val
      * @return string
      */
-    function underscoreToHump($str, $val='_'): string
+    function underscoreToHump($str, $val = '_'): string
     {
-        $str = $val. str_replace($val, " ", strtolower($str));
-        return ltrim(str_replace(" ", "", ucwords($str)), $val );
+        $str = $val . str_replace($val, " ", strtolower($str));
+        return ltrim(str_replace(" ", "", ucwords($str)), $val);
     }
 }
 
-if(!function_exists('humpToUnderLine'))
-{
+if (!function_exists('humpToUnderLine')) {
     /**
      * 驼峰转下划线
      * step:小写和大写紧挨一起的地方,加上分隔符,然后全部转小写
@@ -144,7 +150,7 @@ if(!function_exists('humpToUnderLine'))
      * @param string $val
      * @return string
      */
-    function humpToUnderLine($str, $val='_'): string
+    function humpToUnderLine($str, $val = '_'): string
     {
         return strtolower(preg_replace('/([a-z])([A-Z])/', "$1" . $val . "$2", $str));
     }

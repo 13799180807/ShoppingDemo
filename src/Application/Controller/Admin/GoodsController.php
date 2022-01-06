@@ -9,6 +9,7 @@ use Application\Helper\FeedBack;
 use Application\Library\SqlUtil;
 use Application\Service\GoodsCategoryServiceImpl;
 use Application\Service\GoodsServiceImpl;
+use Application\Upload\Upload;
 
 class GoodsController
 {
@@ -85,9 +86,32 @@ class GoodsController
             ));
             if (count($resDetect) == 0) {
                 /** 符合规范传递数据 */
+
+
+                /** 判断有没有图片上传 上传的数据是否合法 */
+                $upload = new Upload('mainImg');
+                $resFile = $upload->save('upload', [
+                    'ext' => 'jpg,jpeg,png,gif', #限制格式
+                    'size' => 1024*10*10*10*5  #B  5M以内
+                ]);
+
+                if ($resFile['status']) {
+                    $fileMsg=$resFile['msg'];
+                    $fileData=$resFile['data'];
+                    $imgName=$fileData['saveName'];
+                } else {
+                    $fileMsg=$resFile['msg'];
+                     $imgName="";
+                }
+
+                /** 进行控制 */
                 $res=(new GoodsServiceImpl())->saveGoods($requestData['goodsName'],$requestData['goodsCategoryId'],$requestData['goodsPrice'],$requestData['goodsStock'],
-                    $requestData['goodsStatus'],$requestData['goodsHot'],$requestData['recommendation'],$requestData['goodsDescribe'],"",$requestData['goodsIntroduction']);
-                echo FeedBack::result('200', $res['msg']);
+                    $requestData['goodsStatus'],$requestData['goodsHot'],$requestData['recommendation'],$requestData['goodsDescribe'],$imgName,$requestData['goodsIntroduction']);
+
+                $callBack=array(
+                    'images'=>$fileMsg,
+                );
+                echo FeedBack::result('200', $res['msg'],$callBack);
                 return;
             }
             /** 类型不符合 */
@@ -157,22 +181,7 @@ class GoodsController
         /** 返回结果 */
         /** 照片提交单独处理 */
 
-//        header("Content-type:Application/json;charset=utf-8");
-//        echo FeedBack::result('200','数据获取成功',"12");
 
-//        if(empty($_FILES['mainPhoto']['name']))
-//        {
-//            /** 检查照片有没有提交 */
-//            (new Log())->run("没有提交");
-//        }
-//        else
-//        {
-//            (new Log())->run("提交了");
-//            $arr=explode('.',$_FILES['mainPhoto']['name']);
-//            $newFileName='upload/'.time().'.'.$arr[1];
-//            echo $newFileName;
-//            move_uploaded_file($_FILES['mainPhoto']['tmp_name'],$newFileName);
-//        }
 
 
     }

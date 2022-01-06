@@ -164,9 +164,15 @@ class GoodsServiceImpl implements GoodsService
 
         /** 权限比对 */
 
+
         /** 检测这个分类存在不存在，不存在则拒绝创建 */
         if (!count((new GoodsCategoryDaoImpl())->getGoodsCategoryId($goodsCategoryId)) > 0) {
             /** 不存在 */
+
+            /** 进行上传的照片删除 */
+            $path="upload/".$goodsImg;
+            deleteFile($path);
+
             return array(
                 "msg" => "添加的分类不存在！！！"
             );

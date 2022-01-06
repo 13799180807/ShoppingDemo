@@ -21,7 +21,7 @@ class Config
 
         foreach ($config as $item) {
             /** 跳出本次循环  */
-            if ($item == "." || $item == ".." || $item == "database.json") {
+            if ($item == "." || $item == ".." || $item == "database.json" || $item == "phpunit.phar" ) {
                 continue;
             }
 
