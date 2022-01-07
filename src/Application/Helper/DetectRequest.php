@@ -5,6 +5,7 @@ namespace Application\Helper;
 class DetectRequest
 {
     /**
+     * 没用了
      * 检测请求是否符合
      * @param array $requestData
      * @return array
@@ -118,7 +119,8 @@ class DetectRequest
      */
     protected static function detectLength($name, $str, $min, $max): array
     {
-        $length = strlen($str);
+        $length = mb_strlen($str);
+
         if ($length >= $min && $length <= $max) {
             return array($name, true, $str, "长度符合");
         }

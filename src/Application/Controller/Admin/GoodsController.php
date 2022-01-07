@@ -19,7 +19,7 @@ class GoodsController
      */
     public function actionClassify()
     {
-        $res=(new GoodsCategoryServiceImpl())->listCategory();
+        $res = (new GoodsCategoryServiceImpl())->listCategory();
         echo FeedBack::result('200', '数据获取成功', $res);
 
     }
@@ -70,7 +70,7 @@ class GoodsController
             'goodsHot' => "hot",//热度
             'recommendation' => "recommendation",//推荐
         ));
-        if ($resRequest[0] ) {
+        if ($resRequest[0]) {
             $requestData = $resRequest[1];
             /** 检验数据是否符合规范 */
             $resDetect = DetectRequest::detectRun(array(
@@ -92,26 +92,26 @@ class GoodsController
                 $upload = new Upload('mainImg');
                 $resFile = $upload->save('upload', [
                     'ext' => 'jpg,jpeg,png,gif', #限制格式
-                    'size' => 1024*10*10*10*5  #B  5M以内
+                    'size' => 1024 * 10 * 10 * 10 * 5  #B  5M以内
                 ]);
 
                 if ($resFile['status']) {
-                    $fileMsg=$resFile['msg'];
-                    $fileData=$resFile['data'];
-                    $imgName=$fileData['saveName'];
+                    $fileMsg = $resFile['msg'];
+                    $fileData = $resFile['data'];
+                    $imgName = $fileData['saveName'];
                 } else {
-                    $fileMsg=$resFile['msg'];
-                     $imgName="";
+                    $fileMsg = $resFile['msg'];
+                    $imgName = "";
                 }
 
                 /** 进行控制 */
-                $res=(new GoodsServiceImpl())->saveGoods($requestData['goodsName'],$requestData['goodsCategoryId'],$requestData['goodsPrice'],$requestData['goodsStock'],
-                    $requestData['goodsStatus'],$requestData['goodsHot'],$requestData['recommendation'],$requestData['goodsDescribe'],$imgName,$requestData['goodsIntroduction']);
+                $res = (new GoodsServiceImpl())->saveGoods($requestData['goodsName'], $requestData['goodsCategoryId'], $requestData['goodsPrice'], $requestData['goodsStock'],
+                    $requestData['goodsStatus'], $requestData['goodsHot'], $requestData['recommendation'], $requestData['goodsDescribe'], $imgName, $requestData['goodsIntroduction']);
 
-                $callBack=array(
-                    'images'=>$fileMsg,
+                $callBack = array(
+                    'images' => $fileMsg,
                 );
-                echo FeedBack::result('200', $res['msg'],$callBack);
+                echo FeedBack::result('200', $res['msg'], $callBack);
                 return;
             }
             /** 类型不符合 */
@@ -120,7 +120,6 @@ class GoodsController
         }
         /** 失败了 */
         echo FeedBack::fail($resRequest[1]);
-
 
 
     }
@@ -154,18 +153,37 @@ class GoodsController
                 3 => array('price', $requestData['goodsPrice'], 'num', 1, 100000),
                 4 => array('stock', $requestData['goodsStock'], 'numInt', 1, 100000),
                 5 => array('status', $requestData['goodsStatus'], 'numInt', 0, 10),
-                6 => array('describe', $requestData['goodsDescribe'], 'str', 1, 100),
-                7 => array('introduction', $requestData['goodsIntroduction'], 'str', 1, 10000),
+                6 => array('describe', $requestData['goodsDescribe'], 'str', 0, 50),
+                7 => array('introduction', $requestData['goodsIntroduction'], 'str', 0, 1000),
                 8 => array('hot', $requestData['goodsHot'], 'numInt', 0, 5),
                 9 => array('recommendation', $requestData['recommendation'], 'numInt', 0, 5),
             );
             $resDetect = DetectRequest::detectRun($detect);
             if (count($resDetect) == 0) {
                 /** 执行更新操作 */
+
+                /** 图片检测 */
+                $upload = new Upload('mainImg');
+                $resFile = $upload->token("123456789")->save('upload', [
+                    'ext' => 'jpg,jpeg,png,gif', #限制格式
+                    'size' => 1024 * 10 * 10 * 10 * 5  #B  5M以内
+                ]);
+
+                /** 判断照片有没跟新成功 */
+                if ($resFile['status']) {
+                    $fileData = $resFile['data'];
+                    $imgName = $fileData['saveName'];
+                } else {
+                    $imgName = "";
+                }
+                $fileMsg = $resFile['msg'];
+
                 $res = (new GoodsServiceImpl())->updateGoodsById($requestData['goodsId'], $requestData['goodsName'], $requestData['goodsCategoryId'],
                     $requestData['goodsPrice'], $requestData['goodsStock'], $requestData['goodsStatus'], $requestData['goodsHot'], $requestData['recommendation'],
-                    $requestData['goodsDescribe'], '1.jpg', $requestData['goodsIntroduction']);
-                echo FeedBack::result('200', $res['msg']);
+                    $requestData['goodsDescribe'], $imgName, $requestData['goodsIntroduction']);
+                echo FeedBack::result('200', $res['msg'],array(
+                    'mainImg'=>$fileMsg
+                ));
                 return;
             }
             /** 类型不符合 */
@@ -174,14 +192,6 @@ class GoodsController
         }
         /** 失败了 */
         echo FeedBack::fail($resRequest[1]);
-
-
-//为完成
-        /** 检测是否有照片要更新 */
-        /** 返回结果 */
-        /** 照片提交单独处理 */
-
-
 
 
     }

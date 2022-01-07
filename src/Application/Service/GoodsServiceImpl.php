@@ -140,7 +140,7 @@ class GoodsServiceImpl implements GoodsService
 
         /** 回调函数 */
         return array(
-            "msg" => "修改成功"
+            "msg" => "商品修改成功"
         );
     }
 
