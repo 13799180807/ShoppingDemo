@@ -45,23 +45,6 @@ class RegularExpression
         return $this->res;
     }
 
-
-    /**
-     * 验证账号密码是否符合条件
-     * @param $name
-     * @param $str
-     * @param $msg
-     * @return array
-     */
-    public function verificationAccount($name, $str, $msg = "必须为6-15位的数字和字母的组合"): array
-    {
-        if (!preg_match('/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,15}$/', $str)) {
-            return array($name, $str, false, $msg);
-        } else {
-            return array($name, $str, true, "符合要求");
-        }
-    }
-
     /**
      * 判断数字是不是符合大小
      * @param string $name
@@ -85,12 +68,29 @@ class RegularExpression
      */
     public function strLength(string $name, string $str): array
     {
-        $length = strlen($str);
+//        $length = strlen($str);
+        $length = mb_strlen($str);
         if ($length >= $this->strMin && $length <= $this->strMax) {
             return array($name, true, $str, '长度符合');
         }
         return array($name, false, $str, '长度不符合');
 
+    }
+
+    /**
+     * 验证账号密码是否符合条件
+     * @param $name
+     * @param $str
+     * @param $msg
+     * @return array
+     */
+    public function verificationAccount($name, $str, $msg = "必须为6-15位的数字和字母的组合"): array
+    {
+        if (!preg_match('/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,15}$/', $str)) {
+            return array($name, $str, false, $msg);
+        } else {
+            return array($name, $str, true, "符合要求");
+        }
     }
 
 

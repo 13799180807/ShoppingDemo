@@ -1421,3 +1421,101 @@
 [04-Jan-2022 10:05:18 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
 [04-Jan-2022 10:05:18 Asia/Shanghai] PHP Stack trace:
 [04-Jan-2022 10:05:18 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 16
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP   2. indexCurlPost() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:4
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Notice:  Undefined index: newest in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 419
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 420
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Notice:  Undefined index: recommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 514
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 515
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Notice:  Undefined index: hot in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 587
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 588
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:36:48 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\curl.php on line 16
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP   2. indexCurlPost() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:4
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Notice:  Undefined index: newest in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 419
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 420
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Notice:  Undefined index: recommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 514
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 515
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Notice:  Undefined index: hot in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 587
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php on line 588
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:37:44 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\index.php:0
+[06-Jan-2022 13:42:03 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
+[06-Jan-2022 13:42:03 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:42:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[06-Jan-2022 13:42:03 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 282
+[06-Jan-2022 13:42:03 Asia/Shanghai] PHP Stack trace:
+[06-Jan-2022 13:42:03 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[10-Jan-2022 15:53:31 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
+[10-Jan-2022 15:53:31 Asia/Shanghai] PHP Stack trace:
+[10-Jan-2022 15:53:31 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[10-Jan-2022 15:55:08 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 21
+[10-Jan-2022 15:55:08 Asia/Shanghai] PHP Stack trace:
+[10-Jan-2022 15:55:08 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[11-Jan-2022 16:38:02 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[11-Jan-2022 16:38:02 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 16:38:02 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[11-Jan-2022 16:38:02 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 293
+[11-Jan-2022 16:38:02 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 16:38:02 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[11-Jan-2022 16:41:21 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[11-Jan-2022 16:41:21 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 16:41:21 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[11-Jan-2022 16:41:21 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 293
+[11-Jan-2022 16:41:21 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 16:41:21 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[11-Jan-2022 16:44:12 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[11-Jan-2022 16:44:12 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 16:44:12 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[11-Jan-2022 16:44:12 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 293
+[11-Jan-2022 16:44:12 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 16:44:12 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[11-Jan-2022 17:02:07 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 250
+[11-Jan-2022 17:02:07 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 17:02:07 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php:0
+[11-Jan-2022 17:02:07 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 256
+[11-Jan-2022 17:02:07 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 17:02:07 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php:0
+[11-Jan-2022 17:04:17 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 251
+[11-Jan-2022 17:04:17 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 17:04:17 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php:0
+[11-Jan-2022 17:04:17 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 257
+[11-Jan-2022 17:04:17 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 17:04:17 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php:0
+[11-Jan-2022 17:05:36 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 251
+[11-Jan-2022 17:05:36 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 17:05:36 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php:0
+[11-Jan-2022 17:05:36 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 257
+[11-Jan-2022 17:05:36 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 17:05:36 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php:0
+[11-Jan-2022 17:06:33 Asia/Shanghai] PHP Notice:  Undefined variable: account in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 122
+[11-Jan-2022 17:06:33 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 17:06:33 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php:0
+[11-Jan-2022 17:06:33 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 128
+[11-Jan-2022 17:06:33 Asia/Shanghai] PHP Stack trace:
+[11-Jan-2022 17:06:33 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php:0

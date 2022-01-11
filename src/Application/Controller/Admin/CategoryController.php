@@ -13,6 +13,7 @@ class CategoryController
 
     public function actionDemo(){
 
+        setcookie("user5", "demo1", time()+3600);
         echo FeedBack::result('200', $_POST);
     }
 

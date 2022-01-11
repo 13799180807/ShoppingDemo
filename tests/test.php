@@ -19,6 +19,27 @@ echo " 测试页面 <hr>";
 echo "<hr>";
 
 
+//var_dump((new \Application\Middleware\Session("33f3a8822017b8ad2698c5e7546a8174"))->getToken());
+//var_dump((new \Application\Middleware\Session("","admin123"))->setToken());
+
+
+
+
+
+
+/** 保存一个账号信息 */
+//var_dump((new \Application\Service\UserServiceImpl())->saveUser("123456","123456"));
+//var_dump((new \Application\Service\UserServiceImpl())->saveUser("abc123","abc123"));
+/** 验证登入 */
+//var_dump((new \Application\Service\UserServiceImpl())->login("abc1231","abc123"));
+
+/** 获取一个记录 */
+//var_dump((new \Application\Dao\UserDaoImpl())->getById("abc123"));
+
+/** 添加一个用户 */
+//var_dump((new \Application\Dao\UserDaoImpl())->saveUser("abc123","abc123"));
+
+
 /** 数据删除 */
 //(new GoodsServiceImpl())->removeByGoodsId(23);
 

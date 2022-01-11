@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 if (!function_exists('deleteFile')) {
     /**
      * 删除文件
@@ -28,17 +26,29 @@ if (!function_exists('encryption')) {
      */
     function encryption(string $account, string $pwd): string
     {
-        /** 截取账号前6位数字，进行MD5加密 */
-        $account = iconv_substr($account, 0, 6);
+        /**获取账号密码长度 */
+        $aLen = mb_strlen($account);
+        $pLen = mb_strlen($pwd);
 
-        /** 截取加密后MD5 第6位开始到6位结束*/
-        $account = iconv_substr(MD5($account), 6, 6);
+        /** 截取账号密码组成key字符串 */
+        $key = iconv_substr($pwd, 1, ceil($pLen / 2)) . iconv_substr($account, 0, ceil($aLen / 2));
 
-        /** 对密码进行MD5加密 ,截取中间的10位*/
-        $pwd = iconv_substr(MD5($pwd), 6, 10);
+        /** MD5加密 截取长度 */
+        $key = iconv_substr(MD5($key), 25, 6);
+        $account = iconv_substr(MD5($account), 15, 10);
+        $pwd = iconv_substr(MD5($pwd), ceil($pLen / 2), 16);
 
         /** 拼接密码 */
-        return $account . $pwd;
+        return $key . $pwd . $account;
+
+//        /** 截取账号前6位数字，进行MD5加密 */
+//        $account = iconv_substr($account, 0, 6);
+//        /** 截取加密后MD5 第6位开始到6位结束*/
+//        $account = iconv_substr(MD5($account), 6, 6);
+//        /** 对密码进行MD5加密 ,截取中间的10位*/
+//        $pwd = iconv_substr(MD5($pwd), 6, 10);
+//        /** 拼接密码 */
+//        return $account . $pwd;
     }
 }
 

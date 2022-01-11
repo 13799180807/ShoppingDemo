@@ -2,67 +2,74 @@
 require 'curl.php';
 require 'config.php';
 
-    if(isset($_GET['commodity'])){
-        $id=$_GET['commodity'];
-        if( $id!="" && is_numeric($id))
-        {
-            $resData=productCurlPost($id);
-            if (count($resData)>0){
-                $goods=$resData['goods'];
-                $goodsIntroduce=$resData['goodsIntroduce'];
-                $goodsPicture=$resData['goodsPicture'];
 
-
-                foreach ($goods as $row) {
-                    $name = $row["goodsName"];
-                    $price = $row["goodsPrice"];
-                    $stock = $row["goodsStock"];
-                    $hot = $row["goodsHot"];
-                    $recommend =$row["goodsRecommend"];
-                    $category=$row['goodsCategoryId'];
-                    $describe = $row["goodsDescribe"];
-                    $img = IMG_PATH.$row["goodsImg"];
-                    $created = $row["createdAt"];
-                    if( $category==1)
-                    {
-                        $label="数码产品";
-                    }elseif ( $category==2){
-                        $label="玩具系列";
-                    }
-                    elseif ( $category==3){
-                        $label="电子配件";
-                    }
-                    elseif ( $category==4){
-                        $label="影视系列";
-                    }
-                    else{
-                        $label="其他系列";
-                    }
-
-                }
-
-            }else{
-                echo "<script>alert('请求失败请重新进入！'); location.href='index.php';</script>";
-                exit;
-            }
-        }
-        else{
-            echo "<script>alert('非法操作'); location.href='index.php';</script>";
-            exit;
-        }
-    }else{
-        echo "<script>alert('你的操作已经被记录下来了！'); location.href='index.php';</script>";
+if (isset($_COOKIE['token'])) {
+    $loginStatus = userStatus();
+    if (!$loginStatus[0]) {
+        echo "<script>alert('当前登入过期了！！！');location.href='login.php'</script>";
         exit;
     }
+} else {
+    echo "<script>alert('当前未登入！！！');location.href='login.php'</script>";
+    exit;
+}
+
+
+if (isset($_GET['commodity'])) {
+    $id = $_GET['commodity'];
+    if ($id != "" && is_numeric($id)) {
+        $resData = productCurlPost($id);
+        if (count($resData) > 0) {
+            $goods = $resData['goods'];
+            $goodsIntroduce = $resData['goodsIntroduce'];
+            $goodsPicture = $resData['goodsPicture'];
+
+
+            foreach ($goods as $row) {
+                $name = $row["goodsName"];
+                $price = $row["goodsPrice"];
+                $stock = $row["goodsStock"];
+                $hot = $row["goodsHot"];
+                $recommend = $row["goodsRecommend"];
+                $category = $row['goodsCategoryId'];
+                $describe = $row["goodsDescribe"];
+                $img = IMG_PATH . $row["goodsImg"];
+                $created = $row["createdAt"];
+                if ($category == 1) {
+                    $label = "数码产品";
+                } elseif ($category == 2) {
+                    $label = "玩具系列";
+                } elseif ($category == 3) {
+                    $label = "电子配件";
+                } elseif ($category == 4) {
+                    $label = "影视系列";
+                } else {
+                    $label = "其他系列";
+                }
+
+            }
+
+        } else {
+            echo "<script>alert('请求失败请重新进入！'); location.href='index.php';</script>";
+            exit;
+        }
+    } else {
+        echo "<script>alert('非法操作'); location.href='index.php';</script>";
+        exit;
+    }
+} else {
+    echo "<script>alert('你的操作已经被记录下来了！'); location.href='index.php';</script>";
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?php echo $name ;?>商品详情页面</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title><?php echo $name; ?>商品详情页面</title>
     <link rel="shortcut icon" href="<?php echo ASSETS; ?>images/favicon.ico">
     <link rel="stylesheet" href="<?php echo ASSETS; ?>css/vendor/vendor.min.css">
     <link rel="stylesheet" href="<?php echo ASSETS; ?>css/plugins/plugins.min.css">
@@ -107,7 +114,7 @@ require 'config.php';
                     <div class="single-product-img swiper-container product-gallery-top">
                         <div class="swiper-wrapper popup-gallery">
                             <a class="swiper-slide w-100" href="<?php echo $img; ?>">
-                                <img class="w-100" src="<?php echo $img; ?>" >
+                                <img class="w-100" src="<?php echo $img; ?>">
                             </a>
                         </div>
                     </div>
@@ -118,17 +125,17 @@ require 'config.php';
 
                         <div class="swiper-wrapper">
                             <?php
-                            foreach ($goodsPicture as $row){
-                                if($row["goodsPicturePath"]==""){
-                                    $img1=$img;
-                                }else{
-                                    $img1=IMG_PATH.$row["goodsPicturePath"];
+                            foreach ($goodsPicture as $row) {
+                                if ($row["goodsPicturePath"] == "") {
+                                    $img1 = $img;
+                                } else {
+                                    $img1 = IMG_PATH . $row["goodsPicturePath"];
                                 }
-                                    ?>
-                            <div class="swiper-slide">
-                                <img  src="<?php echo $img1; ?>" alt="Product">
-                            </div>
-                            <?php
+                                ?>
+                                <div class="swiper-slide">
+                                    <img src="<?php echo $img1; ?>" alt="Product">
+                                </div>
+                                <?php
                             }
                             ?>
                         </div>
@@ -155,20 +162,20 @@ require 'config.php';
                     <!-- Price Box Start -->
                     <div class="price-box mb-2">
                         <span class="regular-price">￥<?php echo $price; ?></span>
-                        <span class="old-price"><del>￥<?php echo round($price*1.3,2); ?> </del></span>
+                        <span class="old-price"><del>￥<?php echo round($price * 1.3, 2); ?> </del></span>
                     </div>
                     <!-- Price Box End -->
 
                     <!-- SKU Start -->
                     <div class="sku mb-3">
-                        <span>商品标签: <?php echo $label ; ?></span>
+                        <span>商品标签: <?php echo $label; ?></span>
                     </div>
                     <!-- SKU End -->
 
                     <!-- Product Inventory Start -->
                     <div class="product-inventroy mb-3">
                         <span class="inventroy-title"> <strong>库存:</strong></span>
-                        <span class="inventory-varient"><?php echo $stock ;?></span>
+                        <span class="inventory-varient"><?php echo $stock; ?></span>
                     </div>
                     <!-- Product Inventory End -->
 
@@ -181,10 +188,10 @@ require 'config.php';
                     <!-- Product Size Start -->
                     <div class="product-size mb-5">
                         <span><strong> </strong></span>
-                        <a  class="size-ratio active"> </a>
-                        <a  class="size-ratio"> </a>
-                        <a  class="size-ratio"> </a>
-                        <a  class="size-ratio"> </a>
+                        <a class="size-ratio active"> </a>
+                        <a class="size-ratio"> </a>
+                        <a class="size-ratio"> </a>
+                        <a class="size-ratio"> </a>
                     </div>
                     <!-- Product Size End -->
                     <!-- Product Coler Variation Start -->
@@ -237,14 +244,15 @@ require 'config.php';
                     <div class="payment-option mt-4 d-flex">
                         <span><strong>支付: </strong></span>
                         <a>
-                            <img class="fit-image ms-1" src="assets/images/payment/payment.png" alt="Payment Option Image">
+                            <img class="fit-image ms-1" src="assets/images/payment/payment.png"
+                                 alt="Payment Option Image">
                         </a>
                     </div>
                     <!-- Payment Option End -->
 
                     <!-- Product Delivery Policy Start -->
                     <ul class="product-delivery-policy border-top pt-4 mt-4 border-bottom pb-4">
-                        <li> <i class="fa fa-check-square"></i> <span>安全策略 Detailed security policy</span></li>
+                        <li><i class="fa fa-check-square"></i> <span>安全策略 Detailed security policy</span></li>
                         <li><i class="fa fa-truck"></i><span>交付政策 Delivery policy</span></li>
                         <li><i class="fa fa-refresh"></i><span>退货政策 return policy</span></li>
                     </ul>
@@ -261,25 +269,28 @@ require 'config.php';
             <div class="col-lg-12 single-product-tab">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#connect-1" role="tab" aria-selected="true">商品详细描述</a>
+                        <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#connect-1" role="tab"
+                           aria-selected="true">商品详细描述</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#connect-2" role="tab" aria-selected="false">售后服务</a>
+                        <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#connect-2" role="tab"
+                           aria-selected="false">售后服务</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#connect-3" role="tab" aria-selected="false">运输政策</a>
+                        <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#connect-3" role="tab"
+                           aria-selected="false">运输政策</a>
                     </li>
                 </ul>
                 <div class="tab-content mb-text" id="myTabContent">
                     <div class="tab-pane fade show active" id="connect-1" role="tabpanel" aria-labelledby="home-tab">
                         <div class="desc-content p-3">
                             <p class="mb-3">
-                               <?php
-                                    foreach ($goodsIntroduce as $row) {
-                                         $text00 =$row["goodsIntroduction"];
-                                    }
-                                   ?>
-                                <?php   echo $text00; ?>
+                                <?php
+                                foreach ($goodsIntroduce as $row) {
+                                    $text00 = $row["goodsIntroduction"];
+                                }
+                                ?>
+                                <?php echo $text00; ?>
                             </p>
 
                         </div>
@@ -294,7 +305,11 @@ require 'config.php';
                                 <!-- Review Details Start -->
                                 <div class="review_details">
 
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in viverra ex, vitae vestibulum arcu. Duis sollicitudin metus sed lorem commodo, eu dapibus libero interdum. Morbi convallis viverra erat, et aliquet orci congue vel. Integer in odio enim. Pellentesque in dignissim leo. Vivamus varius ex sit amet quam tincidunt iaculis.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in viverra ex,
+                                        vitae vestibulum arcu. Duis sollicitudin metus sed lorem commodo, eu dapibus
+                                        libero interdum. Morbi convallis viverra erat, et aliquet orci congue vel.
+                                        Integer in odio enim. Pellentesque in dignissim leo. Vivamus varius ex sit amet
+                                        quam tincidunt iaculis.</p>
                                 </div>
                                 <!-- Review Details End -->
 
@@ -320,7 +335,6 @@ require 'config.php';
                             <!-- Rating Wrap End -->
 
 
-
                         </div>
                         <!-- End Single Content -->
                     </div>
@@ -328,7 +342,11 @@ require 'config.php';
                         <!-- Shipping Policy Start -->
                         <div class="shipping-policy mb-n2 p-3">
                             <h4 class="title-3 mb-4">Shipping policy for our store</h4>
-                            <p class="desc-content mb-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate</p>
+                            <p class="desc-content mb-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                                wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                                ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+                                vulputate</p>
                             <ul class="policy-list mb-2">
                                 <li>1-2 business days (Typically by end of day)</li>
                                 <li><a href="#">30 days money back guaranty</a></li>
@@ -337,9 +355,15 @@ require 'config.php';
                                 <li>luptatum zzril delenit augue duis dolore</li>
                                 <li>te feugait nulla facilisi.</li>
                             </ul>
-                            <p class="desc-content mb-2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum</p>
-                            <p class="desc-content mb-2">claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per</p>
-                            <p class="desc-content mb-2">seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                            <p class="desc-content mb-2">Nam liber tempor cum soluta nobis eleifend option congue nihil
+                                imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem
+                                insitam; est usus legentis in iis qui facit eorum</p>
+                            <p class="desc-content mb-2">claritatem. Investigationes demonstraverunt lectores legere me
+                                lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur
+                                mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc
+                                putamus parum claram, anteposuerit litterarum formas humanitatis per</p>
+                            <p class="desc-content mb-2">seacula quarta decima et quinta decima. Eodem modo typi, qui
+                                nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
                         </div>
                         <!-- Shipping Policy End -->
                     </div>
@@ -362,7 +386,8 @@ require 'config.php';
                 <div class="col-12 col-sm-6 col-lg-3 mb-8">
                     <div class="single-footer-widget">
                         <h1 class="widget-title">About Us</h1>
-                        <p class="desc-content">We are a team of designers and developers that create high quality wordpress, shopify, Opencart</p>
+                        <p class="desc-content">We are a team of designers and developers that create high quality
+                            wordpress, shopify, Opencart</p>
                         <!-- Soclial Link Start -->
                         <div class="widget-social justify-content-start mb-n2">
                             <a title="Facebook" href="#"><i class="fa fa-facebook-f"></i></a>
@@ -378,9 +403,9 @@ require 'config.php';
                     <div class="single-footer-widget">
                         <h2 class="widget-title">Contact Us</h2>
                         <ul class="contact-links">
-                            <li><i class="pe-7s-home"></i> <span>Your address goes here</span> </li>
-                            <li><i class="pe-7s-mail"></i><a > info@example.com</a></li>
-                            <li><i class="pe-7s-call"></i><a > +012 3456 789</a></li>
+                            <li><i class="pe-7s-home"></i> <span>Your address goes here</span></li>
+                            <li><i class="pe-7s-mail"></i><a> info@example.com</a></li>
+                            <li><i class="pe-7s-call"></i><a> +012 3456 789</a></li>
                         </ul>
                     </div>
                 </div>
@@ -403,7 +428,8 @@ require 'config.php';
                             <!-- Newsletter Form Start -->
                             <div class="newsletter-form-wrap pt-1">
                                 <form id="mc-form" class="mc-form">
-                                    <input type="email" id="mc-email" class="form-control email-box mb-4" placeholder="demo@example.com" name="EMAIL">
+                                    <input type="email" id="mc-email" class="form-control email-box mb-4"
+                                           placeholder="demo@example.com" name="EMAIL">
                                     <button id="mc-submit" class="newsletter-btn" type="submit">Subscribe</button>
                                 </form>
                                 <!-- mailchimp-alerts Start -->
@@ -415,7 +441,8 @@ require 'config.php';
                                 <!-- mailchimp-alerts end -->
                             </div>
                             <!-- Newsletter Form End -->
-                            <p class="desc-content mb-0">Join over 1,000 people who get free and fresh content delivered automatically each time we publish</p>
+                            <p class="desc-content mb-0">Join over 1,000 people who get free and fresh content delivered
+                                automatically each time we publish</p>
                         </div>
                     </div>
                 </div>
@@ -430,7 +457,8 @@ require 'config.php';
             <div class="row align-items-center">
                 <div class="col-12 text-center">
                     <div class="copyright-content">
-                        <p class="mb-0">Copyright &copy; 2021.Company name All rights reserved.<a target="_blank" >XXX版权所有</a></p>
+                        <p class="mb-0">Copyright &copy; 2021.Company name All rights reserved.<a target="_blank">XXX版权所有</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -442,7 +470,8 @@ require 'config.php';
 
 
 <!-- Modal Start  -->
-<div class="modalquickview modal fade" id="quick-view" tabindex="-1" aria-labelledby="quick-view" role="dialog" aria-hidden="true">
+<div class="modalquickview modal fade" id="quick-view" tabindex="-1" aria-labelledby="quick-view" role="dialog"
+     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <button class="btn close" data-bs-dismiss="modal">×</button>
@@ -456,19 +485,24 @@ require 'config.php';
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <a class="swiper-slide" href="#">
-                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/1.jpg" alt="Product">
+                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/1.jpg"
+                                         alt="Product">
                                 </a>
                                 <a class="swiper-slide" href="#">
-                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/2.jpg" alt="Product">
+                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/2.jpg"
+                                         alt="Product">
                                 </a>
                                 <a class="swiper-slide" href="#">
-                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/3.jpg" alt="Product">
+                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/3.jpg"
+                                         alt="Product">
                                 </a>
                                 <a class="swiper-slide" href="#">
-                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/4.jpg" alt="Product">
+                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/4.jpg"
+                                         alt="Product">
                                 </a>
                                 <a class="swiper-slide" href="#">
-                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/5.jpg" alt="Product">
+                                    <img class="w-100" src="<?php echo ASSETS; ?>images/products/large-product/5.jpg"
+                                         alt="Product">
                                 </a>
                             </div>
 
@@ -477,8 +511,10 @@ require 'config.php';
                             <!-- Swiper Pagination End -->
 
                             <!-- Next Previous Button Start -->
-                            <div class="swiper-product-button-next swiper-button-next"><i class="pe-7s-angle-right"></i></div>
-                            <div class="swiper-product-button-prev swiper-button-prev"><i class="pe-7s-angle-left"></i></div>
+                            <div class="swiper-product-button-next swiper-button-next"><i class="pe-7s-angle-right"></i>
+                            </div>
+                            <div class="swiper-product-button-prev swiper-button-prev"><i class="pe-7s-angle-left"></i>
+                            </div>
                             <!-- Next Previous Button End -->
                         </div>
                         <!-- Single Product Image End -->
@@ -515,7 +551,10 @@ require 'config.php';
                         <!-- Price Box End -->
 
                         <!-- Description Start -->
-                        <p class="desc-content mb-5">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+                        <p class="desc-content mb-5">I must explain to you how all this mistaken idea of denouncing
+                            pleasure and praising pain was born and I will give you a complete account of the system,
+                            and expound the actual teachings of the great explorer of the truth, the master-builder of
+                            human happiness.</p>
                         <!-- Description End -->
 
                         <!-- Quantity Start -->
@@ -539,7 +578,8 @@ require 'config.php';
 
                         <!-- Action Button Start -->
                         <div class="actions border-bottom mb-4 pb-4">
-                            <a href="#" title="Compare" class="action compare"><i class="pe-7s-refresh-2"></i> Compare</a>
+                            <a href="#" title="Compare" class="action compare"><i class="pe-7s-refresh-2"></i>
+                                Compare</a>
                             <a href="#" title="Wishlist" class="action wishlist"><i class="pe-7s-like"></i> Wishlist</a>
                         </div>
                         <!-- Action Button End -->
@@ -557,16 +597,22 @@ require 'config.php';
                         <div class="payment-option mt-4 d-flex">
                             <span><strong>Payment: </strong></span>
                             <a href="#">
-                                <img class="fit-image ms-1" src="assets/images/payment/payment.png" alt="Payment Option Image">
+                                <img class="fit-image ms-1" src="assets/images/payment/payment.png"
+                                     alt="Payment Option Image">
                             </a>
                         </div>
                         <!-- Payment Option End -->
 
                         <!-- Product Delivery Policy Start -->
                         <ul class="product-delivery-policy border-top pt-4 mt-4 border-bottom pb-4">
-                            <li> <i class="fa fa-check-square"></i> <span>Security Policy (Edit With Customer Reassurance Module)</span></li>
-                            <li><i class="fa fa-truck"></i><span>Delivery Policy (Edit With Customer Reassurance Module)</span></li>
-                            <li><i class="fa fa-refresh"></i><span>Return Policy (Edit With Customer Reassurance Module)</span></li>
+                            <li><i class="fa fa-check-square"></i> <span>Security Policy (Edit With Customer Reassurance Module)</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-truck"></i><span>Delivery Policy (Edit With Customer Reassurance Module)</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-refresh"></i><span>Return Policy (Edit With Customer Reassurance Module)</span>
+                            </li>
                         </ul>
                         <!-- Product Delivery Policy End -->
 
@@ -661,7 +707,7 @@ require 'config.php';
                                 <li><a href="faq.html">Faq</a></li>
                                 <li><a href="error-404.html">Error 404</a></li>
                                 <li><a href="my-account.html">My Account</a></li>
-                                <li><a href="login.html">Loging | Register</a></li>
+                                <li><a href="login.php">Loging | Register</a></li>
                             </ul>
                         </li>
                         <li class="has-children">
@@ -686,7 +732,8 @@ require 'config.php';
                 <div class="header-top-lan-curr-link">
                     <div class="header-top-lan dropdown">
                         <h4 class="title">Language:</h4>
-                        <button class="dropdown-toggle" data-bs-toggle="dropdown">English <i class="fa fa-angle-down"></i></button>
+                        <button class="dropdown-toggle" data-bs-toggle="dropdown">English <i
+                                    class="fa fa-angle-down"></i></button>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li><a class="dropdown-item" href="#">English</a></li>
                             <li><a class="dropdown-item" href="#">Japanese</a></li>
@@ -696,7 +743,8 @@ require 'config.php';
                     </div>
                     <div class="header-top-curr dropdown">
                         <h4 class="title">Currency:</h4>
-                        <button class="dropdown-toggle" data-bs-toggle="dropdown">USD <i class="fa fa-angle-down"></i></button>
+                        <button class="dropdown-toggle" data-bs-toggle="dropdown">USD <i class="fa fa-angle-down"></i>
+                        </button>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li><a class="dropdown-item" href="#">USD</a></li>
                             <li><a class="dropdown-item" href="#">Pound</a></li>
@@ -713,7 +761,7 @@ require 'config.php';
                 <ul class="contact-links">
                     <li><i class="fa fa-phone"></i><a href="#"> +012 3456 789</a></li>
                     <li><i class="fa fa-envelope-o"></i><a href="#"> info@example.com</a></li>
-                    <li><i class="fa fa-clock-o"></i> <span>Monday - Sunday 9.00 - 18.00</span> </li>
+                    <li><i class="fa fa-clock-o"></i> <span>Monday - Sunday 9.00 - 18.00</span></li>
                 </ul>
                 <!-- Contact Links End -->
 

@@ -1,22 +1,41 @@
 <?php
 
+/** 检测状态---测试 */
+function userStatus(): array
+{
+
+    $statusRes = curl_post("http://localhost:8080/home/user/state", array(
+        'token' => $_COOKIE['token']
+    ));
+    $statusRes = json_decode($statusRes, true);
+    if ($statusRes['status'] == 200) {
+        return array(true, "当前已经登入了");
+    }
+    /** 当前登入过期了 */
+    setcookie("token", $_COOKIE['token'], time() - 3600);
+    setcookie("user", $_COOKIE['user'], time() - 3600);
+
+    return array(false, "当前登入过期了");
+
+}
+
 
 //新的
 /**
  * 主页查询用的接口
  * @return array
  */
-function indexCurlPost():array
+function indexCurlPost(): array
 {
-    $url="http://localhost:8080/home/goods/index";
-    $datalist=array();
-    $datalist["method"]="list";
-    $json=curl_post($url,$datalist);
-    $resArr=json_decode($json,true);
-    if($resArr["status"]=="200"){
+    $url = "http://localhost:8080/home/goods/index";
+    $datalist = array();
+    $datalist["method"] = "list";
+    $json = curl_post($url, $datalist);
+    $resArr = json_decode($json, true);
+    if ($resArr["status"] == "200") {
         return $resArr["data"];
-    }else{
-      return array();
+    } else {
+        return array();
     }
 }
 
@@ -25,14 +44,14 @@ function indexCurlPost():array
  * @param $id
  * @return array
  */
-function productCurlPost($id) :array
+function productCurlPost($id): array
 {
-    $url="http://localhost:8080/home/goods/show";
-    $datalist=array();
-    $datalist["id"]=$id;
-    $json=curl_post($url,$datalist);
-    $resArr=json_decode($json,true);
-    if($resArr["status"]=="200"){
+    $url = "http://localhost:8080/home/goods/show";
+    $datalist = array();
+    $datalist["id"] = $id;
+    $json = curl_post($url, $datalist);
+    $resArr = json_decode($json, true);
+    if ($resArr["status"] == "200") {
         return $resArr["data"];
     }
     return array();
@@ -43,15 +62,14 @@ function productCurlPost($id) :array
  * @return array
  * 模糊查找
  */
-function fuzzyCurlPost($name) :array
+function fuzzyCurlPost($name): array
 {
-    $url="http://localhost:8080/home/goods/fuzzy";
-    $dataList=array();
-    $dataList['fuzzy']=$name;
-    $json=curl_post($url,$dataList);
-    $resArr=json_decode($json,true);
-    if($resArr["status"]=="200")
-    {
+    $url = "http://localhost:8080/home/goods/fuzzy";
+    $dataList = array();
+    $dataList['fuzzy'] = $name;
+    $json = curl_post($url, $dataList);
+    $resArr = json_decode($json, true);
+    if ($resArr["status"] == "200") {
         return $resArr["data"];
     }
     return array();
@@ -64,17 +82,16 @@ function fuzzyCurlPost($name) :array
  * @return array
  * 分类显示
  */
-function categoryCurlPost($id,$page,$num) : array
+function categoryCurlPost($id, $page, $num): array
 {
-    $url="http://localhost:8080/home/category/Classification";
-    $dataList=array();
-    $dataList['id']=$id;
-    $dataList['page']=$page;
-    $dataList['num']=$num;
-    $json=curl_post($url,$dataList);
-    $resArr=json_decode($json,true);
-    if ($resArr["status"]=="200")
-    {
+    $url = "http://localhost:8080/home/category/Classification";
+    $dataList = array();
+    $dataList['id'] = $id;
+    $dataList['page'] = $page;
+    $dataList['num'] = $num;
+    $json = curl_post($url, $dataList);
+    $resArr = json_decode($json, true);
+    if ($resArr["status"] == "200") {
         return $resArr;
     }
     return array();
@@ -82,12 +99,13 @@ function categoryCurlPost($id,$page,$num) : array
 
 //结束
 
-function registerUri($account,$password){
-    $url="http://localhost:8080/home/index/register/reg";
-    $datalist=array();
-    $datalist["account"]=$account;
-    $datalist["password"]=$password;
-    $json=curl_post($url,$datalist);
+function registerUri($account, $password)
+{
+    $url = "http://localhost:8080/home/index/register/reg";
+    $datalist = array();
+    $datalist["account"] = $account;
+    $datalist["password"] = $password;
+    $json = curl_post($url, $datalist);
     return $json;
 }
 
@@ -114,7 +132,9 @@ function curl_get($url)
         return $data;
     }
 }
-function curl_post($url, $postdate ) {
+
+function curl_post($url, $postdate)
+{
     $header = array(
         'Accept: Application/json',
     );
@@ -124,8 +144,8 @@ function curl_post($url, $postdate ) {
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($curl, CURLOPT_TIMEOUT, 10);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE );
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE );
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
     curl_setopt($curl, CURLOPT_POST, 1);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $postdate);
     $data = curl_exec($curl);
