@@ -6,12 +6,15 @@ $dataArray = indexCurlPost();
 if (isset($_COOKIE['token'])) {
     $loginStatus = userStatus();
     if (!$loginStatus[0]) {
-        $userStatus = "登入过期";
+        $userMsg = "登入过期";
+        $userStatus=true;
     } else {
-        $userStatus = $_COOKIE['user'];
+//        $userMsg = $_COOKIE['user'];
+        $userStatus=false;
     }
 } else {
-    $userStatus = "未登入";
+    $userStatus=true;
+    $userMsg = "未登入";
 }
 
 
@@ -23,10 +26,10 @@ if (isset($_COOKIE['token'])) {
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>周边商城</title>
-    <link rel="shortcut icon" href="<?php echo ASSETS; ?>images/favicon.ico">
-    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/vendor/vendor.min.css">
-    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/plugins/plugins.min.css">
-    <link rel="stylesheet" href="<?php echo ASSETS; ?>css/style.min.css">
+    <link href="assets/images/favicon.ico" rel="shortcut icon">
+    <link href="assets/css/vendor/vendor.min.css" rel="stylesheet">
+    <link href="assets/css/plugins/plugins.min.css" rel="stylesheet">
+    <link href="assets/css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -77,9 +80,6 @@ if (isset($_COOKIE['token'])) {
                             <ul>
                                 <li><a href="index.php">首页</a></li>
                                 <li><a href="shop.php">更多商品</a></li>
-                                <li><a href="register.php">注册</a></li>
-                                <li><a href="login.php">登入</a></li>
-
                                 <li class="has-children">
                                     <a href="#">博客<i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
@@ -107,8 +107,21 @@ if (isset($_COOKIE['token'])) {
                             <div class="dropdown-user d-none d-lg-block">
                                 <a href="javascript:void(0)" class="header-action-btn"><i class="pe-7s-user"></i></a>
                                 <ul class="dropdown-menu-user">
-                                    <li><a class="dropdown-item" href="#"><?php echo $userStatus; ?></a></li>
-                                    <li><a class="dropdown-item" href="#">个人中心</a></li>
+                                    <?php
+                                    if ($userStatus){
+                                    ?>
+                                        <li><a class="dropdown-item" href="#"><?php echo $userMsg; ?></a></li>
+                                        <li><a class="dropdown-item" href="login.php">登入</a></li>
+                                        <li><a class="dropdown-item" href="register.php">注册</a></li>
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <li><a class="dropdown-item" href="my-account.php">个人中心</a></li>
+                                        <li><a class="dropdown-item" href="exitLogin.php">退出登入</a></li>
+                                    <?php
+                                    }
+                                    ?>
+
 <!--                                    <li><a class="dropdown-item" href="#">Taka</a></li>-->
                                 </ul>
                             </div>
@@ -957,7 +970,7 @@ if (isset($_COOKIE['token'])) {
                                 <li><a href="contact.html">Contact</a></li>
                                 <li><a href="faq.html">Faq</a></li>
                                 <li><a href="error-404.html">Error 404</a></li>
-                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="my-account.php">My Account</a></li>
                                 <li><a href="login.php">Loging | Register</a></li>
                             </ul>
                         </li>

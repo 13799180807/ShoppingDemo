@@ -706,7 +706,7 @@ if (isset($_GET['commodity'])) {
                                 <li><a href="contact.html">Contact</a></li>
                                 <li><a href="faq.html">Faq</a></li>
                                 <li><a href="error-404.html">Error 404</a></li>
-                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="my-account.php">My Account</a></li>
                                 <li><a href="login.php">Loging | Register</a></li>
                             </ul>
                         </li>

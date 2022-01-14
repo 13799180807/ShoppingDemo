@@ -1519,3 +1519,6 @@
 [11-Jan-2022 17:06:33 Asia/Shanghai] PHP Notice:  Undefined variable: password in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php on line 128
 [11-Jan-2022 17:06:33 Asia/Shanghai] PHP Stack trace:
 [11-Jan-2022 17:06:33 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\register.php:0
+[12-Jan-2022 10:48:23 Asia/Shanghai] PHP Notice:  Undefined index: user in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\my-account.php on line 14
+[12-Jan-2022 10:48:23 Asia/Shanghai] PHP Stack trace:
+[12-Jan-2022 10:48:23 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\my-account.php:0
