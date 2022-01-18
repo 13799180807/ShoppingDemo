@@ -136,8 +136,6 @@ class GoodsServiceImpl implements GoodsService
             (new GoodsIntroductionDaoImpl())->updateByGoodsId($goodsId, $introduction);
         }
 
-        /** ...... */
-
         /** 回调函数 */
         return array(
             "msg" => "商品修改成功"

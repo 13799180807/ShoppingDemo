@@ -3,9 +3,8 @@
 
 namespace Application\Controller\Home;
 
-
-use Application\Helper\DetectRequest;
 use Application\Helper\FeedBack;
+use Application\Helper\Request;
 use Application\Service\UserServiceImpl;
 
 class UserController
@@ -14,37 +13,30 @@ class UserController
     public function actionLogin()
     {
         /** 请求检查 */
-        $param = DetectRequest::detectRequest(array('account' => "account", 'pwd' => 'pwd'));
-        if ($param[0]) {
-            /** 得到请求的数据 */
-            $requestData = $param[1];
-            /** 检测数据是否符合规范 */
-            $detect = array(
-                0 => array('account', $requestData['account'], 'str', 6, 16),
-                1 => array('pwd', $requestData['pwd'], 'str', 6, 16),
-            );
-            $resDetect = DetectRequest::detectRun($detect);
+        $goodsName = Request::param("account", "s");
+        $goodsCategoryId = Request::param("pwd", "s");
 
-            if (count($resDetect) == 0) {
-                /** 进行账号密码验证 */
-                $data = (new UserServiceImpl())->login($requestData['account'], $requestData['pwd']);
-                if ($data['status']) {
-                    /** 账号验证成功 */
-                    $res = (new \Application\Middleware\Session("", $requestData['account']))->setToken();
-                    echo FeedBack::result('200', "登入成功", $res['data']);
-                    return;
+        /** 检测数据是否符合规范 */
+        $data = Request::detect(array(
+            0 => array('account', $goodsName, 'length', 6, 16),
+            1 => array('pwd', $goodsCategoryId, 'length', 6, 16),
+        ));
+        if ($data['status']) {
+            /** 进行账号密码验证 */
+            $loginRes = (new UserServiceImpl())->login($goodsName, $goodsCategoryId);
+            if ($loginRes['status']) {
+                /** 账号验证成功 */
+                $res = (new \Application\Middleware\Session("", $goodsName))->setToken();
+                echo FeedBack::result(200, "登入成功", $res['data']);
+                return;
 
-                } else {
-                    /** 登入失败 */
-                    echo FeedBack::result('404', $data['msg'], array());
-                    return;
-                }
+            } else {
+                /** 登入失败 */
+                echo FeedBack::result(404, $loginRes['msg'], array());
+                return;
             }
-            echo FeedBack::result('404', '请求的参数不规范，请联系管理员。', $resDetect);
-            return;
-
         }
-        echo FeedBack::fail($param[1]);
+        echo FeedBack::fail("参数请求不规范",$data['err']);
     }
 
     /**
@@ -52,51 +44,37 @@ class UserController
      */
     public function actionRegister()
     {
-        $param = DetectRequest::detectRequest(array('account' => "account", 'pwd' => 'pwd'));
-        if ($param[0]) {
-            $requestData = $param[1];
-            /** 检测数据是否符合规范 */
-            $detect = array(
-                0 => array('account', $requestData['account'], 'str', 6, 16),
-                1 => array('pwd', $requestData['pwd'], 'str', 6, 16),
-            );
-            $resDetect = DetectRequest::detectRun($detect);
+        $goodsName = Request::param("account", "s");
+        $goodsCategoryId = Request::param("pwd", "s");
 
-            if (count($resDetect) == 0) {
-                $res = (new UserServiceImpl())->saveUser($requestData['account'], $requestData['pwd']);
-                if ($res['status']) {
-                    echo FeedBack::result('200', $res['msg']);
-                    return;
-                }
-                echo FeedBack::result('404', $res['msg']);
+        $data = Request::detect(array(
+            0 => array('account', $goodsName, 'length', 6, 16),
+            1 => array('pwd', $goodsCategoryId, 'length', 6, 16),
+        ));
+
+        if ($data['status']) {
+            $res = (new UserServiceImpl())->saveUser($goodsName, $goodsCategoryId);
+            if ($res['status']) {
+                echo FeedBack::result(200, $res['msg']);
                 return;
             }
-            echo FeedBack::result('404', '请求的参数不规范，请联系管理员。', $resDetect);
+            echo FeedBack::result(404, $res['msg']);
             return;
-
         }
-        echo FeedBack::fail("请求失败");
+        echo FeedBack::fail("参数请求不规范",$data['err']);
 
     }
 
     /** 测试一下状态 */
     public function actionState()
     {
-        $param = DetectRequest::detectRequest(array('token' => "token"));
-        if ($param[0]) {
-            /** 得到请求的数据 */
-            $requestData = $param[1];
-            $res = (new \Application\Middleware\Session($requestData['token']))->getToken();
-            if ($res['status']) {
-                echo FeedBack::result('200', $res['msg']);
-                return;
-            }
-            echo FeedBack::result('404', $res['msg']);
+        $token = Request::param("token", "s");
+        $res = (new \Application\Middleware\Session($token))->getToken();
+        if ($res['status']) {
+            echo FeedBack::result(200, $res['msg']);
             return;
-
-
         }
-        echo FeedBack::result('404', '当前还没有登入', array());
+        echo FeedBack::result(404, $res['msg']);
 
     }
 

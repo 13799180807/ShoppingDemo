@@ -11,37 +11,37 @@ namespace Application\Helper;
  */
 class FeedBack
 {
-
-
     /**
      * 返回json
-     * @param $status
+     * @param int $code
      * @param string $msg
-     * @param string $dataList
-     * @return mixed
+     * @param array $dataList
+     * @return false|string
      */
-    public static function result($status, $msg = "", $dataList = "")
+    public static function result(int $code, string $msg = "", array $dataList = array())
     {
         $json = array(
-            'status' => $status,
+            'code' => $code,
             'msg' => $msg,
             'data' => $dataList
         );
         return json_encode($json);
     }
 
+
     /**
-     * 失败返回404
+     * 失败
      * @param string $msg
+     * @param array $error
      * @return false|string
      */
-    public static function fail(string $msg)
+    public static function fail(string $msg, array $error = array())
     {
         $json = array(
-            'status' => 404,
+            'code' => 400,
             'msg' => $msg,
             'data' => array(
-                'err' => "请联系管理员进行参数比对"
+                'error' => $error
             )
         );
         return json_encode($json);

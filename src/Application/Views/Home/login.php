@@ -26,7 +26,7 @@ if (isset($_POST['login'])) {
         ));
         $loginRes = json_decode($res, true);
 
-        if ($loginRes['status'] == 200) {
+        if ($loginRes['code'] == 200) {
             $data = $loginRes['data'];
             if (count($data) > 0) {
                 /** 登入成功 */

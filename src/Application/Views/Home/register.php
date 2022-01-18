@@ -16,7 +16,7 @@ if (isset($_POST["register"])) {
         'pwd' => $pwd
     ));
     $res = json_decode($res, true);
-    if ($res['status'] == "200") {
+    if ($res['code'] == 200) {
         $msg = $res["msg"] . '<a href="login.php" style="color: #0d6efd">前往登入</a>';
     } else {
         $msg = $res["msg"];

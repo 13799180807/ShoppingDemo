@@ -8,7 +8,7 @@ class UserServiceImpl implements UserService
 {
 
     /**
-     * 保存一个账号信息
+     * 注册账号
      * @param string $userId
      * @param string $userPwd
      * @return array
@@ -32,7 +32,7 @@ class UserServiceImpl implements UserService
     }
 
     /**
-     * 登入验证
+     * 登入检验
      * @param string $userId
      * @param string $userPwd
      * @return array
@@ -61,7 +61,6 @@ class UserServiceImpl implements UserService
             'status' => false,
             'msg' => '密码错误'
         );
-
 
     }
 }

@@ -82,7 +82,7 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
     }
 
     /**
-     * 获取所有分类
+     * 获取所有商品分类
      * @return array
      */
     public function listCategory() : array

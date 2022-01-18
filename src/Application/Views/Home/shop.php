@@ -15,8 +15,6 @@ if (isset($_POST['name'])) {
         $callBack = $data["callBack"];
         $goodsList = $data["goodsList"];
 
-    } else {
-        //报错
     }
 
 } else {
@@ -29,8 +27,6 @@ if (isset($_POST['name'])) {
         $callBack = $data["callBack"];
         $goodsList = $data["goodsList"];
 
-    } else {
-        //报错
     }
 }
 $categoryName = $callBack['categoryName'];

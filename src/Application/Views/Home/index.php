@@ -63,7 +63,6 @@ if (isset($_COOKIE['token'])) {
         <div class="header-sticky">
             <div class="container">
                 <div class="row align-items-center position-relative">
-
                     <!-- Header Logo Start -->
                     <div class="col-md-6 col-lg-3 col-xl-2 col-6">
                         <div class="header-logo">

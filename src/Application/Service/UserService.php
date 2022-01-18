@@ -7,13 +7,19 @@ namespace Application\Service;
 interface UserService
 {
     /**
-     * 添加一条数据
+     * 注册账号
      * @param string $userId
      * @param string $userPwd
      * @return array
      */
     public function saveUser(string $userId, string $userPwd): array;
 
+    /**
+     * 登入
+     * @param string $userId
+     * @param string $userPwd
+     * @return array
+     */
     public function login(string $userId, string $userPwd): array;
 
 }

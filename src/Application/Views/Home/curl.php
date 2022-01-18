@@ -8,7 +8,7 @@ function userStatus(): array
         'token' => $_COOKIE['token']
     ));
     $statusRes = json_decode($statusRes, true);
-    if ($statusRes['status'] == 200) {
+    if ($statusRes['code'] == 200) {
         return array(true, "当前已经登入了");
     }
     /** 当前登入过期了 */
@@ -32,7 +32,7 @@ function indexCurlPost(): array
     $datalist["method"] = "list";
     $json = curl_post($url, $datalist);
     $resArr = json_decode($json, true);
-    if ($resArr["status"] == "200") {
+    if ($resArr["code"] == 200) {
         return $resArr["data"];
     } else {
         return array();
@@ -51,7 +51,7 @@ function productCurlPost($id): array
     $datalist["id"] = $id;
     $json = curl_post($url, $datalist);
     $resArr = json_decode($json, true);
-    if ($resArr["status"] == "200") {
+    if ($resArr["code"] == 200) {
         return $resArr["data"];
     }
     return array();
@@ -69,7 +69,7 @@ function fuzzyCurlPost($name): array
     $dataList['fuzzy'] = $name;
     $json = curl_post($url, $dataList);
     $resArr = json_decode($json, true);
-    if ($resArr["status"] == "200") {
+    if ($resArr["code"] == 200) {
         return $resArr["data"];
     }
     return array();
@@ -91,7 +91,7 @@ function categoryCurlPost($id, $page, $num): array
     $dataList['num'] = $num;
     $json = curl_post($url, $dataList);
     $resArr = json_decode($json, true);
-    if ($resArr["status"] == "200") {
+    if ($resArr["code"] == 200) {
         return $resArr;
     }
     return array();

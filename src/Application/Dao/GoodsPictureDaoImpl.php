@@ -28,4 +28,17 @@ class GoodsPictureDaoImpl implements GoodsPictureDao
         $sql = "DELETE FROM tb_goods_picture WHERE goods_id=?";
         return (new SqlUtil())->run("remove", $sql, "i", array($goodsId));
     }
+
+    /**
+     * 图片表添加一条数据
+     * @param int $goodsId
+     * @param string $fileName
+     * @return int
+     */
+    public function saveByGoodsId(int $goodsId, string $fileName): int
+    {
+        $sql = "INSERT INTO tb_goods_picture (goods_id, goods_picture_path) value (?,?)";
+        return (new SqlUtil())->run("save", $sql, "is", array($goodsId, $fileName));
+
+    }
 }

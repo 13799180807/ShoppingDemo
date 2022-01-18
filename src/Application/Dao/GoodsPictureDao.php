@@ -18,4 +18,12 @@ interface GoodsPictureDao
      */
     public function removeByGoodsId(int $goodsId): bool;
 
+    /**
+     * 根据goodsId进行商品图片的添加
+     * @param int $goodsId
+     * @param string $fileName
+     * @return int
+     */
+    public function saveByGoodsId(int $goodsId,string $fileName) :int;
+
 }
