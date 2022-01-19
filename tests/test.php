@@ -1,4 +1,5 @@
 <?php
+
 use Application\Dao\GoodsCategoryDaoImpl;
 use Application\Dao\GoodsDaoImpl;
 use Application\Dao\GoodsIntroductionDaoImpl;
@@ -8,7 +9,6 @@ use Application\Helper\Filter;
 use Application\Library\Connection;
 use Application\Library\SqlUtil;
 use Application\Service\GoodsCategoryServiceImpl;
-use Application\Service\GoodsIntroductionServiceImpl;
 use Application\Service\GoodsPictureServiceImpl;
 use Application\Service\GoodsServiceImpl;
 
@@ -16,13 +16,20 @@ use Application\Service\GoodsServiceImpl;
 echo " 测试页面 <hr>";
 echo "<hr>";
 
+//var_dump((new GoodsServiceImpl())->removeByGoodsId(1));
+//$pictureRes = (new GoodsPictureDaoImpl())->getGoodsId(32);
+//if (count($pictureRes) != 0) {
+//    foreach ($pictureRes as $row) {
+//        $path = UPLOAD_PATH .$row['goods_picture_path'];
+//        deleteFile($path);
+//    }
+//}
 
 //var_dump((new \Application\Middleware\Session("33f3a8822017b8ad2698c5e7546a8174"))->getToken());
 //var_dump((new \Application\Middleware\Session("","admin123"))->setToken());
 
-
-
-
+//$res=(new GoodsDaoImpl())->getByField("goods_id", "i", 5);
+//var_dump($res[0]['goods_img']);
 
 
 /** 保存一个账号信息 */
@@ -78,7 +85,6 @@ echo "<hr>";
 //var_dump($resDetectData);
 
 
-
 //var_dump((new GoodsServiceImpl())->updateGoodsById(1,'Ok吗',7,99.99,90,1,1,
 //    1,'这是简单说明','1.jpg',"我是详细说名具体是什么你自己猜猜看呀哈哈哈"));
 //$id=10;
@@ -95,19 +101,9 @@ echo "<hr>";
 //}
 
 
-
-
-
-
-
-
 /** 修改商品信息 */
 //var_dump((new GoodsServiceImpl())->updateGoodsById(1,"01修改",3,1,1,1,
 //    1,1,"lueluelu","2.jpg"));
-
-
-
-
 
 
 //$data=array(
@@ -120,9 +116,6 @@ echo "<hr>";
 //$a=Filter::setEntities($data);
 //echo $a['a'];
 //echo "<hr>";
-
-
-
 
 
 //$a='1";drop table demo; ';
@@ -144,10 +137,6 @@ echo "<hr>";
 //                  goods_hot=?, goods_recommendation=? ,goods_describe=?,goods_img=? WHERE goods_id=? ";
 //$test=array('修改01',2,'15.26',111,2,2,2,"更新测试","11.jpg",1);
 // (new SqlUtil())->run("update",$sql,"sisiiiissi",$test);
-
-
-
-
 
 
 /** 查询商品表中的某个数据存在不存在 */
@@ -199,7 +188,6 @@ echo "<hr>";
 //var_dump($c3);
 
 
-
 //echo "<hr>";
 //
 //$b1=escapeshellcmd($a1);
@@ -234,9 +222,6 @@ echo "<hr>";
 //var_dump((new GoodsCategoryDaoImpl())->countCategoryByGoodsCondition(''));
 
 
-
-
-
 //$a=splicing(array("AAAAAAAAAAasa",'demo_a_aaa_aas',"asAs",'*'));
 //echo $a;
 
@@ -245,15 +230,11 @@ echo "<hr>";
 //var_dump((new GoodsCategoryDaoImpl())->countCategoryByGoodsCondition("","0","0","0","0"));
 
 
-
-
 //$dataList=array();
 //$dataList[]=2;
 //$dataList[]=3;
 //$dataList[]=1;
 //var_dump($dataList);
-
-
 
 
 //$requestData = array(
@@ -281,7 +262,6 @@ echo "<hr>";
 //var_dump(count($res));
 
 
-
 //$requestData=array(
 //    'name'=>'0',
 //    'status'=>'1',
@@ -306,7 +286,6 @@ echo "<hr>";
 //var_dump((new GoodsCategoryServiceImpl())->listAdminIndex($arr));
 
 
-
 //var_dump((new GoodsCategoryDaoImpl())->countListAdminIndex(20,array("%","%","%","%","%")));
 
 
@@ -323,17 +302,8 @@ echo "<hr>";
 //var_dump((new SqlUtil())->run("count",$sql,"ii",array(1,1)));
 
 
-
-
-
-
-
 /** 删除一个分类  */
 //(new GoodsCategoryServiceImpl())->removeByGoodsCategoryId(6);
-
-
-
-
 
 
 //新版本插入
@@ -341,11 +311,9 @@ echo "<hr>";
 //var_dump((new SqlUtil())->run("save",$sql,"ss",array("asd","1234")));
 
 
-
 //新版本删除
 //$sql="DELETE FROM demo WHERE id=?";
 //var_dump((new SqlUtil())->run("remove",$sql,"i",array(5)));
-
 
 
 //$type="save";
@@ -404,7 +372,6 @@ echo "<hr>";
 //var_dump($data);
 //var_dump((new GoodsIntroductionServiceImpl())->getGoodsId(5));
 //var_dump((new GoodsPictureServiceImpl())->getGoodsId(3));
-
 
 
 //var_dump((new GoodsServiceImpl())->getByGoodsName("小"));

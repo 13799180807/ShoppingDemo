@@ -4,7 +4,6 @@ namespace Application\Service;
 
 use Application\Dao\GoodsPictureDaoImpl;
 use Application\Domain\GoodsPicture;
-use Application\Helper\Filter;
 
 class GoodsPictureServiceImpl implements GoodsPictureService
 {
@@ -17,7 +16,6 @@ class GoodsPictureServiceImpl implements GoodsPictureService
      */
     public function saveByGoodsId(int $goodsId, array $fileArr): array
     {
-        // TODO: Implement saveByGoodsId() method.
         if (count($fileArr) == 0) {
             return array(
                 'status' => false,
@@ -51,7 +49,7 @@ class GoodsPictureServiceImpl implements GoodsPictureService
     public function getGoodsId(int $goodsId): array
     {
 
-        $res = (new GoodsPictureDaoImpl())->getGoodsId($goodsId);
+        $res=(new GoodsPictureDaoImpl())->getByField("goods_id",$goodsId);
 
         if (count($res) > 0) {
             return (new GoodsPicture())->pictureModel($res);
@@ -62,5 +60,29 @@ class GoodsPictureServiceImpl implements GoodsPictureService
 
     }
 
+    /**
+     * 批量删除照片
+     * @param array $imgArr
+     * @return array
+     */
+    public function movePhotos(array $imgArr): array
+    {
+        foreach ($imgArr as $value) {
+            /** 查询这个商品id进行获取本地存储名字 */
+            $res = (new GoodsPictureDaoImpl())->getByField("id", $value);
+            if (count($res) != 0) {
+                $imgName = $res[0]['goods_picture_path'];
+                $path = "upload/" . $imgName;
+                deleteFile($path);
+                /** 删除表数据 */
+                (new GoodsPictureDaoImpl())->removeByField("id", $value);
+            }
+        }
+        return array(
+            'status' => true,
+            'msg' => "删除成功"
+        );
 
+
+    }
 }

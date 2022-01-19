@@ -2,9 +2,6 @@
 require 'curl.php';
 require 'config.php';
 
-
-
-
 if (isset($_POST['name'])) {
 
     $res = categoryCurlPost($_POST['name'], $_POST['page_num'], $_POST['select_num']);

@@ -16,8 +16,14 @@ interface GoodsPictureService
      * @param array $fileArr
      * @return array
      */
-    public function saveByGoodsId(int $goodsId,array $fileArr) :array;
+    public function saveByGoodsId(int $goodsId, array $fileArr): array;
 
+    /**
+     * 批量删除删除照片
+     * @param array $imgArr
+     * @return array
+     */
+    public function movePhotos(array $imgArr): array;
 
 
 }

@@ -152,9 +152,17 @@ class GoodsDaoImpl implements GoodsDao
         );
         $resFilter = Filter::setEntities($filterArr);
 
-        /** 执行操作 */
+        if ($filterArr['img']=="")
+        {
+            $sql = "UPDATE tb_goods SET goods_name=?,goods_category_id=?,goods_price=?,goods_stock=?,goods_status=?,
+                  goods_hot=?, goods_recommendation=? ,goods_describe=? WHERE goods_id=? ";
+            $dataList = array($resFilter['name'], $categoryId, $prick, $stock, $status, $hot, $recommendation, $resFilter['describe'], $goodsId);
+            return (new SqlUtil())->run("update", $sql, "sisiiiisi", $dataList);
+        }
+
         $sql = "UPDATE tb_goods SET goods_name=?,goods_category_id=?,goods_price=?,goods_stock=?,goods_status=?,
                   goods_hot=?, goods_recommendation=? ,goods_describe=?,goods_img=? WHERE goods_id=? ";
+        /** 执行操作 */
         $dataList = array($resFilter['name'], $categoryId, $prick, $stock, $status, $hot, $recommendation, $resFilter['describe'], $resFilter['img'], $goodsId);
         return (new SqlUtil())->run("update", $sql, "sisiiiissi", $dataList);
 

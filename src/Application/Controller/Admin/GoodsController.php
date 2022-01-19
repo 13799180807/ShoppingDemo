@@ -12,6 +12,27 @@ use Application\Upload\Upload;
 
 class GoodsController
 {
+
+
+    /** 管理员批量删除图片 */
+    public function actionDeletePhotos()
+    {
+
+        $imgArr =Request::param("imgArr", "s");
+        $imgArr=json_decode($imgArr, true);
+
+        if (count($imgArr) == 0) {
+            echo FeedBack::result(400, "删除失败，删除为空照片");
+            return;
+        }
+
+        /** 开始执行删除 */
+        (new GoodsPictureServiceImpl())->movePhotos($imgArr);
+        echo FeedBack::result(200, '删除照片成功');
+
+    }
+
+
     /**
      * 获取商品的所有分类类别
      */
@@ -157,7 +178,6 @@ class GoodsController
 
     }
 
-
     /** 更新商品信息 */
     public function actionUpdatedGoods()
     {
@@ -174,7 +194,7 @@ class GoodsController
             3 => array('price', $data['price'], 'numSize', 1, 100000),
             4 => array('stock', $data['stock'], 'intSize', 1, 100000),
             5 => array('status', $data['status'], 'intSize', 0, 10),
-            6 => array('describe', $data['describe'], 'length', 0, 50),
+            6 => array('describe', $data['describe'], 'length', 0, 200),
             7 => array('introduction', $data['introduction'], 'length', 0, 1000),
             8 => array('hot', $data['hot'], 'intSize', 0, 5),
             9 => array('recommendation', $data['recommendation'], 'intSize', 0, 5)
@@ -190,7 +210,7 @@ class GoodsController
                 'size' => 1024 * 10 * 10 * 10 * 5  #B  5M以内
             ]);
 
-            /** 判断照片有没跟新成功 */
+            /** 判断照片有没更新成功 */
             if ($resFile['status']) {
                 $fileData = $resFile['data'];
                 $imgName = $fileData['saveName'];
@@ -207,7 +227,22 @@ class GoodsController
             return;
         }
         /** 类型不符合 */
-        echo FeedBack::fail("参数请求不规范", $data['err']);
+        echo FeedBack::fail("参数请求不规范", $detectData['err']);
+    }
+
+    /** 管理员删除商品 */
+    public function actionDel()
+    {
+        $goodsId = Request::param("goodsId", "i");
+        if ($goodsId == 0) {
+            echo FeedBack::fail("参数请求不规范");
+            return;
+        }
+        /** 权限验证 */
+        (new GoodsServiceImpl())->removeByGoodsId($goodsId);
+        echo FeedBack::result(200, "删除成功");
+
+
     }
 
 

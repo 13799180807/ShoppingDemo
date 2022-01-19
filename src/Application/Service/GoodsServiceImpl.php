@@ -9,7 +9,6 @@ use Application\Dao\GoodsPictureDaoImpl;
 use Application\Domain\Goods;
 use Application\Domain\GoodsIntroduction;
 use Application\Domain\GoodsPicture;
-use Application\Helper\Filter;
 
 class GoodsServiceImpl implements GoodsService
 {
@@ -49,7 +48,7 @@ class GoodsServiceImpl implements GoodsService
             $resGoods = (new GoodsDaoImpl())->getById('admin', $id);
             if (count($resGoods) > 0) {
                 /** 商品存在 */
-                $resImg = (new GoodsPictureDaoImpl())->getGoodsId($id);
+                $resImg = (new GoodsPictureDaoImpl())->getByField("goods_id", $id);
                 $resText = (new GoodsIntroductionDaoImpl())->getGoodsId($id);
             } else {
                 /** 没有这个商品 */
@@ -60,7 +59,7 @@ class GoodsServiceImpl implements GoodsService
             /** 用户查询的 */
             $resGoods = (new GoodsDaoImpl())->getById('user', $id, 1);
             if (count($resGoods) > 0) {
-                $resImg = (new GoodsPictureDaoImpl())->getGoodsId($id);
+                $resImg = (new GoodsPictureDaoImpl())->getByField("goods_id", $id);
                 $resText = (new GoodsIntroductionDaoImpl())->getGoodsId($id);
             } else {
                 /** 没有这个商品 */
@@ -102,26 +101,23 @@ class GoodsServiceImpl implements GoodsService
     public function updateGoodsById(int $goodsId, string $name, int $categoryId, float $prick, int $stock, int $status = 1,
                                     int $hot = 2, int $recommendation = 2, string $describe = "", string $img = "", string $introduction = ""): array
     {
-
-        /**  检验数据类型*/
-
-        /** 权限比对 */
-
         /** 判断这个商品id存在不存在 为了防止不通过表单进行操作进入数据库 */
-        if (count((new GoodsDaoImpl())->getByField("goods_id", "i", $goodsId)) == 0) {
+        $res = (new GoodsDaoImpl())->getByField("goods_id", "i", $goodsId);
+        if (count($res) == 0) {
             /** 数据不存在 */
             return array(
                 "msg" => "请正确操作，该数据不存在。你的行为已经被记录！！！"
             );
         }
 
-//        /** 检查这个名字可以不可以修改 */
-//        if (count((new GoodsDaoImpl())->getByField("goods_name","s",$name)) >0 ) {
-//            /** 名字重复，不允许操作 */
-//            return array(
-//                "msg"=>"修改失败，该商品存在。"
-//            );
-//        }
+        /** 判断商品图片有没有更新，如果有更新删除原来的图片的 */
+        if ($img != "") {
+            /** 查询原先商品信息  获得图片的名称  执行删除文件*/
+            $imageName = $res[0]['goods_img'];
+            /** 检测文件删除 */
+            $path = UPLOAD_PATH . $imageName;
+            deleteFile($path);
+        }
 
         /** 执行修改商品表中的商品信息操作 */
         (new GoodsDaoImpl())->updateGoodsById($goodsId, $name, $categoryId, $prick, $stock, $status, $hot, $recommendation, $describe, $img);
@@ -158,19 +154,13 @@ class GoodsServiceImpl implements GoodsService
      */
     public function saveGoods(string $goodsName, int $goodsCategoryId, float $goodsPrice, int $goodsStock = 0, int $goodsStatus = 1, int $goodsHot = 2, int $goodsRecommendation = 2, string $goodsDescribe = "", string $goodsImg = "", string $introduction = ""): array
     {
-        /**  检验数据类型*/
-
-        /** 权限比对 */
-
 
         /** 检测这个分类存在不存在，不存在则拒绝创建 */
         if (!count((new GoodsCategoryDaoImpl())->getGoodsCategoryId($goodsCategoryId)) > 0) {
             /** 不存在 */
-
             /** 进行上传的照片删除 */
-            $path="upload/".$goodsImg;
+            $path = "upload/" . $goodsImg;
             deleteFile($path);
-
             return array(
                 "msg" => "添加的分类不存在！！！"
             );
@@ -185,13 +175,12 @@ class GoodsServiceImpl implements GoodsService
             (new GoodsIntroductionDaoImpl())->saveByGoodsId($goodsId, $introduction);
         }
 
-        /** **** */
-
         /** 回调数据 */
         return array(
             'msg' => "商品添加成功"
         );
     }
+
 
     /**
      * 根据指定的商品id进行商品的删除
@@ -200,14 +189,35 @@ class GoodsServiceImpl implements GoodsService
      */
     public function removeByGoodsId(int $goodsId): array
     {
-        // TODO: Implement removeByGoodsId() method.
-        /** 权限比对 */
+        /** 获取商品表中的主图名字 */
+        $goodsRes = (new GoodsDaoImpl())->getByField("goods_id", "i", $goodsId);
+        if (count($goodsRes) != 0) {
+            $imageName = $goodsRes[0]['goods_img'];
+            /** 检测文件删除 */
+            $path = UPLOAD_PATH . $imageName;
+            deleteFile($path);
+        }
+        /** 获取图片表中所有有关这个商品的图片 */
+        $pictureRes = (new GoodsPictureDaoImpl())->getByField("goods_id", $goodsId);
+        if (count($pictureRes) != 0) {
+            foreach ($pictureRes as $row) {
+                $path = UPLOAD_PATH . $row['goods_picture_path'];
+                deleteFile($path);
+            }
+        }
 
-        /** 执行删除 */
-        (new GoodsDaoImpl())->removeByField("goods_id","i",$goodsId);
+        /** 删除数据库中的记录 */
+        (new GoodsDaoImpl())->removeByField("goods_id", "i", $goodsId);
+        /** 删除详细信息说明 */
+        (new GoodsIntroductionDaoImpl())->removeByGoodsId($goodsId);
+        /** 删除数据库中关联图片记录 */
+        (new GoodsPictureDaoImpl())->removeByField("goods_id", $goodsId);
 
         /** 返回数据 */
-        return array();
+        return array(
+            'status' => true,
+            'msg' => "删除完成"
+        );
 
     }
 }

@@ -85,52 +85,11 @@ class GoodsCategoryServiceImpl implements GoodsCategoryService
      * 获取所有商品分类
      * @return array
      */
-    public function listCategory() : array
+    public function listCategory(): array
     {
-        $res=(new GoodsCategoryDaoImpl())->listCategory();
+        $res = (new GoodsCategoryDaoImpl())->listCategory();
         return (new GoodsCategory())->categoryModel($res);
     }
-
-
-
-//
-//    /**
-//     * 删除一个分类
-//     * @param int $categoryId
-//     * @return bool
-//     */
-//    public function removeByGoodsCategoryId(int $categoryId): bool
-//    {
-//        /** 未进行权限比对 */
-//        $data=array(
-//            'id'=>$categoryId,
-//        );
-//        /** 安全过滤 */
-//        $data=Filter::safeReplace($data);
-//
-//        /** 执行删除 */
-//        (new GoodsCategoryDaoImpl())->removeByGoodsCategoryId($data['id']);
-//
-//        /** 获取这个分类在商品表中有几个数值 */
-//        $resData=(new GoodsDaoImpl())->listGoodsCategoryId("goods_id",$data['id']);
-//
-//        if (count($resData) >0)
-//        {
-//            foreach ($resData as $row){
-//                $goodsId=$row['goods_id'];
-//                /** 执行删除图片和详情表信息 */
-//                (new GoodsIntroductionDaoImpl())->removeByGoodsId($goodsId);
-//                (new GoodsPictureDaoImpl())->removeByGoodsId($goodsId);
-//            }
-//        }
-//        /** 删除商品表中该分类所有信息*/
-//        (new GoodsDaoImpl())->removeByGoodsCategoryId($data['id']);
-//        $msg="xxx执行了删除编号为 ".$data['id'] ." 的分类";
-//        (new Log())->run($msg);
-//        return true;
-//
-//    }
-
 
 
 }

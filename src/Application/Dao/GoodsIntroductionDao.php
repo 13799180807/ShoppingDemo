@@ -36,15 +36,4 @@ interface GoodsIntroductionDao
 
 
 
-
-//    /**
-//     * 检查商品详细表中存在不存在这条数据
-//     * @param string $field
-//     * @param string $fieldType
-//     * @param string $fieldKey
-//     * @return array
-//     */
-//    public function getByField(string $field,string $fieldType,string $fieldKey) :array;
-
-
 }

@@ -8,6 +8,7 @@ use Application\Library\SqlUtil;
 class GoodsIntroductionDaoImpl implements GoodsIntroductionDao
 {
 
+
     /**
      * 根据商品id进行商品详细说明查询
      * @param int $goodsId
@@ -63,4 +64,6 @@ class GoodsIntroductionDaoImpl implements GoodsIntroductionDao
 
 
     }
+
+
 }

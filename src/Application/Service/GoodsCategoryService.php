@@ -22,21 +22,7 @@ interface GoodsCategoryService
      * 获取分类所有信息
      * @return array
      */
-    public function listCategory() :array;
-
-//    /**
-//     * 删除一个分类
-//     * @param int $categoryId
-//     * @return bool
-//     */
-//    public function removeByGoodsCategoryId(int $categoryId) :bool;
-//
-
-
-
-
-
-
+    public function listCategory(): array;
 
 
 }

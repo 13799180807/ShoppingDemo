@@ -40,7 +40,7 @@ if (!function_exists('encryption')) {
 
         /** 拼接密码 */
         return $key . $pwd . $account;
-        
+
     }
 }
 

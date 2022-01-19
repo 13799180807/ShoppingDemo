@@ -8,6 +8,7 @@ header('Access-Control-Allow-Headers:x-requested-with,content-type,test-token,te
 define('APP_PATH', __DIR__ . '/../');
 define('APP_NAME', 'src/Application');
 define('APPLICATION', APP_PATH . 'src/');
+define('UPLOAD_PATH',__DIR__.'/upload/');
 define('DEBUG', false);
 date_default_timezone_set("Asia/Shanghai");
 /** 错误收集 */

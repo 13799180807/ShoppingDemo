@@ -8,25 +8,29 @@ class GoodsPictureDaoImpl implements GoodsPictureDao
 {
 
     /**
-     * 根据商品id获取更多图片信息
-     * @param int $goodsId
+     * 根据不同的字段进行查询获取
+     * @param string $fieldName
+     * @param string $fieldValue
      * @return array
      */
-    public function getGoodsId(int $goodsId): array
+    public function getByField(string $fieldName, string $fieldValue): array
     {
-        $sql = "SELECT * FROM tb_goods_picture WHERE goods_id=?";
-        return (new SqlUtil())->run("query", $sql, "i", array($goodsId));
+        $sql = "SELECT * FROM tb_goods_picture WHERE {$fieldName}=? ";
+        return (new SqlUtil())->run("query", $sql, "i", array($fieldValue));
+
     }
 
+
     /**
-     * 根据goods_id进行删除操作
-     * @param int $goodsId
+     * 根据字段进行删除表中的数据
+     * @param string $fieldName
+     * @param string $fieldValue
      * @return bool
      */
-    public function removeByGoodsId(int $goodsId): bool
+    public function removeByField(string $fieldName, string $fieldValue): bool
     {
-        $sql = "DELETE FROM tb_goods_picture WHERE goods_id=?";
-        return (new SqlUtil())->run("remove", $sql, "i", array($goodsId));
+        $sql = "DELETE FROM tb_goods_picture WHERE {$fieldName}=? ";
+        return (new SqlUtil())->run("remove", $sql, "s", array($fieldValue));
     }
 
     /**

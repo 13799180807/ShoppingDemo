@@ -6,7 +6,6 @@ use Application\Library\SqlUtil;
 
 class GoodsCategoryDaoImpl implements GoodsCategoryDao
 {
-
     private string $sql = "";
     private string $fieldsType = "";
     private array $dataList = array();
@@ -53,6 +52,55 @@ class GoodsCategoryDaoImpl implements GoodsCategoryDao
         } else {
             return (new SqlUtil())->run("count", $sql, $fieldsType, $dataList);
         }
+    }
+
+    /**
+     * 组装sql
+     * @param $goods_name
+     * @param $goods_status
+     * @param $category_id
+     * @param $goods_hot
+     * @param $goods_recommendation
+     */
+    private function combinationSql($goods_name, $goods_status, $category_id, $goods_hot, $goods_recommendation)
+    {
+        $sql = $this->sql;
+        $fieldsType = $this->fieldsType;
+        $dataList = $this->dataList;
+
+        if ($goods_name != "") {
+            $sql = $sql . "  goods_name LIKE ? AND";
+            $name = "%" . $goods_name . "%";
+            $fieldsType = $fieldsType . "s";
+            $dataList[] = $name;
+        }
+
+        if ($goods_status != 0) {
+            $sql = $sql . "  goods_status=? AND";
+            $fieldsType = $fieldsType . "i";
+            $dataList[] = $goods_status;
+        }
+
+        if ($category_id != 0) {
+            $sql = $sql . "  goods_category_id=? AND";
+            $fieldsType = $fieldsType . "i";
+            $dataList[] = $category_id;
+        }
+
+        if ($goods_hot != 0) {
+            $sql = $sql . "  goods_hot=? AND";
+            $fieldsType = $fieldsType . "i";
+            $dataList[] = $goods_hot;
+        }
+
+        if ($goods_recommendation != 0) {
+            $sql = $sql . "  goods_recommendation=? ";
+            $fieldsType = $fieldsType . "i";
+            $dataList[] = $goods_recommendation;
+        }
+        $this->sql = $sql;
+        $this->fieldsType = $fieldsType;
+        $this->dataList = $dataList;
     }
 
     /**
@@ -120,55 +168,6 @@ class GoodsCategoryDaoImpl implements GoodsCategoryDao
     {
         $sql = "DELETE FROM tb_goods_category WHERE goods_category_id=?";
         return (new SqlUtil())->run("remove", $sql, "i", array($categoryId));
-    }
-
-    /**
-     * 组装sql
-     * @param $goods_name
-     * @param $goods_status
-     * @param $category_id
-     * @param $goods_hot
-     * @param $goods_recommendation
-     */
-    private function combinationSql($goods_name, $goods_status, $category_id, $goods_hot, $goods_recommendation)
-    {
-        $sql = $this->sql;
-        $fieldsType = $this->fieldsType;
-        $dataList = $this->dataList;
-
-        if ($goods_name != "") {
-            $sql = $sql . "  goods_name LIKE ? AND";
-            $name = "%" . $goods_name . "%";
-            $fieldsType = $fieldsType . "s";
-            $dataList[] = $name;
-        }
-
-        if ($goods_status != 0) {
-            $sql = $sql . "  goods_status=? AND";
-            $fieldsType = $fieldsType . "i";
-            $dataList[] = $goods_status;
-        }
-
-        if ($category_id != 0) {
-            $sql = $sql . "  goods_category_id=? AND";
-            $fieldsType = $fieldsType . "i";
-            $dataList[] = $category_id;
-        }
-
-        if ($goods_hot != 0) {
-            $sql = $sql . "  goods_hot=? AND";
-            $fieldsType = $fieldsType . "i";
-            $dataList[] = $goods_hot;
-        }
-
-        if ($goods_recommendation != 0) {
-            $sql = $sql . "  goods_recommendation=? ";
-            $fieldsType = $fieldsType . "i";
-            $dataList[] = $goods_recommendation;
-        }
-        $this->sql = $sql;
-        $this->fieldsType = $fieldsType;
-        $this->dataList = $dataList;
     }
 
 }
