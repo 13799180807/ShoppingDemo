@@ -11,7 +11,7 @@ class SqlUtil
     public static $conn;         //数据库连接
 
     /**
-     * 查询的类型(save)(update)(remove)(count)(countAll无条件查询)(query)(queryAll无条件查询)
+     * 查询的类型(save)(update)(remove)(count)(countAll无条件统计)(query)(queryAll无条件查询)
      * @param string $sqlType
      * @param string $sql
      * @param string $fieldsType

@@ -16,6 +16,19 @@ use Application\Service\GoodsServiceImpl;
 echo " 测试页面 <hr>";
 echo "<hr>";
 
+$e=(new \Application\Service\UserServiceImpl())->getUserData("dexian");
+var_dump($e['data']);
+
+
+//$paymentPwd=payPwd(1,"565");
+//var_dump($paymentPwd);
+//var_dump((new \Application\Service\UserServiceImpl())->saveUserInformation(66, "hello", 12345678912, "963541"));
+
+
+//var_dump((new \Application\Dao\UserInformationDaoImpl())->listUserInformationByField("","","user_score"));
+//var_dump((new \Application\Dao\UserInformationDaoImpl())->saveUserInformation(rand(6,1000), "2", 12345698745, 10000, "123456"));
+
+
 //var_dump((new GoodsServiceImpl())->removeByGoodsId(1));
 //$pictureRes = (new GoodsPictureDaoImpl())->getGoodsId(32);
 //if (count($pictureRes) != 0) {

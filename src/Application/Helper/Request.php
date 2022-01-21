@@ -85,7 +85,7 @@ class Request
         foreach ($resArr as $row) {
             if (!$row[1]) {
                 /** 不符合规范 */
-                $errArr[] = "参数 " . $row[0] . " " . $row[3];
+                $errArr[] = "参数 " . $row[0] . " 输入错误， " . $row[3];
             }
         }
         if (count($errArr) > 0) {
@@ -115,6 +115,14 @@ class Request
                 return self::length($arr[0], $arr[1], $arr[3], $arr[4]);
             case 'intSize':
                 return self::intSize($arr[0], $arr[1], $arr[3], $arr[4]);
+            case 'numLength':
+                return self::numLength($arr[0], $arr[1], $arr[3], $arr[4]);
+            case 'account':
+                return self::account($arr[0], $arr[1]);
+            case 'phone':
+                return self::phone($arr[0], $arr[1]);
+            case 'pwd':
+                return self::pwd($arr[0], $arr[1]);
         }
         return array($arr[0], false, "", "错误数据,请正确操作;");
     }
@@ -170,6 +178,73 @@ class Request
             return array($name, false, $num, "输入的数值不符合大小,请规范输入;");
         }
         return array($name, false, $num, "输入的类型不准确，请正确输入;");
+    }
+
+    /**
+     * 检测其长度是否符合要求
+     * @param $name
+     * @param $str
+     * @param $min
+     * @param $max
+     * @return array
+     */
+    protected static function numLength($name, $str, $min, $max): array
+    {
+        /** 获取长度 */
+        $length = mb_strlen($str);
+        if (is_numeric($length)) {
+            if ($length >= $min && $length <= $max) {
+                return array($name, true, $str, "长度符合");
+            }
+            return array($name, false, $str, "长度不符合，请规范输入;");
+        }
+        return array($name, false, $str, "不是数字，类型不符合;");
+    }
+
+    /**
+     * 检查账号用的
+     * @param $name
+     * @param $str
+     * @return array
+     */
+    protected static function account($name, $str): array
+    {
+        $res = preg_match('/^[0-9a-z]{6,16}$/i', $str);
+        if ($res == 1) {
+            return array($name, true, $str);
+        }
+        return array($name, false, $str, "账号为6-16之间的数字和英文");
+//        return array($name, false, $str, $str);
+    }
+
+    /**
+     * 匹配手机号码
+     * @param $name
+     * @param $str
+     * @return array
+     */
+    protected static function phone($name, $str): array
+    {
+        $res = preg_match('/^(13[0-9]|14[5|7]|15[0|1|2|3|4|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/', $str);
+        if ($res == 1) {
+            return array($name, true, $str);
+        }
+        return array($name, false, $str, "请输入正确的手机号;");
+    }
+
+    /**
+     * 匹配密码
+     * @param $name
+     * @param $str
+     * @return array
+     */
+    protected static function pwd($name, $str): array
+    {
+        $isMatched = preg_match('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,16}$/', $str, $matches);
+        if ($isMatched == 1) {
+            return array($name, true, $str);
+        }
+        return array($name, false, $str, "密码格式不正确，必须包含大小写字母和数字的组合，不能使用特殊字符，长度在 6-16 之间");
     }
 
 

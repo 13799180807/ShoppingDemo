@@ -4,18 +4,21 @@
 namespace Application\Domain;
 
 
-class User
+class UserInformation
 {
-    public string $user_id;
-    public string $user_pwd;
-    public string $created_at;
+    public string $id;
+    public string $userId;
+    public string $userName;
+    public int $userPhone;
+    public float $userScore;
+    public string $paymentPwd;
 
     public function userModel(array $rows): array
     {
         $dataList = array();
         $i = 0;
         foreach ($rows as $row) {
-            $c = new User();
+            $c = new UserInformation();
             foreach ($row as $key => $value) {
                 $key = underscoreToHump($key);
                 /** 安全处理 */

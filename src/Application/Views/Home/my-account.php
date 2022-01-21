@@ -12,7 +12,7 @@ if (isset($_COOKIE['token'])) {
     exit;
 }
 $userAccount = $_COOKIE['user'];
-
+//http://localhost:8080/home/user/AddInformation
 ?>
 <!DOCTYPE html>
 <html lang="en">

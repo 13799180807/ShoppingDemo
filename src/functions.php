@@ -16,6 +16,29 @@ if (!function_exists('deleteFile')) {
     }
 }
 
+if (!function_exists('payPwd')) {
+    /**
+     * 1加密 2验证密码是否正确  正确返回1 密码错误返回-1
+     * @param int $type
+     * @param string $pwd
+     * @param string|null $codePwd
+     * @return string
+     */
+    function payPwd(int $type, string $pwd, string $codePwd = null): string
+    {
+        if ($type == 1) {
+            /** 加密操作 */
+            $pwd_peppered = hash_hmac("sha256", $pwd, "20211108");
+            return password_hash($pwd_peppered, PASSWORD_ARGON2ID);
+        }
+        $pwd=$pwd_peppered = hash_hmac("sha256", $pwd, "20211108");
+        /** 验证密码是否正确 */
+        if (password_verify($pwd, $codePwd)) {
+            return "1";
+        }
+        return "-1";
+    }
+}
 
 if (!function_exists('encryption')) {
     /**
