@@ -6,7 +6,6 @@ namespace Application\Helper;
 
 class Request
 {
-
     /**
      * 获得多个请求方式
      * @param array $nameArr

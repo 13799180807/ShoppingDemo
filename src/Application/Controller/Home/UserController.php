@@ -3,7 +3,6 @@
 
 namespace Application\Controller\Home;
 
-use Application\Dao\UserInformationDaoImpl;
 use Application\Helper\FeedBack;
 use Application\Helper\Request;
 use Application\Service\UserServiceImpl;
@@ -40,17 +39,18 @@ class UserController
                         $regTime = $res['user'][0]['createdAt'];
                         /** 去掉支付密码 */
                         $information = $res['information'];
+                        $userInFo = array();
                         foreach ($information as $row) {
-                            /** 有问题还没解决  密码 */
+                            /** 去掉密码 */
                             if (array_key_exists("paymentPwd", $row)) {
                                 unset($row['paymentPwd']);
+                                $userInFo[] = $row;
                             }
                         }
-
                         /** 返回数据 */
                         $callBack = array(
                             'regTime' => $regTime,
-                            'information' => $information
+                            'information' => $userInFo
                         );
                         echo FeedBack::result(200, "获取信息成功", $callBack);
                         return;
@@ -72,7 +72,6 @@ class UserController
         echo FeedBack::fail("参数请求不规范", $data['err']);
 
     }
-
 
     /** 添加个人信息 */
     public function actionAddInformation()

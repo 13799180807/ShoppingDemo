@@ -12,7 +12,25 @@ if (isset($_COOKIE['token'])) {
     exit;
 }
 $userAccount = $_COOKIE['user'];
-//http://localhost:8080/home/user/AddInformation
+$token = $_COOKIE['token'];
+$res = curl_post("http://localhost:8080/home/user/getInformation", array(
+    'token' => $_COOKIE['token'],
+    'account' => $userAccount
+));
+$resArr = json_decode($res, true);
+if ($resArr['code'] == 200) {
+    $userData = $resArr['data'];
+    if (count($userData['information']) == 0) {
+        /** 首次登入请填充信息 */
+        echo "<script>alert('账号信息未补全请补全信息后在体验！！！');location.href='firstLogin.php'</script>";
+        exit;
+    }
+
+} else {
+    $msg = $resArr['msg'];
+    echo "<script>alert('{$msg}！！！');location.href='exitLogin.php'</script>";
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +39,6 @@ $userAccount = $_COOKIE['user'];
     <meta charset="UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>用户个人中心</title>
-    <link href="assets/images/favicon.ico" rel="shortcut icon">
     <link href="assets/css/vendor/vendor.min.css" rel="stylesheet">
     <link href="assets/css/plugins/plugins.min.css" rel="stylesheet">
     <link href="assets/css/style.min.css" rel="stylesheet">
@@ -39,7 +56,7 @@ $userAccount = $_COOKIE['user'];
                 <!-- Header Top Message Start -->
                 <div class="col-md-12 col-lg-6 text-lg-start text-center">
                     <div class="header-top-msg-wrapper">
-                        <p class="header-top-message">欢迎：<?php echo $userAccount; ?> 来到购物商城</p>
+                        <p class="header-top-message">欢迎：<?php echo $userData['information'][0]['userName'] ; ?> 来到购物商城</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 text-end d-none d-lg-block">
@@ -49,7 +66,7 @@ $userAccount = $_COOKIE['user'];
                                 个人中心
                                 <i class="fa fa-angle-down"></i>
                                 <ul class="dropdown-list curreny-list">
-                                    <li><a href="#">账户余额：999分</a></li>
+                                    <li><a href="#">余额：<?php echo $userData['information'][0]['userScore']; ?>分</a></li>
                                     <li><a href="#">未结算订单：5个</a></li>
                                 </ul>
                             </li>
@@ -114,6 +131,7 @@ $userAccount = $_COOKIE['user'];
                                 <a data-bs-toggle="tab" href="#address-edit"><i class="fa fa-map-marker"></i>
                                     收获地址</a>
                                 <a data-bs-toggle="tab" href="#account-info"><i class="fa fa-user"></i> 账号详情</a>
+                                <a data-bs-toggle="tab" href="#account-updPwd"><i class="fa fa-user"></i> 修改密码</a>
                                 <a href="exitLogin.php"><i class="fa fa-sign-out"></i> 退出登入</a>
                             </div>
                         </div>
@@ -126,14 +144,17 @@ $userAccount = $_COOKIE['user'];
                                 <!-- Single Tab Content Start -->
                                 <div class="tab-pane fade show active" id="dashboad" role="tabpanel">
                                     <div class="myaccount-content">
-                                        <h3 class="title">Dashboard</h3>
+                                        <h3 class="title">欢迎：<?php echo $userData['information'][0]['userName']; ?></h3>
                                         <div class="welcome">
-                                            <p>Hello, <strong>Alex Aya</strong> (If Not <strong>Aya !</strong><a
-                                                        class="logout" href="login.html"> Logout</a>)</p>
+                                            <p>账户剩余积分：
+                                                <strong><?php echo $userData['information'][0]['userScore']; ?></strong>
+                                            </p>
                                         </div>
-                                        <p class="mb-0">From your account dashboard. you can easily check & view your
-                                            recent orders, manage your shipping and billing addresses and edit your
-                                            password and account details.</p>
+                                        <div class="welcome">
+                                            <p>您的电话：
+                                                <strong><?php echo $userData['information'][0]['userPhone']; ?></strong>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Single Tab Content End -->
@@ -256,34 +277,30 @@ $userAccount = $_COOKIE['user'];
                                 <!-- Single Tab Content Start -->
                                 <div class="tab-pane fade" id="account-info" role="tabpanel">
                                     <div class="myaccount-content">
-                                        <h3 class="title">Account Details</h3>
+                                        <h3 class="title">修改账户信息</h3>
                                         <div class="account-details-form">
                                             <form action="#">
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="single-input-item mb-3">
-                                                            <label class="required mb-1" for="first-name">First
-                                                                Name</label>
+                                                            <label class="required mb-1" for="first-name">您的新名字</label>
                                                             <input id="first-name" placeholder="First Name"
                                                                    type="text"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="single-input-item mb-3">
-                                                            <label class="required mb-1" for="last-name">Last
-                                                                Name</label>
+                                                            <label class="required mb-1" for="last-name">您的新电话</label>
                                                             <input id="last-name" placeholder="Last Name" type="text"/>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="single-input-item mb-3">
-                                                    <label class="required mb-1" for="display-name">Display Name</label>
-                                                    <input id="display-name" placeholder="Display Name" type="text"/>
+                                                <div class="single-input-item single-item-button">
+                                                    <button class="btn btn btn-dark btn-hover-primary rounded-0">
+                                                        修改信息
+                                                    </button>
                                                 </div>
-                                                <div class="single-input-item mb-3">
-                                                    <label class="required mb-1" for="email">Email Addres</label>
-                                                    <input id="email" placeholder="Email Address" type="email"/>
-                                                </div>
+
                                                 <fieldset>
                                                     <legend>Password change</legend>
                                                     <div class="single-input-item mb-3">
@@ -320,7 +337,46 @@ $userAccount = $_COOKIE['user'];
                                         </div>
                                     </div>
                                 </div> <!-- Single Tab Content End -->
-
+                                <!-- Single Tab Content Start -->
+                                <div class="tab-pane fade" id="account-updPwd" role="tabpanel">
+                                    <div class="myaccount-content">
+                                        <div class="account-details-form">
+                                            <form action="#">
+                                                <fieldset>
+                                                    <legend>修改密码</legend>
+                                                    <div class="single-input-item mb-3">
+                                                        <label class="required mb-1" for="current-pwd">输入旧密码</label>
+                                                        <input id="current-pwd" placeholder="旧密码"
+                                                               type="password"/>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="single-input-item mb-3">
+                                                                <label class="required mb-1"
+                                                                       for="new-pwd">输入新的密码</label>
+                                                                <input id="new-pwd" placeholder="新密码"
+                                                                       type="password"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="single-input-item mb-3">
+                                                                <label class="required mb-1"
+                                                                       for="confirm-pwd">再次输入新的密码</label>
+                                                                <input id="confirm-pwd" placeholder="再次输入新的密码"
+                                                                       type="password"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <div class="single-input-item single-item-button">
+                                                    <button class="btn btn btn-dark btn-hover-primary rounded-0">Save
+                                                        Changes
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div> <!-- Single Tab Content End -->
                             </div>
                         </div>
                         <!-- My Account Tab Content End -->

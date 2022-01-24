@@ -1,5 +1,49 @@
 <?php
 
+
+/**
+ * 检测字母和数字并在区间内
+ * @param $str
+ * @return bool
+ */
+function matchPwd($str): bool
+{
+    $isMatched = preg_match('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,16}$/', $str);
+    if ($isMatched == 1) {
+        return true;
+    }
+    return false;
+}
+
+/**
+ * 匹配手机号
+ * @param $str
+ * @return bool
+ */
+function matchPhone($str): bool
+{
+    $isMatched = preg_match('/^(13[0-9]|14[5|7]|15[0|1|2|3|4|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/', $str, $matches);
+    if ($isMatched == 1) {
+        return true;
+    }
+    return false;
+}
+
+/**
+ * 检测字母和数字并在区间内
+ * @param $str
+ * @return bool
+ */
+function matchNumberLetters($str): bool
+{
+    $isMatched = preg_match('/^[A-Za-z0-9]{1,40}$/', $str);
+    if ($isMatched == 1) {
+        return true;
+    }
+    return false;
+}
+
+
 /** 检测状态---测试 */
 function userStatus(): array
 {
