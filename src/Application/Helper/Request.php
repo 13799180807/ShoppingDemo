@@ -7,6 +7,29 @@ namespace Application\Helper;
 class Request
 {
     /**
+     * 获取访问ip对ip进行判断
+     * @return array
+     */
+    public static function ip(): array
+    {
+        $ip = $_SERVER["REMOTE_ADDR"];
+        $ip = Filter::filterIp($ip);
+        $res = preg_match('/^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:[.](?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$/', $ip);
+        if ($res) {
+            return array(
+                'status' => true,
+                'ip' => $ip,
+                'msg' => "ip正确"
+            );
+        }
+        return array(
+            'status' => false,
+            'ip' => $ip,
+            'msg' => "请使用正确的ipv4进行访问操作"
+        );
+    }
+
+    /**
      * 获得多个请求方式
      * @param array $nameArr
      * @param array $typeArr

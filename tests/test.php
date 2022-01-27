@@ -6,6 +6,7 @@ use Application\Dao\GoodsIntroductionDaoImpl;
 use Application\Dao\GoodsPictureDaoImpl;
 use Application\Helper\FeedBack;
 use Application\Helper\Filter;
+use Application\Helper\Request;
 use Application\Library\Connection;
 use Application\Library\SqlUtil;
 use Application\Service\GoodsCategoryServiceImpl;
@@ -15,9 +16,27 @@ use Application\Service\GoodsServiceImpl;
 
 echo " 测试页面 <hr>";
 echo "<hr>";
+$res=(new \Application\Service\UserServiceImpl())->listRechargeScore(null,null,null,null,1,10);
+var_dump($res);
 
-$e=(new \Application\Service\UserServiceImpl())->getUserData("dexian");
-var_dump($e['data']);
+//$res=(new \Application\Dao\RechargeScoreDaoImpl())->listByField(null,null,"dexian",null,1,2);
+//$res = (new \Application\Dao\RechargeScoreDaoImpl())->countByField(null,null,"dexian");
+
+//$res=(new \Application\Service\UserServiceImpl())->saveRechargeScore("dexian","15.56");
+//var_dump($res);
+
+//(new \Application\Dao\RechargeScoreDaoImpl())->updateRechargeScore(1,1,"ni",2);
+//(new \Application\Dao\RechargeScoreDaoImpl())->removeByUserId("dexian");
+////var_dump(Request::ip());
+//echo $_SERVER['SERVER_NAME'];
+
+
+//$res=(new \Application\Service\UserServiceImpl())->moveUser("771");
+//$res = (new \Application\Dao\UserInformationDaoImpl())->updateUserInformation("771", "更新","13960760606",50,"123456");
+//var_dump($res);
+
+//$e=(new \Application\Service\UserServiceImpl())->getUserData("dexian");
+//var_dump($e['data']);
 
 
 //$paymentPwd=payPwd(1,"565");

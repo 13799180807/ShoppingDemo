@@ -1582,3 +1582,15 @@
 [21-Jan-2022 14:31:07 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 293
 [21-Jan-2022 14:31:07 Asia/Shanghai] PHP Stack trace:
 [21-Jan-2022 14:31:07 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[25-Jan-2022 15:37:11 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\login.php on line 29
+[25-Jan-2022 15:37:11 Asia/Shanghai] PHP Stack trace:
+[25-Jan-2022 15:37:11 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\login.php:0
+[25-Jan-2022 15:37:11 Asia/Shanghai] PHP Notice:  Trying to access array offset on value of type null in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\login.php on line 42
+[25-Jan-2022 15:37:11 Asia/Shanghai] PHP Stack trace:
+[25-Jan-2022 15:37:11 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\login.php:0
+[25-Jan-2022 15:58:47 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[25-Jan-2022 15:58:47 Asia/Shanghai] PHP Stack trace:
+[25-Jan-2022 15:58:47 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[25-Jan-2022 15:58:47 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 293
+[25-Jan-2022 15:58:47 Asia/Shanghai] PHP Stack trace:
+[25-Jan-2022 15:58:47 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0

@@ -9,6 +9,51 @@ use Application\Service\UserServiceImpl;
 
 class UserController
 {
+
+    /** 用户更新个人信息表 */
+    public function actionUpdInformation()
+    {
+        /** 获取数据 */
+        $token = Request::param("token", "s");
+        $userId = Request::param("account", "s");
+        $userName = Request::param("name", "s");
+        $userPhone = Request::param("phone", "i");
+
+        /** 验证前端消息 */
+        $data = Request::detect(array(
+            0 => array("account", $userId, 'account'),
+            1 => array("name", $userName, 'length', 1, 16),
+            2 => array("phone", $userPhone, 'phone'),
+        ));
+        if (!$data['status']) {
+            /** 数据不符合 */
+            echo FeedBack::fail("参数请求不规范", $data['err']);
+            return;
+        }
+
+        /** 验证状态 */
+        $tokenRes = (new \Application\Middleware\Session($token))->getToken();
+        if (!$tokenRes['status']) {
+            /** token失效 */
+            echo FeedBack::result(404, $tokenRes['msg']);
+            return;
+        }
+
+        /** 验证token和操作账号是否相同 */
+        if ($tokenRes['data']['account'] != $userId) {
+            echo FeedBack::result(404, "非法token");
+            return;
+        }
+        /** 执行操作 */
+        $res = (new UserServiceImpl())->updateInformation($userId, $userName, $userPhone);
+        if (!$res['status']) {
+            echo FeedBack::result(404, $res['msg']);
+            return;
+        }
+        echo FeedBack::result(200, "修改信息成功");
+
+    }
+
     /** 获取个人信息 */
     public function actionGetInformation()
     {
@@ -24,7 +69,7 @@ class UserController
             $tokenRes = (new \Application\Middleware\Session($token))->getToken();
             if ($tokenRes['status']) {
 
-                /** 验真token是不是对应本账号的 */
+                /** 验证token是不是对应本账号的 */
                 if ($tokenRes['data']['account'] == $userId) {
 
                     /** 开始查询数据 */

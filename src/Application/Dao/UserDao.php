@@ -22,4 +22,11 @@ interface UserDao
      */
     public function saveUser(string $userId, string $userPwd): int;
 
+    /**
+     * 根据userId删除一条数据
+     * @param string $userId
+     * @return bool
+     */
+    public function moveByUserId(string $userId): bool;
+
 }

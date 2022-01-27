@@ -3,6 +3,7 @@
 
 namespace Application\Controller\Admin;
 
+use Application\Exception\Log;
 use Application\Helper\FeedBack;
 use Application\Helper\Request;
 use Application\Service\GoodsCategoryServiceImpl;
@@ -12,9 +13,9 @@ class CategoryController
 
     public function actionDemo()
     {
-
+        setrawcookie("TestCookie", "132456", time() + 3600 * 24);
+        echo FeedBack::result(200, '请求成功');
     }
-
 
     /**
      * 管理员管理商品分类查看查询，信息显示
@@ -60,7 +61,7 @@ class CategoryController
 
         }
         /** 返回错误信息 */
-        echo FeedBack::fail("参数请求不规范",$data['err']);
+        echo FeedBack::fail("参数请求不规范", $data['err']);
 
 
     }

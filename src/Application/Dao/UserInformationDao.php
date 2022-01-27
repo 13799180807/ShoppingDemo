@@ -26,9 +26,25 @@ interface UserInformationDao
      * @param int|null $num
      * @return array
      */
-    public function listUserInformationByField(string $userId = null, string $userName = null, string $ordinationField = null, int $pagination = null, int $num = null) :array;
+    public function listUserInformationByField(string $userId = null, string $userName = null, string $ordinationField = null, int $pagination = null, int $num = null): array;
 
-//    public function removeByField():bool;
+    /**
+     * 更改用户信息
+     * @param string $userId
+     * @param string|null $userName
+     * @param int|null $userPhone
+     * @param float|null $userScore
+     * @param string|null $paymentPwd
+     * @return bool
+     */
+    public function updateUserInformation(string $userId, string $userName = null, int $userPhone = null, float $userScore = null, string $paymentPwd = null): bool;
+
+    /**
+     * 删除数据
+     * @param string $userId
+     * @return bool
+     */
+    public function removeByUserId(string $userId): bool;
 
 
 }
