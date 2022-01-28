@@ -14,13 +14,12 @@ class GoodsController
     public function actionIndex()
     {
         if (isset($_POST['method']) && $_POST['method'] == "list") {
-
             $data = (new GoodsServiceImpl())->listIndex();
             echo FeedBack::result(200, "请求成功", $data);
-
-        } else {
-            echo FeedBack::fail("请求不正确，请正确传参");
+            return;
         }
+        echo FeedBack::fail("请求不正确，请正确传参");
+
     }
 
     /** 单个商品详情页面用的  */
@@ -32,14 +31,16 @@ class GoodsController
         $data = Request::detect(array(
             0 => array('id', $id, "intSize", 1, 100000),
         ));
-        if ($data['status']) {
-
-            $data = (new GoodsServiceImpl())->listGoodsIdShow("user", $id);
-            echo FeedBack::result(200, "请求成功", $data);
+        if (!$data['status']) {
+            /** 数据不符合规范 */
+            echo FeedBack::fail("参数请求不规范", $data['err']);
             return;
         }
-        /** 数据不符合规范 */
-        echo FeedBack::fail("参数请求不规范",$data['err']);
+
+        $data = (new GoodsServiceImpl())->listGoodsIdShow("user", $id);
+        echo FeedBack::result(200, "请求成功", $data);
+
+
     }
 
 
@@ -47,17 +48,17 @@ class GoodsController
     public function actionFuzzy()
     {
         $fuzzy = Request::param("fuzzy", "s");
-
         $data = Request::detect(array(
             0 => array('fuzzy', $fuzzy, "length", 0, 16),
         ));
         if ($data['status']) {
-            $res = (new GoodsCategoryServiceImpl())->listCategoryGoods("user", 1, 1000, 1, 0, $fuzzy);
-            echo FeedBack::result(200, "请求成功", $res['goodsList']);
+            /** 数据不符合规范 */
+            echo FeedBack::fail("参数请求不规范", $data['err']);
             return;
         }
-        /** 数据不符合规范 */
-        echo FeedBack::fail("参数请求不规范",$data['err']);
+
+        $res = (new GoodsCategoryServiceImpl())->listCategoryGoods("user", 1, 1000, 1, 0, $fuzzy);
+        echo FeedBack::result(200, "请求成功", $res['goodsList']);
 
     }
 

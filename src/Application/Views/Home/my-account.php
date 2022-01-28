@@ -11,6 +11,27 @@ if (isset($_COOKIE['token'])) {
     echo "<script>alert('当前未登入！！！');location.href='login.php'</script>";
     exit;
 }
+if (isset($_POST['updateName'])) {
+    /** 进行了修改名字操作 */
+    $newName = $_POST['name'];
+    $newPhone = $_POST['phone'];
+    $updateRes = curl_post("http://localhost:8080/home/user/UpdInformation", array(
+        'token' => $_COOKIE['token'],
+        'account' => $_COOKIE['user'],
+        'name' => $newName,
+        'phone' => $newPhone
+    ));
+    $updateRes = json_decode($updateRes, true);
+    if ($updateRes['code'] == 200) {
+        echo "<script>alert('修改信息成功！！！');</script>";
+    } else {
+        $msg = $updateRes['msg'];
+        echo "<script>alert('{$msg}');</script>";
+    }
+
+}
+
+
 $userAccount = $_COOKIE['user'];
 $token = $_COOKIE['token'];
 $res = curl_post("http://localhost:8080/home/user/getInformation", array(
@@ -56,7 +77,8 @@ if ($resArr['code'] == 200) {
                 <!-- Header Top Message Start -->
                 <div class="col-md-12 col-lg-6 text-lg-start text-center">
                     <div class="header-top-msg-wrapper">
-                        <p class="header-top-message">欢迎：<?php echo $userData['information'][0]['userName'] ; ?> 来到购物商城</p>
+                        <p class="header-top-message">欢迎：<?php echo $userData['information'][0]['userName']; ?>
+                            来到购物商城</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 text-end d-none d-lg-block">
@@ -130,7 +152,7 @@ if ($resArr['code'] == 200) {
                                     个人账户</a>
                                 <a data-bs-toggle="tab" href="#address-edit"><i class="fa fa-map-marker"></i>
                                     收获地址</a>
-                                <a data-bs-toggle="tab" href="#account-info"><i class="fa fa-user"></i> 账号详情</a>
+                                <a data-bs-toggle="tab" href="#account-info"><i class="fa fa-user"></i> 修改信息</a>
                                 <a data-bs-toggle="tab" href="#account-updPwd"><i class="fa fa-user"></i> 修改密码</a>
                                 <a href="exitLogin.php"><i class="fa fa-sign-out"></i> 退出登入</a>
                             </div>
@@ -279,61 +301,62 @@ if ($resArr['code'] == 200) {
                                     <div class="myaccount-content">
                                         <h3 class="title">修改账户信息</h3>
                                         <div class="account-details-form">
-                                            <form action="#">
+                                            <iframe name="formSubmit" style="display:none;">
+                                                <!-- 隐藏起来将表单刷新指向这里 -->
+                                            </iframe>
+                                            <form action="my-account.php" target="formSubmit" method="post">
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="single-input-item mb-3">
                                                             <label class="required mb-1" for="first-name">您的新名字</label>
-                                                            <input id="first-name" placeholder="First Name"
+                                                            <input id="name" name="name" onblur="reg()"
+                                                                   value="<?php echo $userData['information'][0]['userName']; ?>"
                                                                    type="text"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="single-input-item mb-3">
                                                             <label class="required mb-1" for="last-name">您的新电话</label>
-                                                            <input id="last-name" placeholder="Last Name" type="text"/>
+                                                            <input id="phone" name="phone" onblur="reg()"
+                                                                   value="<?php echo $userData['information'][0]['userPhone']; ?>"
+                                                                   type="text"/>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <label id="tips" style="color:#ff0000"></label>
                                                 <div class="single-input-item single-item-button">
-                                                    <button class="btn btn btn-dark btn-hover-primary rounded-0">
-                                                        修改信息
-                                                    </button>
-                                                </div>
-
-                                                <fieldset>
-                                                    <legend>Password change</legend>
-                                                    <div class="single-input-item mb-3">
-                                                        <label class="required mb-1" for="current-pwd">Current
-                                                            Password</label>
-                                                        <input id="current-pwd" placeholder="Current Password"
-                                                               type="password"/>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-6">
-                                                            <div class="single-input-item mb-3">
-                                                                <label class="required mb-1" for="new-pwd">New
-                                                                    Password</label>
-                                                                <input id="new-pwd" placeholder="New Password"
-                                                                       type="password"/>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <div class="single-input-item mb-3">
-                                                                <label class="required mb-1" for="confirm-pwd">Confirm
-                                                                    Password</label>
-                                                                <input id="confirm-pwd" placeholder="Confirm Password"
-                                                                       type="password"/>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                                <div class="single-input-item single-item-button">
-                                                    <button class="btn btn btn-dark btn-hover-primary rounded-0">Save
-                                                        Changes
-                                                    </button>
+                                                    <input type="submit" id="updateName" value="修改信息" name="updateName"
+                                                           class="btn btn btn-dark btn-hover-primary rounded-0">
                                                 </div>
                                             </form>
+                                            <script>
+                                                function reg() {
+                                                    var resReg = true;
+                                                    var resMsg = "";
+                                                    var name = document.getElementById("name").value;
+                                                    var phone = document.getElementById("phone").value;
+                                                    var phoneReg = /^[1][3,4,5,7,8,9][0-9]{9}$/;
+
+                                                    if (name === "" || (name.length) <= 1 || (name.length) >= 15) {
+                                                        resReg = false;
+                                                        resMsg = resMsg + "名字请在2-15字符之间！！！  ";
+                                                    }
+
+                                                    if (!phoneReg.test(phone)) {
+                                                        resReg = false;
+                                                        resMsg = resMsg + "请填写正确的手机号码！！！  ";
+                                                    }
+
+                                                    if (resReg) {
+                                                        document.getElementById("tips").innerHTML = "<font color='green'> </font>";
+                                                        document.getElementById("updateName").disabled = false;
+                                                    } else {
+                                                        document.getElementById("updateName").disabled = true;
+                                                        document.getElementById("tips").innerHTML = "<font color='red'>" + resMsg + "</font>";
+                                                    }
+
+                                                }
+                                            </script>
                                         </div>
                                     </div>
                                 </div> <!-- Single Tab Content End -->

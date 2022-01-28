@@ -29,4 +29,13 @@ interface UserDao
      */
     public function moveByUserId(string $userId): bool;
 
+    /**
+     * 修改密码
+     * @param string $userId
+     * @param string $userPwd
+     * @return bool
+     */
+    public function updateByUserId(string $userId, string $userPwd): bool;
+
+
 }

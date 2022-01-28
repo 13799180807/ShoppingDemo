@@ -18,8 +18,8 @@ class GoodsController
     public function actionDeletePhotos()
     {
 
-        $imgArr =Request::param("imgArr", "s");
-        $imgArr=json_decode($imgArr, true);
+        $imgArr = Request::param("imgArr", "s");
+        $imgArr = json_decode($imgArr, true);
 
         if (count($imgArr) == 0) {
             echo FeedBack::result(400, "删除失败，删除为空照片");
@@ -93,34 +93,34 @@ class GoodsController
             7 => array('hot', $goodsHot, 'intSize', 0, 5),
             8 => array('recommendation', $recommendation, 'intSize', 0, 5),
         ));
-        if ($data['status']) {
-
-            /** 判断有没有图片上传 上传的数据是否合法 */
-            $upload = new Upload('mainImg');
-            $resFile = $upload->save('upload', [
-                'ext' => 'jpg,jpeg,png,gif', #限制格式
-                'size' => 1024 * 10 * 10 * 10 * 5  #B  5M以内
-            ]);
-            if ($resFile['status']) {
-                $fileMsg = $resFile['msg'];
-                $fileData = $resFile['data'];
-                $imgName = $fileData['saveName'];
-            } else {
-                $fileMsg = $resFile['msg'];
-                $imgName = "";
-            }
-
-            $res = (new GoodsServiceImpl())->saveGoods($goodsName, $goodsCategoryId, $goodsPrice, $goodsStock,
-                $goodsStatus, $goodsHot, $recommendation, $goodsDescribe, $imgName, $goodsIntroduction);
-
-            $callBack = array(
-                'images' => $fileMsg,
-            );
-            echo FeedBack::result(200, $res['msg'], $callBack);
+        if (!$data['status']) {
+            /** 请求数据类型不符合 */
+            echo FeedBack::fail("参数请求不规范", $data['err']);
             return;
         }
-        /** 类型不符合 */
-        echo FeedBack::fail("参数请求不规范", $data['err']);
+
+        /** 判断有没有图片上传 上传的数据是否合法 */
+        $upload = new Upload('mainImg');
+        $resFile = $upload->save('upload', [
+            'ext' => 'jpg,jpeg,png,gif', #限制格式
+            'size' => 1024 * 10 * 10 * 10 * 5  #B  5M以内
+        ]);
+        if ($resFile['status']) {
+            $fileMsg = $resFile['msg'];
+            $fileData = $resFile['data'];
+            $imgName = $fileData['saveName'];
+        } else {
+            $fileMsg = $resFile['msg'];
+            $imgName = "";
+        }
+
+        $res = (new GoodsServiceImpl())->saveGoods($goodsName, $goodsCategoryId, $goodsPrice, $goodsStock,
+            $goodsStatus, $goodsHot, $recommendation, $goodsDescribe, $imgName, $goodsIntroduction);
+
+        $callBack = array(
+            'images' => $fileMsg,
+        );
+        echo FeedBack::result(200, $res['msg'], $callBack);
 
     }
 
@@ -137,44 +137,45 @@ class GoodsController
             0 => array('goodsId', $goodsId, 'intSize', 1, 100000),
             1 => array('filesNum', $filesNum, 'intSize', 0, 50)
         ));
+        if (!$data['status']) {
+            /** 请求数据类型不符合 */
+            echo FeedBack::fail("参数请求不规范", $data['err']);
+            return;
+        }
 
-        if ($data['status']) {
-            /** 执行更新操作 */
-            if ($filesNum == count($_FILES)) {
-
-                $fileArr = array();
-                for ($a = 1; $a <= $filesNum; $a++) {
-                    $fileName = "imgFile" . $a;
-                    $upload = new Upload($fileName);
-                    $resFile = $upload->save('upload', [
-                        'ext' => 'jpg,jpeg,png,gif', #限制格式
-                        'size' => 1024 * 10 * 10 * 10 * 10  #B  5M以内
-                    ]);
-                    if ($resFile['status']) {
-                        $fileData = $resFile['data'];
-                        $imgName = $fileData['saveName'];
-                        $fileArr[] = $imgName;
-                    }
-                }
-                if (count($fileArr) == 0) {
-
-                    echo FeedBack::result(400, '检测照片为空添加失败');
-                    return;
-                }
-
-                $res = (new GoodsPictureServiceImpl())->saveByGoodsId($goodsId, $fileArr);
-                if ($res['status']) {
-                    echo FeedBack::result(200, $res['msg']);
-                    return;
-                }
-                echo FeedBack::result(404, $res['msg']);
-                return;
-            }
+        /** 进行照片检测 */
+        if ($filesNum != count($_FILES)) {
             echo FeedBack::result(404, '上传照片与数量不符合');
             return;
         }
-        /** 类型不符合 */
-        echo FeedBack::fail("参数请求不规范", $data['err']);
+
+        /** 执行更新操作 */
+        $fileArr = array();
+        for ($a = 1; $a <= $filesNum; $a++) {
+            $fileName = "imgFile" . $a;
+            $upload = new Upload($fileName);
+            $resFile = $upload->save('upload', [
+                'ext' => 'jpg,jpeg,png,gif', #限制格式
+                'size' => 1024 * 10 * 10 * 10 * 10  #B  5M以内
+            ]);
+            if ($resFile['status']) {
+                $fileData = $resFile['data'];
+                $imgName = $fileData['saveName'];
+                $fileArr[] = $imgName;
+            }
+        }
+        if (count($fileArr) == 0) {
+            echo FeedBack::result(400, '检测照片为空添加失败');
+            return;
+        }
+
+        $res = (new GoodsPictureServiceImpl())->saveByGoodsId($goodsId, $fileArr);
+        if ($res['status']) {
+            echo FeedBack::result(200, $res['msg']);
+            return;
+        }
+        echo FeedBack::result(404, $res['msg']);
+
 
     }
 
@@ -199,35 +200,32 @@ class GoodsController
             8 => array('hot', $data['hot'], 'intSize', 0, 5),
             9 => array('recommendation', $data['recommendation'], 'intSize', 0, 5)
         ));
-
         if ($detectData['status']) {
-            /** 执行更新操作 */
-
-            /** 图片检测 */
-            $upload = new Upload('mainImg');
-            $resFile = $upload->token("123456789")->save('upload', [
-                'ext' => 'jpg,jpeg,png,gif', #限制格式
-                'size' => 1024 * 10 * 10 * 10 * 5  #B  5M以内
-            ]);
-
-            /** 判断照片有没更新成功 */
-            if ($resFile['status']) {
-                $fileData = $resFile['data'];
-                $imgName = $fileData['saveName'];
-            } else {
-                $imgName = "";
-            }
-            $fileMsg = $resFile['msg'];
-
-            $res = (new GoodsServiceImpl())->updateGoodsById($data['goodsId'], $data['name'], $data['category'], $data['price'], $data['stock'], $data['status'],
-                $data['hot'], $data['recommendation'], $data['describe'], $imgName, $data['introduction']);
-            echo FeedBack::result(200, $res['msg'], array(
-                'mainImg' => $fileMsg
-            ));
+            /** 类型不符合 */
+            echo FeedBack::fail("参数请求不规范", $detectData['err']);
             return;
         }
-        /** 类型不符合 */
-        echo FeedBack::fail("参数请求不规范", $detectData['err']);
+
+        /** 图片检测 */
+        $upload = new Upload('mainImg');
+        $resFile = $upload->token("123456789")->save('upload', [
+            'ext' => 'jpg,jpeg,png,gif', #限制格式
+            'size' => 1024 * 10 * 10 * 10 * 5  #B  5M以内
+        ]);
+        if ($resFile['status']) {
+            $fileData = $resFile['data'];
+            $imgName = $fileData['saveName'];
+        } else {
+            $imgName = "";
+        }
+        $fileMsg = $resFile['msg'];
+
+        $res = (new GoodsServiceImpl())->updateGoodsById($data['goodsId'], $data['name'], $data['category'], $data['price'], $data['stock'], $data['status'],
+            $data['hot'], $data['recommendation'], $data['describe'], $imgName, $data['introduction']);
+        echo FeedBack::result(200, $res['msg'], array(
+            'mainImg' => $fileMsg
+        ));
+
     }
 
     /** 管理员删除商品 */

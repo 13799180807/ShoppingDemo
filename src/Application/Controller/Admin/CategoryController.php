@@ -3,7 +3,6 @@
 
 namespace Application\Controller\Admin;
 
-use Application\Exception\Log;
 use Application\Helper\FeedBack;
 use Application\Helper\Request;
 use Application\Service\GoodsCategoryServiceImpl;

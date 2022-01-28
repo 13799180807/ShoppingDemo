@@ -39,8 +39,6 @@ interface UserService
      */
     public function getUserData(string $userId): array;
 
-    //  还没使用上去
-
     /**
      * 用户修改用户名
      * @param string $userId
@@ -49,6 +47,16 @@ interface UserService
      * @return array
      */
     public function updateInformation(string $userId, string $userName = null, int $userPhone = null): array;
+
+    /**
+     * 用户修改密码
+     * @param string $userId
+     * @param string $userPwd
+     * @param string $newPwd
+     * @return array
+     */
+    public function updatePwd(string $userId, string $userPwd, string $newPwd): array;
+    //  还没使用上去
 
     /**
      * 删除用户

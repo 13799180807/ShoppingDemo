@@ -1594,3 +1594,9 @@
 [25-Jan-2022 15:58:47 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 293
 [25-Jan-2022 15:58:47 Asia/Shanghai] PHP Stack trace:
 [25-Jan-2022 15:58:47 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[28-Jan-2022 14:11:13 Asia/Shanghai] PHP Notice:  Undefined index: goodsRecommend in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 33
+[28-Jan-2022 14:11:13 Asia/Shanghai] PHP Stack trace:
+[28-Jan-2022 14:11:13 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0
+[28-Jan-2022 14:11:13 Asia/Shanghai] PHP Notice:  Undefined variable: text00 in E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php on line 293
+[28-Jan-2022 14:11:13 Asia/Shanghai] PHP Stack trace:
+[28-Jan-2022 14:11:13 Asia/Shanghai] PHP   1. {main}() E:\xampp\htdocs\ShoppingDemo\src\Application\Views\Home\single-product.php:0

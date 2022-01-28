@@ -200,7 +200,6 @@ class UserServiceImpl implements UserService
      */
     public function saveRechargeScore(string $userId, float $score): array
     {
-        // TODO: Implement saveRechargeScore() method.
         /** 检查该用户存在不存在 */
         $isUser = (new UserDaoImpl())->getById($userId);
         if (count($isUser) == 0) {
@@ -250,6 +249,41 @@ class UserServiceImpl implements UserService
             'status' => "获取数据成功",
             'totalPages' => $totalPages,
             'data' => (new RechargeScore())->RechargeScoreModel($dataRes)
+        );
+    }
+
+    /**
+     * 用户修改密码
+     * @param string $userId
+     * @param string $userPwd
+     * @param string $newPwd
+     * @return array
+     */
+    public function updatePwd(string $userId, string $userPwd, string $newPwd): array
+    {
+        /** 检查该用户存在不存在 */
+        $isUser = (new UserDaoImpl())->getById($userId);
+        if (count($isUser) == 0) {
+            $msg = "试图修改：{$userId} 账号密码，该账号不存在，出现安全隐患了；";
+            (new Log())->run($msg);
+            return array(
+                'status' => false,
+                'msg' => "用户不存在，修改密码失败"
+            );
+        }
+
+        /** 验证原密码 */
+        if ($isUser[0]['user_pwd'] != encryption($userId, $userPwd)) {
+            return array(
+                'status' => false,
+                'msg' => "修改密码失败，原密码出错",
+            );
+        }
+        /** 修改密码 */
+        (new UserDaoImpl())->updateByUserId($userId, $newPwd);
+        return array(
+            'status' => true,
+            'msg' => "密码修改成功",
         );
     }
 }

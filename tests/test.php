@@ -16,8 +16,8 @@ use Application\Service\GoodsServiceImpl;
 
 echo " 测试页面 <hr>";
 echo "<hr>";
-$res=(new \Application\Service\UserServiceImpl())->listRechargeScore(null,null,null,null,1,10);
-var_dump($res);
+//$res=(new \Application\Service\UserServiceImpl())->listRechargeScore(null,null,null,null,1,10);
+//var_dump($res);
 
 //$res=(new \Application\Dao\RechargeScoreDaoImpl())->listByField(null,null,"dexian",null,1,2);
 //$res = (new \Application\Dao\RechargeScoreDaoImpl())->countByField(null,null,"dexian");

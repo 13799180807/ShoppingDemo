@@ -55,4 +55,17 @@ class UserDaoImpl implements UserDao
         $data = Filter::preventXss(array($userId));
         return (new SqlUtil())->run("remove", $sql, "s", $data);
     }
+
+    /**
+     * 根据userId修改一条数据
+     * @param string $userId
+     * @param string $userPwd
+     * @return bool
+     */
+    public function updateByUserId(string $userId, string $userPwd): bool
+    {
+        $sql = "UPDATE tb_user SET user_pwd=? WHERE user_id=?";
+        $userPwd = encryption($userId, $userPwd);
+        return (new SqlUtil())->run("update", $sql, "ss", Filter::preventXss(array($userPwd, $userId)));
+    }
 }

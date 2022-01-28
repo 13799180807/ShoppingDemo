@@ -5,10 +5,54 @@ namespace Application\Controller\Home;
 
 use Application\Helper\FeedBack;
 use Application\Helper\Request;
+use Application\Middleware\Session;
 use Application\Service\UserServiceImpl;
 
 class UserController
 {
+
+    /** 用户修改密码 */
+    public function actionUpdPwd()
+    {
+        /** 接收数据  */
+        $token = Request::param("token", "s");
+        $account = Request::param("account", "s");
+        $pwd = Request::param("pwd", "s");
+        $newPwd = Request::param("newPwd", "i");
+        /** 数据检验 */
+        $data = Request::detect(array(
+            0 => array("account", $account, 'account'),
+            1 => array("pwd", $pwd, 'length', 6, 16),
+            2 => array("newPwd", $newPwd, 'length', 6, 16)
+        ));
+        /** 数据判断 */
+        if (!$data['status']) {
+            /** 数据不符合 */
+            echo FeedBack::fail("修改密码失败，参数错误", $data['err']);
+            return;
+        }
+        /** token检查 */
+        $tokenRes = (new Session($token))->getToken();
+        if (!$tokenRes['status']) {
+            /** token失效 */
+            echo FeedBack::result(404, $tokenRes['msg']);
+            return;
+        }
+        if ($tokenRes['data']['account'] != $account) {
+            echo FeedBack::result(404, "非法token");
+            return;
+        }
+        /** 执行修改密码 */
+        $res = (new UserServiceImpl())->updatePwd($account, $pwd, $newPwd);
+        if (!$res['status']) {
+            echo FeedBack::result(404, $res['msg']);
+            return;
+        }
+        /** 修改成功，修改token值，让用户重新登入 */
+        (new Session("", $account))->updateTokenLife();
+        /** 返回成功值 */
+        echo FeedBack::result(200, "修改密码成功，请重新登入");
+    }
 
     /** 用户更新个人信息表 */
     public function actionUpdInformation()
@@ -32,7 +76,7 @@ class UserController
         }
 
         /** 验证状态 */
-        $tokenRes = (new \Application\Middleware\Session($token))->getToken();
+        $tokenRes = (new Session($token))->getToken();
         if (!$tokenRes['status']) {
             /** token失效 */
             echo FeedBack::result(404, $tokenRes['msg']);
@@ -59,62 +103,58 @@ class UserController
     {
         $token = Request::param("token", "s");
         $userId = Request::param("account", "s");
+
         /** 验证前端消息 */
         $data = Request::detect(array(
             0 => array("account", $userId, 'account'),
         ));
-        if ($data['status']) {
+        if (!$data['status']) {
+            /** 数据不符合 */
+            echo FeedBack::fail("获取失败，请求参数有问题", $data['err']);
+            return;
+        }
 
-            /** 验证token  */
-            $tokenRes = (new \Application\Middleware\Session($token))->getToken();
-            if ($tokenRes['status']) {
-
-                /** 验证token是不是对应本账号的 */
-                if ($tokenRes['data']['account'] == $userId) {
-
-                    /** 开始查询数据 */
-                    $res = (new UserServiceImpl())->getUserData($userId);
-
-                    /** 判断数据 进行挑选不要的去除 */
-                    if ($res['status']) {
-
-                        /** 去掉不要的数据 在传给前端 */
-                        $res = $res['data'];
-                        /** 获得注册时间 */
-                        $regTime = $res['user'][0]['createdAt'];
-                        /** 去掉支付密码 */
-                        $information = $res['information'];
-                        $userInFo = array();
-                        foreach ($information as $row) {
-                            /** 去掉密码 */
-                            if (array_key_exists("paymentPwd", $row)) {
-                                unset($row['paymentPwd']);
-                                $userInFo[] = $row;
-                            }
-                        }
-                        /** 返回数据 */
-                        $callBack = array(
-                            'regTime' => $regTime,
-                            'information' => $userInFo
-                        );
-                        echo FeedBack::result(200, "获取信息成功", $callBack);
-                        return;
-
-                    }
-                    echo FeedBack::result(404, $res['msg']);
-                    return;
-
-                }
-                echo FeedBack::result(404, "非法token");
-                return;
-
-            }
+        /** 验证token  */
+        $tokenRes = (new Session($token))->getToken();
+        if (!$tokenRes['status']) {
             /** token失效 */
             echo FeedBack::result(404, $tokenRes['msg']);
             return;
         }
-        /** 数据不符合 */
-        echo FeedBack::fail("参数请求不规范", $data['err']);
+
+        /** 验证token是不是对应本账号的 */
+        if ($tokenRes['data']['account'] != $userId) {
+            echo FeedBack::result(404, "非法token");
+            return;
+        }
+
+        /** 开始查询数据 */
+        $res = (new UserServiceImpl())->getUserData($userId);
+        if (!$res['status']) {
+            echo FeedBack::result(404, $res['msg']);
+            return;
+        }
+
+        /** 去掉不要的数据 在传给前端 */
+        $res = $res['data'];
+        /** 获得注册时间 */
+        $regTime = $res['user'][0]['createdAt'];
+        /** 去掉支付密码 */
+        $information = $res['information'];
+        $userInFo = array();
+        foreach ($information as $row) {
+            /** 去掉密码 */
+            if (array_key_exists("paymentPwd", $row)) {
+                unset($row['paymentPwd']);
+                $userInFo[] = $row;
+            }
+        }
+        /** 返回数据 */
+        $callBack = array(
+            'regTime' => $regTime,
+            'information' => $userInFo
+        );
+        echo FeedBack::result(200, "获取信息成功", $callBack);
 
     }
 
@@ -135,35 +175,35 @@ class UserController
             2 => array("userPhone", $request['userPhone'], 'phone'),
             3 => array("payPwd", $request['payPwd'], 'pwd'),
         ));
-        if ($data['status']) {
+        if (!$data['status']) {
+            /** 数据不符合 */
+            echo FeedBack::fail("添加个人信息失败，请求参数不规范", $data['err']);
+            return;
+        }
 
-            /** 验证 token */
-            $res = (new \Application\Middleware\Session($token))->getToken();
-            if ($res['status']) {
-
-                if ($res['data']['account'] == $request['account']) {
-                    /** 数据符合 */
-                    $saveRes = (new UserServiceImpl())->saveUserInformation($request['account'], $request['userName'], $request['userPhone'], $request['payPwd']);
-                    if ($saveRes['status']) {
-                        echo FeedBack::result(200, "个人信息添加成功");
-                        return;
-                    }
-                    echo FeedBack::result(404, $saveRes['msg']);
-                    return;
-
-                }
-                echo FeedBack::result(404, "非法token");
-                return;
-
-            }
+        /** 验证 token */
+        $res = (new Session($token))->getToken();
+        if (!$res['status']) {
             /** token失效 */
             echo FeedBack::result(404, $res['msg']);
             return;
         }
-        /** 数据不符合 */
-        echo FeedBack::fail("参数请求不规范", $data['err']);
-    }
 
+        if ($res['data']['account'] != $request['account']) {
+            echo FeedBack::result(404, "非法token");
+            return;
+        }
+
+        /** 数据符合 */
+        $saveRes = (new UserServiceImpl())->saveUserInformation($request['account'], $request['userName'], $request['userPhone'], $request['payPwd']);
+
+        if (!$saveRes['status']) {
+            echo FeedBack::result(404, $saveRes['msg']);
+            return;
+        }
+        echo FeedBack::result(200, "个人信息添加成功");
+
+    }
 
     /** 登入 */
     public function actionLogin()
@@ -177,47 +217,48 @@ class UserController
             0 => array('account', $goodsName, 'length', 6, 16),
             1 => array('pwd', $goodsCategoryId, 'length', 6, 16),
         ));
-        if ($data['status']) {
-            /** 进行账号密码验证 */
-            $loginRes = (new UserServiceImpl())->login($goodsName, $goodsCategoryId);
-            if ($loginRes['status']) {
-                /** 账号验证成功 */
-                $res = (new \Application\Middleware\Session("", $goodsName))->setToken();
-                echo FeedBack::result(200, "登入成功", $res['data']);
-                return;
-
-            } else {
-                /** 登入失败 */
-                echo FeedBack::result(404, $loginRes['msg'], array());
-                return;
-            }
+        if (!$data['status']) {
+            echo FeedBack::fail("参数请求不规范", $data['err']);
+            return;
         }
-        echo FeedBack::fail("参数请求不规范", $data['err']);
+
+        /** 进行账号密码验证 */
+        $loginRes = (new UserServiceImpl())->login($goodsName, $goodsCategoryId);
+        if (!$loginRes['status']) {
+            /** 登入失败 */
+            echo FeedBack::result(404, $loginRes['msg'], array());
+            return;
+        }
+
+        /** 账号验证成功 */
+        $res = (new Session("", $goodsName))->setToken();
+        echo FeedBack::result(200, "登入成功", $res['data']);
     }
 
-    /**
-     * 注册
-     */
+    /** 注册 */
     public function actionRegister()
     {
-        $goodsName = Request::param("account", "s");
+        /** 获取前端请求数据 */
         $goodsCategoryId = Request::param("pwd", "s");
+        $goodsName = Request::param("account", "s");
 
+        /** 数据检验 */
         $data = Request::detect(array(
             0 => array('account', $goodsName, 'length', 6, 16),
             1 => array('pwd', $goodsCategoryId, 'length', 6, 16),
         ));
+        /** 判断数据 */
+        if (!$data['status']) {
+            echo FeedBack::fail("参数请求不规范", $data['err']);
+            return;
+        }
 
-        if ($data['status']) {
-            $res = (new UserServiceImpl())->saveUser($goodsName, $goodsCategoryId);
-            if ($res['status']) {
-                echo FeedBack::result(200, $res['msg']);
-                return;
-            }
+        $res = (new UserServiceImpl())->saveUser($goodsName, $goodsCategoryId);
+        if (!$res['status']) {
             echo FeedBack::result(404, $res['msg']);
             return;
         }
-        echo FeedBack::fail("参数请求不规范", $data['err']);
+        echo FeedBack::result(200, $res['msg']);
 
     }
 
@@ -225,12 +266,13 @@ class UserController
     public function actionState()
     {
         $token = Request::param("token", "s");
-        $res = (new \Application\Middleware\Session($token))->getToken();
-        if ($res['status']) {
-            echo FeedBack::result(200, $res['msg']);
+        $res = (new Session($token))->getToken();
+
+        if (!$res['status']) {
+            echo FeedBack::result(404, $res['msg']);
             return;
         }
-        echo FeedBack::result(404, $res['msg']);
+        echo FeedBack::result(200, $res['msg']);
 
     }
 

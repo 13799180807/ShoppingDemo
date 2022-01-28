@@ -23,15 +23,16 @@ class CategoryController
             1 => array('page', $page, "intSize", 1, 9999),
             2 => array('num', $num, "intSize", 1, 99)
         ));
-
         if ($data['status']) {
-            /** 获取数据 */
-            $res = (new GoodsCategoryServiceImpl())->listCategoryGoods('user', $page, $num, 1, $categoryId);
-            echo FeedBack::result(200, "请求成功", $res);
+            /** 数据不符合规范 */
+            echo FeedBack::fail("参数请求不规范", $data['err']);
             return;
         }
-        /** 数据不符合规范 */
-        echo FeedBack::fail("参数请求不规范", $data['err']);
+        
+        /** 获取数据 */
+        $res = (new GoodsCategoryServiceImpl())->listCategoryGoods('user', $page, $num, 1, $categoryId);
+        echo FeedBack::result(200, "请求成功", $res);
+
 
     }
 

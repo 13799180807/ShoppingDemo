@@ -19,6 +19,16 @@ class Session
     }
 
     /**
+     * 修改token用的当修改了密码token要失效
+     * @return array
+     */
+    public function updateTokenLife(): array
+    {
+        (new SqlUtil())->run("update", "UPDATE tb_session SET token=?, lifetime=? WHERE account=? ", "sss", array("0", 0, $this->account));
+        return array();
+    }
+
+    /**
      * 判断token是否可以用
      * @return array
      */
@@ -67,8 +77,6 @@ class Session
         } else {
             /** 修改token操作 */
             (new SqlUtil())->run("update", "UPDATE tb_session SET token=?, lifetime=? WHERE account=? ", "sss", array($this->token, time() + $this->lifetime, $this->account));
-
-
         }
 
         /** 返回值 */
