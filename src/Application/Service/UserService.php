@@ -56,14 +56,6 @@ interface UserService
      * @return array
      */
     public function updatePwd(string $userId, string $userPwd, string $newPwd): array;
-    //  还没使用上去
-
-    /**
-     * 删除用户
-     * @param string $userId
-     * @return array
-     */
-    public function moveUser(string $userId): array;
 
     /**
      * 用户充值
@@ -72,6 +64,18 @@ interface UserService
      * @return array
      */
     public function saveRechargeScore(string $userId, float $score): array;
+    //  还没使用上去
+
+
+
+    /**
+     * 删除用户
+     * @param string $userId
+     * @return array
+     */
+    public function moveUser(string $userId): array;
+
+
 
     /**
      * 获取充值记录信息

@@ -223,7 +223,6 @@ class UserServiceImpl implements UserService
         return array(
             'status' => false,
             'msg' => "出现异常，请联系管理员"
-
         );
     }
 

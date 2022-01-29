@@ -1,6 +1,7 @@
 <?php
 require 'curl.php';
 require 'config.php';
+
 if (isset($_COOKIE['token'])) {
     $loginStatus = userStatus();
     if (!$loginStatus[0]) {
@@ -30,7 +31,37 @@ if (isset($_POST['updateName'])) {
     }
 
 }
+if (isset($_POST['updatePwd'])) {
+    /** 进行了修改密码的操作 */
+    $pwd = $_POST['pwd'];
+    $newPwd = $_POST['newPwd'];
+    $updatePwdRes = curl_post("http://localhost:8080/home/user/UpdPwd", array(
+        'token' => $_COOKIE['token'],
+        'account' => $_COOKIE['user'],
+        'pwd' => $pwd,
+        'newPwd' => $newPwd
+    ));
+    $updatePwdRes = json_decode($updatePwdRes, true);
+    if ($updatePwdRes['code'] == 200) {
+        echo "<script>alert('密码修改成功！！！');</script>";
 
+    } else {
+        $msg = $updatePwdRes['msg'];
+        echo "<script>alert('{$msg}');</script>";
+    }
+
+}
+if (isset($_POST['addScores'])) {
+    /** 账户积分充值 */
+    $addScores = curl_post("http://localhost:8080/home/user/SaveScore", array(
+        'token' => $_COOKIE['token'],
+        'account' => $_COOKIE['user'],
+        'score' => $_POST['score']
+    ));
+    $addScores = json_decode($addScores, true);
+    $msg = $addScores['msg'];
+    echo "<script>alert('{$msg}');</script>";
+}
 
 $userAccount = $_COOKIE['user'];
 $token = $_COOKIE['token'];
@@ -147,7 +178,7 @@ if ($resArr['code'] == 200) {
                                     基本信息</a>
                                 <a data-bs-toggle="tab" href="#orders"><i class="fa fa-cart-arrow-down"></i> 订单</a>
                                 <a data-bs-toggle="tab" href="#download"><i class="fa fa-cloud-download"></i>
-                                    购买记录</a>
+                                    充值记录</a>
                                 <a data-bs-toggle="tab" href="#payment-method"><i class="fa fa-credit-card"></i>
                                     个人账户</a>
                                 <a data-bs-toggle="tab" href="#address-edit"><i class="fa fa-map-marker"></i>
@@ -182,8 +213,9 @@ if ($resArr['code'] == 200) {
                                 <!-- Single Tab Content End -->
 
                                 <!-- Single Tab Content Start -->
-                                <div class="tab-pane fade" id="orders" role="tabpanel">
+                                <div class="tab-pane fade" id="orders" name="orders" role="tabpanel">
                                     <div class="myaccount-content">
+
                                         <h3 class="title">Orders</h3>
                                         <div class="myaccount-table table-responsive text-center">
                                             <table class="table table-bordered">
@@ -221,7 +253,7 @@ if ($resArr['code'] == 200) {
                                                     <td>On Hold</td>
                                                     <td>$990</td>
                                                     <td><a class="btn btn btn-dark btn-hover-primary btn-sm rounded-0"
-                                                           href="cart.html">View</a>
+                                                           href=" #">View</a>
                                                     </td>
                                                 </tr>
                                                 </tbody>
@@ -234,34 +266,35 @@ if ($resArr['code'] == 200) {
                                 <!-- Single Tab Content Start -->
                                 <div class="tab-pane fade" id="download" role="tabpanel">
                                     <div class="myaccount-content">
-                                        <h3 class="title">Downloads</h3>
+                                        <h3 class="title">充值记录 </h3>
                                         <div class="myaccount-table table-responsive text-center">
                                             <table class="table table-bordered">
                                                 <thead class="thead-light">
                                                 <tr>
-                                                    <th>Product</th>
-                                                    <th>Date</th>
-                                                    <th>Expire</th>
-                                                    <th>Download</th>
+                                                    <th>充值分</th>
+                                                    <th>结果</th>
+                                                    <th>充值时间</th>
+                                                    <th>订单说明</th>
+                                                    <th>操作</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
                                                 <tr>
-                                                    <td>Haven - Free Real Estate PSD Template</td>
-                                                    <td>Aug 22, 2018</td>
-                                                    <td>Yes</td>
+                                                    <td>11.00</td>
+                                                    <td>成功</td>
+                                                    <td>2020-11-02-11：30:29</td>
+                                                    <td>成功充值</td>
                                                     <td><a class="btn btn btn-dark btn-hover-primary rounded-0"
-                                                           href="#"><i
-                                                                    class="fa fa-cloud-download me-1"></i> Download File</a>
+                                                           href="#">删除</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>HasTech - Profolio Business Template</td>
-                                                    <td>Sep 12, 2018</td>
-                                                    <td>Never</td>
+                                                    <td>11.00</td>
+                                                    <td>成功</td>
+                                                    <td>2022-01-29 11:37:04</td>
+                                                    <td>成功充值</td>
                                                     <td><a class="btn btn btn-dark btn-hover-primary rounded-0"
-                                                           href="#"><i
-                                                                    class="fa fa-cloud-download me-1"></i> Download File</a>
+                                                           href="#">删除</a>
                                                     </td>
                                                 </tr>
                                                 </tbody>
@@ -274,8 +307,47 @@ if ($resArr['code'] == 200) {
                                 <!-- Single Tab Content Start -->
                                 <div class="tab-pane fade" id="payment-method" role="tabpanel">
                                     <div class="myaccount-content">
-                                        <h3 class="title">Payment Method</h3>
-                                        <p class="saved-message">You Can't Saved Your Payment Method yet.</p>
+                                        <h3 class="title">账户积分充值</h3>
+                                        <form class="saved-message" target="formSubmit" method="post"
+                                              action="my-account.php">
+                                            <label>
+                                                积分:
+                                                <input type="text" id="score" name="score" onblur="reg0()">
+                                            </label>
+                                            <label id="tips0" style="color:#ff0000"></label>
+                                            <input type="submit" id="addScores" disabled="true" value="充值"
+                                                   name="addScores"
+                                                   class="btn btn btn-dark btn-hover-primary rounded-0">
+                                            <script>
+                                                function reg0() {
+                                                    var resReg = true;
+                                                    var resMsg = "";
+                                                    var score = document.getElementById("score").value;
+                                                    var numReg = /^[0-9]*$/;
+
+                                                    if (score === "" || score < 10 || score > 1000) {
+                                                        resReg = false;
+                                                        resMsg = resMsg + "当次充值请在10-1000之间！！！  ";
+                                                    }
+
+                                                    if (!numReg.test(score)) {
+                                                        resReg = false;
+                                                        resMsg = resMsg + "充值请为整数！！！  ";
+                                                    }
+
+                                                    if (resReg) {
+                                                        document.getElementById("tips0").innerHTML = "<font color='green'> </font>";
+                                                        document.getElementById("addScores").disabled = false;
+                                                    } else {
+                                                        document.getElementById("addScores").disabled = true;
+                                                        document.getElementById("tips0").innerHTML = "<font color='red'>" + resMsg + "</font>";
+                                                    }
+
+                                                }
+                                            </script>
+
+                                        </form>
+                                        <p>说明：充值有一定延迟，请耐心等待1分等于1人民币； </p>
                                     </div>
                                 </div>
                                 <!-- Single Tab Content End -->
@@ -364,12 +436,12 @@ if ($resArr['code'] == 200) {
                                 <div class="tab-pane fade" id="account-updPwd" role="tabpanel">
                                     <div class="myaccount-content">
                                         <div class="account-details-form">
-                                            <form action="#">
+                                            <form action="my-account.php" target="formSubmit" method="post">
                                                 <fieldset>
                                                     <legend>修改密码</legend>
                                                     <div class="single-input-item mb-3">
                                                         <label class="required mb-1" for="current-pwd">输入旧密码</label>
-                                                        <input id="current-pwd" placeholder="旧密码"
+                                                        <input id="pwd" onblur="reg1()" name="pwd" placeholder="旧密码"
                                                                type="password"/>
                                                     </div>
                                                     <div class="row">
@@ -377,7 +449,8 @@ if ($resArr['code'] == 200) {
                                                             <div class="single-input-item mb-3">
                                                                 <label class="required mb-1"
                                                                        for="new-pwd">输入新的密码</label>
-                                                                <input id="new-pwd" placeholder="新密码"
+                                                                <input id="newPwd" onblur="reg1()" name="newPwd"
+                                                                       placeholder="新密码"
                                                                        type="password"/>
                                                             </div>
                                                         </div>
@@ -385,17 +458,52 @@ if ($resArr['code'] == 200) {
                                                             <div class="single-input-item mb-3">
                                                                 <label class="required mb-1"
                                                                        for="confirm-pwd">再次输入新的密码</label>
-                                                                <input id="confirm-pwd" placeholder="再次输入新的密码"
+                                                                <input id="newPwd1" name="newPwd1" onblur="reg1()"
+                                                                       placeholder="再次输入新的密码"
                                                                        type="password"/>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </fieldset>
+                                                <label id="tips1" style="color:#ff0000"></label>
                                                 <div class="single-input-item single-item-button">
-                                                    <button class="btn btn btn-dark btn-hover-primary rounded-0">Save
-                                                        Changes
-                                                    </button>
+                                                    <input type="submit" id="updatePwd" value="修改密码" name="updatePwd"
+                                                           disabled="true"
+                                                           class="btn btn btn-dark btn-hover-primary rounded-0">
                                                 </div>
+                                                <script>
+                                                    function reg1() {
+                                                        var resReg = true;
+                                                        var resMsg = "";
+                                                        var pwd = document.getElementById("pwd").value;
+                                                        var newPwd = document.getElementById("newPwd").value;
+                                                        var newPwd1 = document.getElementById("newPwd1").value;
+
+                                                        if (pwd === "" || (pwd.length) <= 5 || (pwd.length) > 16) {
+                                                            resReg = false;
+                                                            resMsg = resMsg + "请输入正确密码！！！";
+                                                        }
+
+                                                        if (newPwd === "" || (newPwd.length) <= 5 || (newPwd.length) > 16) {
+                                                            resReg = false;
+                                                            resMsg = resMsg + "新密码请在6-16字符之间！！！  ";
+                                                        }
+
+                                                        if (newPwd !== newPwd1) {
+                                                            resReg = false;
+                                                            resMsg = resMsg + "新密码两次输入不相等！！！  ";
+                                                        }
+
+                                                        if (resReg) {
+                                                            document.getElementById("tips1").innerHTML = "<font color='green'> </font>";
+                                                            document.getElementById("updatePwd").disabled = false;
+                                                        } else {
+                                                            document.getElementById("updatePwd").disabled = true;
+                                                            document.getElementById("tips1").innerHTML = "<font color='red'>" + resMsg + "</font>";
+                                                        }
+
+                                                    }
+                                                </script>
                                             </form>
                                         </div>
                                     </div>
@@ -451,11 +559,11 @@ if ($resArr['code'] == 200) {
                     <div class="single-footer-widget aos-init aos-animate">
                         <h2 class="widget-title">Information</h2>
                         <ul class="widget-list">
-                            <li><a href="contact.html">Terms & Conditions</a></li>
-                            <li><a href="contact.html">Payment Methode</a></li>
-                            <li><a href="contact.html">Product Warranty</a></li>
-                            <li><a href="contact.html">Return Process</a></li>
-                            <li><a href="contact.html">Payment Security</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                            <li><a href="">Payment Methode</a></li>
+                            <li><a href="">Product Warranty</a></li>
+                            <li><a href="">Return Process</a></li>
+                            <li><a href="">Payment Security</a></li>
                         </ul>
                     </div>
                 </div>
@@ -495,9 +603,7 @@ if ($resArr['code'] == 200) {
             <div class="row align-items-center">
                 <div class="col-12 text-center">
                     <div class="copyright-content">
-                        <p class="mb-0">Copyright &copy; 2021.Company name All rights reserved.<a
-                                    href="https://sc.chinaz.com/moban/"
-                                    target="_blank">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+                        <p class="mb-0">Copyright &copy; 2021.Company name All rights reserved.
                         </p>
                     </div>
                 </div>

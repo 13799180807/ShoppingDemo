@@ -11,6 +11,43 @@ use Application\Service\UserServiceImpl;
 class UserController
 {
 
+
+    /** 用户充值分 */
+    public function actionSaveScore()
+    {
+        $token = Request::param("token", "s");
+        $account = Request::param("account", "s");
+        $score = Request::param("score", "i");
+
+        $data = Request::detect(array(
+            0 => array("account", $account, 'account'),
+            1 => array("score", $score, 'intSize', 10, 1000)
+        ));
+        if (!$data['status']) {
+            /** 数据不符合 */
+            echo FeedBack::fail("充值失败，当次充值请在10-1000", $data['err']);
+            return;
+        }
+        $tokenRes = (new Session($token))->getToken();
+        if (!$tokenRes['status']) {
+            /** token失效 */
+            echo FeedBack::result(404, $tokenRes['msg']);
+            return;
+        }
+        if ($tokenRes['data']['account'] != $account) {
+            echo FeedBack::result(404, "非法token");
+            return;
+        }
+        /** 执行充值 */
+        $res = (new UserServiceImpl())->saveRechargeScore($account, (float)$score);
+        if (!$res['status']) {
+            echo FeedBack::result(404, $res['msg']);
+            return;
+        }
+        echo FeedBack::result(200, "充值成功，请耐心等待到账时间");
+
+    }
+
     /** 用户修改密码 */
     public function actionUpdPwd()
     {
