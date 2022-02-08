@@ -64,9 +64,16 @@ interface UserService
      * @return array
      */
     public function saveRechargeScore(string $userId, float $score): array;
-    //  还没使用上去
 
-
+    /**
+     * 获取用户信息
+     * @param int $page
+     * @param int $num
+     * @param string|null $userId
+     * @param string|null $userName
+     * @return array
+     */
+    public function listUserInformation(int $page = 1, int $num = 10, string $userId = null, string $userName = null): array;
 
     /**
      * 删除用户
@@ -74,8 +81,6 @@ interface UserService
      * @return array
      */
     public function moveUser(string $userId): array;
-
-
 
     /**
      * 获取充值记录信息

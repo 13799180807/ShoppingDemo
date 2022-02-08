@@ -184,7 +184,9 @@ class UserServiceImpl implements UserService
     {
         (new UserDaoImpl())->moveByUserId($userId);
         (new UserInformationDaoImpl())->removeByUserId($userId);
-        (new RechargeScoreDaoImpl())->removeByUserId("$userId");
+        #充值记录不需要删除
+//        (new RechargeScoreDaoImpl())->removeByUserId($userId);
+
         return array(
             'status' => true,
             'msg' => "删除数据成功"
@@ -283,6 +285,29 @@ class UserServiceImpl implements UserService
         return array(
             'status' => true,
             'msg' => "密码修改成功",
+        );
+    }
+
+    /**
+     * 获取用户信息
+     * @param int $page
+     * @param int $num
+     * @param string|null $userId
+     * @param string|null $userName
+     * @return array
+     */
+    public function listUserInformation(int $page = 1, int $num = 10, string $userId = null, string $userName = null): array
+    {
+        $countUser = (new UserInformationDaoImpl())->countUserInformationByField($userId, $userName);
+        $totalPage = ceil($countUser / $num);
+        $resUser = (new UserInformationDaoImpl())->listUserInformationByField($userId, $userName, null, $page, $num);
+        return array(
+            'status' => true,
+            'msg' => "获取信息成功",
+            'data' => array(
+                'totalPage' => $totalPage,
+                'user' => (new UserInformation())->userModel($resUser)
+            )
         );
     }
 }

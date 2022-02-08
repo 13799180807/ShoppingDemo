@@ -242,17 +242,17 @@ class UserController
 
     }
 
-    /** 登入 */
+    /** 登录 */
     public function actionLogin()
     {
         /** 请求检查 */
-        $goodsName = Request::param("account", "s");
-        $goodsCategoryId = Request::param("pwd", "s");
+        $account = Request::param("account", "s");
+        $pwd = Request::param("pwd", "s");
 
         /** 检测数据是否符合规范 */
         $data = Request::detect(array(
-            0 => array('account', $goodsName, 'length', 6, 16),
-            1 => array('pwd', $goodsCategoryId, 'length', 6, 16),
+            0 => array('account', $account, 'length', 6, 16),
+            1 => array('pwd', $pwd, 'length', 6, 16),
         ));
         if (!$data['status']) {
             echo FeedBack::fail("参数请求不规范", $data['err']);
@@ -260,16 +260,16 @@ class UserController
         }
 
         /** 进行账号密码验证 */
-        $loginRes = (new UserServiceImpl())->login($goodsName, $goodsCategoryId);
+        $loginRes = (new UserServiceImpl())->login($account, $pwd);
         if (!$loginRes['status']) {
-            /** 登入失败 */
+            /** 登录失败 */
             echo FeedBack::result(404, $loginRes['msg'], array());
             return;
         }
 
         /** 账号验证成功 */
-        $res = (new Session("", $goodsName))->setToken();
-        echo FeedBack::result(200, "登入成功", $res['data']);
+        $res = (new Session("", $account))->setToken();
+        echo FeedBack::result(200, "登录成功", $res['data']);
     }
 
     /** 注册 */

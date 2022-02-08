@@ -4,6 +4,7 @@ use Application\Dao\GoodsCategoryDaoImpl;
 use Application\Dao\GoodsDaoImpl;
 use Application\Dao\GoodsIntroductionDaoImpl;
 use Application\Dao\GoodsPictureDaoImpl;
+use Application\Dao\UserInformationDaoImpl;
 use Application\Helper\FeedBack;
 use Application\Helper\Filter;
 use Application\Helper\Request;
@@ -16,6 +17,17 @@ use Application\Service\GoodsServiceImpl;
 
 echo " 测试页面 <hr>";
 echo "<hr>";
+$res=(new \Application\Service\AdminServiceImpl())->auditRecharge(10,1);
+var_dump($res);
+
+//$res=(new \Application\Service\UserServiceImpl())->listUserInformation();
+//var_dump($res);
+//var_dump($res['data']);
+//var_dump($res['data']['user']);
+//$informationRes = (new UserInformationDaoImpl())->listUserInformationByField();
+//$res1 = (new UserInformationDaoImpl())->countUserInformationByField("dexian");
+//var_dump($informationRes);
+//var_dump($res1);
 //$res=(new \Application\Service\UserServiceImpl())->listRechargeScore(null,null,null,null,1,10);
 //var_dump($res);
 

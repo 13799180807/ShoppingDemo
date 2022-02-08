@@ -8,9 +8,10 @@ interface RechargeScoreDao
      * 添加一条数据
      * @param string $userId
      * @param float $score
+     * @param string $description
      * @return int
      */
-    public function saveRechargeScore(string $userId, float $score): int;
+    public function saveRechargeScore(string $userId, float $score,string $description="用户充值"): int;
 
     /**
      * 更新一条数据

@@ -47,7 +47,6 @@ function matchNumberLetters($str): bool
 /** 检测状态---测试 */
 function userStatus(): array
 {
-
     $statusRes = curl_post("http://localhost:8080/home/user/state", array(
         'token' => $_COOKIE['token']
     ));

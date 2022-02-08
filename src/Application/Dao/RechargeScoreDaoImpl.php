@@ -17,12 +17,13 @@ class RechargeScoreDaoImpl implements RechargeScoreDao
      * 添加一条数据
      * @param string $userId
      * @param float $score
+     * @param string $description
      * @return int
      */
-    public function saveRechargeScore(string $userId, float $score): int
+    public function saveRechargeScore(string $userId, float $score,string $description="用户充值"): int
     {
-        $data = Filter::preventXss(array($userId, $score));
-        return (new SqlUtil())->run("save", "INSERT INTO tb_recharge_score (user_id,score_amount) VALUES (?,?)", "ss", $data);
+        $data = Filter::preventXss(array($userId, $score,$description));
+        return (new SqlUtil())->run("save", "INSERT INTO tb_recharge_score (user_id,score_amount,score_description) VALUES (?,?,?)", "sss", $data);
     }
 
     /**
@@ -103,7 +104,7 @@ class RechargeScoreDaoImpl implements RechargeScoreDao
 
         if ($page != null) {
             /** 需要分页 */
-            $sql = $sql . " ORDER BY created_at LIMIT ?,?";
+            $sql = $sql . " ORDER BY created_at DESC LIMIT ?,?";
             $data[] = ($page - 1) * $num;
             $data[] = $num;
             $fieldsType = $fieldsType . "ii";

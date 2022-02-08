@@ -18,7 +18,6 @@ class UserDaoImpl implements UserDao
     public function getById(string $userId): array
     {
         return (new SqlUtil())->run("query", "SELECT * FROM tb_user WHERE user_id=?", "s", array($userId));
-
     }
 
     /**

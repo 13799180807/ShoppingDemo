@@ -39,7 +39,7 @@ class Session
         if (count($res) == 0) {
             return array(
                 'status' => false,
-                'msg' => "你还没有进行登入，请登入后再操作。",
+                'msg' => "你还没有进行登录，请登入后再操作。",
                 'data' => array()
             );
         }
@@ -48,7 +48,7 @@ class Session
         if ($res[0]['lifetime'] <= time()) {
             return array(
                 'status' => false,
-                'msg' => "登入信息已经过期，请重新登入",
+                'msg' => "登录信息已经过期，请重新登入",
                 'data' => array()
             );
         }
@@ -70,9 +70,9 @@ class Session
     {
         /** 生成唯一的值 */
         self::uuid();
-        /** 检测账号是否是第一次登入 */
+        /** 检测账号是否是第一次登录 */
         if (count((new SqlUtil())->run("query", "SELECT * FROM tb_session WHERE account=? ", "s", array($this->account))) == 0) {
-            /** 插入操作 该账号进行第一次登入 */
+            /** 插入操作 该账号进行第一次登录 */
             (new SqlUtil())->run("save", "INSERT INTO tb_session (account, token, lifetime) VALUES (?,?,?)", "sss", array($this->account, $this->token, time() + $this->lifetime));
         } else {
             /** 修改token操作 */

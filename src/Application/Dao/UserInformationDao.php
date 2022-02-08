@@ -29,6 +29,14 @@ interface UserInformationDao
     public function listUserInformationByField(string $userId = null, string $userName = null, string $ordinationField = null, int $pagination = null, int $num = null): array;
 
     /**
+     * 统计
+     * @param string|null $userId
+     * @param string|null $userName
+     * @return int
+     */
+    public function countUserInformationByField(string $userId = null, string $userName = null): int;
+
+    /**
      * 更改用户信息
      * @param string $userId
      * @param string|null $userName
