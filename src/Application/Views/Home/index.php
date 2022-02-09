@@ -6,7 +6,7 @@ $dataArray = indexCurlPost();
 if (isset($_COOKIE['token'])) {
     $loginStatus = userStatus();
     if (!$loginStatus[0]) {
-        $userMsg = "登入过期";
+        $userMsg = "登录过期";
         $userStatus=true;
     } else {
 //        $userMsg = $_COOKIE['user'];
@@ -14,7 +14,7 @@ if (isset($_COOKIE['token'])) {
     }
 } else {
     $userStatus=true;
-    $userMsg = "未登入";
+    $userMsg = "未登录";
 }
 
 
@@ -110,13 +110,14 @@ if (isset($_COOKIE['token'])) {
                                     if ($userStatus){
                                     ?>
                                         <li><a class="dropdown-item" href="#"><?php echo $userMsg; ?></a></li>
-                                        <li><a class="dropdown-item" href="login.php">登入</a></li>
+                                        <li><a class="dropdown-item" href="login.php">登录</a></li>
                                         <li><a class="dropdown-item" href="register.php">注册</a></li>
                                     <?php
                                     } else {
                                     ?>
                                         <li><a class="dropdown-item" href="my-account.php">个人中心</a></li>
-                                        <li><a class="dropdown-item" href="exitLogin.php">退出登入</a></li>
+                                        <li><a class="dropdown-item" href="cart.html">购物车</a></li>
+                                        <li><a class="dropdown-item" href="exitLogin.php">退出登录</a></li>
                                     <?php
                                     }
                                     ?>

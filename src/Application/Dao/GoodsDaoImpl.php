@@ -8,50 +8,46 @@ use Application\Library\SqlUtil;
 class GoodsDaoImpl implements GoodsDao
 {
     /**
-     * 删除商品表中一个分类的数据
-     * @param int $goodsCategoryId
+     * 根据参数删除表数据
+     * @param int|null $goodsId
+     * @param int|null $categoryId
      * @return bool
      */
-    public function removeByGoodsCategoryId(int $goodsCategoryId): bool
+    public function removeByField(int $goodsId = null, int $categoryId = null): bool
     {
-        $sql = "DELETE FROM tb_goods WHERE goods_category_id=?";
-        return (new SqlUtil())->run("remove", $sql, "i", array($goodsCategoryId));
+        if (($goodsId == null && $categoryId == null) || ($goodsId != null && $categoryId != null)) {
+            return false;
+        }
+        $sql = "DELETE FROM tb_goods WHERE";
+        $data = array();
 
+        if ($goodsId != null) {
+            $sql = $sql . " goods_id=?";
+            $data[] = $goodsId;
+        }
+        if ($categoryId != null) {
+            $sql = $sql . " goods_category_id=?";
+            $data[] = $categoryId;
+        }
+
+        return (new SqlUtil())->run("remove", $sql, "i", $data);
     }
 
     /**
-     * 根据id进行查询商品的某个信息
-     * @param string $userType
+     * 根据商品id获取信息
      * @param int $goodsId
-     * @param int $goodsStatus
      * @return array
      */
-    public function getById(string $userType, int $goodsId, int $goodsStatus = 0): array
+    public function getByGoodsId(int $goodsId): array
     {
-        /** 组装sql */
-        $dataList = array();
-
-        if ($userType == "admin") {
-            $sql = "SELECT * FROM tb_goods WHERE goods_id=? AND";
-        } else {
-            $sql = "SELECT goods_id,goods_name,goods_category_id,goods_price,goods_stock, goods_hot,goods_recommendation,goods_describe,goods_img,created_at FROM tb_goods WHERE goods_id=? AND";
-        }
-        $fieldsType = "i";
-        $dataList[] = $goodsId;
-
-        if ($goodsStatus != 0) {
-            /** 增加条件 */
-            $sql = $sql . " goods_status=?";
-            $fieldsType = $fieldsType . "i";
-            $dataList[] = $goodsStatus;
-        } else {
-            /** 去掉多余的AND */
-            $sql = trim($sql, "AND");
-
-        }
-        return (new SqlUtil())->run("query", $sql, $fieldsType, $dataList);
-
+        $sql = "SELECT * FROM tb_goods WHERE goods_id=? ";
+        $data = Filter::preventXss(array($goodsId));
+        return (new SqlUtil())->run("query", $sql, "i", $data);
     }
+
+
+    /** 修改前后分界线 */
+
 
     /**
      * 根据不同字段进行查询该字段的信息
@@ -152,8 +148,7 @@ class GoodsDaoImpl implements GoodsDao
         );
         $resFilter = Filter::setEntities($filterArr);
 
-        if ($filterArr['img']=="")
-        {
+        if ($filterArr['img'] == "") {
             $sql = "UPDATE tb_goods SET goods_name=?,goods_category_id=?,goods_price=?,goods_stock=?,goods_status=?,
                   goods_hot=?, goods_recommendation=? ,goods_describe=? WHERE goods_id=? ";
             $dataList = array($resFilter['name'], $categoryId, $prick, $stock, $status, $hot, $recommendation, $resFilter['describe'], $goodsId);
@@ -168,19 +163,6 @@ class GoodsDaoImpl implements GoodsDao
 
     }
 
-    public function getByField(string $field, string $fieldType, string $fieldKey): array
-    {
-        /** 过滤字符 */
-        $resFilter = Filter::setEntities(array("fieldKey" => $fieldKey));
-
-        /** 组装sql */
-        $sql = "SELECT * FROM tb_goods WHERE {$field}=? ";
-
-        /** 执行查询 */
-        return (new SqlUtil())->run("query", $sql, $fieldType, array($resFilter['fieldKey']));
-
-
-    }
 
     public function saveGoods(string $goodsName, int $goodsCategoryId, float $goodsPrice, int $goodsStock = 0, int $goodsStatus = 1, int $goodsHot = 2,
                               int $goodsRecommendation = 2, string $goodsDescribe = "", string $goodsImg = ""): int
@@ -200,16 +182,5 @@ class GoodsDaoImpl implements GoodsDao
             $resFilter['goodsName'], $goodsCategoryId, $goodsPrice, $goodsStock, $goodsStatus, $goodsHot, $goodsRecommendation, $resFilter['goodsDescribe'], $resFilter['goodsImg']));
     }
 
-    /**
-     * 根据指定字段删除商品表中的一条数据
-     * @param string $field
-     * @param string $fieldType
-     * @param string $fieldKey
-     * @return bool
-     */
-    public function removeByField(string $field, string $fieldType, string $fieldKey): bool
-    {
-        $sql = "DELETE FROM tb_goods WHERE {$field}=?";
-        return (new SqlUtil())->run("remove", $sql, $fieldType, array($fieldKey));
-    }
+
 }

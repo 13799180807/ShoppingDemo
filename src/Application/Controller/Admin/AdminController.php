@@ -20,9 +20,28 @@ class AdminController
         /** 接收数据 */
         $account = Request::param("account", "s");
         $token = Request::param("token", "s");
-        $scoreId = Request::param("scoreId", "s");
-        /**  */
+        $status = Request::param("status", "i");
+        $scoreId = Request::param("scoreId", "i");
 
+        if ($status != 1 && $status != 3) {
+            echo FeedBack::fail("参数请求不规范");
+            return;
+        }
+
+        /** 验证token */
+        $isToken = (new Token())->isState("admin", $account, $token);
+        if (!$isToken['status'] ) {
+            echo FeedBack::result(404, $isToken['msg']);
+            return;
+        }
+
+        /** 执行操作 */
+        $res = (new AdminServiceImpl())->auditRecharge($scoreId, $status);
+        if (!$res['status']) {
+            echo FeedBack::result(404, $res['msg']);
+            return;
+        }
+        echo FeedBack::result(200, "审核成功");
 
     }
 

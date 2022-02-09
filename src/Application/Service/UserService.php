@@ -83,6 +83,15 @@ interface UserService
     public function moveUser(string $userId): array;
 
     /**
+     * 用户伪删除数据
+     * @param int $scoreId
+     * @param int $display
+     * @param string $userId
+     * @return array
+     */
+    public function moveUserRechargeScore(int $scoreId, int $display,string $userId): array;
+
+    /**
      * 获取充值记录信息
      * @param int|null $scoreId
      * @param int|null $scoreStatus

@@ -37,12 +37,15 @@ class GoodsController
             return;
         }
 
-        $data = (new GoodsServiceImpl())->listGoodsIdShow("user", $id);
-        echo FeedBack::result(200, "请求成功", $data);
+        $res = (new GoodsServiceImpl())->listGoodsIdShow($id, 1);
+        if (!$res['data']) {
+            echo FeedBack::result(400, $res['msg']);
+            return;
+        }
+        echo FeedBack::result(200, '数据获取成功', $res['data']);
 
 
     }
-
 
     /** 模糊查询 */
     public function actionFuzzy()
@@ -51,7 +54,7 @@ class GoodsController
         $data = Request::detect(array(
             0 => array('fuzzy', $fuzzy, "length", 0, 16),
         ));
-        if ($data['status']) {
+        if (!$data['status']) {
             /** 数据不符合规范 */
             echo FeedBack::fail("参数请求不规范", $data['err']);
             return;

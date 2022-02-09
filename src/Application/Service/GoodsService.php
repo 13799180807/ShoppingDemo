@@ -13,11 +13,11 @@ interface GoodsService
 
     /**
      * 单个商品详情页面使用
-     * @param string $userType
      * @param int $id
+     * @param int|null $status
      * @return array
      */
-    public function listGoodsIdShow(string $userType, int $id): array;
+    public function listGoodsIdShow(int $id,int $status=null): array;
 
     /**
      * 根据商品id进行更新这个分类

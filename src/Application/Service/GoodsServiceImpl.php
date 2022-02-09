@@ -36,49 +36,47 @@ class GoodsServiceImpl implements GoodsService
 
     /**
      * 单个商品详情页面
-     * @param string $userType
      * @param int $id
+     * @param int|null $status
      * @return array
      */
-    public function listGoodsIdShow(string $userType, int $id): array
+    public function listGoodsIdShow(int $id, int $status = null): array
     {
-        /** 判断用户还是管理员 */
-        if ($userType == 'admin') {
-            /** 管理员执行的 */
-            $resGoods = (new GoodsDaoImpl())->getById('admin', $id);
-            if (count($resGoods) > 0) {
-                /** 商品存在 */
-                $resImg = (new GoodsPictureDaoImpl())->getByField("goods_id", $id);
-                $resText = (new GoodsIntroductionDaoImpl())->getGoodsId($id);
-            } else {
-                /** 没有这个商品 */
-                $resImg = array();
-                $resText = array();
+        /** 检查商品存在不存在 */
+        $goodsRes = (new GoodsDaoImpl())->getByGoodsId($id);
+        if (count($goodsRes) == 0) {
+            return array(
+                'status' => false,
+                'msg' => "商品不存在",
+                'data' => array()
+            );
+        }
+        /** 判断需要查找的商品状态 */
+        if ($status != null) {
+            if ($goodsRes[0]['goods_status'] != $status) {
+                return array(
+                    'status' => false,
+                    'msg' => "商品已经下架啦",
+                    'data' => array()
+                );
             }
-        } else {
-            /** 用户查询的 */
-            $resGoods = (new GoodsDaoImpl())->getById('user', $id, 1);
-            if (count($resGoods) > 0) {
-                $resImg = (new GoodsPictureDaoImpl())->getByField("goods_id", $id);
-                $resText = (new GoodsIntroductionDaoImpl())->getGoodsId($id);
-            } else {
-                /** 没有这个商品 */
-                $resImg = array();
-                $resText = array();
-            }
-
         }
 
+
+        /** 查询商品信息 */
+        $resImg = (new GoodsPictureDaoImpl())->getByField("goods_id", $id);
+        $resText = (new GoodsIntroductionDaoImpl())->getGoodsId($id);
+
         /** 数据进行组装输出*/
-        $goods = (new Goods())->goodsModel($resGoods);
-        $img = (new GoodsPicture())->pictureModel($resImg);
-        $text = (new GoodsIntroduction())->introductionModel($resText);
-        $categoryList = (new GoodsCategoryDaoImpl())->listCategory();
         return array(
-            "goods" => $goods,
-            "categoryList" => $categoryList,
-            "goodsIntroduce" => $text,
-            "goodsPicture" => $img
+            'status' => true,
+            'msg' => "商品查询成功",
+            'data' => array(
+                "goods" => (new Goods())->goodsModel($goodsRes),
+                "categoryList" => (new GoodsCategoryDaoImpl())->listCategory(),
+                "goodsIntroduce" => (new GoodsIntroduction())->introductionModel($resText),
+                "goodsPicture" => (new GoodsPicture())->pictureModel($resImg)
+            ),
         );
 
     }
@@ -102,7 +100,7 @@ class GoodsServiceImpl implements GoodsService
                                     int $hot = 2, int $recommendation = 2, string $describe = "", string $img = "", string $introduction = ""): array
     {
         /** 判断这个商品id存在不存在 为了防止不通过表单进行操作进入数据库 */
-        $res = (new GoodsDaoImpl())->getByField("goods_id", "i", $goodsId);
+        $res = (new GoodsDaoImpl())->getByGoodsId($goodsId);
         if (count($res) == 0) {
             /** 数据不存在 */
             return array(
@@ -190,7 +188,8 @@ class GoodsServiceImpl implements GoodsService
     public function removeByGoodsId(int $goodsId): array
     {
         /** 获取商品表中的主图名字 */
-        $goodsRes = (new GoodsDaoImpl())->getByField("goods_id", "i", $goodsId);
+
+        $goodsRes = (new GoodsDaoImpl())->getByGoodsId($goodsId);
         if (count($goodsRes) != 0) {
             $imageName = $goodsRes[0]['goods_img'];
             /** 检测文件删除 */
@@ -207,7 +206,7 @@ class GoodsServiceImpl implements GoodsService
         }
 
         /** 删除数据库中的记录 */
-        (new GoodsDaoImpl())->removeByField("goods_id", "i", $goodsId);
+        (new GoodsDaoImpl())->removeByField($goodsId);
         /** 删除详细信息说明 */
         (new GoodsIntroductionDaoImpl())->removeByGoodsId($goodsId);
         /** 删除数据库中关联图片记录 */

@@ -54,14 +54,18 @@ class GoodsController
         $data = Request::detect(array(
             0 => array('id', $goodsId, 'intSize', 1, 100000),
         ));
-
-        if ($data['status']) {
-            /** 数据合法执行查询 */
-            $data = (new GoodsServiceImpl())->listGoodsIdShow('admin', $goodsId);
-            echo FeedBack::result(200, '数据获取成功', $data);
+        if (!$data['status']) {
+            echo FeedBack::fail("参数请求不规范", $data['err']);
             return;
         }
-        echo FeedBack::fail("参数请求不规范", $data['err']);
+
+        /** 数据合法执行查询 */
+        $res = (new GoodsServiceImpl())->listGoodsIdShow( $goodsId);
+        if (!$res['status']) {
+            echo FeedBack::result(400, $res['msg']);
+            return;
+        }
+        echo FeedBack::result(200, '数据获取成功', $res['data']);
 
     }
 
@@ -200,7 +204,7 @@ class GoodsController
             8 => array('hot', $data['hot'], 'intSize', 0, 5),
             9 => array('recommendation', $data['recommendation'], 'intSize', 0, 5)
         ));
-        if ($detectData['status']) {
+        if (!$detectData['status']) {
             /** 类型不符合 */
             echo FeedBack::fail("参数请求不规范", $detectData['err']);
             return;

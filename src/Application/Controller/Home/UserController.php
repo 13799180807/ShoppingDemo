@@ -48,6 +48,40 @@ class UserController
 
     }
 
+    /** 伪删除订单 */
+    public function actionDelScore()
+    {
+        $token = Request::param("token", "s");
+        $account = Request::param("account", "s");
+        $scoreId = Request::param("scoreId", "i");
+        $status = Request::param("status", "i");
+
+        if ($scoreId == 0 || $status == 0) {
+            echo FeedBack::result(404, "参数请求错误，请确认后在重试");
+            return;
+        }
+
+        /** token检查 */
+        $tokenRes = (new Session($token))->getToken();
+        if (!$tokenRes['status']) {
+            /** token失效 */
+            echo FeedBack::result(404, $tokenRes['msg']);
+            return;
+        }
+        if ($tokenRes['data']['account'] != $account) {
+            echo FeedBack::result(404, "非法token");
+            return;
+        }
+
+        $res = (new UserServiceImpl())->moveUserRechargeScore($scoreId, $status, $account);
+        if (!$res['status']) {
+            echo FeedBack::result(404, $res['msg']);
+            return;
+        }
+        echo FeedBack::result(200, "修改成功");
+
+    }
+
     /** 用户修改密码 */
     public function actionUpdPwd()
     {
@@ -189,7 +223,8 @@ class UserController
         /** 返回数据 */
         $callBack = array(
             'regTime' => $regTime,
-            'information' => $userInFo
+            'information' => $userInFo,
+            'rechargeRes' => $res['rechargeRes']
         );
         echo FeedBack::result(200, "获取信息成功", $callBack);
 

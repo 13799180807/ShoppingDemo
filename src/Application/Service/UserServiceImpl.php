@@ -130,10 +130,15 @@ class UserServiceImpl implements UserService
 
         /** 获取账号的订单信息 */
 
+        /** 获取充值记录 */
+        $rechargeRes = (new RechargeScoreDaoImpl())->listByField(null, null, $userId, 1);
+
         /** 返回 */
         $callBack = array(
             'user' => $userRes,
             'information' => $informationRes,
+            'rechargeRes' => (new RechargeScore())->RechargeScoreModel($rechargeRes),
+
         );
         return array(
             'status' => true,
@@ -309,5 +314,36 @@ class UserServiceImpl implements UserService
                 'user' => (new UserInformation())->userModel($resUser)
             )
         );
+    }
+
+    /**
+     * 用户伪删除数据
+     * @param int $scoreId
+     * @param int $display
+     * @param string $userId
+     * @return array
+     */
+    public function moveUserRechargeScore(int $scoreId, int $display, string $userId): array
+    {
+        /** 获取订单信息 */
+        $rechargeRes = (new RechargeScoreDaoImpl())->listByField($scoreId);
+        if (count($rechargeRes) == 0) {
+            return array(
+                'status' => false,
+                'msg' => "订单不存在，修改失败",
+            );
+        }
+        if ($rechargeRes[0]['user_id'] != $userId) {
+            return array(
+                'status' => false,
+                'msg' => "请勿操作别人订单，请正常操作",
+            );
+        }
+        (new RechargeScoreDaoImpl())->updateRechargeScore($scoreId, null, null, $display);
+        return array(
+            'status' => true,
+            'msg' => "删除成功"
+        );
+
     }
 }

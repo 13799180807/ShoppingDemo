@@ -32,6 +32,7 @@ class Token
                 'msg' => "非法获取token，验证失败"
             );
         }
+
         return array(
             'status' => true,
             'msg' => "验证成功"

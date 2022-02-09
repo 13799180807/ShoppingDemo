@@ -138,80 +138,8 @@ if (isset($_POST['lookupName'])) {
                 </div>
                 <!-- Cart Product/Price End -->
 
-                <!-- Cart Product/Price Start -->
-                <div class="cart-product-wrapper mb-4 pb-4 border-bottom">
-
-                    <!-- Single Cart Product Start -->
-                    <div class="single-cart-product">
-                        <div class="cart-product-thumb">
-                            <a href="single-product.html"><img src="assets/images/products/small-product/2.jpg"
-                                                               alt="Cart Product"></a>
-                        </div>
-                        <div class="cart-product-content">
-                            <h3 class="title"><a href="single-product.html">Soldout new product</a></h3>
-                            <div class="product-quty-price">
-                                <span class="cart-quantity">4 <strong> × </strong></span>
-                                <span class="price">
-									<span class="new">$80.00</span>
-                                    </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Cart Product End -->
-
-                    <!-- Product Remove Start -->
-                    <div class="cart-product-remove">
-                        <a href="#"><i class="pe-7s-close"></i></a>
-                    </div>
-                    <!-- Product Remove End -->
-
-                </div>
-                <!-- Cart Product/Price End -->
-
-                <!-- Cart Product/Price Start -->
-                <div class="cart-product-wrapper mb-4 pb-4 border-bottom">
-
-                    <!-- Single Cart Product Start -->
-                    <div class="single-cart-product">
-                        <div class="cart-product-thumb">
-                            <a href="single-product.html"><img src="assets/images/products/small-product/1.jpg"
-                                                               alt="Cart Product"></a>
-                        </div>
-                        <div class="cart-product-content">
-                            <h3 class="title"><a href="single-product.html">New badge product</a></h3>
-                            <div class="product-quty-price">
-                                <span class="cart-quantity">2 <strong> × </strong></span>
-                                <span class="price">
-									<span class="new">$50.00</span>
-                                    </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Cart Product End -->
-
-                    <!-- Product Remove Start -->
-                    <div class="cart-product-remove">
-                        <a href="#"><i class="pe-7s-close"></i></a>
-                    </div>
-                    <!-- Product Remove End -->
-
-                </div>
-                <!-- Cart Product/Price End -->
-
-                <!-- Cart Product Total Start -->
-                <div class="cart-product-total mb-4 pb-4 border-bottom">
-                    <span class="value">Total</span>
-                    <span class="price">220$</span>
-                </div>
-                <!-- Cart Product Total End -->
-
                 <!-- Cart Product Button Start -->
-                <div class="cart-product-btn mt-4">
-                    <a href="cart.html" class="btn btn-light btn-hover-primary w-100"><i
-                                class="fa fa-shopping-cart"></i> View cart</a>
-                    <a href="checkout.html" class="btn btn-light btn-hover-primary w-100 mt-4"><i
-                                class="fa fa-share"></i> Checkout</a>
-                </div>
+
                 <!-- Cart Product Button End -->
 
             </div>
@@ -236,7 +164,7 @@ if (isset($_POST['lookupName'])) {
                     <!--开始-->
                     <?php
 
-                    if ($lookupRes == "-1") {
+                    if ($lookupRes == "-1" || count($lookupRes)==0 ) {
                         echo "<span style='margin-left: 20%;font-size: 23px'>空空如也......</span>";
                     } else {
                         foreach ($lookupRes as $row) {

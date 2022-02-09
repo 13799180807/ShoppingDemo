@@ -12,6 +12,7 @@ if (isset($_COOKIE['token'])) {
     echo "<script>alert('当前未登入！！！');location.href='login.php'</script>";
     exit;
 }
+
 if (isset($_POST['updateName'])) {
     /** 进行了修改名字操作 */
     $newName = $_POST['name'];
@@ -62,6 +63,23 @@ if (isset($_POST['addScores'])) {
     $msg = $addScores['msg'];
     echo "<script>alert('{$msg}');</script>";
 }
+
+
+if (isset($_GET['dUid'])) {
+    /** 需要进行删除充值记录 */
+    $delScores = curl_post("http://localhost:8080/home/user/DelScore", array(
+        'token' => $_COOKIE['token'],
+        'account' => $_COOKIE['user'],
+        'scoreId' => $_GET['dUid'],
+        'status' => 2
+    ));
+    $delScores = json_decode($delScores, true);
+    $msg = $delScores['msg'];
+    echo "<script>alert('{$msg}');</script>";
+
+
+}
+
 
 $userAccount = $_COOKIE['user'];
 $token = $_COOKIE['token'];
@@ -274,29 +292,38 @@ if ($resArr['code'] == 200) {
                                                     <th>充值分</th>
                                                     <th>结果</th>
                                                     <th>充值时间</th>
+                                                    <th>完成审核时间</th>
                                                     <th>订单说明</th>
                                                     <th>操作</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr>
-                                                    <td>11.00</td>
-                                                    <td>成功</td>
-                                                    <td>2020-11-02-11：30:29</td>
-                                                    <td>成功充值</td>
-                                                    <td><a class="btn btn btn-dark btn-hover-primary rounded-0"
-                                                           href="#">删除</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>11.00</td>
-                                                    <td>成功</td>
-                                                    <td>2022-01-29 11:37:04</td>
-                                                    <td>成功充值</td>
-                                                    <td><a class="btn btn btn-dark btn-hover-primary rounded-0"
-                                                           href="#">删除</a>
-                                                    </td>
-                                                </tr>
+                                                <?php
+                                                foreach ($userData['rechargeRes'] as $row) {
+                                                    if ($row['scoreStatus'] == 1) {
+                                                        $status = "充值成功";
+                                                        $updateAt = $row['updatedAt'];
+                                                    } elseif ($row['scoreStatus'] == 2) {
+                                                        $status = "等待处理";
+                                                        $updateAt = "";
+                                                    } else {
+                                                        $status = "充值失败";
+                                                        $updateAt = $row['updatedAt'];
+                                                    }
+                                                    ?>
+                                                    <tr>
+                                                        <td><?php echo $row['scoreAmount']; ?></td>
+                                                        <td><?php echo $status; ?></td>
+                                                        <td><?php echo $row['createdAt']; ?></td>
+                                                        <td><?php echo $updateAt; ?></td>
+                                                        <td><?php echo $row['scoreDescription']; ?></td>
+                                                        <td><a class="btn btn btn-dark btn-hover-primary rounded-0"
+                                                               href="my-account.php?dUid=<?php echo $row['scoreId']; ?>">删除</a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                                }
+                                                ?>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -345,7 +372,6 @@ if ($resArr['code'] == 200) {
 
                                                 }
                                             </script>
-
                                         </form>
                                         <p>说明：充值有一定延迟，请耐心等待1分等于1人民币； </p>
                                     </div>

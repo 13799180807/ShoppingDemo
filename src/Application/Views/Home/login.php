@@ -8,10 +8,10 @@ $yzm = "";
 if (isset($_COOKIE['token'])) {
     $loginStatus = userStatus();
     if ($loginStatus[0]) {
-        echo "<script>alert('当前已经登入了！！！');location.href='index.php'</script>";
+        echo "<script>alert('当前已经登录了！！！');location.href='index.php'</script>";
         exit;
     } else {
-        echo "<script>alert('当前登入过期了！！！');location.href='login.php'</script>";
+        echo "<script>alert('当前登录过期了！！！');location.href='login.php'</script>";
         exit;
     }
 }
@@ -29,16 +29,16 @@ if (isset($_POST['login'])) {
         if ($loginRes['code'] == 200) {
             $data = $loginRes['data'];
             if (count($data) > 0) {
-                /** 登入成功 */
+                /** 登录成功 */
                 setcookie("token", $data['token'], time() + 3600);
                 setcookie("user", $data['account'], time() + 3600);
-                echo "<script>alert('登入成功！！！');location.href='index.php'</script>";
+                echo "<script>alert('登录成功！！！');location.href='index.php'</script>";
                 exit;
             }
             echo "<script>alert('{$data['msg']}');</script>";
 
         } else {
-            /** 登入失败 */
+            /** 登录失败 */
             echo "<script>alert('{$loginRes['msg']}');</script>";
         }
 
@@ -105,7 +105,7 @@ if (isset($_POST['login'])) {
                             <div class="dropdown-user d-none d-lg-block">
                                 <a class="header-action-btn" href="javascript:void(0)"><i class="pe-7s-user"></i></a>
                                 <ul class="dropdown-menu-user">
-                                    <li><a class="dropdown-item">未登入</a></li>
+                                    <li><a class="dropdown-item">未登录</a></li>
                                     <li><a class="dropdown-item" href="#">注册</a></li>
                                 </ul>
                             </div>
@@ -150,7 +150,7 @@ if (isset($_POST['login'])) {
 
                     <!-- Login Title & Content Start -->
                     <div class="section-content text-center mb-5">
-                        <h2 class="title mb-2">登入</h2>
+                        <h2 class="title mb-2">登录</h2>
                         <p class="desc-content">请使用下面的帐户详细信息登录.</p>
                     </div>
                     <!-- Login Title & Content End -->
@@ -203,7 +203,7 @@ if (isset($_POST['login'])) {
                         <div class="single-input-item mb-3">
 
                             <button type="submit" id="login" disabled="true" name="login"
-                                    class="btn btn btn-dark btn-hover-primary rounded-0">登入
+                                    class="btn btn btn-dark btn-hover-primary rounded-0">登录
                             </button>
                             <label id="tips" style="color:#ff0000"></label>
                         </div>
