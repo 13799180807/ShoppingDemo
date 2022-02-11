@@ -64,8 +64,41 @@ class ShoppingCartsDaoImpl implements ShoppingCartsDao
         return (new SqlUtil())->run("update", $sql, "ii", $data);
     }
 
+    /**
+     * 获取数据
+     * @param int|null $cartId
+     * @param string|null $userId
+     * @param int|null $goodsId
+     * @return array
+     */
     public function getByField(int $cartId = null, string $userId = null, int $goodsId = null): array
     {
-        // TODO: Implement getByField() method.
+        $sql = "SELECT * FROM tb_shopping_carts WHERE";
+        $data = array();
+        $fieldsType = "";
+        if ($cartId != null) {
+            $sql = $sql . " cart_id=? AND";
+            $data[] = $cartId;
+            $fieldsType = $fieldsType . "i";
+        }
+        if ($userId != null) {
+            $sql = $sql . " user_id=? AND";
+            $data[] = $userId;
+            $fieldsType = $fieldsType . "s";
+        }
+        if ($goodsId != null) {
+            $sql = $sql . " goods_id=? AND";
+            $data[] = $goodsId;
+            $fieldsType = $fieldsType . "i";
+        }
+        /** 去掉不想要的 */
+        $sql = trim($sql, "AND");
+
+        if (count($data) == 0) {
+            return array();
+        }
+        return (new SqlUtil())->run("query", $sql, $fieldsType, Filter::preventXss($data));
+
+
     }
 }

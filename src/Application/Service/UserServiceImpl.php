@@ -5,6 +5,7 @@ namespace Application\Service;
 
 
 use Application\Dao\RechargeScoreDaoImpl;
+use Application\Dao\ShoppingCartsDaoImpl;
 use Application\Dao\UserDaoImpl;
 use Application\Dao\UserInformationDaoImpl;
 use Application\Domain\RechargeScore;
@@ -189,6 +190,7 @@ class UserServiceImpl implements UserService
     {
         (new UserDaoImpl())->moveByUserId($userId);
         (new UserInformationDaoImpl())->removeByUserId($userId);
+        (new ShoppingCartsDaoImpl())->moveByField(null, $userId);
         #充值记录不需要删除
 //        (new RechargeScoreDaoImpl())->removeByUserId($userId);
 

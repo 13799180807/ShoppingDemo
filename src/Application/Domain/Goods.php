@@ -34,7 +34,7 @@ class Goods
                 $c->$key = htmlentities($value);
 
             }
-            $dataList[$i] = $c;
+            $dataList[$i] = (array)$c;
             $i++;
         }
         return $dataList;

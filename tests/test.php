@@ -4,6 +4,7 @@ use Application\Dao\GoodsCategoryDaoImpl;
 use Application\Dao\GoodsDaoImpl;
 use Application\Dao\GoodsIntroductionDaoImpl;
 use Application\Dao\GoodsPictureDaoImpl;
+use Application\Dao\ShoppingCartsDaoImpl;
 use Application\Dao\UserInformationDaoImpl;
 use Application\Helper\FeedBack;
 use Application\Helper\Filter;
@@ -18,13 +19,18 @@ use Application\Service\GoodsServiceImpl;
 echo " 测试页面 <hr>";
 echo "<hr>";
 
+//$res=(new \Application\Service\ShoppingCartsServiceImpl())->listByUserCarts("dexian");
+//$res=(new \Application\Dao\ShoppingCartsDaoImpl())->getByField(null,"",9);
+//$res1=(new \Application\Service\ShoppingCartsServiceImpl())->saveShoppingCart("dexian",2,1);
 
-$res=(new \Application\Service\ShoppingCartsServiceImpl())->saveShoppingCart("dexian",5,5);
-//$res=(new \Application\Dao\ShoppingCartsDaoImpl())->updateByCartId(4,15);
-//$res=(new \Application\Dao\ShoppingCartsDaoImpl())->moveByField(null,"dexian");
-//$res=(new \Application\Dao\ShoppingCartsDaoImpl())->saveShoppingCart("dexian",6,5);
+
 //$res=(new \Application\Service\AdminServiceImpl())->auditRecharge(10,1);
-var_dump($res);
+//var_dump($res['data']['carts']);
+//var_dump($res['data']['goods']);
+
+//(new \Application\Controller\Home\CartsController())->actionListCarts();
+
+
 
 //$res=(new \Application\Service\UserServiceImpl())->listUserInformation();
 //var_dump($res);
